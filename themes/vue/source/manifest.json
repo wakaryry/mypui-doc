@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "The Progressive JavaScript Framework",
+  "description": "基于uniapp，快速开发原生APP/MP/H5的组件库与工具集",
   "display": "standalone",
   "icons": [
     {
@@ -40,9 +40,9 @@
       "density": "4.0"
     }
   ],
-  "lang": "en-US",
-  "name": "Vue.js",
-  "short_name": "Vue",
+  "lang": "zh-CN",
+  "name": "mypUI",
+  "short_name": "mypUI",
   "start_url": "./menu",
   "theme_color": "#4fc08d"
 }
