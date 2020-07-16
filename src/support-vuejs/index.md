@@ -1,0 +1,4 @@
+---
+sponsors: true
+type: sponsors
+---
