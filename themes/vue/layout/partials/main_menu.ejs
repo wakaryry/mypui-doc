@@ -6,12 +6,7 @@
 <%- partial('partials/learn_dropdown') %>
 <%- partial('partials/ecosystem_dropdown') %>
 <li>
-  <a href="<%- url_for("/v2/guide/team.html") %>" class="nav-link team<%- page.path.match(/team\.html/) ? ' current' : '' %>">团队</a>
+  <a href="<%- url_for("/doc/guide/team.html") %>" class="nav-link team<%- page.path.match(/team\.html/) ? ' current' : '' %>">团队</a>
 </li>
-<%- partial('partials/resources_dropdown') %>
-<!-- <li>
-  <a href="<%- url_for("/partners") %>" class="nav-link <%- page.path.match(/partners/) ? 'current' : '' %>">Partners</a>
-</li> -->
-<%- partial('partials/support_vue_dropdown') %>
-<%- partial('partials/language_dropdown') %>
+<%- partial('partials/support_mypui_dropdown') %>
 <li><a href="https://github.com/wakaryry/mypui-doc" target="_blank" class="nav-link contribute">参与文档</a></li>
