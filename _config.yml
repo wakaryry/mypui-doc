@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo
 
 # Site
-title: Vue.js
+title: mypUI
 subtitle:
-description: "The Progressive JavaScript Framework"
-author: Evan You
+description: "基于uniapp快速开发nvue页面的组件库与工具集"
+author: Yuping Ma
 email:
 language: zh-CN
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://cn.vuejs.org
+url: https://mypui.vuejs.org
 root: /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
