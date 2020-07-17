@@ -1,5 +1,5 @@
 ---
-title: WHY mypUI
+title: 为什么选择mypUI
 type: guide
 order: 1
 ---

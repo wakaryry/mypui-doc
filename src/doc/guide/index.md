@@ -1,5 +1,5 @@
 ---
-title: 介绍
+title: 快速上手
 type: guide
 order: 2
 ---
