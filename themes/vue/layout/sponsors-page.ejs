@@ -9,49 +9,14 @@ mypUI 是采用 MIT 许可的开源项目，使用完全免费。
 
 <p>我们通过以下方式接受赞助：</p>
 
-<div id="one-time-donations">
-  <a href="https://www.paypal.me/evanyou" target="_blank" rel="noopener">
-    <img src="/images/paypal.png" style="width:100px">
-  </a>
-  <a href="#btc"><%- partial('icons/btc') %> BTC</a>
-  <a href="#bch"><%- partial('icons/bch') %> BCH</a>
-  <a href="#eth"><%- partial('icons/eth') %> ETH</a>
-  <a href="#ltc"><%- partial('icons/ltc') %> LTC</a>
+<div style="display:flex;flex-direction:row;flex-wrap:wrap;margin-top:16px;">
+	<div>
+	  <img src="/images/pay_wx_68.png" style="width:300px;height:400px;">
+	</div>
+	<div>
+	  <img src="/images/pay_ali_68.png" style="width:300px;height:400px;">
+	</div>
 </div>
-
-<div id="coin-details" v-if="type && coins[type]">
-  <p>{{ coins[type].name }} Address:<br>{{ coins[type].address }}</p>
-  <img :src="'/images/coin-' + type + '.png'">
-</div>
-<script>
-var coins = new Vue({
-  el: '#coin-details',
-  data: {
-    type: window.location.hash.slice(1),
-    coins: {
-      btc: {
-        name: 'Bitcoin',
-        address: '14MEpy5a9MwDZa9CUzrfDhTU8dy2KKJ5mU'
-      },
-      bch: {
-        name: 'Bitcoin Cash',
-        address: '15gftB3fwumFRWGWFhVzTgc4nhM5w1F2Tu'
-      },
-      eth: {
-        name: 'Ethereum',
-        address: '0x3411356C1f0Bf5D859464eD2AC54DD2C222519B7'
-      },
-      ltc: {
-        name: 'Litecoin',
-        address: 'LUcHis3B8SFtEeZtuCaZoqsyN9XFAKmbCP'
-      }
-    }
-  }
-})
-window.addEventListener('hashchange', function () {
-  coins.type = window.location.hash.slice(1)
-})
-</script>
 
 <h2 id="Recurring-Pledges">周期性赞助</h2>
 

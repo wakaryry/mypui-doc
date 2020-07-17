@@ -14,15 +14,11 @@
         <input type="text" id="search-query-menu" aria-label="搜索 mypUI 站点" class="search-query st-default-search-input">
       </form>
       <%- partial('partials/toc', { type: 'guide' }) %>
-    <% } else { %>
-      <%- partial('partials/ad') %>
     <% } %>
   <% } %>
   <% if (page.title.trim()) { %>
     <h1><%- page.title %><%- page.type === 'examples' ? ' Example' : '' %></h1>
   <% } %>
-
-  <%- partial('partials/ad-pagetop') %>
 
   <% if (page.sponsors) { %>
     <%- partial('sponsors-page') %>
