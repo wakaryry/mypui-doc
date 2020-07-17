@@ -11,7 +11,7 @@
   <% if (page.type) { %>
     <% if (page.type === 'menu') { %>
       <form id="search-form">
-        <input type="text" id="search-query-menu" aria-label="搜索 Vue.js 站点" class="search-query st-default-search-input">
+        <input type="text" id="search-query-menu" aria-label="搜索 mypUI 站点" class="search-query st-default-search-input">
       </form>
       <%- partial('partials/toc', { type: 'guide' }) %>
     <% } else { %>
@@ -50,7 +50,7 @@
       <%- partial('partials/ad-text') %>
     <%_ } _%>
     发现错误？想参与编辑？
-    <a href="https://github.com/vuejs/cn.vuejs.org/blob/master/src/<%- page.path.replace(/\.html$/, '.md') %>" rel="noopener" target="_blank">
+    <a href="https://github.com/wakaryry/mypui-doc/blob/master/src/<%- page.path.replace(/\.html$/, '.md') %>" rel="noopener" target="_blank">
       在 GitHub 上编辑此页！
     </a>
   </div>
