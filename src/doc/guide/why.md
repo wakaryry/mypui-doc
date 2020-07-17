@@ -4,7 +4,7 @@ type: guide
 order: 1
 ---
 
-mypUI 是基于 uniapp 的一套组件库与工具集，可以 **高效且规范** 地开发出 uniapp 支持的各端应用（APP/各家小程序/H5/快应用）。兼容 nvue 页面 和 vue 页面。nvue 页面对应的 app端 依托 weex 编译为原生，具备良好的性能与体验。
+mypUI 是基于 uniapp 的一套组件库与工具集，可以 **高效且规范** 地开发出 uniapp 支持的各端应用（APP/各家小程序/H5/快应用）。兼容 nvue 页面 和 vue 页面。nvue 页面对应的 app端 依托 weex 编译为原生，具备良好的性能与体验。mypUI 绝对能为您带来 **稳定、高效、规范** 的开发体验。
 
 ## 思考
 
@@ -14,296 +14,143 @@ mypUI 从一开始就一直在思考如下几个问题：
 
 - 一个基础的组件，如何做到简单易用，又能够灵活的适配？
 
-- UI库往往带有很多组件，如何最大程度的降低学习成本与熟练成本？
+- UI库往往带有很多组件，如何最大程度的降低学习成本与熟练成本，怎样才能最快上手？
 
-- 各端的兼容往往会导致各端的差异化适配，而差异化的适配往往会降低开发的效率，如何保证性能的基础上提高开发的效率？
+- 文档的可读性和可理解性，一个细致化的组件开放的属性可能几十个，如何满足新手的可读性与可理解性？
 
-- 有很多变量的值，他们可能是计算而得，可能是通过api获取而得，这些值UI内用到，用户也会经常用到，是不是可以只计算或获取一次？
+- 各端的兼容往往会导致各端的差异化适配，而差异化的适配往往会降低开发的效率，如何在保证性能的基础上提高开发的效率？
+
+- 有很多变量的值，他们可能是计算而得，可能是通过api获取而得，这些值在UI内用到，用户也会经常用到，是不是可以只计算或获取一次？
 
 - 如何能够让使用者加快开发速度，减少文档依赖，减少记忆成本？
+
+- 版本的成熟性与稳定性，是不是一直维护？如何兼容版本更新，降低更新成本？
 
 - 一个组件库最重要的是什么？到底满足什么才能算是一个好的组件库？
 
 - 为什么要用这个库，她能带来什么好处？她的核心竞争力在哪里？
 
-### 兼容性
+<p class="tip">以上的思考，有些是我们开发过程中需要思考的问题，有些是我们在使用第三库时遇到的问题，或者我们在开发库时需要考虑的问题。这些问题得到一个妥善的解决，绝对是一个绝佳的高效工具</p>
 
-Vue **不支持** IE8 及以下版本，因为 Vue 使用了 IE8 无法模拟的 ECMAScript 5 特性。但它支持所有[兼容 ECMAScript 5 的浏览器](https://caniuse.com/#feat=es5)。
+下面我们就来回答这些问题，这也是我们推荐您使用 mypUI 的真正原因，也是 mypUI 的真正魅力所在。
 
-### 语义化版本控制
+## 可配置的主题设计
 
-Vue 在其所有项目中公布的功能和行为都遵循[语义化版本控制](https://semver.org/lang/zh-CN/)。对于未公布的或内部暴露的行为，其变更会描述在[发布说明](https://github.com/vuejs/vue/releases)中。
+mypUI 设计规范和技术上支持灵活的样式定制，以满足业务和品牌上多样化的视觉需求，包括但不限于全局样式（主色、圆角、边框）和指定组件的视觉定制。
 
-### 更新日志
+![主题配置](/images/doc/button.png)
 
-最新稳定版本：{{vue_version}}
+mypUI 的样式采用了 scss 作为开发语言，并定义了一系列全局的样式变量，您可以根据需求进行相应的调整。
 
-每个版本的更新日志见 [GitHub](https://github.com/vuejs/vue/releases)。
+其中包含了 主题、文字、边框、圆角、字号、尺寸 等多种通用变量，所有的样式变量以及具体的使用说明在 [这里](/doc/guide/theme.html) 找到。
 
-## Vue Devtools
+如果以上变量不能满足你的定制需求，可以给我们提 issue。
 
-在使用 Vue 时，我们推荐在你的浏览器上安装 [Vue Devtools](https://github.com/vuejs/vue-devtools#vue-devtools)。它允许你在一个更友好的界面中审查和调试 Vue 应用。
+当然，对于您自己添加变量，那也是非常的方便。更多主题配置的内容将在 [主题配置](/doc/guide/theme.html) 讲解。
 
-## 直接用 `<script>` 引入
+## 快捷配置与灵活订制
 
-<div class="vueschool" style=""><a href="https://learning.dcloud.io/#/?vid=1" target="_blank" rel="sponsored noopener" title="Vue.js 教程 - 安装与部署">观看本节视频讲解</a></div>
+mypUI 中的组件几乎开放了所有的可配置项，在满足主题配置的同时，也支持个性化的适配。
 
-直接下载并用 `<script>` 标签引入，`Vue` 会被注册为一个全局变量。
+比如 `myp-button` 组件，可以通过 `bgType` `border` `radius` `icon` `text` `height` 快速实现样式与主题配置。非常方便快捷，也很容易上手。
 
-<p class="tip">在开发环境下不要使用压缩版本，不然你就失去了所有常见错误相关的警告!</p>
+如果在这些配置的基础上，还不能满足一些特殊的要求，您可以设置各种 `style` 来满足您的要求，比如 `textStyle` `boxStyle` `iconStyle` 等。
 
-<div id="downloads">
-  <a class="button" href="https://cn.vuejs.org/js/vue.js" download>开发版本</a><span class="light info">包含完整的警告和调试模式</span>
-
-  <a class="button" href="https://cn.vuejs.org/js/vue.min.js" download>生产版本</a><span class="light info">删除了警告，{{gz_size}}KB min+gzip</span>
-</div>
-
-### CDN
-
-对于制作原型或学习，你可以这样使用最新版本：
+mypUI 组件既能满足一键式的快捷配置，也能满足几乎所有元素的细节配置。
 
 ``` html
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<myp-button icon="plus" text="左侧带图标"></myp-button>
+<myp-button :loading="loadingVisible" bgType="success" icon="wechat" text="点击切换加载状态" @buttonClicked="toggleLoading"></myp-button>
+<myp-button icon="circle-wechat" :text="null" radius="ll" iconType="success" iconStyle="font-size: 100rpx;" boxStyle="height: 100rpx;width: 100rpx;" border="none"></myp-button>
 ```
 
-对于生产环境，我们推荐链接到一个明确的版本号和构建文件，以避免新版本造成的不可预期的破坏：
+具体细节查看各个组件的文档。
 
-``` html
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
-```
+## 语义化与统一规范
 
-如果你使用原生 ES Modules，这里也有一个兼容 ES Module 的构建文件：
+如何快速上手？如何降低学习成本？如何了解一个就是了解全部？如何减轻记忆压力，放下文档依赖？
 
-``` html
-<script type="module">
-  import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.esm.browser.js'
-</script>
-```
+这一切还需要 **语义化的字段设计** 与 **统一规范的字段设计** 有关。
 
-你可以在 [cdn.jsdelivr.net/npm/vue](https://cdn.jsdelivr.net/npm/vue/) 浏览 NPM 包的源代码。
+mypUI 中组件的props都采用了规范与统一的命名规则。`xx` `xxType` `xxSize` `xxStyle`，你只需要知道一次，就能知道所有，并且随时都知道，因为没有模糊的设置，而且大家都彼此规则一样。
 
-Vue 也可以在 [unpkg](https://unpkg.com/vue@{{vue_version}}/dist/vue.js) 和 [cdnjs](https://cdnjs.cloudflare.com/ajax/libs/vue/{{vue_version}}/vue.js) 上获取 (cdnjs 的版本更新可能略滞后)。
+这些规范涉及到了：
 
-请确认了解[不同构建版本](#对不同构建版本的解释)并在你发布的站点中使用**生产环境版本**，把 `vue.js` 换成 `vue.min.js`。这是一个更小的构建，可以带来比开发环境下更快的速度体验。
+- props的命名规范与统一，各种命名后缀都有特定的含义；
 
-## NPM
+- 响应事件的规范：`buttonClicked` `cellClicked` `...` 都是无需记忆的事件名字；
 
-在用 Vue 构建大型应用时推荐使用 NPM 安装<sup>[[1]](#footnote-1)</sup>。NPM 能很好地和诸如 [webpack](https://webpack.js.org/) 或 [Browserify](http://browserify.org/) 模块打包器配合使用。同时 Vue 也提供配套工具来开发[单文件组件](single-file-components.html)。
+`myp-button`中背景主题色叫做 `bgType`，`myp-cell`中背景主题色也是`bgType`。
 
-``` bash
-# 最新稳定版
-$ npm install vue
-```
+具体字段的设计规范，请查阅 [设计规范](/doc/guide/design.html)。
 
-## 命令行工具 (CLI)
+## 文档分层，一目了然
 
-Vue 提供了一个[官方的 CLI](https://github.com/vuejs/vue-cli)，为单页面应用 (SPA) 快速搭建繁杂的脚手架。它为现代前端工作流提供了 batteries-included 的构建设置。只需要几分钟的时间就可以运行起来并带有热重载、保存时 lint 校验，以及生产环境可用的构建版本。更多详情可查阅 [Vue CLI 的文档](https://cli.vuejs.org)。
+写文档是个技术活，看文档也是个难题。很多有用的东西，因为文档不全，或者文档可读性太差，大大提高了使用者的门槛，以及使用成本。
 
-<p class="tip">CLI 工具假定用户对 Node.js 和相关构建工具有一定程度的了解。如果你是新手，我们强烈建议先在不用构建工具的情况下通读<a href="./">指南</a>，在熟悉 Vue 本身之后再使用 CLI。</p>
+而文档不分层，大量的props说明堆叠在一起，也难以一目了然，很大程度上增加了内容筛选的难度。
 
-<div class="vue-mastery"><a href="https://www.vuemastery.com/courses/real-world-vue-js/vue-cli" target="_blank" rel="sponsored noopener" title="Vue CLI">在 Vue Mastery 观看视频讲解</a></div>
+mypUI 组件的文档，分为快捷设置，细节配置，进阶设置等层次。常规属性一目了然。降低阅读难度。
 
-## 对不同构建版本的解释
+## 抹平差异，减少配置
 
-在 [NPM 包的 `dist/` 目录](https://cdn.jsdelivr.net/npm/vue/dist/)你将会找到很多不同的 Vue.js 构建版本。这里列出了它们之间的差别：
+在兼容各端的过程中，差异化的配置或者适配是不可避免的，但是很多差异是可以通过取舍以及封装抹平的。
 
-| | UMD | CommonJS | ES Module (基于构建工具使用) | ES Module (直接用于浏览器) |
-| --- | --- | --- | --- | --- |
-| **完整版** | vue.js | vue.common.js | vue.esm.js | vue.esm.browser.js |
-| **只包含运行时版** | vue.runtime.js | vue.runtime.common.js | vue.runtime.esm.js | - |
-| **完整版 (生产环境)** | vue.min.js | - | - | vue.esm.browser.min.js |
-| **只包含运行时版 (生产环境)** | vue.runtime.min.js | - | - | - |
+尤其是在app端的时候，导航栏各种设计，或者是tabbar的各种特效，使用自带的navbar或者tabbar很难满足要求，而个别页面自定义的话，又觉得风格不统一，甚至uni的在`pages.json`中的各种`subnvue`的配置实在是不够友好。
 
-### 术语
+这种情况，在快捷开发、便利性、统一性，与小程序端使用原生navbar的性能之间进行取舍。到底如何取舍？
 
-- **完整版**：同时包含编译器和运行时的版本。
+我的选择是去除掉系统自带的navbar和tabbar，去除掉`page.json`中各种设置，`pages.json`仅仅只是一个页面注册的地方。简单粗暴，快捷高效，各端开发基本统一，减少差异适配。
 
-- **编译器**：用来将模板字符串编译成为 JavaScript 渲染函数的代码。
+当然，这仅仅只是我的选择。你依然有自由选择的权利。我们提供了自定义的navbar与tabbar。
 
-- **运行时**：用来创建 Vue 实例、渲染并处理虚拟 DOM 等的代码。基本上就是除去编译器的其它一切。
+取舍，我们考虑：
 
-- **[UMD](https://github.com/umdjs/umd)**：UMD 版本可以通过 `<script>` 标签直接用在浏览器中。jsDelivr CDN 的 [https://cdn.jsdelivr.net/npm/vue](https://cdn.jsdelivr.net/npm/vue) 默认文件就是运行时 + 编译器的 UMD 版本 (`vue.js`)。
+- 失去了什么：小程序端原生navbar比自定义的要好，但是这点性能基本上忽略不计了。因为我们都能够接受小程序端`scroll-view`自定义的下拉刷新。而在nvue-app，就更不要考虑这个性能的问题了。
 
-- **[CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1)**：CommonJS 版本用来配合老的打包工具比如 [Browserify](http://browserify.org/) 或 [webpack 1](https://webpack.github.io)。这些打包工具的默认文件 (`pkg.main`) 是只包含运行时的 CommonJS 版本 (`vue.runtime.common.js`)。
+- 得到了什么：统一的开发方式，高效便捷，好维护。而且可实现全屏弹层，并且可以非常灵活的处理navbar层，适应各种设计；
 
-- **[ES Module](http://exploringjs.com/es6/ch_modules.html)**：从 2.6 开始 Vue 会提供两个 ES Modules (ESM) 构建文件：
+个人觉得，得大于失。在选择面前，我们不可能什么都兼顾，选择合适的就是好的。很多人纠结用这用那，其实在nvue出来之前，自己连vue页面都能够接受，结果nvue出来了，又在为这里那里纠结个不停。实在是得不偿失。赶紧动手，实现为上。去实现，去完成，去努力，去发光发热。
 
-  - 为打包工具提供的 ESM：为诸如 [webpack 2](https://webpack.js.org) 或 [Rollup](https://rollupjs.org/) 提供的现代打包工具。ESM 格式被设计为可以被静态分析，所以打包工具可以利用这一点来进行“tree-shaking”并将用不到的代码排除出最终的包。为这些打包工具提供的默认文件 (`pkg.module`) 是只有运行时的 ES Module 构建 (`vue.runtime.esm.js`)。
+另外就是封装组件，各端使用不同的组件时，将其封装进入一个组件，提供统一的开放接口和属性配置。比如`scroll-view`与`list`。
 
-  - 为浏览器提供的 ESM (2.6+)：用于在现代浏览器中通过 `<script type="module">` 直接导入。
+## 复用与缓存，降低成本
 
-### 运行时 + 编译器 vs. 只包含运行时
+在开发的过程中，有些内容是多次需要的，而且很有可能是只需要计算一次的。但是因为某些原因，我们不得不重新获取或者计算。我们应该避免这种重复的行为，一是不太好维护，二是有些接口调用起来比较消耗。
 
-如果你需要在客户端编译模板 (比如传入一个字符串给 `template` 选项，或挂载到一个元素上并以其 DOM 内部的 HTML 作为模板)，就将需要加上编译器，即完整版：
+所以，我们把这些内容初始化一次，存放起来，封装一些方法，每次去取现成的就行。
 
-``` js
-// 需要编译器
-new Vue({
-  template: '<div>{{ hi }}</div>'
-})
+还有就是，在写代码的时候，某个页面或者组件难免会要求多次计算，但是前面的计算也是有效的，这个时候我们可以缓存已经有的计算，新的计算值不断缓存进去就行。没有必要一直从头开始。
 
-// 不需要编译器
-new Vue({
-  render (h) {
-    return h('div', this.hi)
-  }
-})
-```
+就好比，省市区三级一样，没有必要每一次省变了都去后台拉取市的信息，而是先检查缓存，缓存有就用缓存的，缓存没有才去拉取，拉取之后存入缓存。
 
-当使用 `vue-loader` 或 `vueify` 的时候，`*.vue` 文件内部的模板会在构建时预编译成 JavaScript。你在最终打好的包里实际上是不需要编译器的，所以只用运行时版本即可。
+这是一种习惯，也是一种节约成本的方式。
 
-因为运行时版本相比完整版体积要小大约 30%，所以应该尽可能使用这个版本。如果你仍然希望使用完整版，则需要在打包工具里配置一个别名：
+## 性能优化
 
-#### webpack
+性能优化，考虑几个方面。大多数的优化，uni已经帮我们做了。我们应该考虑什么？
 
-``` js
-module.exports = {
-  // ...
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js' // 用 webpack 1 时需用 'vue/dist/vue.common.js'
-    }
-  }
-}
-```
+- bingdingX的运用；
 
-#### Rollup
+- 减少不必要的UI刷新；
 
-``` js
-const alias = require('rollup-plugin-alias')
+- 在必要的时候创建实例；
 
-rollup({
-  // ...
-  plugins: [
-    alias({
-      'vue': require.resolve('vue/dist/vue.esm.js')
-    })
-  ]
-})
-```
+- 及时销毁不需要的监听；
 
-#### Browserify
+## 更新策略与稳定性
 
-添加到你项目的 `package.json`：
 
-``` js
-{
-  // ...
-  "browser": {
-    "vue": "vue/dist/vue.common.js"
-  }
-}
-```
+## 优秀的组件库
 
-#### Parcel
 
-在你项目的 `package.json` 中添加：
+## 核心竞争力
 
-``` js
-{
-  // ...
-  "alias": {
-    "vue" : "./node_modules/vue/dist/vue.common.js"
-  }
-}
-```
 
-### 开发环境 vs. 生产环境模式
+## 选我没错
 
-对于 UMD 版本来说，开发环境/生产环境模式是硬编码好的：开发环境下用未压缩的代码，生产环境下使用压缩后的代码。
+说了这么多，哈哈哈哈，其实就是想告诉你：**不要纠结，选我没错！去实现，去完成！**
 
-CommonJS 和 ES Module 版本是用于打包工具的，因此我们不提供压缩后的版本。你需要自行将最终的包进行压缩。
-
-CommonJS 和 ES Module 版本同时保留原始的 `process.env.NODE_ENV` 检测，以决定它们应该运行在什么模式下。你应该使用适当的打包工具配置来替换这些环境变量以便控制 Vue 所运行的模式。把 `process.env.NODE_ENV` 替换为字符串字面量同时可以让 UglifyJS 之类的压缩工具完全丢掉仅供开发环境的代码块，以减少最终的文件尺寸。
-
-#### webpack
-
-在 webpack 4+ 中，你可以使用 `mode` 选项：
-
-``` js
-module.exports = {
-  mode: 'production'
-}
-```
-
-但是在 webpack 3 及其更低版本中，你需要使用 [DefinePlugin](https://webpack.js.org/plugins/define-plugin/)：
-
-``` js
-var webpack = require('webpack')
-
-module.exports = {
-  // ...
-  plugins: [
-    // ...
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    })
-  ]
-}
-```
-
-#### Rollup
-
-使用 [rollup-plugin-replace](https://github.com/rollup/rollup-plugin-replace)：
-
-``` js
-const replace = require('rollup-plugin-replace')
-
-rollup({
-  // ...
-  plugins: [
-    replace({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    })
-  ]
-}).then(...)
-```
-
-#### Browserify
-
-为你的包应用一次全局的 [envify](https://github.com/hughsk/envify) 转换。
-
-``` bash
-NODE_ENV=production browserify -g envify -e main.js | uglifyjs -c -m > build.js
-```
-
-也可以移步[生产环境部署](deployment.html)。
-
-### CSP 环境
-
-有些环境，如 Google Chrome Apps，会强制应用内容安全策略 (CSP)，不能使用 `new Function()` 对表达式求值。这时可以用 CSP 兼容版本。完整版本依赖于该功能来编译模板，所以无法在这些环境下使用。
-
-另一方面，运行时版本则是完全兼容 CSP 的。当通过 [webpack + vue-loader](https://github.com/vuejs-templates/webpack-simple) 或者 [Browserify + vueify](https://github.com/vuejs-templates/browserify-simple) 构建时，模板将被预编译为 `render` 函数，可以在 CSP 环境中完美运行。
-
-## 开发版本
-
-**重要**：GitHub 仓库的 `/dist` 文件夹只有在新版本发布时才会提交。如果想要使用 GitHub 上 Vue 最新的源码，你需要自己构建！
-
-``` bash
-git clone https://github.com/vuejs/vue.git node_modules/vue
-cd node_modules/vue
-npm install
-npm run build
-```
-
-## Bower
-
-Bower 只提供 UMD 版本。
-
-``` bash
-# 最新稳定版本
-$ bower install vue
-```
-
-## AMD 模块加载器
-
-所有 UMD 版本都可以直接用作 AMD 模块。
-
-<small>
-**译者注**
-<a id="footnote-1"></a>[1] 对于中国大陆用户，建议将 NPM 源设置为[国内的镜像](https://npm.taobao.org/)，可以大幅提升安装速度。
-</small>
+多谢支持。
 
 <!-- zhlint ignore: min+gzip -->
