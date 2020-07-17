@@ -1,6 +1,8 @@
-# myp-button
-
-> button组件
+---
+title: myp-button
+type: guide
+order: 3
+---
 
 ### 规则
 
