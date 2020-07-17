@@ -1,9 +1,7 @@
 ---
-title: 安装
+title: WHY mypUI
 type: guide
 order: 1
-vue_version: 2.5.16
-gz_size: "30.90"
 ---
 
 ### 兼容性
