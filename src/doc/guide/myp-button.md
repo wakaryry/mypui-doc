@@ -1,7 +1,7 @@
 ---
 title: 按钮：myp-button
 type: guide
-order: 3
+order: 20
 ---
 
 ### 规则

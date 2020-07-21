@@ -184,4 +184,11 @@ mypUI 组件的文档，分为快捷设置，细节配置，进阶设置等层�
 
 多谢支持。
 
+## 快速体验
+
+- 安装HBuilderX；
+- 下载或者clone本UI库；
+- 在HBuilderX里面打开或者导入；
+- 运行到自己想要体验的平台即可；
+
 <!-- zhlint ignore: min+gzip -->
