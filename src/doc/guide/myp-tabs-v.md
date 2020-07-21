@@ -1,5 +1,5 @@
 ---
-title: 竖向tabs
+title: 竖向tabs：myp-tabs-v
 type: guide
-order: 24
+order: 22
 ---
