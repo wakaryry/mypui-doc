@@ -67,6 +67,50 @@ UI内部使用了 `easycom` 的组件自动引入，所以您必须在项目中�
 
 <p class="tip">注意：在 app.vue 里面全局引入 mypui.scss 是不会起作用的。毕竟里面只是定义了一些 scss变量</p>
 
+### 初始化系统变量
+
+我们建议您在 `onLaunch` 里面对系统变量进行初始化（当然，这是可选的，`mypUI` 内部接口会根据需要调用初始化的接口）。
+
+初始化代码如下：
+
+- 先引入并放入mixins；
+
+- 然后调用初始化方法；
+
+```html
+<script>
+	import systemMixin from '@/mypUI/myp-mixin/systemMixin.js'
+	
+	export default {
+		globalData: {
+			currentTab: 0
+		},
+		mixins: [systemMixin],
+		onLaunch: function() {
+			console.log('App Launch')
+			// #ifdef APP-NVUE || H5
+			this.mypInitSystemInfo()
+			// #endif
+			// #ifndef APP-NVUE || H5
+			setTimeout(()=>{
+				this.mypInitSystemInfo()
+			}, 0)
+			// #endif
+		},
+		onShow: function() {
+			console.log('App Show')
+		},
+		onHide: function() {
+			console.log('App Hide')
+		}
+	}
+</script>
+
+<style lang="scss">
+	@import '@/mypUI/base.scss';
+</style>
+```
+
 ### 现在开始愉快的使用吧
 
 自由且无需手动导入 `mypUI` 的使用方式，正式开始。
