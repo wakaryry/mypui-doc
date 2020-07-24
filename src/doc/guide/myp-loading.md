@@ -1,5 +1,5 @@
 ---
-title: loading：myp-loading
+title: 加载提示：myp-loading
 type: guide
-order: 72
+order: 73
 ---

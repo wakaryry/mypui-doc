@@ -1,5 +1,5 @@
 ---
-title: 输入框：myp-input-one
+title: 验证码输入：myp-input-one
 type: guide
 order: 33
 ---

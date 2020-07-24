@@ -1,5 +1,5 @@
 ---
-title: mixin混入
+title: 混入总览
 type: guide
 order: 200
 ---
