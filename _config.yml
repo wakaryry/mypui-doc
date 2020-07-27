@@ -144,7 +144,7 @@ offline:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: git@github.com:wakaryry/mypui-doc.git
+  repo: git@github.com:wakaryry/mypui-doc.git
   branch: h-pages
 
 feed:
