@@ -1,15 +1,15 @@
 {
-  "name": "cn.vuejs.org",
+  "name": "mypui.asnowsoft.cn",
   "private": true,
   "hexo": {
     "version": "3.9.0"
   },
   "scripts": {
     "start": "hexo server",
-    "lint": "zhlint 'src/v2/{guide,api,style-guide}/*.md'",
-    "lint:fix": "zhlint 'src/v2/{guide,api,style-guide}/*.md' --fix",
-    "build": "node pre-deploy.js && hexo clean && hexo generate",
-    "deploy": "npm run build && hexo deploy"
+	"build": "hexo clean && hexo generate",
+	"deploy": "npm run build && hexo deploy",
+    "lint": "zhlint 'src/doc/{guide,api,style-guide}/*.md'",
+    "lint:fix": "zhlint 'src/doc/{guide,api,style-guide}/*.md' --fix"
   },
   "engines": {
     "node": ">=12.0.0"
