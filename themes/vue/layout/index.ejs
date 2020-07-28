@@ -26,7 +26,22 @@
       </div>
     </div>
   </div>
-
+  
+  <div id="special">
+    <h3>特别赞助</h3>
+    <%_ for (const sponsor of theme.special_sponsors) { _%>
+    <a href="<%- sponsor.url %>" target="_blank" rel="noopener sponsored">
+      <img src="<%- url_for(`/images/${sponsor.img}`) %>" style="width:200px">
+    </a>
+    <%_ } _%>
+    <%_if (theme.special_sponsors.length < 2) { _%>
+    <br>
+    <a class="become-backer" href="/support-mypui">
+      成为特别赞助商
+    </a>
+    <%_} _%>
+  </div>
+  
   <div id="highlights">
     <div class="inner">
       <div class="point">
