@@ -2,12 +2,12 @@ site_description: mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库
 root_domain: mypui.asnowsoft.cn
 vue_version: 2.5.16
 special_sponsors:
-  - url: http://www.dcloud.io/?hmsr=vuejsorg&hmpl=&hmcu=&hmkw=&hmci=
-    img: dcloud.gif
-    name: hi
-    description: 几分钟内在云端构建发布 API，免费试用。
-  - url: https://coding.imooc.com/?c=vuejs&mc_marking=7cf403c3c89d6fccf944791e71e7a959&mc_channel=vuezwsq
-    img: imooc-sponsor.png
-    ad_img: imooc-sponsor2.png
-    name: hi
-    description: 几分钟内在云端构建发布 API，免费试用。
+  - url: '#'
+    img: small-school.png
+    name: 小学通
+    description: 上小学通云校，学习小学内容。
+  - url: https://mcui.asnowsoft.com/?c=mypui
+    img: mcui.png
+    ad_img: mcui.png
+    name: mcui
+    description: 通过MCUI丰富的组件库、插件库可以非常方便的设计和实现精美的页面与高性能的网站框架。

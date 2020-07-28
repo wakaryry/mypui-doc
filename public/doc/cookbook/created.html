@@ -9,24 +9,24 @@
     <meta name="description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="alternate" hreflang="x-default" href="https://vuejs.org/doc/cookbook/uni后缀.html">
-    <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/doc/cookbook/uni后缀.html">
-    <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/doc/cookbook/uni后缀.html">
-    <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/doc/cookbook/uni后缀.html">
-    <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/doc/cookbook/uni后缀.html">
-    <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/doc/cookbook/uni后缀.html">
-    <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/doc/cookbook/uni后缀.html">
-    <link rel="alternate" hreflang="es" href="https://es.vuejs.org/doc/cookbook/uni后缀.html">
+    <link rel="alternate" hreflang="x-default" href="https://vuejs.org/doc/cookbook/created.html">
+    <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/doc/cookbook/created.html">
+    <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/doc/cookbook/created.html">
+    <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/doc/cookbook/created.html">
+    <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/doc/cookbook/created.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/doc/cookbook/created.html">
+    <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/doc/cookbook/created.html">
+    <link rel="alternate" hreflang="es" href="https://es.vuejs.org/doc/cookbook/created.html">
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="mypUI">
     <meta property="og:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
-    <meta property="og:image" content="https://cn.vuejs.org//images/logo.png">
+    <meta property="og:image" content="https://mypui.asnowsoft.cn//images/logo.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="mypUI">
     <meta name="twitter:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
-    <meta name="twitter:image" content="https://cn.vuejs.org/images/logo.png">
+    <meta name="twitter:image" content="https://mypui.asnowsoft.cn/images/logo.png">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
@@ -79,7 +79,7 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-46852172-3', 'cn.vuejs.org');
+      ga('create', '', 'mypui.asnowsoft.cn');
       ga('send', 'pageview');
     </script>
   </head>
@@ -210,13 +210,31 @@
   
 
   
-    <p>写一个vue格式的组件，在里面做好条件编译。</p>
-<ul>
-<li>nvue页面引入这个vue格式的组件，编译到app端则会使用app端对应的条件；</li>
-<li>nvue页面引入这个vue格式的组件，编译到非app端则会对应其他相应的编译条件。</li>
-</ul>
-<p>组件的后缀不重要，是nvue还是vue最终是由页面决定的， APP-NVUE和APP-PLUS-NVUE是一样的.</p>
-<p>nvue页面引入组件，组件可以是vue后缀的，编译到app端会是相应的nvue规范</p>
+    <pre><code class="hljs undefined">&lt;template&gt;
+	&lt;myp-popup pos=&quot;left&quot; :show=&quot;show&quot; width=&quot;636&quot; :height=&quot;heightRpx&quot; :offset=&quot;114&quot; @overlayClicked=&quot;toCancel&quot;&gt;
+		&lt;view :style=&quot;mypContentHeightStyle&quot;&gt;
+			&lt;myp-navbar bgType=&quot;none&quot;&gt;&lt;/myp-navbar&gt;
+			&lt;view style=&quot;height: 12rpx;&quot;&gt;&lt;/view&gt;
+			&lt;view class=&quot;ap&quot;&gt;
+				&lt;view class=&quot;ap-head&quot;&gt;
+					&lt;text class=&quot;ap-title&quot;&gt;&#123;&#123;name&#125;&#125;&lt;/text&gt;
+				&lt;/view&gt;
+				&lt;myp-scroll ref=&quot;myp-list&quot; bgType=&quot;inverse&quot; :extra=&quot;82&quot; @inited=&quot;toInit&quot; @down=&quot;toLoadItems&quot; @up=&quot;toLoadItems&quot; boxStyle=&quot;flex: 1; width: 636rpx;&quot; width=&quot;636rpx&quot;&gt;
+					&lt;view class=&quot;ap-item&quot;&gt;
+						&lt;circle-cell-small v-for=&quot;(s,index) in items&quot; :key=&quot;index&quot; :item=&quot;s&quot; @select=&quot;toSelect&quot;&gt;&lt;/circle-cell-small&gt;
+					&lt;/view&gt;
+				&lt;/myp-scroll&gt;
+				&lt;view class=&quot;ap-close&quot;&gt;
+					&lt;myp-button text=&quot;关闭&quot; border=&quot;none&quot; radius=&quot;ll&quot; textType=&quot;inverse&quot; boxStyle=&quot;width:166rpx;height:62rpx;background-color: #262626;&quot; @buttonClicked=&quot;toCancel&quot;&gt;&lt;/myp-button&gt;
+				&lt;/view&gt;
+			&lt;/view&gt;
+		&lt;/view&gt;
+	&lt;/myp-popup&gt;
+&lt;/template&gt;</code></pre>
+<p>我们知道在popup里面的内容受v-if控制，正常来说，每一次打开都会created，但是在微信小程序端，我们发现，v-if控制的内容，也会第一时间created，v-if变化不会引起created，也就是和正常元素一样，只会created一次，其它不会变化。</p>
+<p>所以如果我们想利用created来刷新数据的话，那就需要注意，微信小程序端尽管有v-if变化，但是也只是created一次，而且created的时候时机并不是我们想象的那样v-if为true的第一次，而是和正常元素一样created，这个时候他的props不一定是我们需要的。</p>
+<p>因为外部的环境并不适合v-if为true的情况。</p>
+<p>所以，我们往往在微信小程序端需要watch show。</p>
 
   
   
@@ -234,7 +252,7 @@ _bsa.init('custom', 'CKYD62QM', 'placement:vuejsorg',
 
 
     发现错误？想参与编辑？
-    <a href="https://github.com/wakaryry/mypui-doc/blob/master/src/doc/cookbook/uni后缀.md" rel="noopener" target="_blank">
+    <a href="https://github.com/wakaryry/mypui-doc/blob/master/src/doc/cookbook/created.md" rel="noopener" target="_blank">
       在 GitHub 上编辑此页！
     </a>
   </div>

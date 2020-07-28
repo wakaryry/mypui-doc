@@ -9,24 +9,24 @@
     <meta name="description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="alternate" hreflang="x-default" href="https://vuejs.org/doc/cookbook/组件自适应高度的问题.html">
-    <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/doc/cookbook/组件自适应高度的问题.html">
-    <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/doc/cookbook/组件自适应高度的问题.html">
-    <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/doc/cookbook/组件自适应高度的问题.html">
-    <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/doc/cookbook/组件自适应高度的问题.html">
-    <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/doc/cookbook/组件自适应高度的问题.html">
-    <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/doc/cookbook/组件自适应高度的问题.html">
-    <link rel="alternate" hreflang="es" href="https://es.vuejs.org/doc/cookbook/组件自适应高度的问题.html">
+    <link rel="alternate" hreflang="x-default" href="https://vuejs.org/doc/cookbook/nvueMargin.html">
+    <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/doc/cookbook/nvueMargin.html">
+    <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/doc/cookbook/nvueMargin.html">
+    <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/doc/cookbook/nvueMargin.html">
+    <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/doc/cookbook/nvueMargin.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/doc/cookbook/nvueMargin.html">
+    <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/doc/cookbook/nvueMargin.html">
+    <link rel="alternate" hreflang="es" href="https://es.vuejs.org/doc/cookbook/nvueMargin.html">
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="mypUI">
     <meta property="og:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
-    <meta property="og:image" content="https://cn.vuejs.org//images/logo.png">
+    <meta property="og:image" content="https://mypui.asnowsoft.cn//images/logo.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="mypUI">
     <meta name="twitter:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
-    <meta name="twitter:image" content="https://cn.vuejs.org/images/logo.png">
+    <meta name="twitter:image" content="https://mypui.asnowsoft.cn/images/logo.png">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
@@ -79,7 +79,7 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-46852172-3', 'cn.vuejs.org');
+      ga('create', '', 'mypui.asnowsoft.cn');
       ga('send', 'pageview');
     </script>
   </head>
@@ -210,10 +210,8 @@
   
 
   
-    <p>有时候我们发现，我们使用v-for渲染一系列组件的时候，在某些端高度全部是一样的，实际上每个具体的组件的高度是不一样的，会根据实际内容而定。</p>
-<p>为什么会出现这种情况？</p>
-<p>很有可能是在当前平台高度计算的问题，所以我们可以试着给那个高度计算有问题的地方明确限制宽度。</p>
-<p>比如text，多行text的时候，如果高度是不确定的，而出现高度并不适应的情况时，我们检查一下text的宽度是不是真的有规定。</p>
+    <p>有时候我们的一些布局，需要用到 <code>margin-top: -10px;</code> margin为负数的情况。</p>
+<p>不过在nvue页面中，margin为负数可能导致内容被上面的内容遮挡住。</p>
 
   
   
@@ -231,7 +229,7 @@ _bsa.init('custom', 'CKYD62QM', 'placement:vuejsorg',
 
 
     发现错误？想参与编辑？
-    <a href="https://github.com/wakaryry/mypui-doc/blob/master/src/doc/cookbook/组件自适应高度的问题.md" rel="noopener" target="_blank">
+    <a href="https://github.com/wakaryry/mypui-doc/blob/master/src/doc/cookbook/nvueMargin.md" rel="noopener" target="_blank">
       在 GitHub 上编辑此页！
     </a>
   </div>
