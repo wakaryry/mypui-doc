@@ -1,7 +1,7 @@
 ---
 title: 认识团队
 type: guide
-order: 800
+order: 3000
 ---
 
 {% raw %}
