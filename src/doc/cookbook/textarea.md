@@ -1,7 +1,7 @@
 ---
 title: textarea总结
 type: cookbook
-order: 4
+order: 14
 ---
 
 - textarea在auto-height开启之后，小程序和h5上面无法设置min-height，没有初始化高度，在app（至少iOS）上面min-height有效；

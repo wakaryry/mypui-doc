@@ -1,7 +1,7 @@
 ---
 title: 空字符串的判定
 type: cookbook
-order: 1
+order: 13
 ---
 
 // 需要注意，如果我们在外部设置 `text=""`，mp中会显示true，我们应该设置`:text="null"`。或者 `:text="blankStr" blankStr = ''`.

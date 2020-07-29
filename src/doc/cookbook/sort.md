@@ -1,7 +1,7 @@
 ---
 title: js中sort排序
 type: cookbook
-order: 2
+order: 12
 ---
 
 js arr 的sort方法，是原地排序。

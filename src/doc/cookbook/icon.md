@@ -1,7 +1,7 @@
 ---
 title: 自定义icon
 type: cookbook
-order: 7
+order: 6
 ---
 
 # 总结

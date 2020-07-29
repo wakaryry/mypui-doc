@@ -1,3 +1,9 @@
+---
+title: nvue or vue
+type: cookbook
+order: 8
+---
+
 写一个vue格式的组件，在里面做好条件编译。
 
 - nvue页面引入这个vue格式的组件，编译到app端则会使用app端对应的条件；

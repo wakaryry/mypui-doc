@@ -1,3 +1,9 @@
+---
+title: global-variable
+type: cookbook
+order: 5
+---
+
 在使用的过程中，我的全局js 变量在app端总是被重置。在ios和Android上面都有过测试。在mp和H5上可以正常使用。
 
 ```

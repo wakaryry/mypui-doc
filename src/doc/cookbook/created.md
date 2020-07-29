@@ -1,3 +1,9 @@
+---
+title: created
+type: cookbook
+order: 3
+---
+
 ```
 <template>
 	<myp-popup pos="left" :show="show" width="636" :height="heightRpx" :offset="114" @overlayClicked="toCancel">

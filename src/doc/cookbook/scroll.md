@@ -1,7 +1,7 @@
 ---
 title: scroll的问题
 type: cookbook
-order: 5
+order: 11
 ---
 
 `scroll-view`在`scroll-x`的时候，`app-nvue`需要在`scroll`上面设置`flex-direction:row;`.
