@@ -4,27 +4,27 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head><meta name="generator" content="Hexo 3.9.0">
-    <title>单元：myp-cell — mypUI</title>
+    <title>xBar占位：myp-x-bar — mypUI</title>
     <meta charset="utf-8">
     <meta name="description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="alternate" hreflang="x-default" href="https://vuejs.org/doc/guide/myp-cell.html">
-    <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/doc/guide/myp-cell.html">
-    <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/doc/guide/myp-cell.html">
-    <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/doc/guide/myp-cell.html">
-    <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/doc/guide/myp-cell.html">
-    <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/doc/guide/myp-cell.html">
-    <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/doc/guide/myp-cell.html">
-    <link rel="alternate" hreflang="es" href="https://es.vuejs.org/doc/guide/myp-cell.html">
+    <link rel="alternate" hreflang="x-default" href="https://vuejs.org/doc/guide/myp-x-bar.html">
+    <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/doc/guide/myp-x-bar.html">
+    <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/doc/guide/myp-x-bar.html">
+    <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/doc/guide/myp-x-bar.html">
+    <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/doc/guide/myp-x-bar.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/doc/guide/myp-x-bar.html">
+    <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/doc/guide/myp-x-bar.html">
+    <link rel="alternate" hreflang="es" href="https://es.vuejs.org/doc/guide/myp-x-bar.html">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="单元：myp-cell — mypUI">
+    <meta property="og:title" content="xBar占位：myp-x-bar — mypUI">
     <meta property="og:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
     <meta property="og:image" content="https://mypui.asnowsoft.cn//images/logo.png">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="单元：myp-cell — mypUI">
+    <meta name="twitter:title" content="xBar占位：myp-x-bar — mypUI">
     <meta name="twitter:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
     <meta name="twitter:image" content="https://mypui.asnowsoft.cn/images/logo.png">
 
@@ -416,7 +416,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-x-bar.html" class="sidebar-link">xBar占位：myp-x-bar</a>
+      <a href="/doc/guide/myp-x-bar.html" class="sidebar-link current">xBar占位：myp-x-bar</a>
     </li>
   
     
@@ -820,7 +820,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-cell.html" class="sidebar-link current">单元：myp-cell</a>
+      <a href="/doc/guide/myp-cell.html" class="sidebar-link">单元：myp-cell</a>
     </li>
   
     
@@ -1183,255 +1183,26 @@
 </div>
 
 
-<div class="content guide with-sidebar myp-cell-guide">
+<div class="content guide with-sidebar myp-x-bar-guide">
   
     
   
   
-    <h1>单元：myp-cell</h1>
+    <h1>xBar占位：myp-x-bar</h1>
   
 
   
-    <h3 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h3><ul>
-<li>icon/title/value/indicator，默认可以实现一行4段；</li>
-<li>默认title对应一级标题，value是二级标题或者是描述内容；</li>
-<li>搭配slot可以实现多行或者一行更多段，但是不太建议用此来实现多行；</li>
-<li>多行公用cell会在另一个组件实现；</li>
-</ul>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="可配置参数"><a href="#可配置参数" class="headerlink" title="可配置参数"></a>可配置参数</h3><table>
-<thead>
-<tr>
-<th>Prop</th>
-<th>Type</th>
-<th>Required</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>icon</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>icon的名字/图片地址，图片会自动识别。</td>
-</tr>
-<tr>
-<td>title</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>title文字描述。</td>
-</tr>
-<tr>
-<td>value</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>二级文字描述。</td>
-</tr>
-<tr>
-<td>indicator</td>
-<td>String</td>
-<td></td>
-<td>right</td>
-<td>indicator <code>icon</code>的名字，或者图片地址。图片会自动识别。可以通过indicator为空字符串等来覆盖。</td>
-</tr>
-<tr>
-<td>bgType</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>背景色主题配置。可以取<code>nav</code>/<code>primary</code>/<code>success</code>/<code>warning</code>/<code>error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-bg</code>。</td>
-</tr>
-<tr>
-<td>titleType</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>title字体颜色设置。可以取<code>nav</code>/<code>text</code>/<code>primary</code>/<code>success</code>/<code>warning</code>/<code>error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-color</code>。</td>
-</tr>
-<tr>
-<td>valueType</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>value字体颜色设置。可以取<code>nav</code>/<code>text</code>/<code>primary</code>/<code>success</code>/<code>warning</code>/<code>error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-color</code>。</td>
-</tr>
-<tr>
-<td>iconType</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>icon颜色设置。可以取<code>nav</code>/<code>text</code>/<code>primary</code>/<code>success</code>/<code>warning</code>/<code>error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-color</code>。</td>
-</tr>
-<tr>
-<td>indicatorType</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>indicator颜色设置。可以取<code>nav</code>/<code>text</code>/<code>primary</code>/<code>success</code>/<code>warning</code>/<code>error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-color</code>。</td>
-</tr>
-<tr>
-<td>titleSize</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>title字体大小设置。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-size</code>。</td>
-</tr>
-<tr>
-<td>valueSize</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>value字体大小设置。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-size</code>。</td>
-</tr>
-<tr>
-<td>iconSize</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>icon大小设置。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-size</code>。</td>
-</tr>
-<tr>
-<td>indicatorSize</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>indicator大小设置。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-size</code>。</td>
-</tr>
-<tr>
-<td>height</td>
-<td>String</td>
-<td>否</td>
-<td><code>l</code></td>
-<td>设置组件的高度。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-height</code>。</td>
-</tr>
-<tr>
-<td>radius</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>设置组件的圆角大小。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-radius</code>。</td>
-</tr>
-<tr>
-<td>border</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>设置组件的边框样式。边框设置。可以取<code>all-light</code>/<code>all-dark</code>/<code>all-primary</code>/<code>all-success</code>/<code>all-warning</code>/<code>all-error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-border-all</code>。</td>
-</tr>
-<tr>
-<td>hover</td>
-<td>String</td>
-<td>否</td>
-<td>bg</td>
-<td>设置组件的hover效果，可以取<code>opacity</code>/<code>bg</code>/<code>bg-opacity</code>。</td>
-</tr>
-<tr>
-<td>space</td>
-<td>String</td>
-<td>否</td>
-<td>12rpx</td>
-<td>设置<code>icon</code>的margin-right间距，<code>title</code>的margin-right间距 ，<code>indicator</code>的margin-left间距。</td>
-</tr>
-<tr>
-<td>iconStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>设置<code>icon</code>样式，可以覆盖之前<code>icon</code>样式。</td>
-</tr>
-<tr>
-<td>indicatorStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>设置<code>indicator</code>样式，可以覆盖之前<code>indicator</code>样式。</td>
-</tr>
-<tr>
-<td>iconMode</td>
-<td>String</td>
-<td>否</td>
-<td>aspectFill</td>
-<td>当<code>icon</code>为图片时的mode，更多参数查看uni的image标签mode属性。</td>
-</tr>
-<tr>
-<td>indicatorMode</td>
-<td>String</td>
-<td>否</td>
-<td>aspectFill</td>
-<td>当<code>indicator</code>为图片时的mode，更多参数查看uni的image标签mode属性。</td>
-</tr>
-<tr>
-<td>boxStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖组件最外层样式。</td>
-</tr>
-<tr>
-<td>titleStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖<code>title</code>样式</td>
-</tr>
-<tr>
-<td>valueStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖<code>value</code>样式</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>type/size/iconSize/height/radius/border等可以实现快速设置，根据scss配置，可以快速实现自己的效果；</li>
-<li>其它的style设置可以覆盖掉这些快捷设置的效果；</li>
-<li>既满足一键配置，也满足灵活定义。也就是满足共性，包容特性；</li>
-</ul>
-<h3 id="slot"><a href="#slot" class="headerlink" title="slot"></a>slot</h3><ul>
-<li>默认slot，覆盖title/value；</li>
-<li>extra，在value与indicator之间提供更多配置；</li>
-</ul>
-<h3 id="事件回掉"><a href="#事件回掉" class="headerlink" title="事件回掉"></a>事件回掉</h3><table>
-<thead>
-<tr>
-<th>Event</th>
-<th>Params</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cellClicked</td>
-<td></td>
-<td>点击触发</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例与结果"><a href="#示例与结果" class="headerlink" title="示例与结果"></a>示例与结果</h3><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>我对一套UI的理解就是，公用性比较强的组件集合。</p>
-<p>我们把这些常用的，配置量偏小的，或者说只要很少的配置就能满足要求的组件合起来组成一套UI。而不是试图去使用这些UI组件去适配所有的样式，希望借此满足所有的组件。</p>
-<p>一个UI组件里面考虑太多的因素，或者试图利用它去实现一堆的内容，显然是不合适的。</p>
-<p>我们将UI分成了两部分，一部分是公共组件，另一部分是业务中常见的一些组件。</p>
-<p>很多业务常用组件，是很难通过一个UI组件来配置完成的，或者说就相当于重新写了一个组件。</p>
-<p>与其这样，我们还不如保持UI组件的轻量化。</p>
-<p>在这套组件内，我们不仅会提供公用的UI组件，也会提供大多数业务所涉及到的样式组件。</p>
-<p>公用UI组件基本上可以通过配置一下就能满足要求，如果改动量很大，或者层级嵌套很深，建议重新写一个组件，毕竟去适配一个组件消耗的精力可能比自己写一个还要大。</p>
-<p>而且作为公用（大家都可以用的组件）来说，需要考虑很多因素，而自己写的往往只需要完成样式即可。适配所有人和适配自己是完全不一样的。</p>
-<p>原则就是：宁愿多写几个，也不可一个去勉强适应多个。</p>
-
+    
   
   
     <div class="guide-links">
       
       
-        <span>← <a href="/doc/guide/myp-stepper.html">步进器：myp-stepper</a></span>
+        <span>← <a href="/doc/guide/myp-x-status.html">status占位：myp-x-status</a></span>
       
       
       
-        <span style="float: right;"><a href="/doc/guide/myp-icon.html">图标：myp-icon</a> →</span>
+        <span style="float: right;"><a href="/doc/guide/myp-position.html">定位盒子：myp-position</a> →</span>
       
     </div>
   
@@ -1449,7 +1220,7 @@ _bsa.init('custom', 'CKYD62QM', 'placement:vuejsorg',
 
 
     发现错误？想参与编辑？
-    <a href="https://github.com/wakaryry/mypui-doc/blob/master/src/doc/guide/myp-cell.md" rel="noopener" target="_blank">
+    <a href="https://github.com/wakaryry/mypui-doc/blob/master/src/doc/guide/myp-x-bar.md" rel="noopener" target="_blank">
       在 GitHub 上编辑此页！
     </a>
   </div>

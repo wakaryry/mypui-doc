@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head><meta name="generator" content="Hexo 3.9.0">
-    <title>css注意与问题 — mypUI</title>
+    <title>css — mypUI</title>
     <meta charset="utf-8">
     <meta name="description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,12 +19,12 @@
     <link rel="alternate" hreflang="es" href="https://es.vuejs.org/doc/cookbook/css.html">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="css注意与问题 — mypUI">
+    <meta property="og:title" content="css — mypUI">
     <meta property="og:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
     <meta property="og:image" content="https://mypui.asnowsoft.cn//images/logo.png">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="css注意与问题 — mypUI">
+    <meta name="twitter:title" content="css — mypUI">
     <meta name="twitter:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
     <meta name="twitter:image" content="https://mypui.asnowsoft.cn/images/logo.png">
 
@@ -172,25 +172,61 @@
     
     
     <li>
-      <a href="/doc/cookbook/string.html" class="sidebar-link">空字符串的判定</a>
+      <a href="/doc/cookbook/autoHeight.html" class="sidebar-link">autoHeight</a>
     </li>
   
     
     
     <li>
-      <a href="/doc/cookbook/sort.html" class="sidebar-link">js中sort排序</a>
+      <a href="/doc/cookbook/bubble.html" class="sidebar-link">bubble</a>
     </li>
   
     
     
     <li>
-      <a href="/doc/cookbook/v3.html" class="sidebar-link">v3中getApp</a>
+      <a href="/doc/cookbook/created.html" class="sidebar-link">created</a>
     </li>
   
     
     
     <li>
-      <a href="/doc/cookbook/textarea.html" class="sidebar-link">textarea总结</a>
+      <a href="/doc/cookbook/css.html" class="sidebar-link current">css</a>
+    </li>
+  
+    
+    
+    <li>
+      <a href="/doc/cookbook/globalVar.html" class="sidebar-link">global-variable</a>
+    </li>
+  
+    
+    
+    <li>
+      <a href="/doc/cookbook/icon.html" class="sidebar-link">自定义icon</a>
+    </li>
+  
+    
+    
+    <li>
+      <a href="/doc/cookbook/nvueMargin.html" class="sidebar-link">margin</a>
+    </li>
+  
+    
+    
+    <li>
+      <a href="/doc/cookbook/nvueOrVue.html" class="sidebar-link">nvue or vue</a>
+    </li>
+  
+    
+    
+    <li>
+      <a href="/doc/cookbook/provideInject.html" class="sidebar-link">provide inject</a>
+    </li>
+  
+    
+    
+    <li>
+      <a href="/doc/cookbook/radius.html" class="sidebar-link">radius</a>
     </li>
   
     
@@ -202,13 +238,31 @@
     
     
     <li>
-      <a href="/doc/cookbook/css.html" class="sidebar-link current">css注意与问题</a>
+      <a href="/doc/cookbook/sort.html" class="sidebar-link">js中sort排序</a>
     </li>
   
     
     
     <li>
-      <a href="/doc/cookbook/icon.html" class="sidebar-link">自定义icon</a>
+      <a href="/doc/cookbook/string.html" class="sidebar-link">空字符串的判定</a>
+    </li>
+  
+    
+    
+    <li>
+      <a href="/doc/cookbook/textarea.html" class="sidebar-link">textarea总结</a>
+    </li>
+  
+    
+    
+    <li>
+      <a href="/doc/cookbook/v3.html" class="sidebar-link">v3中getApp</a>
+    </li>
+  
+    
+    
+    <li>
+      <a href="/doc/cookbook/windowScreen.html" class="sidebar-link">windown</a>
     </li>
   
 </ul>
@@ -224,7 +278,7 @@
     
   
   
-    <h1>css注意与问题</h1>
+    <h1>css</h1>
   
 
   
@@ -253,6 +307,11 @@
 	<span class="hljs-attribute">-webkit-line-clamp</span>: <span class="hljs-number">2</span>;
 	<span class="hljs-attribute">overflow</span>: hidden;
 &#125;</code></pre>
+<p>nvue下如果存在全局css的话（app.vue里)，在app端只会在page的js文件里面出现一次，但是若是不使用全局文件，而是每次都在组件里面引入的话，页面的js里面会出现多次这些css。<br>app端使用全局css，可以大量减少页面js的css量，减少包体积，加快js内查询速度。</p>
+<p>对于非app端来说，一定程度上也可以减少代码量。<br>非app下，全局和非全局css都是只会出现一次，不过，非全局的情况下，每一个组件里面都会出现这个css。使用全局css文件，可以减少组件下的css量，从而减少包体积。并且页面下也不会再出现这个全局css文件的内容。虽然app端nvue页面是会出现的（因为所有依赖需要的东西都会进入一个js里面）。</p>
+<p>另外对于scss/less来说，引入全局scss变量是不起作用的。组件或者页面里面对于变量的使用会报错：不存在该变量。</p>
+<p>所以对于变量，依然需要单独引入。变量的引入不会增加css量，所以没有关系。</p>
+<p>最佳的办法就是 变量和css分开文件，不要放在一个文件里面。我们在需要用变量的地方引入变量。而其它css都是直接公用。</p>
 
   
   
