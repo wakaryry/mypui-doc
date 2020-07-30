@@ -1198,9 +1198,9 @@
 <p>静态文件的路径依然保持和示范项目中一致即可也就是依然是 <code>/static/ui</code> 路径。</p>
 <h3 id="使css生效"><a href="#使css生效" class="headerlink" title="使css生效"></a>使css生效</h3><p>为了减少包体积，UI内使用了 <code>全局css</code> 。您需要在 <code>app.vue</code> 里面引入 <code>mypUI</code> 中的 <code>base.scss</code>。</p>
 <p>也就是：</p>
-<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>&gt;</span><span class="css">
-	<span class="hljs-keyword">@import</span> <span class="hljs-string">'@/mypUI/base.scss'</span>;
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>&gt;</span>
+	@import '@/mypUI/base.scss';
+<span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
 <p>因为使用了 <code>scss变量</code>，记得设置 <code>style</code> 的 <code>lang=&quot;scss&quot;</code>。</p>
 <h3 id="配置-easycom"><a href="#配置-easycom" class="headerlink" title="配置 easycom"></a>配置 <code>easycom</code></h3><p>UI内部使用了 <code>easycom</code> 的组件自动引入，所以您必须在项目中开启 <code>easycom</code>。</p>
 <p>在 <code>pages.json</code> 中添加如下代码：</p>
@@ -1217,9 +1217,9 @@
 <p>如果主题内定义的变量无法满足您的要求，您可以在里面进行添加，并适当在 <code>base.scss</code> 里面增加相应的 <code>class</code> 即可。</p>
 <p>关于主题的具体说明与使用，请查阅 <a href="/doc/guide/theme.html">主题</a>。</p>
 <p>如果您需要用到主题内定义的<code>scss变量</code>，一定要记得在使用的地方引入<code>mypui.scss</code>，否则编译会报错。</p>
-<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>&gt;</span><span class="css">
-	<span class="hljs-keyword">@import</span> <span class="hljs-string">'@/mypUI/mypui.scss'</span>;
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>&gt;</span>
+	@import '@/mypUI/mypui.scss';
+<span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
 <p class="tip">注意：在 app.vue 里面全局引入 mypui.scss 是不会起作用的。毕竟里面只是定义了一些 scss变量</p>
 
 <h3 id="初始化系统变量"><a href="#初始化系统变量" class="headerlink" title="初始化系统变量"></a>初始化系统变量</h3><p>我们建议您在 <code>onLaunch</code> 里面对系统变量进行初始化（当然，这是可选的，<code>mypUI</code> 内部接口会根据需要调用初始化的接口）。</p>
@@ -1258,9 +1258,9 @@
 	&#125;
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>&gt;</span><span class="css">
-	<span class="hljs-keyword">@import</span> <span class="hljs-string">'@/mypUI/base.scss'</span>;
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>&gt;</span>
+	@import '@/mypUI/base.scss';
+<span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
 <h3 id="现在开始愉快的使用吧"><a href="#现在开始愉快的使用吧" class="headerlink" title="现在开始愉快的使用吧"></a>现在开始愉快的使用吧</h3><p>自由且无需手动导入 <code>mypUI</code> 的使用方式，正式开始。</p>
 <p>祝您使用愉快。</p>
 <p class="tip">如果在使用的过程中，您发现有任何不如意或者bug存在，敬请联系我们，或者给出您的宝贵意见。当然，您也可以给出您的实现方式。或者给我们提一个 <a href="https://github.com/wakaryry/mypUI" target="_blank" rel="noopener">pr</a></p>

@@ -1735,12 +1735,12 @@ ul.demo li {
   visibility: hidden;
 }
 .content h2 {
-  margin: 45px 0 0.8em;
+  margin: 12px 0 0.8em;
   padding-bottom: 0.7em;
   border-bottom: 1px solid #ddd;
 }
 .content h3 {
-  margin: 52px 0 1.2em;
+  margin: 12px 0 1.2em;
   line-height: 1.2;
   position: relative;
 }
