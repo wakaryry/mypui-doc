@@ -1,5 +1,5 @@
 ---
-title: windown
+title: window
 type: cookbook
 order: 16
 ---

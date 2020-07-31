@@ -68,7 +68,7 @@ order: 3
 				<text>...</text>
 			</myp-list-cell>
 		</myp-list-simple>
-		<myp-loadinng ref="myp-loading"></myp-loadinng>
+		<myp-loading ref="myp-loading"></myp-loading>
 		<myp-toast ref="myp-toast"></myp-toast>
 	</view>
 </template>
