@@ -1093,6 +1093,24 @@
 	  
       
       
+      
+    
+    <li>
+      <a href="/doc/guide/contentBoxMixin.html" class="sidebar-link">contentBoxMixin</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
         <li><h3>规模化</h3></li>
       
       
@@ -1246,27 +1264,27 @@
 				<span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
 			<span class="hljs-tag">&lt;/<span class="hljs-name">myp-list-cell</span>&gt;</span>
 		<span class="hljs-tag">&lt;/<span class="hljs-name">myp-list-simple</span>&gt;</span>
-		<span class="hljs-tag">&lt;<span class="hljs-name">myp-loadinng</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"myp-loading"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-loadinng</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">myp-loading</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"myp-loading"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-loading</span>&gt;</span>
 		<span class="hljs-tag">&lt;<span class="hljs-name">myp-toast</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"myp-toast"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-toast</span>&gt;</span>
 	<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
-	import navHelper from '@/router/navHelper.js'
-	import toastMixin from '@/mypUI/myp-mixin/toastMixin.js'
-	import loadingMixin from '@/mypUI/myp-mixin/loadingMixin.js'
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+	<span class="hljs-keyword">import</span> navHelper <span class="hljs-keyword">from</span> <span class="hljs-string">'@/router/navHelper.js'</span>
+	<span class="hljs-keyword">import</span> toastMixin <span class="hljs-keyword">from</span> <span class="hljs-string">'@/mypUI/myp-mixin/toastMixin.js'</span>
+	<span class="hljs-keyword">import</span> loadingMixin <span class="hljs-keyword">from</span> <span class="hljs-string">'@/mypUI/myp-mixin/loadingMixin.js'</span>
 	
-	export default &#123;
-		mixins: [navHelper, toastMixin, loadingMixin],
+	<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;
+		<span class="hljs-attr">mixins</span>: [navHelper, toastMixin, loadingMixin],
 		data() &#123;
-			return &#123;
+			<span class="hljs-keyword">return</span> &#123;
 				
 			&#125;
 		&#125;,
-		methods: &#123;
+		<span class="hljs-attr">methods</span>: &#123;
 		&#125;
 	&#125;
-<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>&gt;</span>
 	

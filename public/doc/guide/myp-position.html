@@ -1093,6 +1093,24 @@
 	  
       
       
+      
+    
+    <li>
+      <a href="/doc/guide/contentBoxMixin.html" class="sidebar-link">contentBoxMixin</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
         <li><h3>规模化</h3></li>
       
       
@@ -1192,7 +1210,15 @@
   
 
   
-    
+    <p>myp-position 是特殊定位的包裹层。也就是 <code>absolute</code> <code>fixed</code> 定位的封装盒子。</p>
+<p>用来做 顶部或者底部 的定位。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">myp-position</span> <span class="hljs-attr">pos</span>=<span class="hljs-string">"bottom"</span> <span class="hljs-attr">offset</span>=<span class="hljs-string">"x-60px"</span> <span class="hljs-attr">boxStyle</span>=<span class="hljs-string">"left:75rpx;width:600rpx;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-position</span>&gt;</span></code></pre>
+<h2 id="pos"><a href="#pos" class="headerlink" title="pos"></a>pos</h2><p>定位的基线，基于 顶部，还是基于 底部。</p>
+<p>只可以取值：<code>top</code> 或者 <code>bottom</code>。</p>
+<h2 id="offset"><a href="#offset" class="headerlink" title="offset"></a>offset</h2><p>offset 单位随意，默认 rpx，支持 语意字符串。是与定位基线的距离。也就是：<code>top:offsetPx;</code> 之类的。</p>
+<h2 id="fixed"><a href="#fixed" class="headerlink" title="fixed"></a>fixed</h2><p>默认false，也就是 absolute 定位。true 时为 fixed 定位。</p>
+<h2 id="boxStyle"><a href="#boxStyle" class="headerlink" title="boxStyle"></a>boxStyle</h2><p>个性化 style 设置。</p>
+
   
   
     <div class="guide-links">

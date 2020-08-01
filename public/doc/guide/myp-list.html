@@ -1093,6 +1093,24 @@
 	  
       
       
+      
+    
+    <li>
+      <a href="/doc/guide/contentBoxMixin.html" class="sidebar-link">contentBoxMixin</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
         <li><h3>规模化</h3></li>
       
       
@@ -1195,10 +1213,6 @@
     <p class="tip">在nvue页面开发中，list组件可以说是最常用的，也是最重要的组件之一。nvue页面中，页面不会自己有滚动效果，内容必须包裹在scroll/list中才会实现 页面/内容 的滚动。uniapp的处理是默认给所有的页面最外层包裹一个scroll，从而使页面具备滚动的能力。</p>
 
 <p class="tip">但是考虑到，我们一般会自己自定义各种刷新，以及页面内部会再次使用到scroll/list，我们给所有页面禁用了uniapp自动添加的外层scroll。</p>
-
-<p class="tip">禁用uniapp自动包裹的scroll之后，我们发现页面的高度需要我们自己管理，根view（root view）的高度需要自己设置。在root view上面设置flex:1是会铺满高度，但是很多时候，我们依然需要为里面的子组件设置明确的高度，而且很多时候不太方便一直flex:1下去。所以我们大多数时候都是使用具备明确高度的list或者其它盒子来撑开页面。</p>
-
-<p class="tip">使用 mypUI 其实最应该熟练的就是页面内容的管理，如何管理高度，如何管理层级。熟悉之后，你会发现做起事来干脆直接、得心应手。</p>
 
 <p><code>myp-list</code> 在是 weex的 list 组件与 其它端的 scroll-view 封装而成。</p>
 <blockquote>

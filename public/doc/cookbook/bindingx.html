@@ -4,27 +4,27 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head><meta name="generator" content="Hexo 3.9.0">
-    <title>v3中getApp — mypUI</title>
+    <title>bindingx — mypUI</title>
     <meta charset="utf-8">
     <meta name="description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="alternate" hreflang="x-default" href="https://vuejs.org/doc/cookbook/v3.html">
-    <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/doc/cookbook/v3.html">
-    <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/doc/cookbook/v3.html">
-    <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/doc/cookbook/v3.html">
-    <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/doc/cookbook/v3.html">
-    <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/doc/cookbook/v3.html">
-    <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/doc/cookbook/v3.html">
-    <link rel="alternate" hreflang="es" href="https://es.vuejs.org/doc/cookbook/v3.html">
+    <link rel="alternate" hreflang="x-default" href="https://vuejs.org/doc/cookbook/bindingx.html">
+    <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/doc/cookbook/bindingx.html">
+    <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/doc/cookbook/bindingx.html">
+    <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/doc/cookbook/bindingx.html">
+    <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/doc/cookbook/bindingx.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/doc/cookbook/bindingx.html">
+    <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/doc/cookbook/bindingx.html">
+    <link rel="alternate" hreflang="es" href="https://es.vuejs.org/doc/cookbook/bindingx.html">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="v3中getApp — mypUI">
+    <meta property="og:title" content="bindingx — mypUI">
     <meta property="og:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
     <meta property="og:image" content="https://mypui.asnowsoft.cn//images/logo.png">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="v3中getApp — mypUI">
+    <meta name="twitter:title" content="bindingx — mypUI">
     <meta name="twitter:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
     <meta name="twitter:image" content="https://mypui.asnowsoft.cn/images/logo.png">
 
@@ -256,7 +256,7 @@
     
     
     <li>
-      <a href="/doc/cookbook/v3.html" class="sidebar-link current">v3中getApp</a>
+      <a href="/doc/cookbook/v3.html" class="sidebar-link">v3中getApp</a>
     </li>
   
     
@@ -274,7 +274,7 @@
     
     
     <li>
-      <a href="/doc/cookbook/bindingx.html" class="sidebar-link">bindingx</a>
+      <a href="/doc/cookbook/bindingx.html" class="sidebar-link current">bindingx</a>
     </li>
   
 </ul>
@@ -290,41 +290,24 @@
     
   
   
-    <h1>v3中getApp</h1>
+    <h1>bindingx</h1>
   
 
   
-    <blockquote>
-<p><code>v3</code>模式加速了首页 <code>nvue</code> 的启动速度，当在首页 <code>nvue</code> 中访问 <code>getApp</code> 不一定可以获取真正的 <code>App</code> 对象.</p>
-</blockquote>
-<blockquote>
-<p><code>nvue</code> 首页使用 <code>const app = getApp({allowDefault: true})</code> , 这样能获取一个 <code>app</code> 对象，可以使用这个 <code>app</code> 对象操作 <code>globalData</code>，但是注意这时候不能获取 <code>App.vue</code> 内 <code>globalData</code> 设置的初始值.</p>
-</blockquote>
-<h1 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h1><ul>
-<li>使用 <code>allowDefault</code> 时，是否可以对 <code>app</code>中的 <code>globalData</code> 进行赋值操作，下一次继续使用 <code>allowDefault</code>获取的<code>app</code>，能不能提取到赋值之后的<code>globalData</code>；</li>
-<li><code>allowDefault</code>获取到的<code>app</code>，它的<code>globalData</code>赋值之后是不是会同步到<code>getApp</code>的<code>app</code>对象；</li>
-</ul>
-<h2 id="进一步解释"><a href="#进一步解释" class="headerlink" title="进一步解释"></a>进一步解释</h2><p>比如我页面，<code>getApp()</code> 还是 <code>undefined</code> 的时候，我使用 <code>getApp({allowDefault: true})</code> 来 将数据存入它的 <code>globalData</code>。然后我在 后面 用 <code>getApp()</code> 来直接获取到了 <code>app</code> 对象，这个时候 我能从 这个 <code>app</code> 对象 获取到 前面使用 <code>allowDefault</code> 赋值的 <code>globalData</code> 吗？</p>
-<p>再直接一点就是： getApp 使用的就是 单例，不管如何调用，<code>getApp({allowDefault: true})</code> 和  <code>getApp()</code> 实际上就是 同一个 对象。</p>
-<p>只不过 <code>getApp()</code> 需要依赖 <code>app.vue</code> 里面的 状态 来做初始化，而 <code>getApp({allowDefault: true})</code> 直接就是 自己初始化，不依赖 <code>app.vue</code>. 它们 实际上 就是 同一个 对象。当  <code>getApp({allowDefault: true})</code> 已经被调用，生成对象<code>a</code>的时候，再调用 <code>getApp()</code>, 获得的就是 <code>对象a</code>.</p>
-<h1 id="回复"><a href="#回复" class="headerlink" title="回复"></a>回复</h1><p>可以这么理解吧，下面这样的代码应该就是你要实现的效果吧</p>
-<pre><code class="hljs js">onLoad() &#123;
-    <span class="hljs-keyword">const</span> app = getApp(&#123;
-        <span class="hljs-attr">allowDefault</span>: <span class="hljs-literal">true</span>
-    &#125;)
-    app.test = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
-        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'app.test'</span>, <span class="hljs-string">'test'</span>)
-    &#125;
-    app.globalData.a = <span class="hljs-string">'a'</span>
-&#125;,
-<span class="hljs-attr">methods</span>: &#123;
-    onClick() &#123;
-        <span class="hljs-keyword">const</span> app = getApp()
-        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'app.globalData.a'</span>, app.globalData.a)
-        app.test()
-    &#125;
-&#125;</code></pre>
-<p><a href="https://github.com/dcloudio/uni-app/issues/1091" target="_blank" rel="noopener">v3 getApp</a></p>
+    <pre><code class="js">bindingX.bind({
+                    eventType: <span class="string">'pan'</span>,
+                    anchor: <span class="keyword">this</span>.$refs[<span class="string">'aaa'</span>].ref,
+                    props: [{
+                        element: <span class="keyword">this</span>.$refs[<span class="string">'bbb'</span>].ref,
+                        property: <span class="string">'transform.translateY'</span>,
+                        expression: <span class="string">'y+0'</span>
+                    }]
+                })
+</code></pre>
+<p>表达式不能直接是 y 这种，会报错。</p>
+<p>TypeError: undefined is not an object (evaluating ‘t.childNodes’) __ERROR</p>
+<p>debug会发现是表达式不正确。表达式必须带操作符。</p>
+<p>touchstart进行绑定，比如pan手势，Android端可以直接随着手势联动，而iOS端不能，需要下一次才能继续。</p>
 
   
   
@@ -342,7 +325,7 @@ _bsa.init('custom', 'CKYD62QM', 'placement:vuejsorg',
 
 
     发现错误？想参与编辑？
-    <a href="https://github.com/wakaryry/mypui-doc/blob/master/src/doc/cookbook/v3.md" rel="noopener" target="_blank">
+    <a href="https://github.com/wakaryry/mypui-doc/blob/master/src/doc/cookbook/bindingx.md" rel="noopener" target="_blank">
       在 GitHub 上编辑此页！
     </a>
   </div>
