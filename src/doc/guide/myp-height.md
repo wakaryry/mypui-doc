@@ -40,4 +40,8 @@ myp-height 是有一个有趣的组件。它给予了您快速决策特殊高度
 
 个性化的style设置。
 
-其它相关文档：[myp-x-status](/doc/guide/myp-x-status.html) [myp-x-bar](/doc/guide/myp-x-bar.html) [myp-navbar](/doc/guide/myp-navbar.html)
+其它相关文档：
+
+- [myp-x-status](/doc/guide/myp-x-status.html) 
+- [myp-x-bar](/doc/guide/myp-x-bar.html) 
+- [myp-navbar](/doc/guide/myp-navbar.html)
