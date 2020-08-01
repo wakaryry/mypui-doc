@@ -53,74 +53,7 @@ myp-list 类组件可以自动撑开整个页面，但是很多时候，我们�
 
 所以，我们提供了一个 高度盒子，它具备 myp-list 类组件所有的高度控制能力，但是只是一个空view，具备一个默认插槽。
 
-它不具备 myp-list 的刷新/加载 等能力，不过其它高度控制类属性确是一模一样的。
-
-具体属性有：
-
-```js
-	props: {
-		includeStatus: {
-			type: Boolean,
-			default: false
-		},
-		includeNav: {
-			type: Boolean,
-			default: false
-		},
-		tabHeight: {
-			type: Number,
-			default: 0 // px
-		},
-		// 补充高度
-		extra: {
-			type: [Number, String],
-			default: 0
-		},
-		// 设置了height，会直接使用height，忽略其它的计算
-		height: {
-			type: [Number, String],
-			default: '0'
-		},
-		useFlex: {
-			type: Boolean,
-			default: false
-		},
-		width: {
-			type: String,
-			default: '750rpx'
-		},
-		// foot悬浮在scroll之上，滚动到底部时，foot可能遮挡住scroll的内容，我们给scroll加一个底部空白高度
-		footToken: {
-			type: String,
-			default: '0px'  // 占位的高度
-		},
-		boxStyle: {
-			type: String,
-			default: ''
-		},
-		scrollStyle: {
-			type: String,
-			default: ''
-		},
-		bgType: {
-			type: String,
-			default: 'page'
-		},
-		hasFoot: {
-			type: Boolean,
-			default: false
-		},
-		// 我们通过footBottom来设置bottom的距离
-		footBottom: {
-			type: String,
-			default: '0px'
-		},
-		footStyle: {
-			type: String,
-			default: ''
-		}
-	}
-```
+它不具备 myp-list 的刷新/加载 等能力，不过其它高度控制类属性确是一模一样的：`includeStatus` `includeNav` `includeXBar` `tabHeight` `extra` `height` 等。
 
 使用方法和规则与 myp-list 类组件一致。具体请看[myp-list](/doc/guide/myp-list.html)。
 
