@@ -50,21 +50,67 @@ myp-navbar 主要的字段就是 `title` `lefts` `rights` `@leftAction` `@rightA
 
 在 title与icon 的外层，包裹了一个 view，它对外暴露了 style的设置，也就是 centerStyle。我们一般用于修改中间标题区的宽度。
 
+中间内容区的宽度默认是 350rpx，您可以根据需要修改宽度。而且默认是 超过350rpx宽度的 text 会被截断，是 ellipsis 截断。
+
 ## 左右按钮
 
 左右按钮的设置非常灵活，支持 一次性设置样式，也支持 单独的配置样式。左右按钮支持 图标与文字 的组合。
 
 `lefts` `rights`
 
-`itemTextType` `itemTextSize` `itemTextStyle` `itemIconType` `itemIconSize` `itemIconStyle` 
+- 1. `itemTextType` `itemTextSize` `itemTextStyle` `itemIconType` `itemIconSize` `itemIconStyle` 
 
-`leftItemStyle` `leftBgType` `leftStyle`
+- 2. `leftItemStyle` `rightItemStyle`
 
-`rightItemStyle` `rightBgType` `rightStyle`
+- 3. `leftBgType` `leftStyle` `rightBgType` `rightStyle`
 
-lefts rights 是一个数组，
+lefts rights 是 数组类型，他们包含了 各侧按钮的数量 以及 按钮的个性化配置。
 
-### 单独配置
+`[{icon: 'left', text: '返回'}]`
 
-## 样例
+> 我们把 左右侧 的每一个按钮叫做 item。
 
+可以大概知道，上面我们列出的一堆属性就是针对 item 的统一化的配置。从名字我们就能够知道，他们分别对应谁，以及对应什么方面。
+
+- `1.` 项，主要是为 所有 item 的 文字和icon图标 的统一配置信息；
+
+- `2.` 项，是对 item 的外层整体进行配置；
+
+- `3.` 项，是对 所有 items 的整体进行配置，也就是 对 left/right 这片区域进行配置。
+
+每一个 item 都可以重置 统一的 item 配置。
+
+每个 item 全面的配置信息如下：
+
+```js
+{
+	icon: 'left',  // icon 图标或者图片
+	text: '返回',  // 文字
+	iconType: 'inverse',  // icon 主题色
+	iconSize: 'l',  // icon尺寸
+	iconStyle: '',  // icon style
+	textType: 'inverse',  // text 主题色
+	textSize: 'l',  // text 尺寸
+	textStyle: '', // text style
+	style: '',  // 整个 item 的 style
+	bgType: 'primary'  // 整个 item 的背景主题色
+}
+```
+
+## 事件
+
+我们为 左-中-右 提供了统一名字的 点击响应。
+
+### @leftAction
+
+携带参数，左侧按钮的 index 值。
+
+### @rightAction
+
+携带参数，右侧按钮的 index 值。
+
+### centerAction
+
+## 插槽
+
+提供了 left/right/title 三个插槽。注意 中间的不叫 center，而是叫做 title。
