@@ -1210,7 +1210,36 @@
   
 
   
-    
+    <p>myp-loading 同样很帅气。主要用来做 loading 等待状态的提示。用于等待数据 或者 限制用户操作 等。</p>
+<ul>
+<li>支持 loading 显示在不同的位置；</li>
+<li>支持 loading 设置图标/文字/背景色，以及大小等样式；</li>
+<li>支持遮罩层；</li>
+<li>支持统一配置，支持个性化配置；</li>
+<li>提供便捷的mixin，支持拿来即用，什么都不需要配置；</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">myp-loading</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"myp-loading"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-loading</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">import</span> loadingMixin <span class="hljs-keyword">from</span> <span class="hljs-string">'@/mypUI/myp-mixin/loadingMixin.js'</span>
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;
+    <span class="hljs-attr">mixins</span>: [loadingMixin],
+    <span class="hljs-attr">methods</span>: &#123;
+      toShowLoading() &#123;
+        <span class="hljs-keyword">this</span>.mypShowLoading(&#123;<span class="hljs-attr">needMask</span>: <span class="hljs-literal">true</span>&#125;)
+      &#125;,
+      toHideLoading() &#123;
+        <span class="hljs-keyword">this</span>.mypHideLoading()
+      &#125;
+    &#125;
+  &#125;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+<p>loading 与 toast 不同，loading 打开之后，必须自己在合适的时候 关闭，否则她会一直存在。</p>
+
   
   
     <div class="guide-links">

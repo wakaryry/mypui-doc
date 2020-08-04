@@ -1210,7 +1210,35 @@
   
 
   
-    
+    <p>myp-toast 是非常优秀的一个 toast 组件。</p>
+<ul>
+<li>支持 toast 内容显示在不同的位置；</li>
+<li>支持 toast 设置图标/文字/内容/背景色，以及大小等样式；</li>
+<li>支持统一配置，支持个性化配置；</li>
+<li>提供便捷的mixin，支持拿来即用，什么都不需要配置；</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">myp-toast</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"myp-toast"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-toast</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">import</span> toastMixin <span class="hljs-keyword">from</span> <span class="hljs-string">'@/mypUI/myp-mixin/toastMixin.js'</span>
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;
+    <span class="hljs-attr">mixins</span>: [toastMixin],
+    <span class="hljs-attr">methods</span>: &#123;
+      toShowToast() &#123;
+        <span class="hljs-keyword">this</span>.mypShowToast(&#123;
+          <span class="hljs-attr">text</span>: <span class="hljs-string">'发布成功'</span>,
+          <span class="hljs-attr">type</span>: <span class="hljs-string">'success'</span>,
+          <span class="hljs-attr">mode</span>: <span class="hljs-string">'big'</span>
+        &#125;)
+      &#125;
+    &#125;
+  &#125;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+
   
   
     <div class="guide-links">
