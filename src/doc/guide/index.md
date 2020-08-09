@@ -102,50 +102,6 @@ css相关：
 
 具体自定义字体图标请看文档：[myp-icon](/doc/guide/myp-icon.html)。
 
-### 初始化系统变量
-
-我们建议您在 `onLaunch` 里面对系统变量进行初始化（当然，这是可选的，`mypUI` 内部接口会根据需要调用初始化的接口）。
-
-初始化代码如下：
-
-- 先引入并放入mixins；
-
-- 然后调用初始化方法；
-
-```html
-<script>
-	import systemMixin from '@/mypUI/myp-mixin/systemMixin.js'
-	
-	export default {
-		globalData: {
-			currentTab: 0
-		},
-		mixins: [systemMixin],
-		onLaunch: function() {
-			console.log('App Launch')
-			// #ifdef APP-NVUE || H5
-			this.mypInitSystemInfo()
-			// #endif
-			// #ifndef APP-NVUE || H5
-			setTimeout(()=>{
-				this.mypInitSystemInfo()
-			}, 0)
-			// #endif
-		},
-		onShow: function() {
-			console.log('App Show')
-		},
-		onHide: function() {
-			console.log('App Hide')
-		}
-	}
-</script>
-
-<style lang="scss">
-	@import '@/mypUI/base.scss';
-</style>
-```
-
 ### 是否锁定屏幕
 
 我们建议您锁定屏幕。
@@ -160,46 +116,15 @@ onLaunch: function() {
 }
 ```
 
-### 现在开始愉快的使用吧
+### 初始化系统变量
 
-自由且无需手动导入 `mypUI` 的使用方式，正式开始。
+我们建议您在 `onLaunch` 里面对系统变量进行初始化（当然，这是可选的，`mypUI` 内部接口会根据需要调用初始化的接口）。
 
-祝您使用愉快。
+初始化代码如下：
 
-<p class="tip">如果在使用的过程中，您发现有任何不如意或者bug存在，敬请联系我们，或者给出您的宝贵意见。当然，您也可以给出您的实现方式。或者给我们提一个 <a href="https://github.com/wakaryry/mypUI">pr</a></p>
+- 先引入并放入mixins；
 
-## 找到代码与我们
-
-- [mypUI-github](https://github.com/wakaryry/mypUI) 欢迎star
-
-- [mypUI-uniapp插件市场](https://ext.dcloud.net.cn/plugin?id=2190) 需要您的好评
-
-- [mypUI-文档开源](https://github.com/wakaryry/mypui-doc)
-
-- [mypUI-文档地址](https://www.mypui.cn)
-
-- 作者wx：`pptpdf`
-
-- 作者qq：`382006503`
-
-- 欢迎加入wx群和qq群。wx群请加wx，qq群请加qq群号：`306797275`
-
-<p class="tip">强烈建议加入wx与qq群，获取更多mypUI的动态与帮助</p>
-
-## 快速体验
-
-- 安装HBuilderX；
-- 下载或者clone本UI库；
-- 在HBuilderX里面打开或者导入；
-- 运行到自己想要体验的平台即可；
-
-<p class="tip">想了解我们是怎么使用 mypUI 的吗？又如何对 mypUI 有一个更加全面的了解？或者说站在一个代码设计者的角度去了解 mypUI? 纵观全局，对你更加高效的使用mypUI非常有用。建议您一定要看看</p>
-
-<a class="button" href="global.html">全局视角了解mypUI</a>
-
-您可以配合 mypUI 的示范代码 来做更加深入的理解。
-
-## 全部app.vue
+- 然后调用初始化方法；
 
 ```html
 <script>
@@ -243,3 +168,42 @@ onLaunch: function() {
 	@import '@/mypUI/base.scss';
 </style>
 ```
+
+### 现在开始愉快的使用吧
+
+自由且无需手动导入 `mypUI` 的使用方式，正式开始。
+
+祝您使用愉快。
+
+<p class="tip">如果在使用的过程中，您发现有任何不如意或者bug存在，敬请联系我们，或者给出您的宝贵意见。当然，您也可以给出您的实现方式。或者给我们提一个 <a href="https://github.com/wakaryry/mypUI">pr</a></p>
+
+## 找到代码与我们
+
+- [mypUI-github](https://github.com/wakaryry/mypUI) 欢迎star
+
+- [mypUI-uniapp插件市场](https://ext.dcloud.net.cn/plugin?id=2190) 需要您的好评
+
+- [mypUI-文档开源](https://github.com/wakaryry/mypui-doc)
+
+- [mypUI-文档地址](https://www.mypui.cn)
+
+- 作者wx：`pptpdf`
+
+- 作者qq：`382006503`
+
+- 欢迎加入wx群和qq群。wx群请加wx，qq群请加qq群号：`306797275`
+
+<p class="tip">强烈建议加入wx与qq群，获取更多mypUI的动态与帮助</p>
+
+## 快速体验
+
+- 安装HBuilderX；
+- 下载或者clone本UI库；
+- 在HBuilderX里面打开或者导入；
+- 运行到自己想要体验的平台即可；
+
+<p class="tip">想了解我们是怎么使用 mypUI 的吗？又如何对 mypUI 有一个更加全面的了解？或者说站在一个代码设计者的角度去了解 mypUI? 纵观全局，对你更加高效的使用mypUI非常有用。建议您一定要看看</p>
+
+<a class="button" href="global.html">全局视角了解mypUI</a>
+
+您可以配合 mypUI 的示范代码 来做更加深入的理解。
