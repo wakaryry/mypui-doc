@@ -14,9 +14,45 @@ myp-navbar 是一个通用的自定义导航栏组件。不支持设置背景图
 
 这就是一个默认 标题栏居中 的导航栏。
 
-myp-navbar 主要的字段就是 `title` `lefts` `rights` `@leftAction` `@rightAction`。一个通用的导航栏，通常就是 中间标题 + 左右按钮。
+myp-navbar 主要的字段就是 `title` `lefts` `rights` `@leftAction` `@rightAction`。一个通用的导航栏，通常就是 中间标题 + 左右按钮。当然，还有一些背景等配置。
 
-下面，我们从 中间标题 讲起。
+## 整体配置
+
+`bgType` `isSeize` `fixed` `height` `includeStatus` `boxStyle` `navStyle`
+
+### bgType
+
+背景主题色，比如 `bgType="primary"`。
+
+### isSeize
+
+是否占位，只在 `fixed` 为 `true` 时起作用。就是指，`position:fixed` 时，是否在视图中有一个相同高度的空白view占位。
+
+默认开启了 fixed。默认占位。您可以根据需要修改。
+
+### fixed
+
+是否启用 `position:fixed`。默认 `:fixed="true"`，启用了 固定定位，而且开启了占位。可以根据需要调整。
+
+### height
+
+默认是 44px。Number类型。px单位。建议您不要修改这个值，如果您不知道您在做什么。
+
+修改 height 高度值，会导致其它的高度决策出现问题，如果您不做其它处理的话。我们的navHeight 默认是 44px，您可以根据需要全局全局修改这个配置值（`/mypUI/myp-mixin/windowMixin.js` 中 `mypGetNavHeight` 用到这个值），然后 myp-navbar 中设置配置中的height。
+
+如果您只是单独的某个页面修改这个值，请适配单独那个页面的高度决策。
+
+### includeStatus
+
+是否包含 status 状态栏。默认包含。Boolean值，默认 true。
+
+### boxStyle
+
+整个navbar的 style设置。
+
+### navStyle
+
+导航栏除去status的那部分 style 设置。
 
 ## 中间标题
 
@@ -109,7 +145,7 @@ lefts rights 是 数组类型，他们包含了 各侧按钮的数量 以及 按
 
 携带参数，右侧按钮的 index 值。
 
-### centerAction
+### @centerAction
 
 ## 插槽
 
