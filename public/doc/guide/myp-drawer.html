@@ -1210,7 +1210,66 @@
   
 
   
-    
+    <p>myp-drawer 组件，提供了从不同方向出现的抽屉的实现。是一个重量级的组件，也是后期打算重点打磨的组件之一。实际上 mypUI 里面的弹层交互类组件都是非常非常优秀的，在很早以前我们的组件就为很多人提供了思路。</p>
+<p>当前主要特色：</p>
+<ul>
+<li>不同方向的打开；</li>
+<li>与 myp-popup/myp-popup-always一致的属性配置；</li>
+<li>程序api打开抽屉；</li>
+<li>手势拖拽打开抽屉；</li>
+<li>全屏遮罩；</li>
+<li>等。</li>
+</ul>
+<p>其实他是在 myp-popup-always 的基础上增加了 手势拖拽功能。所以 myp-popup-always支持的它都支持。myp-popup-always其实与myp-popup一致。这三个组件，保持神级一致。用起来非常顺手与方便。</p>
+<blockquote>
+<p>具体如何选择？</p>
+</blockquote>
+<ul>
+<li>myp-popup 内部内容是 v-if 控制的，不支持 standout。大部分的 popup都可以用；</li>
+<li>myp-popup-always 内部内容不受 v-if控制，支持 standout，用于standout以及明确需要与其它内容配合控制层级的地方；</li>
+<li>myp-drawer 是 myp-popup-always 的手势强化版，用于手势拖拽抽屉等；</li>
+</ul>
+<p>如果您不知道自己该选择哪个，请直接使用 myp-popup。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>myp-drawer 用法上稍微有所不同，不再是使用 <code>show</code> 来控制，而是采用 <code>ref method</code> 来控制。</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">myp-drawer</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"drawer-bottom"</span> <span class="hljs-attr">pos</span>=<span class="hljs-string">"bottom"</span> <span class="hljs-attr">standout</span>=<span class="hljs-string">"60px"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"750rpx"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"x-1000rpx"</span> @<span class="hljs-attr">overlayClicked</span>=<span class="hljs-string">"hide"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">bottom</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">bottom</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">myp-x-bar</span> <span class="hljs-attr">bgType</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">boxStyle</span>=<span class="hljs-string">"width:750rpx;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-x-bar</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">myp-drawer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+	<span class="hljs-keyword">import</span> bottom <span class="hljs-keyword">from</span> <span class="hljs-string">'./bottom.vue'</span>
+	
+	<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;
+		<span class="hljs-attr">components</span>: &#123;
+			bottom
+		&#125;,
+		<span class="hljs-attr">methods</span>: &#123;
+			hide(duration) &#123;
+				<span class="hljs-keyword">this</span>.$refs[<span class="hljs-string">'drawer-bottom'</span>].hide(duration)
+			&#125;,
+			show(duration) &#123;
+				<span class="hljs-keyword">this</span>.$refs[<span class="hljs-string">'drawer-bottom'</span>].show(duration)
+			&#125;
+		&#125;
+	&#125;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+<p>以上代码就构建了一个 从底部出现的，事先露出 60px standout高度的 drawer。它支持手势拉出。</p>
+<h2 id="ref-method"><a href="#ref-method" class="headerlink" title="ref method"></a>ref method</h2><p>通过 ref method 来控制打开与关闭。提供 show 与 hide 方法。</p>
+<h3 id="show"><a href="#show" class="headerlink" title="show"></a>show</h3><p><code>show(duration)</code> 打开，支持 duration配置；</p>
+<h3 id="hide"><a href="#hide" class="headerlink" title="hide"></a>hide</h3><p><code>hide(duration)</code> 关闭，支持 duration配置；</p>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>关于高度、位置等其它信息请查看文档：</p>
+<ul>
+<li><a href="/doc/guide/myp-popup.html">myp-popup</a></li>
+<li><a href="/doc/guide/myp-popup-always.html">myp-popup-always</a></li>
+</ul>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
+<li>增加手势收起；</li>
+<li>开放swipe动作支持；</li>
+<li>开放打开/收起的progress，方便外部实现某些随动/联动动画；</li>
+</ul>
+
   
   
     <div class="guide-links">

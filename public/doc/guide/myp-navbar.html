@@ -1213,8 +1213,18 @@
     <p>myp-navbar 是一个通用的自定义导航栏组件。不支持设置背景图片。如果您需要特殊的导航栏，建议您直接 写一个，而不是 去适配 myp-navbar。</p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">myp-navbar</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"我是导航栏"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-navbar</span>&gt;</span></code></pre>
 <p>这就是一个默认 标题栏居中 的导航栏。</p>
-<p>myp-navbar 主要的字段就是 <code>title</code> <code>lefts</code> <code>rights</code> <code>@leftAction</code> <code>@rightAction</code>。一个通用的导航栏，通常就是 中间标题 + 左右按钮。</p>
-<p>下面，我们从 中间标题 讲起。</p>
+<p>myp-navbar 主要的字段就是 <code>title</code> <code>lefts</code> <code>rights</code> <code>@leftAction</code> <code>@rightAction</code>。一个通用的导航栏，通常就是 中间标题 + 左右按钮。当然，还有一些背景等配置。</p>
+<h2 id="整体配置"><a href="#整体配置" class="headerlink" title="整体配置"></a>整体配置</h2><p><code>bgType</code> <code>isSeize</code> <code>fixed</code> <code>height</code> <code>includeStatus</code> <code>boxStyle</code> <code>navStyle</code></p>
+<h3 id="bgType"><a href="#bgType" class="headerlink" title="bgType"></a>bgType</h3><p>背景主题色，比如 <code>bgType=&quot;primary&quot;</code>。</p>
+<h3 id="isSeize"><a href="#isSeize" class="headerlink" title="isSeize"></a>isSeize</h3><p>是否占位，只在 <code>fixed</code> 为 <code>true</code> 时起作用。就是指，<code>position:fixed</code> 时，是否在视图中有一个相同高度的空白view占位。</p>
+<p>默认开启了 fixed。默认占位。您可以根据需要修改。</p>
+<h3 id="fixed"><a href="#fixed" class="headerlink" title="fixed"></a>fixed</h3><p>是否启用 <code>position:fixed</code>。默认 <code>:fixed=&quot;true&quot;</code>，启用了 固定定位，而且开启了占位。可以根据需要调整。</p>
+<h3 id="height"><a href="#height" class="headerlink" title="height"></a>height</h3><p>默认是 44px。Number类型。px单位。建议您不要修改这个值，如果您不知道您在做什么。</p>
+<p>修改 height 高度值，会导致其它的高度决策出现问题，如果您不做其它处理的话。我们的navHeight 默认是 44px，您可以根据需要全局全局修改这个配置值（<code>/mypUI/myp-mixin/windowMixin.js</code> 中 <code>mypGetNavHeight</code> 用到这个值），然后 myp-navbar 中设置配置中的height。</p>
+<p>如果您只是单独的某个页面修改这个值，请适配单独那个页面的高度决策。</p>
+<h3 id="includeStatus"><a href="#includeStatus" class="headerlink" title="includeStatus"></a>includeStatus</h3><p>是否包含 status 状态栏。默认包含。Boolean值，默认 true。</p>
+<h3 id="boxStyle"><a href="#boxStyle" class="headerlink" title="boxStyle"></a>boxStyle</h3><p>整个navbar的 style设置。</p>
+<h3 id="navStyle"><a href="#navStyle" class="headerlink" title="navStyle"></a>navStyle</h3><p>导航栏除去status的那部分 style 设置。</p>
 <h2 id="中间标题"><a href="#中间标题" class="headerlink" title="中间标题"></a>中间标题</h2><p>我们默认采用了 左-中-右 三段式的设计。左右两侧分别是 200rpx，中间是 350rpx。当你需要一些别的 设计的时候，您可能需要修改 这三段各段的宽度。默认他们就是排成一行，不换行。</p>
 <p>中间 title，包含了 title 和 icon，也就是允许在文字的右侧设置一个 icon 图标。</p>
 <h3 id="title"><a href="#title" class="headerlink" title="title"></a>title</h3><p>中间标题栏，以及它的主题、大小、个性化等设置。</p>
@@ -1282,7 +1292,7 @@
 <h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>我们为 左-中-右 提供了统一名字的 点击响应。</p>
 <h3 id="leftAction"><a href="#leftAction" class="headerlink" title="@leftAction"></a>@leftAction</h3><p>携带参数，左侧按钮的 index 值。</p>
 <h3 id="rightAction"><a href="#rightAction" class="headerlink" title="@rightAction"></a>@rightAction</h3><p>携带参数，右侧按钮的 index 值。</p>
-<h3 id="centerAction"><a href="#centerAction" class="headerlink" title="centerAction"></a>centerAction</h3><h2 id="插槽"><a href="#插槽" class="headerlink" title="插槽"></a>插槽</h2><p>提供了 left/right/title 三个插槽。注意 中间的不叫 center，而是叫做 title。</p>
+<h3 id="centerAction"><a href="#centerAction" class="headerlink" title="@centerAction"></a>@centerAction</h3><h2 id="插槽"><a href="#插槽" class="headerlink" title="插槽"></a>插槽</h2><p>提供了 left/right/title 三个插槽。注意 中间的不叫 center，而是叫做 title。</p>
 
   
   

@@ -1240,6 +1240,33 @@
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
 <p class="tip">注意：在 app.vue 里面全局引入 mypui.scss 是不会起作用的。毕竟里面只是定义了一些 scss变量</p>
 
+<h3 id="使用字体icon"><a href="#使用字体icon" class="headerlink" title="使用字体icon"></a>使用字体icon</h3><p>我们默认提供了一套 mypiconfont。来自 iconfont.cn。</p>
+<p>我们以前是在 <code>myp-icon</code> 组件里面加载字体图标，如果您需要更换自己的图标，需要去修改这个组件的配置内容。</p>
+<p>现在，我们改成了从 app.vue 里面引入图标的方式。这需要您手动引入图标，同时还记得引入图标相关的css。</p>
+<pre><code class="hljs js">onLaunch: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
+	<span class="hljs-comment">// #ifdef APP-PLUS</span>
+	<span class="hljs-keyword">const</span> dom = weex.requireModule(<span class="hljs-string">'dom'</span>);
+	dom.addRule(<span class="hljs-string">'fontFace'</span>, &#123;
+		<span class="hljs-string">'fontFamily'</span>: <span class="hljs-string">"mypiconfont"</span>,
+		<span class="hljs-string">'src'</span>: <span class="hljs-string">"url('https://at.alicdn.com/t/font_1994281_a83sr011dzg.ttf')"</span>
+	&#125;)
+	<span class="hljs-comment">// #endif</span>
+&#125;</code></pre>
+<p>以上代码是为 app端引入字体图标。</p>
+<p>css相关：</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>&gt;</span><span class="css">
+	<span class="hljs-keyword">@import</span> <span class="hljs-string">'@/mypUI/icon.css'</span>;
+	<span class="hljs-keyword">@import</span> <span class="hljs-string">'@/mypUI/mypui.scss'</span>;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
+<p>以上的 <code>@import &#39;@/mypUI/icon.css&#39;;</code>，不仅为 非app端 引入了字体图标，同时定义了 <code>myp-iconfont</code> 这个class，如果需要使用字体图标，且使 <code>myp-icon</code> 中字体图标生效，必须引入该 css。图标的名字与对应关系在 <code>/mypUI/icons.js</code> 中。</p>
+<p>具体自定义字体图标请看文档：<a href="/doc/guide/myp-icon.html">myp-icon</a>。</p>
+<h3 id="是否锁定屏幕"><a href="#是否锁定屏幕" class="headerlink" title="是否锁定屏幕"></a>是否锁定屏幕</h3><p>我们建议您锁定屏幕。</p>
+<p>app.vue 中设置如下：</p>
+<pre><code class="hljs js">onLaunch: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
+	<span class="hljs-comment">// #ifdef APP-PLUS</span>
+	plus.screen.lockOrientation(<span class="hljs-string">'portrait-primary'</span>); <span class="hljs-comment">//锁定屏幕</span>
+	<span class="hljs-comment">// #endif</span>
+&#125;</code></pre>
 <h3 id="初始化系统变量"><a href="#初始化系统变量" class="headerlink" title="初始化系统变量"></a>初始化系统变量</h3><p>我们建议您在 <code>onLaunch</code> 里面对系统变量进行初始化（当然，这是可选的，<code>mypUI</code> 内部接口会根据需要调用初始化的接口）。</p>
 <p>初始化代码如下：</p>
 <ul>
@@ -1258,13 +1285,21 @@
 		<span class="hljs-attr">mixins</span>: [systemMixin],
 		<span class="hljs-attr">onLaunch</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
 			<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'App Launch'</span>)
-			<span class="hljs-comment">// #ifdef APP-NVUE || H5</span>
+			<span class="hljs-comment">// #ifdef APP-PLUS || H5</span>
 			<span class="hljs-keyword">this</span>.mypInitSystemInfo()
 			<span class="hljs-comment">// #endif</span>
-			<span class="hljs-comment">// #ifndef APP-NVUE || H5</span>
+			<span class="hljs-comment">// #ifndef APP-PLUS || H5</span>
 			setTimeout(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>&#123;
 				<span class="hljs-keyword">this</span>.mypInitSystemInfo()
 			&#125;, <span class="hljs-number">0</span>)
+			<span class="hljs-comment">// #endif</span>
+			<span class="hljs-comment">// #ifdef APP-PLUS</span>
+			plus.screen.lockOrientation(<span class="hljs-string">'portrait-primary'</span>); <span class="hljs-comment">//锁定屏幕</span>
+			<span class="hljs-keyword">const</span> dom = weex.requireModule(<span class="hljs-string">'dom'</span>);
+			dom.addRule(<span class="hljs-string">'fontFace'</span>, &#123;
+				<span class="hljs-string">'fontFamily'</span>: <span class="hljs-string">"mypiconfont"</span>,
+				<span class="hljs-string">'src'</span>: <span class="hljs-string">"url('https://at.alicdn.com/t/font_1994281_a83sr011dzg.ttf')"</span>
+			&#125;)
 			<span class="hljs-comment">// #endif</span>
 		&#125;,
 		<span class="hljs-attr">onShow</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
@@ -1277,6 +1312,7 @@
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>&gt;</span><span class="css">
+	<span class="hljs-keyword">@import</span> <span class="hljs-string">'@/mypUI/icon.css'</span>;
 	<span class="hljs-keyword">@import</span> <span class="hljs-string">'@/mypUI/base.scss'</span>;
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
 <h3 id="现在开始愉快的使用吧"><a href="#现在开始愉快的使用吧" class="headerlink" title="现在开始愉快的使用吧"></a>现在开始愉快的使用吧</h3><p>自由且无需手动导入 <code>mypUI</code> 的使用方式，正式开始。</p>
