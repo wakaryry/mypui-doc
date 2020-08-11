@@ -1210,232 +1210,79 @@
   
 
   
-    <h3 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h3><ul>
-<li>icon/title/value/indicator，默认可以实现一行4段；</li>
-<li>默认title对应一级标题，value是二级标题或者是描述内容；</li>
-<li>搭配slot可以实现多行或者一行更多段，但是不太建议用此来实现多行；</li>
-<li>多行公用cell会在另一个组件实现；</li>
-</ul>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="可配置参数"><a href="#可配置参数" class="headerlink" title="可配置参数"></a>可配置参数</h3><table>
-<thead>
-<tr>
-<th>Prop</th>
-<th>Type</th>
-<th>Required</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>icon</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>icon的名字/图片地址，图片会自动识别。</td>
-</tr>
-<tr>
-<td>title</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>title文字描述。</td>
-</tr>
-<tr>
-<td>value</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>二级文字描述。</td>
-</tr>
-<tr>
-<td>indicator</td>
-<td>String</td>
-<td></td>
-<td>right</td>
-<td>indicator <code>icon</code>的名字，或者图片地址。图片会自动识别。可以通过indicator为空字符串等来覆盖。</td>
-</tr>
-<tr>
-<td>bgType</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>背景色主题配置。可以取<code>nav</code>/<code>primary</code>/<code>success</code>/<code>warning</code>/<code>error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-bg</code>。</td>
-</tr>
-<tr>
-<td>titleType</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>title字体颜色设置。可以取<code>nav</code>/<code>text</code>/<code>primary</code>/<code>success</code>/<code>warning</code>/<code>error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-color</code>。</td>
-</tr>
-<tr>
-<td>valueType</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>value字体颜色设置。可以取<code>nav</code>/<code>text</code>/<code>primary</code>/<code>success</code>/<code>warning</code>/<code>error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-color</code>。</td>
-</tr>
-<tr>
-<td>iconType</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>icon颜色设置。可以取<code>nav</code>/<code>text</code>/<code>primary</code>/<code>success</code>/<code>warning</code>/<code>error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-color</code>。</td>
-</tr>
-<tr>
-<td>indicatorType</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>indicator颜色设置。可以取<code>nav</code>/<code>text</code>/<code>primary</code>/<code>success</code>/<code>warning</code>/<code>error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-color</code>。</td>
-</tr>
-<tr>
-<td>titleSize</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>title字体大小设置。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-size</code>。</td>
-</tr>
-<tr>
-<td>valueSize</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>value字体大小设置。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-size</code>。</td>
-</tr>
-<tr>
-<td>iconSize</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>icon大小设置。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-size</code>。</td>
-</tr>
-<tr>
-<td>indicatorSize</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>indicator大小设置。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-size</code>。</td>
-</tr>
-<tr>
-<td>height</td>
-<td>String</td>
-<td>否</td>
-<td><code>l</code></td>
-<td>设置组件的高度。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-height</code>。</td>
-</tr>
-<tr>
-<td>radius</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>设置组件的圆角大小。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-radius</code>。</td>
-</tr>
-<tr>
-<td>border</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>设置组件的边框样式。边框设置。可以取<code>all-light</code>/<code>all-dark</code>/<code>all-primary</code>/<code>all-success</code>/<code>all-warning</code>/<code>all-error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-border-all</code>。</td>
-</tr>
-<tr>
-<td>hover</td>
-<td>String</td>
-<td>否</td>
-<td>bg</td>
-<td>设置组件的hover效果，可以取<code>opacity</code>/<code>bg</code>/<code>bg-opacity</code>。</td>
-</tr>
-<tr>
-<td>space</td>
-<td>String</td>
-<td>否</td>
-<td>12rpx</td>
-<td>设置<code>icon</code>的margin-right间距，<code>title</code>的margin-right间距 ，<code>indicator</code>的margin-left间距。</td>
-</tr>
-<tr>
-<td>iconStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>设置<code>icon</code>样式，可以覆盖之前<code>icon</code>样式。</td>
-</tr>
-<tr>
-<td>indicatorStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>设置<code>indicator</code>样式，可以覆盖之前<code>indicator</code>样式。</td>
-</tr>
-<tr>
-<td>iconMode</td>
-<td>String</td>
-<td>否</td>
-<td>aspectFill</td>
-<td>当<code>icon</code>为图片时的mode，更多参数查看uni的image标签mode属性。</td>
-</tr>
-<tr>
-<td>indicatorMode</td>
-<td>String</td>
-<td>否</td>
-<td>aspectFill</td>
-<td>当<code>indicator</code>为图片时的mode，更多参数查看uni的image标签mode属性。</td>
-</tr>
-<tr>
-<td>boxStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖组件最外层样式。</td>
-</tr>
-<tr>
-<td>titleStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖<code>title</code>样式</td>
-</tr>
-<tr>
-<td>valueStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖<code>value</code>样式</td>
-</tr>
-</tbody>
-</table>
+    <p>myp-cell 是通用的 单行cell 展示组件。为 icon-title-value-indicator 四段式设计。基本能满足所有的单行cell要求。</p>
 <ul>
-<li>type/size/iconSize/height/radius/border等可以实现快速设置，根据scss配置，可以快速实现自己的效果；</li>
-<li>其它的style设置可以覆盖掉这些快捷设置的效果；</li>
-<li>既满足一键配置，也满足灵活定义。也就是满足共性，包容特性；</li>
+<li>hover效果以及配置；</li>
+<li>支持border/radius等快捷配置；</li>
+<li>支持细节配置；</li>
+<li>开放 特殊的 slot；</li>
 </ul>
-<h3 id="slot"><a href="#slot" class="headerlink" title="slot"></a>slot</h3><ul>
-<li>默认slot，覆盖title/value；</li>
-<li>extra，在value与indicator之间提供更多配置；</li>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">myp-cell</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"setting"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"设置"</span> <span class="hljs-attr">indicator</span>=<span class="hljs-string">"right"</span> @<span class="hljs-attr">cellClicked</span>=<span class="hljs-string">"toSet"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-cell</span>&gt;</span></code></pre>
+<p>使用非常简单，和其它组件一样，即支持快速配置，也支持细节定义。</p>
+<h3 id="cellClicked"><a href="#cellClicked" class="headerlink" title="@cellClicked"></a>@cellClicked</h3><p>点击事件监听。非常语意化的名字设计，就和 <code>buttonClicked</code> 一样，无需记忆。</p>
+<p class="tip">不要什么内容都想着用myp-cell去包裹，也不要老想着去自定义里面的插槽内容。单行使用就是这个组件最佳的用法。</p>
+
+<p>下面我们对其配置属性做个介绍，其整体属性如下：</p>
+<ul>
+<li>盒子：<code>bgType</code> <code>height</code> <code>space</code> <code>border</code> <code>radius</code> <code>hover</code> <code>boxStyle</code>；</li>
+<li>icon：<code>icon</code> <code>iconType</code> <code>iconSize</code> <code>iconStyle</code> <code>iconBoxStyle</code> <code>iconMode</code>；</li>
+<li>title：<code>title</code> <code>titleType</code> <code>titleSize</code> <code>titleStyle</code>；</li>
+<li>value：<code>value</code> <code>valueType</code> <code>valueSize</code> <code>valueStyle</code>；</li>
+<li>indicator：<code>indicator</code> <code>indicatorType</code> <code>indicatorSize</code> <code>indicatorStyle</code> <code>indicatorBoxStyle</code> <code>indicatorMode</code>；</li>
+<li>插槽：default, extra；</li>
+<li>事件：<code>@cellClicked</code>；</li>
 </ul>
-<h3 id="事件回掉"><a href="#事件回掉" class="headerlink" title="事件回掉"></a>事件回掉</h3><table>
-<thead>
-<tr>
-<th>Event</th>
-<th>Params</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cellClicked</td>
-<td></td>
-<td>点击触发</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例与结果"><a href="#示例与结果" class="headerlink" title="示例与结果"></a>示例与结果</h3><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>我对一套UI的理解就是，公用性比较强的组件集合。</p>
-<p>我们把这些常用的，配置量偏小的，或者说只要很少的配置就能满足要求的组件合起来组成一套UI。而不是试图去使用这些UI组件去适配所有的样式，希望借此满足所有的组件。</p>
+<h2 id="盒子"><a href="#盒子" class="headerlink" title="盒子"></a>盒子</h2><p>和其它组件一样，非常统一的配置。</p>
+<p><code>bgType</code> <code>height</code> <code>space</code> <code>border</code> <code>radius</code> <code>hover</code> <code>boxStyle</code></p>
+<blockquote>
+<p>需要注意的是：myp-cell 组件默认提供了 32rpx 的左右 padding。主要是为了减少左右侧的padding配置频率。</p>
+</blockquote>
+<h3 id="bgType"><a href="#bgType" class="headerlink" title="bgType"></a>bgType</h3><p>背景色主题配置。比如：<code>bgType=&quot;primary&quot;</code>。</p>
+<h3 id="height"><a href="#height" class="headerlink" title="height"></a>height</h3><p>高度scss配置，可选：<code>ss</code> <code>s</code> <code>base</code> <code>l</code> <code>ll</code>。默认是 <code>l</code>。</p>
+<h3 id="border"><a href="#border" class="headerlink" title="border"></a>border</h3><p>主题中定义的 border 快捷配置。border属性是同时支持 范围与颜色 的，比如：<code>border=&quot;all&quot;</code> <code>border=&quot;bottom&quot;</code> <code>border=&quot;all-primary&quot;</code> <code>border=&quot;bottom-error&quot;</code>。无 border 设置为 none。</p>
+<h3 id="radius"><a href="#radius" class="headerlink" title="radius"></a>radius</h3><p>mypUI.scss 中定义的 radius 快捷配置。默认 base。支持 <code>ss</code> <code>s</code> <code>base</code> <code>l</code> <code>ll</code>。无 radius 设置为 none。</p>
+<h3 id="hover"><a href="#hover" class="headerlink" title="hover"></a>hover</h3><p>hover 属性配置，也就是 uniapp中的 hover-class 配置。默认是 opacity，也就是 透明度发生变化。可以选择的值有：<code>bg</code> <code>opacity</code> <code>bg-opacity</code>。无 hover 效果设置为 none。</p>
+<h3 id="space"><a href="#space" class="headerlink" title="space"></a>space</h3><p>图标与文字之间的间隔快捷配置。默认是 12rpx。必须带单位。</p>
+<p class="tip">我们建议您在使用 mypUI 的过程中，涉及到 自定义宽高尺寸的属性，带上宽高的单位。我们会逐渐取消掉 Number 类型的 宽高属性配置，一律要求带上单位。这是一种开发规范，我们也能基于此进行优化。</p>
+
+<h3 id="boxStyle"><a href="#boxStyle" class="headerlink" title="boxStyle"></a>boxStyle</h3><p>外层盒子style设置。我们一般用于设置一些特别的宽高。我们在 myp-cell 的外层 class 中默认设置了 左右 32rpx 的padding。如果您需要别的值，请覆盖。</p>
+<p class="tip">如果您需要在这里私有化border-color，border-style，border-width，您必须给其加上 !important。因为为了兼容H5，这些设置在 class中加了 !important。</p>
+
+<h2 id="icon"><a href="#icon" class="headerlink" title="icon"></a>icon</h2><p>左侧图标设置。其实就是设置左侧的 myp-icon组件。依然是熟悉的味道：</p>
+<p><code>icon</code> <code>iconType</code> <code>iconSize</code> <code>iconStyle</code> <code>iconBoxStyle</code> <code>iconMode</code></p>
+<h3 id="icon-1"><a href="#icon-1" class="headerlink" title="icon"></a>icon</h3><p>左侧的图标。默认没有内容。可以是字体图标，也可以是图片。支持网络图片。</p>
+<h3 id="iconMode"><a href="#iconMode" class="headerlink" title="iconMode"></a>iconMode</h3><p>如果 icon 是图片的话，支持图片的 mode 设置。默认是 <code>aspectFill</code>。</p>
+<h3 id="iconType"><a href="#iconType" class="headerlink" title="iconType"></a>iconType</h3><p>图标的主题颜色。默认设置是 text，也就是 <code>myp-color-text</code>。</p>
+<h3 id="iconSize"><a href="#iconSize" class="headerlink" title="iconSize"></a>iconSize</h3><p>图标的尺寸设置，scss变量名字，可选：<code>ss</code> <code>s</code> <code>base</code> <code>l</code> <code>ll</code>。默认 <code>l</code>。</p>
+<h3 id="iconStyle"><a href="#iconStyle" class="headerlink" title="iconStyle"></a>iconStyle</h3><p>图标的 style设置。图片图标的话，可以自定义宽高。字体图标可以个性化font-size等属性。</p>
+<h3 id="iconBoxStyle"><a href="#iconBoxStyle" class="headerlink" title="iconBoxStyle"></a>iconBoxStyle</h3><p>icon的外层包裹，比如给图标加个border等。</p>
+<h2 id="title"><a href="#title" class="headerlink" title="title"></a>title</h2><p>cell 内 title 文字属性设置，它的相关属性依然是那么的熟悉。素质四连，简单高效：</p>
+<p><code>title</code> <code>titleType</code> <code>titleSize</code> <code>titleStyle</code></p>
+<h3 id="title-1"><a href="#title-1" class="headerlink" title="title"></a>title</h3><p>左侧 title 文字，默认为空。</p>
+<h3 id="titleType"><a href="#titleType" class="headerlink" title="titleType"></a>titleType</h3><p>文字主题类型，也就是颜色设置。比如：<code>titleType=&quot;primary&quot;</code>。</p>
+<h3 id="titleSize"><a href="#titleSize" class="headerlink" title="titleSize"></a>titleSize</h3><p>文字尺寸scss变量设置，可选：<code>ss</code> <code>s</code> <code>base</code> <code>l</code> <code>ll</code>。默认是 <code>base</code>。</p>
+<h3 id="titleStyle"><a href="#titleStyle" class="headerlink" title="titleStyle"></a>titleStyle</h3><p>文字title的style个性化设置。</p>
+<h2 id="value"><a href="#value" class="headerlink" title="value"></a>value</h2><p><code>value</code> <code>valueType</code> <code>valueSize</code> <code>valueStyle</code></p>
+<p>和 title 设置一样，不再细说。</p>
+<blockquote>
+<p>需要注意的是：value 默认是占满cell组件的剩余宽度的。而且是 向右对齐。如果别的对齐，请覆盖。默认 size为base，type是second。</p>
+</blockquote>
+<h2 id="indicator"><a href="#indicator" class="headerlink" title="indicator"></a>indicator</h2><p><code>indicator</code> <code>indicatorType</code> <code>indicatorSize</code> <code>indicatorStyle</code> <code>indicatorBoxStyle</code> <code>indicatorMode</code></p>
+<p>cell 右侧的指示器。比如 <code>indicator=&quot;right&quot;</code>。默认 size是l，type是second。</p>
+<h2 id="插槽"><a href="#插槽" class="headerlink" title="插槽"></a>插槽</h2><h3 id="默认"><a href="#默认" class="headerlink" title="默认"></a>默认</h3><p>默认slot，覆盖title/value。</p>
+<h3 id="extra"><a href="#extra" class="headerlink" title="extra"></a>extra</h3><p>extra，在value与indicator之间提供更多插入更多内容的配置。比如，您在这之间需要一个 点击更新 的提示按钮。</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">myp-cell</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">"bold-refresh"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"软件更新"</span> <span class="hljs-attr">indicator</span>=<span class="hljs-string">"right"</span> <span class="hljs-attr">space</span>=<span class="hljs-string">"24rpx"</span> <span class="hljs-attr">boxStyle</span>=<span class="hljs-string">"padding-left:38rpx;padding-right:48rpx;"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"extra"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"cell-upload"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">myp-icon</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"solid-up"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"inverse"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"l"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-icon</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"cell-upload-text"</span>&gt;</span>有新版本<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">myp-cell</span>&gt;</span></code></pre>
+<p><img src="/images/doc/cell-extra.jpg" alt="cell-extra"></p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>我们将UI分成了两部分，一部分是公共组件，另一部分是业务中常见的一些组件。</p>
 <p>一个UI组件里面考虑太多的因素，或者试图利用它去实现一堆的内容，显然是不合适的。</p>
-<p>我们将UI分成了两部分，一部分是公共组件，另一部分是业务中常见的一些组件。</p>
 <p>很多业务常用组件，是很难通过一个UI组件来配置完成的，或者说就相当于重新写了一个组件。</p>
 <p>与其这样，我们还不如保持UI组件的轻量化。</p>
-<p>在这套组件内，我们不仅会提供公用的UI组件，也会提供大多数业务所涉及到的样式组件。</p>
+<p>我们不仅会提供公用的UI组件，也会提供大多数业务所涉及到的样式组件 myppUI。</p>
 <p>公用UI组件基本上可以通过配置一下就能满足要求，如果改动量很大，或者层级嵌套很深，建议重新写一个组件，毕竟去适配一个组件消耗的精力可能比自己写一个还要大。</p>
 <p>而且作为公用（大家都可以用的组件）来说，需要考虑很多因素，而自己写的往往只需要完成样式即可。适配所有人和适配自己是完全不一样的。</p>
 <p>原则就是：宁愿多写几个，也不可一个去勉强适应多个。</p>

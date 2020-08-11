@@ -1210,249 +1210,77 @@
   
 
   
-    <h3 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h3><ul>
-<li>支持纯文字</li>
-<li>支持icon+文字；</li>
-<li>支持loading+文字</li>
-<li>布局是icon/loading在左，文字在右；</li>
-<li>icon和loading二选一，loading为true，icon将会隐藏</li>
-<li>兼容nvue/vue；</li>
-</ul>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="可配置参数"><a href="#可配置参数" class="headerlink" title="可配置参数"></a>可配置参数</h3><table>
-<thead>
-<tr>
-<th>Prop</th>
-<th>Type</th>
-<th>Required</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>text</td>
-<td>String</td>
-<td></td>
-<td>确定</td>
-<td>按钮的文字描述。</td>
-</tr>
-<tr>
-<td>icon</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>icon的名字，或者图片地址，图片会自动识别，默认不带icon。</td>
-</tr>
-<tr>
-<td>loading</td>
-<td>Boolean</td>
-<td>否</td>
-<td>false</td>
-<td>是否显示loading。true时显示loading。</td>
-</tr>
-<tr>
-<td>loadingSrc</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>loading为true时显示，这时候icon会隐藏。默认gif是：<code>/static/ui/loading.gif</code>。</td>
-</tr>
-<tr>
-<td>bgType</td>
-<td>String</td>
-<td>否</td>
-<td>白色</td>
-<td>背景色主题配置。可以取<code>nav</code>/<code>primary</code>/<code>success</code>/<code>warning</code>/<code>error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-bg</code>。</td>
-</tr>
-<tr>
-<td>height</td>
-<td>String</td>
-<td>否</td>
-<td>100rpx</td>
-<td>按钮高度，单位rpx。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。</td>
-</tr>
-<tr>
-<td>hover</td>
-<td>String</td>
-<td>否</td>
-<td>opacity</td>
-<td>按钮的hover效果，状态为disabled和loading下hover无效。可以取<code>opacity</code>/<code>bg</code>/<code>bg-opacity</code>。</td>
-</tr>
-<tr>
-<td>radius</td>
-<td>String</td>
-<td>否</td>
-<td>base</td>
-<td>按钮圆角设置。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>，<code>none</code>取消圆角。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-radius-base</code>。</td>
-</tr>
-<tr>
-<td>border</td>
-<td>String</td>
-<td>否</td>
-<td>all</td>
-<td>边框设置。可以取<code>all-light</code>/<code>all-dark</code>/<code>all-primary</code>/<code>all-success</code>/<code>all-warning</code>/<code>all-error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-border-all</code>。</td>
-</tr>
-<tr>
-<td>disabled</td>
-<td>Boolean</td>
-<td>否</td>
-<td>false</td>
-<td>禁用点击，且会具备<code>myp-disabled</code>class的禁用效果</td>
-</tr>
-<tr>
-<td>highlight</td>
-<td>Boolean</td>
-<td>否</td>
-<td>false</td>
-<td>用于状态标记，是否<code>hightlight</code>，方便设置和切换状态使用，为true时，可设置按钮<code>highlightStyle</code>/<code>highlightTextStyle</code>/<code>highlightIconStyle</code>。</td>
-</tr>
-<tr>
-<td>space</td>
-<td>String</td>
-<td>否</td>
-<td>12rpx</td>
-<td><code>loading/icon</code>与<code>text</code>之间<code>margin-left</code>的间距。</td>
-</tr>
-<tr>
-<td>textType</td>
-<td>String</td>
-<td>否</td>
-<td>text</td>
-<td>text字体颜色设置。可以取<code>nav</code>/<code>text</code>/<code>primary</code>/<code>success</code>/<code>warning</code>/<code>error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-color</code>。</td>
-</tr>
-<tr>
-<td>textSize</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>text字体大小设置。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-size</code>。</td>
-</tr>
-<tr>
-<td>iconType</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>icon颜色设置。可以取<code>nav</code>/<code>text</code>/<code>primary</code>/<code>success</code>/<code>warning</code>/<code>error</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-color</code>。</td>
-</tr>
-<tr>
-<td>iconSize</td>
-<td>String</td>
-<td>否</td>
-<td><code>l</code></td>
-<td>icon大小设置。可以取<code>ss</code>/<code>s</code>/<code>base</code>/<code>l</code>/<code>ll</code>。更多参数设置查看<code>base.scss</code>文件，默认对应的<code>class</code>为<code>myp-size</code>。</td>
-</tr>
-<tr>
-<td>iconMode</td>
-<td>String</td>
-<td>否</td>
-<td>aspectFill</td>
-<td>当icon为图片时的mode，更多参数查看uni的image标签mode属性。</td>
-</tr>
-<tr>
-<td>boxStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖组件最外层样式。</td>
-</tr>
-<tr>
-<td>disabledStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖组件为disabled状态时最外层样式。</td>
-</tr>
-<tr>
-<td>highlightStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖组件为highlight状态时最外层样式。</td>
-</tr>
-<tr>
-<td>textStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖组件内text样式。</td>
-</tr>
-<tr>
-<td>disabledTextStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖组件disabled状态时text样式。</td>
-</tr>
-<tr>
-<td>highlightTextStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖组件highlight状态时text样式。</td>
-</tr>
-<tr>
-<td>iconStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖组件内icon样式。</td>
-</tr>
-<tr>
-<td>disabledIconStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖组件为disabled时icon样式。</td>
-</tr>
-<tr>
-<td>highlightIconStyle</td>
-<td>String</td>
-<td>否</td>
-<td>空</td>
-<td>覆盖组件为highlight时icon样式。</td>
-</tr>
-<tr>
-<td>loadingWidth</td>
-<td>String</td>
-<td>否</td>
-<td>36rpx</td>
-<td>设置loading的宽度。</td>
-</tr>
-<tr>
-<td>loadingHeight</td>
-<td>String</td>
-<td>否</td>
-<td>36rpx</td>
-<td>设置loading的高度。</td>
-</tr>
-</tbody>
-</table>
+    <p>myp-button 非常可爱有趣，提供了 文字/按钮/图标 等样式的交互hover能力，还有 disabled/highlight/loading 等状态。</p>
+<p>主要特色如下：</p>
 <ul>
-<li>默认<code>button</code>内是水平垂直居中的，<code>boxStyle</code>可以覆盖掉这个设置；</li>
-<li>其它的<code>style</code>设置可以覆盖掉这些快捷设置的效果；</li>
-<li>既满足一键配置，也满足灵活定义。也就是满足共性，包容特性；</li>
-<li>具体的<code>props</code>取值，应该参考<code>base.scss</code>以及<code>mypui.scss</code>；</li>
+<li>支持快捷配置与细节配置（正如其它组件一样，mypUI在高效与细节之间做得非常优秀）；</li>
+<li>支持loading效果；</li>
+<li>支持disabled/highlight状态；</li>
+<li>支持 图标-文字-图标 三段式组合设置；</li>
+<li>支持 border/radius，等；</li>
 </ul>
-<h3 id="slot"><a href="#slot" class="headerlink" title="slot"></a>slot</h3><blockquote>
-<p>默认slot</p>
-</blockquote>
-<h3 id="事件回掉"><a href="#事件回掉" class="headerlink" title="事件回掉"></a>事件回掉</h3><table>
-<thead>
-<tr>
-<th>Event</th>
-<th>Params</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>buttonClicked</td>
-<td></td>
-<td>点击触发</td>
-</tr>
-</tbody>
-</table>
-<h3 id="示例与结果"><a href="#示例与结果" class="headerlink" title="示例与结果"></a>示例与结果</h3>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">myp-button</span> <span class="hljs-attr">text</span>=<span class="hljs-string">"手机号登陆"</span> <span class="hljs-attr">bgType</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">border</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">radius</span>=<span class="hljs-string">"ll"</span> @<span class="hljs-attr">buttonClicked</span>=<span class="hljs-string">"toPhoneLogin"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-button</span>&gt;</span></code></pre>
+<p class="tip">我们建议您优先使用主题配置，不要老想着个性化style设置。只有在主题设置不能满足要求的时，才使用style的配置。</p>
+
+<p>myp-button 的配置属性比较多，其实也很简单。毕竟命名规则都是一致的。我们只需要知道 myp-button 是 <code>icon-text-icon2</code> 形式的设计即可。</p>
+<p>myp-button 是 <code>flex-direction:row</code> 的形式。其props如下：</p>
+<ul>
+<li><p>盒子类：<code>bgType</code> <code>height(s/l之类)</code> <code>radius</code> <code>border</code> <code>disabled</code> <code>highlight</code> <code>hover</code> <code>space</code> <code>boxStyle</code></p>
+</li>
+<li><p>text：<code>text</code> <code>textType</code> <code>textSize</code> <code>textStyle</code></p>
+</li>
+<li><p>icon：<code>icon</code> <code>iconMode</code> <code>iconType</code> <code>iconSize</code> <code>iconStyle</code> <code>iconBoxStyle</code></p>
+</li>
+<li><p>icon2：<code>icon2</code> <code>icon2Mode</code> <code>icon2Type</code> <code>icon2Size</code> <code>icon2Style</code> <code>icon2BoxStyle</code></p>
+</li>
+<li><p>loading：<code>loading</code> <code>loadingSrc</code> <code>loadingWidth</code> <code>loadingHeight</code></p>
+</li>
+<li><p>事件：<code>@buttonClicked</code></p>
+</li>
+<li><p>默认插槽</p>
+</li>
+</ul>
+<h2 id="盒子"><a href="#盒子" class="headerlink" title="盒子"></a>盒子</h2><p>myp-button 外层view设置，以及一些整体状态等配置。和其它组件一样，命名非常统一，你只需要用过一个组件，就能知道其它组件的用法。很直接，很干脆，用起来很有效率。</p>
+<p><code>bgType</code> <code>height(s/l之类)</code> <code>radius</code> <code>border</code> <code>disabled</code> <code>highlight</code> <code>hover</code> <code>space</code> <code>boxStyle</code></p>
+<h3 id="bgType"><a href="#bgType" class="headerlink" title="bgType"></a>bgType</h3><p>背景色主题配置。比如 <code>bgType=&quot;primary&quot;</code>。默认无主题，也就是 白色背景。透明背景为：<code>bgType=&quot;none&quot;</code></p>
+<h3 id="height"><a href="#height" class="headerlink" title="height"></a>height</h3><p>mypUI.scss 中定义的高度快捷配置。默认 base。支持 <code>ss</code> <code>s</code> <code>base</code> <code>l</code> <code>ll</code>。</p>
+<h3 id="radius"><a href="#radius" class="headerlink" title="radius"></a>radius</h3><p>mypUI.scss 中定义的 radius 快捷配置。默认 base。支持 <code>ss</code> <code>s</code> <code>base</code> <code>l</code> <code>ll</code>。无 radius 设置为 none。</p>
+<h3 id="border"><a href="#border" class="headerlink" title="border"></a>border</h3><p>主题中定义的 border 快捷配置。border属性是同时支持 范围与颜色 的，比如：<code>border=&quot;all&quot;</code> <code>border=&quot;bottom&quot;</code> <code>border=&quot;all-primary&quot;</code> <code>border=&quot;bottom-error&quot;</code>。无 border 设置为 none。</p>
+<h3 id="hover"><a href="#hover" class="headerlink" title="hover"></a>hover</h3><p>hover 属性配置，也就是 uniapp中的 hover-class 配置。默认是 opacity，也就是 透明度发生变化。可以选择的值有：<code>bg</code> <code>opacity</code> <code>bg-opacity</code>。无 hover 效果设置为 none。</p>
+<h3 id="space"><a href="#space" class="headerlink" title="space"></a>space</h3><p>图标与文字之间的间隔快捷配置。默认是 12rpx。必须带单位。</p>
+<p class="tip">我们建议您在使用 mypUI 的过程中，涉及到 自定义宽高尺寸的属性，带上宽高的单位。我们会逐渐取消掉 Number 类型的 宽高属性配置，一律要求带上单位。这是一种开发规范，我们也能基于此进行优化。</p>
+
+<h3 id="disabled"><a href="#disabled" class="headerlink" title="disabled"></a>disabled</h3><p>禁用状态。默认false。禁用以及loading时按钮是不可点击的。除了用作状态标记之外，一般用于点击保护，比如：只有输入正确长度的手机号和密码才能点击登陆。</p>
+<h3 id="highlight"><a href="#highlight" class="headerlink" title="highlight"></a>highlight</h3><p>highlight 状态标记。默认是 false。</p>
+<p class="tip">highlight有什么用？其实highlight disabled 以及普通状态，合起来就有三个状态，这就实现了 一个 button 组件可以在不同的状态下具备不同的样式。就好比 原生app组件 button 一样，具备不同的状态，不同的样式。可以用于做 切换、标记，等。</p>
+
+<h3 id="boxStyle"><a href="#boxStyle" class="headerlink" title="boxStyle"></a>boxStyle</h3><p>外层盒子style设置。我们一般用于设置一些特别的宽高。</p>
+<p class="tip">如果您需要在这里私有化border-color，border-style，border-width，您必须给其加上 !important。因为为了兼容H5，这些设置在 class中加了 !important。</p>
+
+<h2 id="text"><a href="#text" class="headerlink" title="text"></a>text</h2><p>button 内文字属性设置，它的相关属性依然是那么的熟悉。素质四连，简单高效：</p>
+<p><code>text</code> <code>textType</code> <code>textSize</code> <code>textStyle</code></p>
+<h3 id="text-1"><a href="#text-1" class="headerlink" title="text"></a>text</h3><p>button 文字，默认为空。</p>
+<h3 id="textType"><a href="#textType" class="headerlink" title="textType"></a>textType</h3><p>文字主题类型，也就是颜色设置。比如：<code>textType=&quot;primary&quot;</code>。</p>
+<h3 id="textSize"><a href="#textSize" class="headerlink" title="textSize"></a>textSize</h3><p>文字尺寸scss变量设置，可选：<code>ss</code> <code>s</code> <code>base</code> <code>l</code> <code>ll</code>。默认是 <code>base</code>。</p>
+<h3 id="textStyle"><a href="#textStyle" class="headerlink" title="textStyle"></a>textStyle</h3><p>文字text的style个性化设置。</p>
+<h2 id="icon"><a href="#icon" class="headerlink" title="icon"></a>icon</h2><p>左侧图标设置。其实就是设置左侧的 myp-icon组件。依然是熟悉的味道：</p>
+<p><code>icon</code> <code>iconMode</code> <code>iconType</code> <code>iconSize</code> <code>iconStyle</code> <code>iconBoxStyle</code></p>
+<h3 id="icon-1"><a href="#icon-1" class="headerlink" title="icon"></a>icon</h3><p>左侧的图标。默认没有内容。可以是字体图标，也可以是图片。支持网络图片。</p>
+<h3 id="iconMode"><a href="#iconMode" class="headerlink" title="iconMode"></a>iconMode</h3><p>如果 icon 是图片的话，支持图片的 mode 设置。默认是 <code>aspectFill</code>。</p>
+<h3 id="iconType"><a href="#iconType" class="headerlink" title="iconType"></a>iconType</h3><p>图标的主题颜色。</p>
+<h3 id="iconSize"><a href="#iconSize" class="headerlink" title="iconSize"></a>iconSize</h3><p>图标的尺寸设置，scss变量名字，可选：<code>ss</code> <code>s</code> <code>base</code> <code>l</code> <code>ll</code>。默认 <code>l</code>。</p>
+<h3 id="iconStyle"><a href="#iconStyle" class="headerlink" title="iconStyle"></a>iconStyle</h3><p>图标的 style设置。图片图标的话，可以自定义宽高。字体图标可以个性化font-size等属性。</p>
+<h3 id="iconBoxStyle"><a href="#iconBoxStyle" class="headerlink" title="iconBoxStyle"></a>iconBoxStyle</h3><p>icon的外层包裹，比如给图标加个border等。</p>
+<h2 id="icon2"><a href="#icon2" class="headerlink" title="icon2"></a>icon2</h2><p>icon2 是文字右侧的图标。它和 icon 是一致的。不再细说。</p>
+<p><code>icon2</code> <code>icon2Mode</code> <code>icon2Type</code> <code>icon2Size</code> <code>icon2Style</code> <code>icon2BoxStyle</code></p>
+<h2 id="loading"><a href="#loading" class="headerlink" title="loading"></a>loading</h2><p>我们允许给 button 设置为 loading 状态，这个时候 左侧的icon会变成loading图标，而且整个按钮不可点击。</p>
+<p><code>loading</code> <code>loadingSrc</code> <code>loadingWidth</code> <code>loadingHeight</code></p>
+<h3 id="loading-1"><a href="#loading-1" class="headerlink" title="loading"></a>loading</h3><p>是否是 loading状态，默认是 false。打开之后 显示 loading 图标，禁用点击。</p>
+<h3 id="loadingSrc"><a href="#loadingSrc" class="headerlink" title="loadingSrc"></a>loadingSrc</h3><p>loading 图片的src。默认是 <code>/static/ui/loading.gif</code>。</p>
+<h3 id="loadingWidth"><a href="#loadingWidth" class="headerlink" title="loadingWidth"></a>loadingWidth</h3><p>loading 图片的宽度。默认 36rpx。</p>
+<h3 id="loadingHeight"><a href="#loadingHeight" class="headerlink" title="loadingHeight"></a>loadingHeight</h3><p>loading 图片的高度。默认 36rpx。</p>
+<h2 id="buttonClicked"><a href="#buttonClicked" class="headerlink" title="@buttonClicked"></a>@buttonClicked</h2><p>点击 myp-button 任意位置触发。</p>
+
   
   
     <div class="guide-links">
