@@ -56,15 +56,15 @@ mypUI.scss 中定义的高度快捷配置。默认 base。支持 `ss` `s` `base`
 
 ### radius
 
-mypUI.scss 中定义的 radius 快捷配置。默认 base。支持 `ss` `s` `base` `l` `ll`。
+mypUI.scss 中定义的 radius 快捷配置。默认 base。支持 `ss` `s` `base` `l` `ll`。无 radius 设置为 none。
 
 ### border
 
-主题中定义的 border 快捷配置。border属性是同时支持 范围与颜色 的，比如：`border="all"` `border="bottom"` `border="all-primary"` `border="bottom-error"`。
+主题中定义的 border 快捷配置。border属性是同时支持 范围与颜色 的，比如：`border="all"` `border="bottom"` `border="all-primary"` `border="bottom-error"`。无 border 设置为 none。
 
 ### hover
 
-hover 属性配置，也就是 uniapp中的 hover-class 配置。默认是 opacity，也就是 透明度发生变化。可以选择的值有：`bg` `opacity` `bg-opacity`。
+hover 属性配置，也就是 uniapp中的 hover-class 配置。默认是 opacity，也就是 透明度发生变化。可以选择的值有：`bg` `opacity` `bg-opacity`。无 hover 效果设置为 none。
 
 ### space
 
