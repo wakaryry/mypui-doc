@@ -67,41 +67,6 @@ UI内部使用了 `easycom` 的组件自动引入，所以您必须在项目中�
 
 <p class="tip">注意：在 app.vue 里面全局引入 mypui.scss 是不会起作用的。毕竟里面只是定义了一些 scss变量</p>
 
-### 使用字体icon
-
-我们默认提供了一套 mypiconfont。来自 iconfont.cn。
-
-我们以前是在 `myp-icon` 组件里面加载字体图标，如果您需要更换自己的图标，需要去修改这个组件的配置内容。
-
-现在，我们改成了从 app.vue 里面引入图标的方式。这需要您手动引入图标，同时还记得引入图标相关的css。
-
-```js
-onLaunch: function() {
-	// #ifdef APP-PLUS
-	const dom = weex.requireModule('dom');
-	dom.addRule('fontFace', {
-		'fontFamily': "mypiconfont",
-		'src': "url('https://at.alicdn.com/t/font_1994281_a83sr011dzg.ttf')"
-	})
-	// #endif
-}
-```
-
-以上代码是为 app端引入字体图标。
-
-css相关：
-
-```html
-<style lang="scss">
-	@import '@/mypUI/icon.css';
-	@import '@/mypUI/mypui.scss';
-</style>
-```
-
-以上的 `@import '@/mypUI/icon.css';`，不仅为 非app端 引入了字体图标，同时定义了 `myp-iconfont` 这个class，如果需要使用字体图标，且使 `myp-icon` 中字体图标生效，必须引入该 css。图标的名字与对应关系在 `/mypUI/icons.js` 中。
-
-具体自定义字体图标请看文档：[myp-icon](/doc/guide/myp-icon.html)。
-
 ### 是否锁定屏幕
 
 我们建议您锁定屏幕。
@@ -147,11 +112,6 @@ onLaunch: function() {
 			// #endif
 			// #ifdef APP-PLUS
 			plus.screen.lockOrientation('portrait-primary'); //锁定屏幕
-			const dom = weex.requireModule('dom');
-			dom.addRule('fontFace', {
-				'fontFamily': "mypiconfont",
-				'src': "url('https://at.alicdn.com/t/font_1994281_a83sr011dzg.ttf')"
-			})
 			// #endif
 		},
 		onShow: function() {
@@ -164,7 +124,6 @@ onLaunch: function() {
 </script>
 
 <style lang="scss">
-	@import '@/mypUI/icon.css';
 	@import '@/mypUI/base.scss';
 </style>
 ```
