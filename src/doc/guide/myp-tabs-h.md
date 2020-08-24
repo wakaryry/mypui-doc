@@ -196,5 +196,3 @@ isTap 决策是否是 点击了tabs-item。默认是关闭的。使用 普通模
 ## TODO
 
 - 更多的样式支持；
-- app端联动时的抖动问题；
-- app端使用 animation模块；

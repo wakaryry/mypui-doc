@@ -4,6 +4,10 @@ type: cookbook
 order: 4
 ---
 
+H5下，nvue页面，由于部分样式会被默认样式覆盖，所以我们的全局样式，要么加 important，要么不写。
+
+为此，我们只加了border相关的。其它的不写入全局样式，比如 flex-direction/justify-content/align-items 等。他们在H5上面会被覆盖掉，如果加 important 的话，我们想要修改的时候也需要加 important。
+
 `text-overflow`实际上是作用在`text`标签的，我们需要为`text`标签设置宽度，以及把该属性设置在`text`标签上面，而不是在他的父组件上面.
 
 单行省略：
