@@ -26,7 +26,7 @@
 .content
   position: relative
   padding: $content-padding-vertical 0
-  max-width: 700px
+  max-width: 1200px
   margin: 0 auto
   padding-left: 50px
   &.api
@@ -195,9 +195,21 @@
   .sidebar
     position: fixed
 
-@media screen and (min-width: 1590px)
+@media screen and (min-width: 1760px)
   #header
     background-color: #fff
+
+@media screen and (max-width: 1760px)
+  .content.with-sidebar
+    margin-left: 290px
+  #ad
+    z-index: $z-base
+    position: relative
+    padding: 0
+    bottom: 0
+    right: 0
+    float: right
+    padding: 0 0 20px 30px
 
 @media screen and (max-width: 1300px)
   .content.with-sidebar
