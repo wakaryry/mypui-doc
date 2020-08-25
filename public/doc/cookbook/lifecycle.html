@@ -4,27 +4,27 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head><meta name="generator" content="Hexo 3.9.0">
-    <title>bindingx — mypUI</title>
+    <title>app — mypUI</title>
     <meta charset="utf-8">
     <meta name="description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="alternate" hreflang="x-default" href="https://vuejs.org/doc/cookbook/bindingx.html">
-    <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/doc/cookbook/bindingx.html">
-    <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/doc/cookbook/bindingx.html">
-    <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/doc/cookbook/bindingx.html">
-    <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/doc/cookbook/bindingx.html">
-    <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/doc/cookbook/bindingx.html">
-    <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/doc/cookbook/bindingx.html">
-    <link rel="alternate" hreflang="es" href="https://es.vuejs.org/doc/cookbook/bindingx.html">
+    <link rel="alternate" hreflang="x-default" href="https://vuejs.org/doc/cookbook/lifecycle.html">
+    <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/doc/cookbook/lifecycle.html">
+    <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/doc/cookbook/lifecycle.html">
+    <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/doc/cookbook/lifecycle.html">
+    <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/doc/cookbook/lifecycle.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/doc/cookbook/lifecycle.html">
+    <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/doc/cookbook/lifecycle.html">
+    <link rel="alternate" hreflang="es" href="https://es.vuejs.org/doc/cookbook/lifecycle.html">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="bindingx — mypUI">
+    <meta property="og:title" content="app — mypUI">
     <meta property="og:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
     <meta property="og:image" content="https://mypui.asnowsoft.cn//images/logo.png">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="bindingx — mypUI">
+    <meta name="twitter:title" content="app — mypUI">
     <meta name="twitter:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
     <meta name="twitter:image" content="https://mypui.asnowsoft.cn/images/logo.png">
 
@@ -274,13 +274,13 @@
     
     
     <li>
-      <a href="/doc/cookbook/bindingx.html" class="sidebar-link current">bindingx</a>
+      <a href="/doc/cookbook/bindingx.html" class="sidebar-link">bindingx</a>
     </li>
   
     
     
     <li>
-      <a href="/doc/cookbook/app.html" class="sidebar-link">app</a>
+      <a href="/doc/cookbook/app.html" class="sidebar-link current">app</a>
     </li>
   
     
@@ -292,7 +292,7 @@
     
     
     <li>
-      <a href="/doc/cookbook/lifecycle.html" class="sidebar-link">app</a>
+      <a href="/doc/cookbook/lifecycle.html" class="sidebar-link current">app</a>
     </li>
   
 </ul>
@@ -308,24 +308,14 @@
     
   
   
-    <h1>bindingx</h1>
+    <h1>app</h1>
   
 
   
-    <pre><code class="js">bindingX.bind({
-                    eventType: <span class="string">'pan'</span>,
-                    anchor: <span class="keyword">this</span>.$refs[<span class="string">'aaa'</span>].ref,
-                    props: [{
-                        element: <span class="keyword">this</span>.$refs[<span class="string">'bbb'</span>].ref,
-                        property: <span class="string">'transform.translateY'</span>,
-                        expression: <span class="string">'y+0'</span>
-                    }]
-                })
-</code></pre>
-<p>表达式不能直接是 y 这种，会报错。</p>
-<p>TypeError: undefined is not an object (evaluating ‘t.childNodes’) __ERROR</p>
-<p>debug会发现是表达式不正确。表达式必须带操作符。</p>
-<p>touchstart进行绑定，比如pan手势，Android端可以直接随着手势联动，而iOS端不能，需要下一次才能继续。</p>
+    <p>页面与组件的生命周期如何理解？</p>
+<p>先组件created，然后页面onload，这些都是同步任务。</p>
+<p>父子组件的生命周期先后顺序？</p>
+<p>先父组件created，然后子组件created，子组件mounted，然后父组件mounted。都是同步任务。</p>
 
   
   
@@ -343,7 +333,7 @@ _bsa.init('custom', 'CKYD62QM', 'placement:vuejsorg',
 
 
     发现错误？想参与编辑？
-    <a href="https://github.com/wakaryry/mypui-doc/blob/master/src/doc/cookbook/bindingx.md" rel="noopener" target="_blank">
+    <a href="https://github.com/wakaryry/mypui-doc/blob/master/src/doc/cookbook/lifecycle.md" rel="noopener" target="_blank">
       在 GitHub 上编辑此页！
     </a>
   </div>
