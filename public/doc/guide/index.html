@@ -1212,6 +1212,10 @@
   
     <p>mypUI 是基于 uniapp 的一套组件库与工具集，可以 <strong>高效且规范</strong> 地开发出 uniapp 支持的各端应用（APP/各家小程序/H5/快应用）。兼容 nvue 页面 和 vue 页面。nvue 页面对应的 app端 依托 weex 编译为原生，具备良好的性能与体验。mypUI 绝对能为您带来 <strong>稳定、高效、规范</strong> 的开发体验。</p>
 <h2 id="集成mypUI"><a href="#集成mypUI" class="headerlink" title="集成mypUI"></a>集成mypUI</h2><h3 id="拷贝UI组件"><a href="#拷贝UI组件" class="headerlink" title="拷贝UI组件"></a>拷贝UI组件</h3><p>直接将<code>mypUI</code>放在您的项目根目录下。</p>
+<blockquote>
+<p>或者npm安装：<code>npm install @mypui/myp-ui</code></p>
+</blockquote>
+<pre><code class="hljs bash">npm install @mypui/myp-ui</code></pre>
 <h3 id="复制UI的静态资源"><a href="#复制UI的静态资源" class="headerlink" title="复制UI的静态资源"></a>复制UI的静态资源</h3><p><code>loadingSrc</code>等公用静态资源直接使用了示范UI项目中 <code>/static/ui</code> 下面的静态文件，没有使用网络图片，所以需要拷贝到自己的项目下（<code>/static/ui</code>这个路径还是需要保持一致的）。</p>
 <p>静态文件的路径依然保持和示范项目中一致即可也就是依然是 <code>/static/ui</code> 路径。</p>
 <h3 id="使css生效"><a href="#使css生效" class="headerlink" title="使css生效"></a>使css生效</h3><p>为了减少包体积，UI内使用了 <code>全局css</code> 。您需要在 <code>app.vue</code> 里面引入 <code>mypUI</code> 中的 <code>base.scss</code>。</p>
@@ -1220,6 +1224,9 @@
 	<span class="hljs-keyword">@import</span> <span class="hljs-string">'@/mypUI/base.scss'</span>;
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
 <p>因为使用了 <code>scss变量</code>，记得设置 <code>style</code> 的 <code>lang=&quot;scss&quot;</code>。</p>
+<blockquote>
+<p>注意：如果您使用的是npm安装，记得引入方式为：<code>@import &#39;@mypui/myp-ui/mypui.scss&#39;;</code>。</p>
+</blockquote>
 <h3 id="配置-easycom"><a href="#配置-easycom" class="headerlink" title="配置 easycom"></a>配置 <code>easycom</code></h3><p>UI内部使用了 <code>easycom</code> 的组件自动引入，所以您必须在项目中开启 <code>easycom</code>。</p>
 <p>在 <code>pages.json</code> 中添加如下代码：</p>
 <pre><code class="hljs js"><span class="hljs-string">"easycom"</span>: &#123;
@@ -1228,6 +1235,9 @@
 		<span class="hljs-string">"myp-(.*)"</span>: <span class="hljs-string">"@/mypUI/myp-$1/myp-$1.vue"</span> <span class="hljs-comment">// 匹配mypUI内的vue文件</span>
 	&#125;
 &#125;</code></pre>
+<blockquote>
+<p>注意：npm安装时，easycom配置为：<code>&quot;myp-(.*)&quot;: &quot;@mypui/myp-ui/myp-$1/myp-$1.vue&quot;</code></p>
+</blockquote>
 <blockquote>
 <p>easycom 是什么？请看官方文档 <a href="https://uniapp.dcloud.io/collocation/pages?id=easycom" target="_blank" rel="noopener">easycom</a></p>
 </blockquote>
@@ -1238,7 +1248,7 @@
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>&gt;</span><span class="css">
 	<span class="hljs-keyword">@import</span> <span class="hljs-string">'@/mypUI/mypui.scss'</span>;
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
-<p class="tip">注意：在 app.vue 里面全局引入 mypui.scss 是不会起作用的。毕竟里面只是定义了一些 scss变量</p>
+<p class="tip">注意：在 app.vue 里面全局引入 mypui.scss 是不会起作用的。毕竟里面只是定义了一些 scss变量。而且该文件也不需要在 app.vue 里面引入。</p>
 
 <h3 id="是否锁定屏幕"><a href="#是否锁定屏幕" class="headerlink" title="是否锁定屏幕"></a>是否锁定屏幕</h3><p>我们建议您锁定屏幕。</p>
 <p>app.vue 中设置如下：</p>
@@ -1256,6 +1266,7 @@
 </li>
 </ul>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+	<span class="hljs-comment">// import systemMixin from '@mypui/myp-ui/myp-mixin/systemMixin.js'</span>
 	<span class="hljs-keyword">import</span> systemMixin <span class="hljs-keyword">from</span> <span class="hljs-string">'@/mypUI/myp-mixin/systemMixin.js'</span>
 	
 	<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;
@@ -1301,6 +1312,8 @@
 <li><p><a href="https://github.com/wakaryry/mypui-doc" target="_blank" rel="noopener">mypUI-文档开源</a></p>
 </li>
 <li><p><a href="https://www.mypui.cn" target="_blank" rel="noopener">mypUI-文档地址</a></p>
+</li>
+<li><p>npm地址：<a href="https://www.npmjs.com/package/@mypui/myp-ui" target="_blank" rel="noopener">https://www.npmjs.com/package/@mypui/myp-ui</a></p>
 </li>
 <li><p>作者wx：<code>pptpdf</code></p>
 </li>

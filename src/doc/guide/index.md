@@ -12,6 +12,12 @@ mypUI 是基于 uniapp 的一套组件库与工具集，可以 **高效且规范
 
 直接将`mypUI`放在您的项目根目录下。
 
+> 或者npm安装：`npm install @mypui/myp-ui`
+
+```bash
+npm install @mypui/myp-ui
+```
+
 ### 复制UI的静态资源
 
 `loadingSrc`等公用静态资源直接使用了示范UI项目中 `/static/ui` 下面的静态文件，没有使用网络图片，所以需要拷贝到自己的项目下（`/static/ui`这个路径还是需要保持一致的）。
@@ -32,6 +38,8 @@ mypUI 是基于 uniapp 的一套组件库与工具集，可以 **高效且规范
 
 因为使用了 `scss变量`，记得设置 `style` 的 `lang="scss"`。
 
+> 注意：如果您使用的是npm安装，记得引入方式为：`@import '@mypui/myp-ui/mypui.scss';`。
+
 ### 配置 `easycom`
 
 UI内部使用了 `easycom` 的组件自动引入，所以您必须在项目中开启 `easycom`。
@@ -46,6 +54,8 @@ UI内部使用了 `easycom` 的组件自动引入，所以您必须在项目中�
 	}
 }
 ```
+
+> 注意：npm安装时，easycom配置为：`"myp-(.*)": "@mypui/myp-ui/myp-$1/myp-$1.vue"`
 
 > easycom 是什么？请看官方文档 [easycom](https://uniapp.dcloud.io/collocation/pages?id=easycom)
 
@@ -65,7 +75,7 @@ UI内部使用了 `easycom` 的组件自动引入，所以您必须在项目中�
 </style>
 ```
 
-<p class="tip">注意：在 app.vue 里面全局引入 mypui.scss 是不会起作用的。毕竟里面只是定义了一些 scss变量</p>
+<p class="tip">注意：在 app.vue 里面全局引入 mypui.scss 是不会起作用的。毕竟里面只是定义了一些 scss变量。而且该文件也不需要在 app.vue 里面引入。</p>
 
 ### 是否锁定屏幕
 
@@ -93,6 +103,7 @@ onLaunch: function() {
 
 ```html
 <script>
+	// import systemMixin from '@mypui/myp-ui/myp-mixin/systemMixin.js'
 	import systemMixin from '@/mypUI/myp-mixin/systemMixin.js'
 	
 	export default {
@@ -145,6 +156,8 @@ onLaunch: function() {
 - [mypUI-文档开源](https://github.com/wakaryry/mypui-doc)
 
 - [mypUI-文档地址](https://www.mypui.cn)
+
+- npm地址：[https://www.npmjs.com/package/@mypui/myp-ui](https://www.npmjs.com/package/@mypui/myp-ui)
 
 - 作者wx：`pptpdf`
 
