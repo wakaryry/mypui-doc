@@ -1,7 +1,25 @@
 ---
-title: 定位盒子：myp-position
+title: 定位：myp-position
 type: guide
-order: 109
+order: 72
+---
+
+## Props
+
+| Prop name | Description | Type    | Values | Default  |
+| --------- | ----------- | ------- | ------ | -------- |
+| fixed     |             | boolean | -      | false    |
+| pos       |             | string  | -      | 'bottom' |
+| offset    |             | string  | -      | '0px'    |
+| bgType    |             | string  | -      | 'none'   |
+| boxStyle  |             | string  | -      | ''       |
+
+## Slots
+
+| Name    | Description | Bindings |
+| ------- | ----------- | -------- |
+| default |             |          |
+
 ---
 
 myp-position 是特殊定位的包裹层。也就是 `absolute` `fixed` 定位的封装盒子。

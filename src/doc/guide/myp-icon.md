@@ -1,7 +1,33 @@
 ---
 title: 图标：myp-icon
 type: guide
-order: 501
+order: 204
+---
+
+## Props
+
+| Prop name | Description | Type   | Values | Default     |
+| --------- | ----------- | ------ | ------ | ----------- |
+| name      |             | string | -      | 'right'     |
+| type      |             | string | -      | ''          |
+| size      |             | string | -      | 'l'         |
+| mode      |             | string | -      | 'aspectFit' |
+| hover     |             | string | -      | 'none'      |
+| iconStyle |             | string | -      | ""          |
+| boxStyle  |             | string | -      | ''          |
+
+## Events
+
+| Event name  | Type | Description |
+| ----------- | ---- | ----------- |
+| iconClicked |      |
+
+## Slots
+
+| Name    | Description | Bindings |
+| ------- | ----------- | -------- |
+| default |             |          |
+
 ---
 
 myp-icon 提供了快速使用 icon图标 的能力，支持 字体图标、本地图片，以及网络图片。

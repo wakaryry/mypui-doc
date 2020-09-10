@@ -1,7 +1,34 @@
 ---
-title: 加载提示：myp-loading
+title: 加载中：myp-loading
 type: guide
-order: 603
+order: 253
+---
+
+## Props
+
+| Prop name    | Description | Type    | Values | Default                  |
+| ------------ | ----------- | ------- | ------ | ------------------------ |
+| pos          |             | string  | -      | 'center'                 |
+| offset       |             | string  | -      | '0'                      |
+| icon         |             | string  | -      | '/static/ui/loading.gif' |
+| text         |             | string  | -      | ''                       |
+| delay        |             | number  | -      | 0                        |
+| bgType       |             | string  | -      | 'mask-dark'              |
+| needMask     |             | boolean | -      | false                    |
+| maskType     |             | string  | -      | 'mask'                   |
+| maskStyle    |             | string  | -      | ''                       |
+| contentStyle |             | string  | -      | ''                       |
+| iconStyle    |             | string  | -      | ''                       |
+| textType     |             | string  | -      | 'inverse'                |
+| textSize     |             | string  | -      | 'ss'                     |
+| textStyle    |             | string  | -      | ''                       |
+
+## Events
+
+| Event name  | Type      | Description |
+| ----------- | --------- | ----------- |
+| maskClicked | undefined |
+
 ---
 
 myp-loading 同样很帅气。主要用来做 loading 等待状态的提示。用于等待数据 或者 限制用户操作 等。

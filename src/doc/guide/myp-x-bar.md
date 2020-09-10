@@ -1,7 +1,22 @@
 ---
-title: xBar占位：myp-x-bar
+title: 底部安全区：myp-x-bar
 type: guide
-order: 108
+order: 71
+---
+
+## Props
+
+| Prop name | Description | Type   | Values | Default |
+| --------- | ----------- | ------ | ------ | ------- |
+| bgType    |             | string | -      | ''      |
+| boxStyle  |             | string | -      | ''      |
+
+## Slots
+
+| Name    | Description | Bindings |
+| ------- | ----------- | -------- |
+| default |             |          |
+
 ---
 
 myp-x-bar 为您提供了快速决策 x-bar 高度的能力。您可以在需要使用 xbar 高度的地方快速调用。

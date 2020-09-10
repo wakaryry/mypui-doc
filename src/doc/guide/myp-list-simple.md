@@ -1,7 +1,46 @@
 ---
 title: 列表：myp-list-simple
 type: guide
-order: 101
+order: 61
+---
+
+## Props
+
+| Prop name     | Description | Type           | Values | Default  |
+| ------------- | ----------- | -------------- | ------ | -------- |
+| includeXBar   |             | boolean        | -      | true     |
+| overrideXBar  |             | boolean        | -      | true     |
+| xBarBgType    |             | string         | -      | ''       |
+| xBarStyle     |             | string         | -      | ''       |
+| showScrollbar |             | boolean        | -      | true     |
+| includeStatus |             | boolean        | -      | false    |
+| includeNav    |             | boolean        | -      | false    |
+| tabHeight     |             | number         | -      | 0        |
+| extra         |             | number\|string | -      | 0        |
+| height        |             | number\|string | -      | '0'      |
+| useFlex       |             | boolean        | -      | false    |
+| width         |             | string         | -      | '750rpx' |
+| footToken     |             | string         | -      | '0px'    |
+| boxStyle      |             | string         | -      | ''       |
+| scrollStyle   |             | string         | -      | ''       |
+| bgType        |             | string         | -      | 'page'   |
+| hasFoot       |             | boolean        | -      | false    |
+| footBottom    |             | string         | -      | '0px'    |
+| footStyle     |             | string         | -      | ''       |
+
+## Events
+
+| Event name | Type      | Description |
+| ---------- | --------- | ----------- |
+| scroll     | undefined |
+
+## Slots
+
+| Name    | Description | Bindings |
+| ------- | ----------- | -------- |
+| default |             |          |
+| foot    |             |          |
+
 ---
 
 myp-list-simple 是 myp-list 组件的简化版，它移除了 刷新和加载 的功能，只是一个简单的数据展示组件。我们在不需要 刷新和加载 的页面，通常都是使用该组件来撑开页面和获得滚动能力。

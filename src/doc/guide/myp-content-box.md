@@ -1,7 +1,39 @@
 ---
-title: 高度盒子：myp-content-box
+title: 盒子：myp-content-box
 type: guide
-order: 105
+order: 68
+---
+
+## Props
+
+| Prop name     | Description | Type           | Values | Default  |
+| ------------- | ----------- | -------------- | ------ | -------- |
+| includeXBar   |             | boolean        | -      | true     |
+| overrideXBar  |             | boolean        | -      | true     |
+| xBarBgType    |             | string         | -      | ''       |
+| xBarStyle     |             | string         | -      | ''       |
+| showScrollbar |             | boolean        | -      | true     |
+| includeStatus |             | boolean        | -      | false    |
+| includeNav    |             | boolean        | -      | false    |
+| tabHeight     |             | number         | -      | 0        |
+| extra         |             | number\|string | -      | 0        |
+| height        |             | number\|string | -      | '0'      |
+| useFlex       |             | boolean        | -      | false    |
+| width         |             | string         | -      | '750rpx' |
+| footToken     |             | string         | -      | '0px'    |
+| boxStyle      |             | string         | -      | ''       |
+| scrollStyle   |             | string         | -      | ''       |
+| bgType        |             | string         | -      | 'page'   |
+| hasFoot       |             | boolean        | -      | false    |
+| footBottom    |             | string         | -      | '0px'    |
+| footStyle     |             | string         | -      | ''       |
+
+## Slots
+
+| Name    | Description | Bindings |
+| ------- | ----------- | -------- |
+| default |             |          |
+
 ---
 
 我们提供了一个 myp-content-box 的组件，里面除了混入了 myp-list 类组件的 styleMixin，什么都没有。

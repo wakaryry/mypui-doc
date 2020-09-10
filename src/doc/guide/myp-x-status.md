@@ -1,7 +1,22 @@
 ---
-title: status占位：myp-x-status
+title: 状态栏：myp-x-status
 type: guide
-order: 107
+order: 70
+---
+
+## Props
+
+| Prop name | Description | Type   | Values | Default |
+| --------- | ----------- | ------ | ------ | ------- |
+| bgType    |             | string | -      | ''      |
+| boxStyle  |             | string | -      | ''      |
+
+## Slots
+
+| Name    | Description | Bindings |
+| ------- | ----------- | -------- |
+| default |             |          |
+
 ---
 
 myp-x-status 为您提供了快速决策 statusBar 高度的能力。您可以在需要使用 statusBar 高度的地方快速调用。

@@ -1,7 +1,44 @@
 ---
 title: 抽屉：myp-drawer
 type: guide
-order: 302
+order: 104
+---
+
+## Props
+
+| Prop name    | Description | Type           | Values | Default                                                                                               |
+| ------------ | ----------- | -------------- | ------ | ----------------------------------------------------------------------------------------------------- |
+| pos          |             | string         | -      | 'bottom'                                                                                              |
+| bgType       |             | string         | -      | 'none'                                                                                                |
+| duration     |             | number         | -      | 300                                                                                                   |
+| overlay      |             | object         | -      | {<br> timingFunction: ['ease-in', 'ease-out'],<br> duration: 300,<br> bg: '',<br> bgType: 'mask'<br>} |
+| height       |             | number\|string | -      | 0                                                                                                     |
+| standout     |             | number\|string | -      | '0'                                                                                                   |
+| leftOffset   |             | number\|string | -      | -1                                                                                                    |
+| rightOffset  |             | number\|string | -      | -1                                                                                                    |
+| bottomOffset |             | number\|string | -      | -1                                                                                                    |
+| topOffset    |             | number\|string | -      | -1                                                                                                    |
+| width        |             | number\|string | -      | 750                                                                                                   |
+| animation    |             | object         | -      | {<br> timingFunction: 'ease-in-out'<br>}                                                              |
+| left         |             | string         | -      | '0'                                                                                                   |
+| top          |             | string         | -      | '0'                                                                                                   |
+| right        |             | string         | -      | '0'                                                                                                   |
+| bottom       |             | string         | -      | '0'                                                                                                   |
+| boxStyle     |             | string         | -      | ''                                                                                                    |
+
+## Events
+
+| Event name     | Type      | Description |
+| -------------- | --------- | ----------- |
+| overlayClicked | undefined |
+
+## Slots
+
+| Name    | Description | Bindings |
+| ------- | ----------- | -------- |
+| overlay |             |          |
+| default |             |          |
+
 ---
 
 myp-drawer 组件，提供了从不同方向出现的抽屉的实现。是一个重量级的组件，也是后期打算重点打磨的组件之一。实际上 mypUI 里面的弹层交互类组件都是非常非常优秀的，在很早以前我们的组件就为很多人提供了思路。

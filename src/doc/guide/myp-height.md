@@ -1,7 +1,23 @@
 ---
-title: 高度盒子：myp-height
+title: 高度：myp-height
 type: guide
-order: 106
+order: 69
+---
+
+## Props
+
+| Prop name | Description | Type   | Values | Default |
+| --------- | ----------- | ------ | ------ | ------- |
+| height    |             | string | -      | '0'     |
+| bgType    |             | string | -      | 'none'  |
+| boxStyle  |             | string | -      | ''      |
+
+## Slots
+
+| Name    | Description | Bindings |
+| ------- | ----------- | -------- |
+| default |             |          |
+
 ---
 
 myp-height 是有一个有趣的组件。它给予了您快速决策特殊高度的能力。
