@@ -37,9 +37,9 @@ order: 200
 
 ## Events
 
-| Event name | Type      | Description |
-| ---------- | --------- | ----------- |
-| selected   | undefined |
+| Event name  | Type      | Description |
+| ----------- | --------- | ----------- |
+| itemClicked | undefined |
 
 ---
 

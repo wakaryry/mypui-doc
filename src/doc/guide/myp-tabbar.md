@@ -6,31 +6,30 @@ order: 101
 
 ## Props
 
-| Prop name      | Description | Type           | Values | Default                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| -------------- | ----------- | -------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| includeXBar    |             | boolean        | -      | true                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| overrideXBar   |             | boolean        | -      | true                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| xBarBgType     |             | string         | -      | ''                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| xBarStyle      |             | string         | -      | ''                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| tabs           |             | array          | -      | []                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| tabStyle       |             | object         | -      | {<br> iconStyle: 'font-size: 20px;color: #333232;',<br> selectedIconStyle: 'font-size: 20px;color: #01A9F0;',<br> titleStyle: '',<br> selectedTitleStyle: '',<br> boxStyle: '',<br> itemStyle: '',<br> height: 50, // px<br> badgeStyle: '',<br> badgeTextStyle: '',<br> dotStyle: '',<br> // we use it to help to position the badge or dot<br> iconBoxWidth: '46px',<br> image: null,<br> imageStyle: '',<br> imageBoxStyle: '',<br>} |
-| includeStatus  |             | boolean        | -      | true                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| includeNav     |             | boolean        | -      | true                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| duration       |             | number\|string | -      | 300                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| timingFunction |             | string         | -      | 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'                                                                                                                                                                                                                                                                                                                                                                                                  |
-| top            |             | number\|string | -      | 0                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Prop name      | Description | Type    | Values | Default                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| -------------- | ----------- | ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| tabs           |             | array   | -      | []                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| tabStyle       |             | object  | -      | {<br> iconStyle: 'font-size: 20px;color: #333232;',<br> selectedIconStyle: 'font-size: 20px;color: #01A9F0;',<br> titleStyle: '',<br> selectedTitleStyle: '',<br> boxStyle: '',<br> tabsStyle: '',<br> itemStyle: '',<br> height: 50, // px<br> badgeStyle: '',<br> badgeTextStyle: '',<br> dotStyle: '',<br> // we use it to help to position the badge or dot<br> iconBoxWidth: '46px',<br> image: null,<br> imageStyle: '',<br> imageBoxStyle: '',<br> imageWidthXBar: false<br>} |
+| duration       |             | number  | -      | 300                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| timingFunction |             | string  | -      | 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| top            |             | string  | -      | '0'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| isSeize        |             | boolean | -      | true                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| considerXBar   |             | boolean | -      | true                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| xBarBgType     |             | string  | -      | 'inverse'                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| xBarStyle      |             | string  | -      | ''                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ## Events
 
 | Event name | Type      | Description |
 | ---------- | --------- | ----------- |
-| selected   | undefined |
+| tabClicked | undefined |
 
 ## Slots
 
 | Name    | Description | Bindings |
 | ------- | ----------- | -------- |
 | default |             |          |
+| bg      |             |          |
 | tabs    |             |          |
 
 ---
@@ -44,7 +43,7 @@ myp-tabbar 提供了自定义 tabbar 的UI以及包含子组件与跳转的能�
 ```html
 <template>
 	<view>
-		<myp-tabbar ref="tabbar" :tabs="tabs" :tabStyle="tabStyle" @selected="tabbarSwitched">
+		<myp-tabbar ref="tabbar" :tabs="tabs" :tabStyle="tabStyle" @tabClicked="tabbarSwitched">
 			<home></home>
 			<mine></mine>
 		</myp-tabbar>
@@ -154,24 +153,7 @@ myp-tabbar 及其包裹的子组件定义了页面的内容，正如我们所看
 
 在 myp-tabbar 外层的组件，一般都是一些 toast/loading/popup 之类等。毕竟 myp-tabbar 会占满全屏。剩下的也只够您 弹出内容了。
 
-使用 myp-tabbar，最重要的就是：tabbar的UI适配，和 tabbar的功能跳转，以及 tab内容与页面之间的通信。讲这些之前，我们先介绍一些 tabbar的内容区高度适配。
-
-## 高度适配
-
-默认情况下，myp-tabbar 组件的高度是占据全屏，它包含了 statusbar/navbar/xbar。实际上，您也无需做额外的设置，除非个别情况，您需要排除掉 statusbar和navbar。当然，也不排除您把 tabbar组件用作他途，比如仅仅当作是一个不支持手势的tabs内容切换组件，不过我们并不建议你这么做，毕竟这是个 tabbar 组件。
-
-myp-tabbar 直接使用了 `position:absolute`，而且它的 tabs 中部分组件不得不使用 `fixed` 定位（比如凸出，特殊的背景bg），所以我们建议您的 弹层类组件，全部放到 页面下，与 myp-tabbar 同为兄弟，而不是放在 内容页这些子组件上。尤其是您发现弹层被遮挡的时候，尤其需要注意是否恰当的处理好了组件层级问题。
-
-myp-tabbar 的高度控制主要有：`includeStatus` `includeNav` `includeXBar`，默认都是包含的，也就是都是 `true`。我们只希望您改变 `includeStatus` `includeNav` 这两个高度属性。
-
-关闭掉 `includeStatus` `includeNav`，顶部会遗留出一个 status/navbar 的高度，这种情况其实就是 各个 tabs 共享一个navbar。有时候我们可能会有这样的需求。
-
-有时候，我们可能不仅仅只是各个 tabs 之间共享 status和navbar，可能还需要共享 一个背景图片，也就是 顶部露出一些高度，以供共享视图使用。
-这个高度不一定就是 status和navbar的高度，所以，我们还提供了一个额外的 `top` 属性。
-
-比如，您需要在不包含 status和navbar的基础上，距离屏幕顶部再多个 40px，这个时候你 可以设置 `top="40px"`。top 的设置与 `includeStatus` `includeNav` 是独立的，可以互相配合使用。
-
-如果您不是非常清楚地知道您在做什么，请不要关闭 `includeXBar`。默认tabbar的tabs会在最底部，而且会自动处理好xbar的。
+使用 myp-tabbar，最重要的就是：tabbar的UI适配，和 tabbar的功能跳转，以及 tab内容与页面之间的通信。
 
 ## UI适配
 
@@ -368,13 +350,13 @@ next 与 prev 是 setPage 的便捷方法，我们一般不使用，主要还是
 
 `setPage(page, animated = true)`
 
-点击 tabitem，自动调用了该方法，该方法会帮您处理 内容子组件的切换，同时给您一个 `selected` 通知。
+点击 tabitem，自动调用了该方法，该方法会帮您处理 内容子组件的切换，同时给您一个 `tabClicked` 通知。
 
-您需要监听该通知 `@selected`，来记录您的当前 tab number，以便实现更多的业务逻辑。该通知携带参数格式为：`{page: 1}`。
+您需要监听该通知 `@tabClicked`，来记录您的当前 tab number，以便实现更多的业务逻辑。该通知携带参数格式为：`{page: 1}`。
 
-### @selected
+### @tabClicked
 
-点击 tabitem，以及调用 `setPage` 都会触发 `selected` 通知。该通知携带参数格式为：`{page: 1}`。
+点击 tabitem，以及调用 `setPage` 都会触发 `tabClicked` 通知。该通知携带参数格式为：`{page: 1}`。
 
 ### 程序跳转
 
