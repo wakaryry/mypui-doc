@@ -436,6 +436,24 @@
       
     
     <li>
+      <a href="/doc/guide/myp-scroll-inline.html" class="sidebar-link">横向列表：myp-scroll-inline</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
       <a href="/doc/guide/myp-scroll-scale.html" class="sidebar-link">伸缩列表：myp-scroll-scale</a>
     </li>
   
@@ -801,6 +819,24 @@
     
     <li>
       <a href="/doc/guide/myp-check-item.html" class="sidebar-link">单多选：myp-check-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-check-static.html" class="sidebar-link">单多选：myp-check-static</a>
     </li>
   
     
@@ -1264,6 +1300,24 @@
 	  
 	  
 	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-timeline-item.html" class="sidebar-link">结果展示：myp-timeline-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
 	    <li><h3>反馈互动</h3></li>
 	  
 	  
@@ -1597,24 +1651,6 @@
 	  
 	  
       
-      
-    
-    <li>
-      <a href="/doc/guide/element.html" class="sidebar-link">元素节点</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
         <li><h3>规模化</h3></li>
       
       
@@ -1692,24 +1728,6 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
@@ -1728,7 +1746,7 @@
       
     
     <li>
-      <a href="/doc/guide/filter.html" class="sidebar-link">过滤器</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1816,95 +1834,95 @@
 </thead>
 <tbody>
 <tr>
-<td>selections</td>
-<td></td>
-<td>array</td>
-<td>-</td>
-<td>[]</td>
-</tr>
-<tr>
-<td>labelProps</td>
-<td></td>
-<td>object</td>
-<td>-</td>
-<td>{<br> s1: {<br> label: ‘name’,<br> value: ‘id’<br> },<br> s2: {<br> label: ‘name’,<br> value: ‘id’,<br> // the tag is for to get s2 selections in s1<br> tag: “c”<br> },<br> s3: {<br> label: ‘name’,<br> value: ‘id’,<br> // the tag is for to get get s3 in selections in s2<br> tag: “a”<br> }<br>}</td>
-</tr>
-<tr>
 <td>mode</td>
-<td></td>
+<td>[‘s3’, ‘s2’, ‘s1’]</td>
 <td>string</td>
 <td>-</td>
 <td>“s1”</td>
 </tr>
 <tr>
 <td>value</td>
-<td></td>
+<td>值，不是索引</td>
 <td>array</td>
 <td>-</td>
 <td>[0,0,0,0,0,0,0]</td>
 </tr>
 <tr>
 <td>bgType</td>
-<td></td>
+<td>背景主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘inverse’</td>
 </tr>
 <tr>
 <td>textType</td>
-<td></td>
+<td>选择项文字颜色主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘text’</td>
 </tr>
 <tr>
 <td>textSize</td>
-<td></td>
+<td>选择项文字尺寸主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘base’</td>
 </tr>
 <tr>
 <td>height</td>
-<td></td>
+<td>自定义的高度</td>
 <td>string</td>
 <td>-</td>
 <td>‘500rpx’</td>
 </tr>
 <tr>
 <td>itemHeight</td>
-<td></td>
+<td>选择项自定义的高度</td>
 <td>string</td>
 <td>-</td>
 <td>‘100rpx’</td>
 </tr>
 <tr>
 <td>boxStyle</td>
-<td></td>
+<td>外层样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
 </tr>
 <tr>
 <td>itemStyle</td>
-<td></td>
+<td>选择项的外层样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
 </tr>
 <tr>
 <td>textStyle</td>
-<td></td>
+<td>选择项的文字样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
 </tr>
 <tr>
 <td>indicatorStyle</td>
-<td></td>
+<td>indicator-style</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
+</tr>
+<tr>
+<td>selections</td>
+<td>选择的内容</td>
+<td>array</td>
+<td>-</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>labelProps</td>
+<td>对应选择内容的字段</td>
+<td>object</td>
+<td>-</td>
+<td>{<br> s1: {<br> label: ‘name’,<br> value: ‘id’<br> },<br> s2: {<br> label: ‘name’,<br> value: ‘id’,<br> // the tag is for to get s2 selections in s1<br> tag: “c”<br> },<br> s3: {<br> label: ‘name’,<br> value: ‘id’,<br> // the tag is for to get get s3 in selections in s2<br> tag: “a”<br> }<br>}</td>
 </tr>
 </tbody>
 </table>
@@ -1929,6 +1947,16 @@
 </table>
 <hr>
 
+  
+  
+    <div class="donate-box">
+	  <p>mypUI 是采用 MIT 许可的开源项目，使用完全免费。您觉得不错，或者对您有所帮助，甚至是鼓励作者的付出，可以给他买杯咖啡:</p>
+      <div style="margin-top:1em;">
+        <img src="/images/pay_wx_68.png" style="width:300px;height:400px;">,
+		<img src="/images/pay_ali_68.png" style="width:300px;height:400px;">
+      </div>
+	  <p style="margin-top:1em;">更多赞助方式：<a href="/support-mypui/">支持mypUI</a></p>
+    </div>
   
   
     <div class="guide-links">

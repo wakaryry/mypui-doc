@@ -1,23 +1,19 @@
 ---
 title: 盒子：myp-content-box
 type: guide
-order: 70
+order: 71
 ---
 
 ## Props
 
-| Prop name     | Description | Type    | Values | Default |
-| ------------- | ----------- | ------- | ------ | ------- |
-| bgType        |             | string  | -      | 'page'  |
-| border        |             | string  | -      | 'none'  |
-| radius        |             | string  | -      | 'none'  |
-| includeStatus |             | boolean | -      | false   |
-| includeNav    |             | boolean | -      | false   |
-| includeXBar   |             | boolean | -      | true    |
-| tabHeight     |             | number  | -      | 0       |
-| extra         |             | string  | -      | '0'     |
-| height        |             | string  | -      | '0'     |
-| boxStyle      |             | string  | -      | ''      |
+| Prop name | Description                                   | Type   | Values | Default      |
+| --------- | --------------------------------------------- | ------ | ------ | ------------ |
+| bgType    | 背景主题                                      | string | -      | 'page'       |
+| border    | 边框主题                                      | string | -      | ''           |
+| radius    | 圆角主题                                      | string | -      | ''           |
+| extra     | 需要从屏幕高度减去的高度                      | string | -      | 'status-nav' |
+| height    | height 非 0 时，会直接使用 height，忽略 extra | string | -      | '0'          |
+| boxStyle  | 外层样式                                      | string | -      | ''           |
 
 ## Slots
 
@@ -29,7 +25,15 @@ order: 70
 
 我们提供了一个 myp-content-box 的组件，这个组件主要是用来 组件化快速决策高度。
 
-为什么会有这个组件？
+**这个组件需要注意的就是 `extra` 属性的配置。**
+
+我们约定如下：
+
+- extra指的是需要从屏幕高度上减去的高度；
+- height属性设置为非0时，extra属性无效；
+- extra是可以多段拼接的，比如：`status-nav-x-100rpx-40px`，它表示 `状态栏高度+导航栏高度+xBar安全区高度+100rpx的高度+40px的高度`，非常灵活与方便；
+
+**为什么会有这个组件？**
 
 一切还得从 公元前520年 说起。那时候，天地虽不是初生，但混沌依旧，万物皆有灵，一切是那么的玄幻莫测。
 

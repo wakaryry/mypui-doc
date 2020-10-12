@@ -436,6 +436,24 @@
       
     
     <li>
+      <a href="/doc/guide/myp-scroll-inline.html" class="sidebar-link">横向列表：myp-scroll-inline</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
       <a href="/doc/guide/myp-scroll-scale.html" class="sidebar-link">伸缩列表：myp-scroll-scale</a>
     </li>
   
@@ -801,6 +819,24 @@
     
     <li>
       <a href="/doc/guide/myp-check-item.html" class="sidebar-link">单多选：myp-check-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-check-static.html" class="sidebar-link">单多选：myp-check-static</a>
     </li>
   
     
@@ -1264,6 +1300,24 @@
 	  
 	  
 	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-timeline-item.html" class="sidebar-link">结果展示：myp-timeline-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
 	    <li><h3>反馈互动</h3></li>
 	  
 	  
@@ -1597,24 +1651,6 @@
 	  
 	  
       
-      
-    
-    <li>
-      <a href="/doc/guide/element.html" class="sidebar-link">元素节点</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
         <li><h3>规模化</h3></li>
       
       
@@ -1692,24 +1728,6 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
@@ -1728,7 +1746,7 @@
       
     
     <li>
-      <a href="/doc/guide/filter.html" class="sidebar-link">过滤器</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1818,20 +1836,19 @@
 </ul>
 <p>contentBoxMixin（<code>/mypUI/myp-mixin/contentBoxMixin.js</code>）就是用来辅助计算高度的。</p>
 <p>你只需要按照规则设置，您就能拿到您想要的高度。</p>
-<p>实际上，这个规则，我们已经在别的地方见过很多次了。他们就是 与 xBar statusbar navbar tabbar extra 等相关的内容。</p>
-<p>我们肯定对 <code>includeStatus</code> <code>includeNav</code> <code>includeXBar</code> <code>tabHeight</code> <code>extra</code> <code>height</code> 等这些设置和规则不再陌生。</p>
+<p>实际上，这个规则，我们已经在别的地方见过很多次了。他们就是 与 xBar statusbar navbar tabbar extra 等相关的内容：通过 <code>extra</code> 属性来控制高度的。</p>
 <p>contentBoxMixin 也一样，不过是对外暴露的名字不一样而已。</p>
-<p class="tip">为什么名字不一样？因为 开放的mixin，为了避免命名冲突，对外暴露都加了一个 myp 前缀</p>
+<p class="tip">开放的mixin，为了避免命名冲突，对外暴露都加了一个 myp 前缀</p>
 
-<p>默认属性下，得到的高度 = 屏幕的高度 - 状态栏高度 - 导航栏高度。</p>
+<p>在该mixin中相对应的属性为：<code>mypExtra</code>：</p>
+<ul>
+<li>mypExtra: 默认是 status-nav，也就是导航栏和状态栏的高度。extra表示的是需要从屏幕高度上减去的高度，减去之后剩下的就是我们需要的高度。</li>
+</ul>
+<p>也就是，默认属性下：得到的高度 = 屏幕的高度 - 状态栏高度 - 导航栏高度。</p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>contentBoxMixin 的设置是开放在 data 中的。</p>
 <pre><code class="hljs js">data() &#123;
 	<span class="hljs-keyword">return</span> &#123;
-		<span class="hljs-attr">mypIncludeStatus</span>: <span class="hljs-literal">false</span>,  <span class="hljs-comment">// 默认不包含状态栏</span>
-		<span class="hljs-attr">mypIncludeNav</span>: <span class="hljs-literal">false</span>,   <span class="hljs-comment">// 默认不包含导航栏</span>
-		<span class="hljs-attr">mypTabHeight</span>: <span class="hljs-number">0</span>,
-		<span class="hljs-attr">mypIncludeXBar</span>: <span class="hljs-literal">true</span>,
-		<span class="hljs-attr">mypExtra</span>: <span class="hljs-string">'0px'</span>
+		<span class="hljs-attr">mypExtra</span>: <span class="hljs-string">'status-nav-x-120rpx-50px'</span>
 	&#125;
 &#125;</code></pre>
 <p>您可以根据需要修改他们的值，最终你直接使用 <code>mypContentHeight</code> <code>mypContentHeightStyle</code> 即可。</p>
@@ -1847,12 +1864,22 @@
     <span class="hljs-attr">mixins</span>: [contentBoxMixin],
     data() &#123;
       <span class="hljs-keyword">return</span> &#123;
-        <span class="hljs-attr">mypExtra</span>: <span class="hljs-string">'100rpx'</span>
+        <span class="hljs-attr">mypExtra</span>: <span class="hljs-string">'status-nav-100rpx'</span>
       &#125;
     &#125;
   &#125;
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 
+  
+  
+    <div class="donate-box">
+	  <p>mypUI 是采用 MIT 许可的开源项目，使用完全免费。您觉得不错，或者对您有所帮助，甚至是鼓励作者的付出，可以给他买杯咖啡:</p>
+      <div style="margin-top:1em;">
+        <img src="/images/pay_wx_68.png" style="width:300px;height:400px;">,
+		<img src="/images/pay_ali_68.png" style="width:300px;height:400px;">
+      </div>
+	  <p style="margin-top:1em;">更多赞助方式：<a href="/support-mypui/">支持mypUI</a></p>
+    </div>
   
   
     <div class="guide-links">

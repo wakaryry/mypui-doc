@@ -1872,6 +1872,9 @@ ul.demo li {
   font-family: FontAwesome;
   background-color: #42b983;
 }
+.donate-box {
+  margin-top: 2em;
+}
 .guide-links {
   margin-top: 2em;
   height: 1em;

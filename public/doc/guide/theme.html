@@ -436,6 +436,24 @@
       
     
     <li>
+      <a href="/doc/guide/myp-scroll-inline.html" class="sidebar-link">横向列表：myp-scroll-inline</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
       <a href="/doc/guide/myp-scroll-scale.html" class="sidebar-link">伸缩列表：myp-scroll-scale</a>
     </li>
   
@@ -801,6 +819,24 @@
     
     <li>
       <a href="/doc/guide/myp-check-item.html" class="sidebar-link">单多选：myp-check-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-check-static.html" class="sidebar-link">单多选：myp-check-static</a>
     </li>
   
     
@@ -1264,6 +1300,24 @@
 	  
 	  
 	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-timeline-item.html" class="sidebar-link">结果展示：myp-timeline-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
 	    <li><h3>反馈互动</h3></li>
 	  
 	  
@@ -1597,24 +1651,6 @@
 	  
 	  
       
-      
-    
-    <li>
-      <a href="/doc/guide/element.html" class="sidebar-link">元素节点</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
         <li><h3>规模化</h3></li>
       
       
@@ -1692,24 +1728,6 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
@@ -1728,7 +1746,7 @@
       
     
     <li>
-      <a href="/doc/guide/filter.html" class="sidebar-link">过滤器</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1804,7 +1822,230 @@
   
 
   
-    
+    <p>mypUI 是基于主题配置的组件库，在快速配置与开发的同时，给予了您足够便捷的个性化能力。</p>
+<p>了解 mypUI 的主题配置是非常有用的：</p>
+<ul>
+<li><ol>
+<li>加快您熟悉 mypUI；</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>知道具备哪些可配置项；</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>熟悉base.scss中可用的class；</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>提供了一个组件库比较成熟的主题变量；</li>
+</ol>
+</li>
+</ul>
+<p>我们主要从以下几个方面来讲主题与主题配置：</p>
+<ul>
+<li>主题变量的分类与设计；</li>
+<li>主题变量与base.scss的对应，以及base.scss的解析；</li>
+<li>组件中对于主题的一些约定；</li>
+<li>如何自定义主题变量的值；</li>
+<li>如何增加主题变量；</li>
+<li>各端兼容；</li>
+</ul>
+<blockquote>
+<p>主题变量的分类与设计</p>
+</blockquote>
+<p>我们的主题变量的定义都在 mypui.scss 文件中，主要包含：</p>
+<ul>
+<li>主题色；</li>
+<li>特殊色；</li>
+<li>多级文本色；</li>
+<li>特殊语意文本色；</li>
+<li>通用背景色；</li>
+<li>特殊语意背景色；</li>
+<li>边框色；</li>
+<li>边框宽度；</li>
+<li>高度；</li>
+<li>字体大小；</li>
+<li>字体行高；</li>
+<li>圆角大小；</li>
+<li>上下间距；</li>
+<li>左右间距；</li>
+<li>特殊语意下透明度；</li>
+<li>导航栏相关的主题配置；</li>
+</ul>
+<p>具体如下：</p>
+<pre><code class="hljs scss"><span class="hljs-comment">// </span>
+<span class="hljs-comment">// 主题色：通常一个APP在设计稿上，主题色一般是 3色或者4色。过多的色彩不仅混乱，而且不好管理与维护</span>
+<span class="hljs-comment">// </span>
+<span class="hljs-variable">$myp-color-primary</span>: <span class="hljs-number">#8F9CFF</span>;  <span class="hljs-comment">// 主要主题色，通常是设计稿中的主体色彩</span>
+<span class="hljs-variable">$myp-color-success</span>: <span class="hljs-number">#8FDAFF</span>;  <span class="hljs-comment">// 成功主题色，通常用于表征：安全的/通过的/成功的</span>
+<span class="hljs-variable">$myp-color-warning</span>: <span class="hljs-number">#FFD666</span>;  <span class="hljs-comment">// 警告主题色，通常用于表征：提示/警告/有风险/需要注意</span>
+<span class="hljs-variable">$myp-color-error</span>: <span class="hljs-number">#FF9090</span>;  <span class="hljs-comment">// 错误主题色，通常用于表征：有危险/谨慎操作/错误</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// 特殊色：有时候我们会碰到一些主题之外的特殊色，我们开放了一个 自定义色彩作为补充，也提供了一个特殊语意的（链接色）</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-variable">$myp-color-custom</span>: <span class="hljs-number">#4A5061</span>;  <span class="hljs-comment">// 自定义的主题色，作为补充</span>
+<span class="hljs-variable">$myp-color-link</span>: <span class="hljs-number">#0273F1</span>;  <span class="hljs-comment">// 特殊的链接色，有时候文字中的特殊提示可能不是主题色，特殊的链接色可以用来作为特殊的文字提示</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// 多级文本色：提供四级文本色以及一个反色。反色通常用于深色背景</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-variable">$myp-text-color</span>: <span class="hljs-number">#333232</span>;  <span class="hljs-comment">// 一级文本色，也是主要文本色，用于显示与阅读</span>
+<span class="hljs-variable">$myp-text-color-inverse</span>: <span class="hljs-number">#FFFFFF</span>;  <span class="hljs-comment">// 反色</span>
+<span class="hljs-variable">$myp-text-color-second</span>: <span class="hljs-number">#666464</span>;  <span class="hljs-comment">// 二级文本色，一般用于描述/提示</span>
+<span class="hljs-variable">$myp-text-color-third</span>: <span class="hljs-number">#999696</span>;  <span class="hljs-comment">// 三级文本色，辅助色</span>
+<span class="hljs-variable">$myp-text-color-forth</span>: <span class="hljs-number">#CCC8C8</span>;  <span class="hljs-comment">// 四级文本色，辅助色</span>
+
+<span class="hljs-comment">// </span>
+<span class="hljs-comment">// 特殊语意文本色：提供了 占位字符串以及禁用时的文本颜色</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-variable">$myp-text-color-place</span>: <span class="hljs-number">#CCC8C8</span>;  <span class="hljs-comment">// 占位符的颜色</span>
+<span class="hljs-variable">$myp-text-color-disabled</span>: <span class="hljs-number">#CCC8C8</span>;  <span class="hljs-comment">// 禁用时文本颜色。用得少，一般禁用时使用opacity</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// 通用背景色：提供了反色、通用页面色、浅色、暗色背景色设置</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-variable">$myp-bg-color-inverse</span>: <span class="hljs-number">#FFFFFF</span>;  <span class="hljs-comment">// 反色背景</span>
+<span class="hljs-variable">$myp-bg-color-page</span>: <span class="hljs-number">#FAFAFA</span>;  <span class="hljs-comment">// 通用页面背景色</span>
+<span class="hljs-variable">$myp-bg-color-light</span>: <span class="hljs-number">#F3F4F5</span>;  <span class="hljs-comment">// 浅色背景色</span>
+<span class="hljs-variable">$myp-bg-color-dark</span>: <span class="hljs-number">#F1F1F1</span>;  <span class="hljs-comment">// 暗色背景色</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// 特殊语意背景色：hover时的背景色以及mask的背景色</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-variable">$myp-bg-color-hover</span>: <span class="hljs-number">#F1F1F1</span>;  <span class="hljs-comment">// hover时的背景色</span>
+<span class="hljs-variable">$myp-bg-color-hover-dark</span>: rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.8</span>);  <span class="hljs-comment">// hover时的暗色</span>
+<span class="hljs-variable">$myp-bg-color-mask</span>: rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.2</span>);  <span class="hljs-comment">// 浅色遮罩</span>
+<span class="hljs-variable">$myp-bg-color-mask-dark</span>: rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.8</span>);  <span class="hljs-comment">// 暗色遮罩</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// 边框色：提供了浅/暗主题以及反色</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-variable">$myp-border-color</span>: <span class="hljs-number">#F7F5F5</span>;  <span class="hljs-comment">// 通用边框色</span>
+<span class="hljs-variable">$myp-border-color-light</span>: <span class="hljs-number">#F7F5F5</span>;  <span class="hljs-comment">// 浅色</span>
+<span class="hljs-variable">$myp-border-color-dark</span>: <span class="hljs-number">#EBEBEB</span>;  <span class="hljs-comment">// 暗色</span>
+<span class="hljs-variable">$myp-border-color-inverse</span>: <span class="hljs-number">#FFFFFF</span>;  <span class="hljs-comment">// 反色</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// 边框宽度：方便不同端设置不同的宽度</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">/* #ifdef APP-NVUE */</span>
+<span class="hljs-variable">$myp-border-width</span>: <span class="hljs-number">1px</span>;
+<span class="hljs-comment">/* #endif */</span>
+<span class="hljs-comment">/* #ifndef APP-NVUE */</span>
+<span class="hljs-variable">$myp-border-width</span>: <span class="hljs-number">1px</span>;
+<span class="hljs-comment">/* #endif */</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// 高度：</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-variable">$myp-height-ss</span>: <span class="hljs-number">40</span>rpx;  <span class="hljs-comment">// ss</span>
+<span class="hljs-variable">$myp-height-s</span>: <span class="hljs-number">60</span>rpx;  <span class="hljs-comment">// s</span>
+<span class="hljs-variable">$myp-height-base</span>: <span class="hljs-number">80</span>rpx;  <span class="hljs-comment">// base</span>
+<span class="hljs-variable">$myp-height-l</span>: <span class="hljs-number">100</span>rpx;  <span class="hljs-comment">// l</span>
+<span class="hljs-variable">$myp-height-ll</span>: <span class="hljs-number">120</span>rpx;  <span class="hljs-comment">// ll</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// 字体大小</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-variable">$myp-font-size-ss</span>: <span class="hljs-number">24</span>rpx;  <span class="hljs-comment">// ss</span>
+<span class="hljs-variable">$myp-font-size-s</span>: <span class="hljs-number">28</span>rpx;  <span class="hljs-comment">// s</span>
+<span class="hljs-variable">$myp-font-size-base</span>: <span class="hljs-number">30</span>rpx;  <span class="hljs-comment">// base</span>
+<span class="hljs-variable">$myp-font-size-l</span>: <span class="hljs-number">32</span>rpx;  <span class="hljs-comment">// l</span>
+<span class="hljs-variable">$myp-font-size-ll</span>: <span class="hljs-number">36</span>rpx;  <span class="hljs-comment">// ll</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// 字体行高</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-variable">$myp-lh-ss</span>: <span class="hljs-number">34</span>rpx;  <span class="hljs-comment">// ss</span>
+<span class="hljs-variable">$myp-lh-s</span>: <span class="hljs-number">40</span>rpx;  <span class="hljs-comment">// s</span>
+<span class="hljs-variable">$myp-lh-base</span>: <span class="hljs-number">42</span>rpx;  <span class="hljs-comment">// base</span>
+<span class="hljs-variable">$myp-lh-l</span>: <span class="hljs-number">45</span>rpx;  <span class="hljs-comment">// l</span>
+<span class="hljs-variable">$myp-lh-ll</span>: <span class="hljs-number">50</span>rpx;  <span class="hljs-comment">// ll</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// 圆角大小</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-variable">$myp-border-radius-ss</span>: <span class="hljs-number">4</span>rpx;  <span class="hljs-comment">// ss</span>
+<span class="hljs-variable">$myp-border-radius-s</span>: <span class="hljs-number">6</span>rpx;  <span class="hljs-comment">// s</span>
+<span class="hljs-variable">$myp-border-radius-base</span>: <span class="hljs-number">12</span>rpx;  <span class="hljs-comment">// base</span>
+<span class="hljs-variable">$myp-border-radius-l</span>: <span class="hljs-number">24</span>rpx;  <span class="hljs-comment">// l</span>
+<span class="hljs-variable">$myp-border-radius-ll</span>: <span class="hljs-number">60</span>rpx;  <span class="hljs-comment">// ll</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// 上下间距</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-variable">$myp-space-ss</span>: <span class="hljs-number">6</span>rpx;  <span class="hljs-comment">// ss</span>
+<span class="hljs-variable">$myp-space-s</span>: <span class="hljs-number">12</span>rpx;  <span class="hljs-comment">// s</span>
+<span class="hljs-variable">$myp-space-base</span>: <span class="hljs-number">16</span>rpx;  <span class="hljs-comment">// base</span>
+<span class="hljs-variable">$myp-space-l</span>: <span class="hljs-number">24</span>rpx;  <span class="hljs-comment">// l</span>
+<span class="hljs-variable">$myp-space-ll</span>: <span class="hljs-number">32</span>rpx;  <span class="hljs-comment">// ll</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// 左右间距</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-variable">$myp-wing-ss</span>: <span class="hljs-number">12</span>rpx;  <span class="hljs-comment">// ss</span>
+<span class="hljs-variable">$myp-wing-s</span>: <span class="hljs-number">24</span>rpx;  <span class="hljs-comment">// s</span>
+<span class="hljs-variable">$myp-wing-base</span>: <span class="hljs-number">32</span>rpx;  <span class="hljs-comment">// base</span>
+<span class="hljs-variable">$myp-wing-l</span>: <span class="hljs-number">36</span>rpx;  <span class="hljs-comment">// l</span>
+<span class="hljs-variable">$myp-wing-ll</span>: <span class="hljs-number">40</span>rpx;  <span class="hljs-comment">// ll</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// 特殊语意下的透明度</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-variable">$myp-opacity-disabled</span>: <span class="hljs-number">0.5</span>;  <span class="hljs-comment">// 禁用时透明度</span>
+<span class="hljs-variable">$myp-opacity-hover</span>: <span class="hljs-number">0.5</span>;  <span class="hljs-comment">// 透明度变化效果的hover</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// 导航栏相关的主题配置</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-variable">$myp-nav-title-color</span>: <span class="hljs-number">#000000</span>;  <span class="hljs-comment">// 导航栏的标题色</span>
+<span class="hljs-variable">$myp-nav-title-size</span>: <span class="hljs-number">16px</span>;  <span class="hljs-comment">// 导航栏标题字体大小</span>
+<span class="hljs-variable">$myp-nav-icon-color</span>: <span class="hljs-number">#4C4C4C</span>;  <span class="hljs-comment">// 导航栏item的icon颜色</span>
+<span class="hljs-variable">$myp-nav-icon-size</span>: <span class="hljs-number">20px</span>;  <span class="hljs-comment">// 导航栏item的icon字体大小</span>
+<span class="hljs-variable">$myp-nav-item-color</span>: <span class="hljs-number">#4C4C4C</span>;  <span class="hljs-comment">// 导航栏item的文字颜色</span>
+<span class="hljs-variable">$myp-nav-item-size</span>: <span class="hljs-number">14px</span>;  <span class="hljs-comment">// 导航栏item的文字大小</span>
+<span class="hljs-variable">$myp-nav-bg-color</span>: <span class="hljs-number">#FFFFFF</span>;  <span class="hljs-comment">// 导航栏的背景色</span></code></pre>
+<p class="tip">对于主题值里面的单位，rpx还是px，取决于您自己。我们默认提供了rpx单位，您可以使用px单位</p>
+
+<blockquote>
+<p>主题变量与base.scss的对应，以及base.scss的解析</p>
+</blockquote>
+<p>base.scss 中定义的class，基本上已经足够支撑大多数的设计。熟悉它里面与主题的对应关系以及有哪些内容，对于快速开发，以及减少css代码的书写，与减少包体积来说是十分重要的。</p>
+<blockquote>
+<p>组件中对于主题的一些约定</p>
+</blockquote>
+<p>在文档中，主题类的属性，我们都会说明，<code>xxxx主题</code>，比如 背景主题 颜色主题 尺寸主题。其它非主题类的，我们会说明为：<code>样式</code> 或者 <code>自定义xxxx</code>，比如 文字样式 自定义高度 自定义宽度。</p>
+<p>在组件里面，您应该已经注意到了，我们的组件中存在：xxx xxxType xxxSize xxxStyle 这些非常规范与统一的属性。</p>
+<ul>
+<li><p>xxxType: 对应的是背景主题，或者文字颜色主题。背景主题对应 base.scss中的 <code>myp-bg</code>，颜色主题对应 base.scss 中的 <code>myp-color</code>；</p>
+</li>
+<li><p>xxxSize: 对应的尺寸类的主题，具体看对应的属性语意，一般对应：<code>myp-size</code>(文字尺寸主题)</p>
+</li>
+</ul>
+<blockquote>
+<p>如何自定义主题变量的值</p>
+</blockquote>
+<p>我们不建议您直接修改 <code>mypui.scss</code> 以及 <code>base.scss</code>。因为这不利于您的升级和维护。</p>
+<p>我们建议您直接将 mypui.scss 中的变量全部复制到 uni.scss 中，然后在 uni.scss 中修改变量值。</p>
+<blockquote>
+<p>如何增加主题变量</p>
+</blockquote>
+<blockquote>
+<p>各端兼容</p>
+</blockquote>
+
+  
+  
+    <div class="donate-box">
+	  <p>mypUI 是采用 MIT 许可的开源项目，使用完全免费。您觉得不错，或者对您有所帮助，甚至是鼓励作者的付出，可以给他买杯咖啡:</p>
+      <div style="margin-top:1em;">
+        <img src="/images/pay_wx_68.png" style="width:300px;height:400px;">,
+		<img src="/images/pay_ali_68.png" style="width:300px;height:400px;">
+      </div>
+	  <p style="margin-top:1em;">更多赞助方式：<a href="/support-mypui/">支持mypUI</a></p>
+    </div>
   
   
     <div class="guide-links">

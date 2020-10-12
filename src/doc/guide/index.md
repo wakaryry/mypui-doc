@@ -4,7 +4,9 @@ type: guide
 order: 2
 ---
 
-mypUI 是基于 uniapp 的一套组件库与工具集，可以 **高效且规范** 地开发出 uniapp 支持的各端应用（APP/各家小程序/H5/快应用）。兼容 nvue 页面 和 vue 页面。nvue 页面对应的 app端 依托 weex 编译为原生，具备良好的性能与体验。mypUI 绝对能为您带来 **稳定、高效、规范** 的开发体验。
+mypUI 是基于 uniapp/weex 的一套组件库与工具集，可以 **高效且规范** 地开发出 uniapp 支持的各端应用（APP/各家小程序/H5/快应用）。兼容 nvue 页面 和 vue 页面。nvue 页面对应的 app端 依托 weex 编译为原生，具备良好的性能与体验。
+
+mypUI 从学习成本、开发经验，以及记忆成本、性能优化、包体积等多方面考虑，不断优化，已经是一个不可多得的优秀框架，绝对能为您带来 **稳定、高效、规范** 的开发体验。
 
 ## 集成mypUI
 
@@ -40,6 +42,8 @@ npm install @mypui/myp-ui
 
 > 注意：如果您使用的是npm安装，记得引入方式为：`@import '@mypui/myp-ui/mypui.scss';`。
 
+具体的scss变量的引入以及自定义和规范，请看文档：[主题](/doc/guide/theme.html) 以及 [设计](/doc/guide/design.html).
+
 ### 配置 `easycom`
 
 UI内部使用了 `easycom` 的组件自动引入，所以您必须在项目中开启 `easycom`。
@@ -63,19 +67,13 @@ UI内部使用了 `easycom` 的组件自动引入，所以您必须在项目中�
 
 `mypUI` 下的 `mypui.scss` 是主题 `scss变量` 定义文件。您需要根据您的项目UI的主题色对其进行修改。
 
-如果主题内定义的变量无法满足您的要求，您可以在里面进行添加，并适当在 `base.scss` 里面增加相应的 `class` 即可。
+我们不建议您直接修改 `mypui.scss`，您只需要把 `mypui.scss` 中的变量复制粘贴到 `uni.scss` 中，然后就可以随心所欲的修改变量值了（当然，你不能删除掉 `uni.scss`，不然是会报错的）。
+
+如果主题内定义的变量无法满足您的要求，您还可以在 `uni.scss` 里面进行添加，然后新增一个相应的 `class` 文件即可，并在 `app.vue` 下引入。
 
 关于主题的具体说明与使用，请查阅 [主题](/doc/guide/theme.html)。
 
-如果您需要用到主题内定义的`scss变量`，一定要记得在使用的地方引入`mypui.scss`，否则编译会报错。
-
-```html
-<style lang="scss">
-	@import '@/mypUI/mypui.scss';
-</style>
-```
-
-<p class="tip">注意：在 app.vue 里面全局引入 mypui.scss 是不会起作用的。毕竟里面只是定义了一些 scss变量。而且该文件也不需要在 app.vue 里面引入。</p>
+如果您需要用到主题内定义的`scss变量`，然后您也在 `uni.scss`中进行了复制粘贴，那么您可以在项目里面的任何地方直接使用，不需要再次引入scss变量。
 
 ### 是否锁定屏幕
 
@@ -91,6 +89,14 @@ onLaunch: function() {
 }
 ```
 
+`pages.json`中可以设置 `globalStyle`：
+
+```json
+"globalStyle": {
+	"pageOrientation": "portrait"
+}
+```
+
 ### 初始化系统变量
 
 我们建议您在 `onLaunch` 里面对系统变量进行初始化（当然，这是可选的，`mypUI` 内部接口会根据需要调用初始化的接口）。
@@ -103,22 +109,20 @@ onLaunch: function() {
 
 ```html
 <script>
-	// import systemMixin from '@mypui/myp-ui/myp-mixin/systemMixin.js'
-	import systemMixin from '@/mypUI/myp-mixin/systemMixin.js'
+	import {initSystemInfo} from '@/mypUI/utils/system.js'
 	
 	export default {
 		globalData: {
 			currentTab: 0
 		},
-		mixins: [systemMixin],
 		onLaunch: function() {
 			console.log('App Launch')
 			// #ifdef APP-PLUS || H5
-			this.mypInitSystemInfo()
+			initSystemInfo()
 			// #endif
 			// #ifndef APP-PLUS || H5
 			setTimeout(()=>{
-				this.mypInitSystemInfo()
+				initSystemInfo()
 			}, 0)
 			// #endif
 			// #ifdef APP-PLUS
@@ -173,6 +177,12 @@ onLaunch: function() {
 - 下载或者clone本UI库；
 - 在HBuilderX里面打开或者导入；
 - 运行到自己想要体验的平台即可；
+
+**Android APP下载地址**
+
+[Android Demo APK下载](https://mypui.asnowsoft.cn/apk/mypUI.apk)
+
+![Android下载](https://mypui.asnowsoft.cn/apk/mypUI.png)
 
 <p class="tip">想了解我们是怎么使用 mypUI 的吗？又如何对 mypUI 有一个更加全面的了解？或者说站在一个代码设计者的角度去了解 mypUI? 纵观全局，对你更加高效的使用mypUI非常有用。建议您一定要看看</p>
 

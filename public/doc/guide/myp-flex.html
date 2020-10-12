@@ -436,6 +436,24 @@
       
     
     <li>
+      <a href="/doc/guide/myp-scroll-inline.html" class="sidebar-link">横向列表：myp-scroll-inline</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
       <a href="/doc/guide/myp-scroll-scale.html" class="sidebar-link">伸缩列表：myp-scroll-scale</a>
     </li>
   
@@ -801,6 +819,24 @@
     
     <li>
       <a href="/doc/guide/myp-check-item.html" class="sidebar-link">单多选：myp-check-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-check-static.html" class="sidebar-link">单多选：myp-check-static</a>
     </li>
   
     
@@ -1264,6 +1300,24 @@
 	  
 	  
 	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-timeline-item.html" class="sidebar-link">结果展示：myp-timeline-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
 	    <li><h3>反馈互动</h3></li>
 	  
 	  
@@ -1597,24 +1651,6 @@
 	  
 	  
       
-      
-    
-    <li>
-      <a href="/doc/guide/element.html" class="sidebar-link">元素节点</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
         <li><h3>规模化</h3></li>
       
       
@@ -1692,24 +1728,6 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
@@ -1728,7 +1746,7 @@
       
     
     <li>
-      <a href="/doc/guide/filter.html" class="sidebar-link">过滤器</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1817,56 +1835,56 @@
 <tbody>
 <tr>
 <td>direction</td>
-<td></td>
+<td>布局方向主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘row’</td>
 </tr>
 <tr>
 <td>wrap</td>
-<td></td>
+<td>换行主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘nowrap’</td>
 </tr>
 <tr>
 <td>justify</td>
-<td></td>
+<td>justify 主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘start’</td>
 </tr>
 <tr>
 <td>align</td>
-<td></td>
+<td>align 主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘center’</td>
 </tr>
 <tr>
 <td>bgType</td>
-<td></td>
+<td>背景颜色主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
 </tr>
 <tr>
 <td>border</td>
-<td></td>
+<td>边框主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘none’</td>
 </tr>
 <tr>
 <td>radius</td>
-<td></td>
+<td>圆角主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘none’</td>
 </tr>
 <tr>
 <td>boxStyle</td>
-<td></td>
+<td>外层样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
@@ -1890,12 +1908,43 @@
 </table>
 <hr>
 <p>myp-flex 是flex布局的组件化。</p>
-<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">myp-flex</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex:1;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex:1;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex:1;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">myp-flex</span>&gt;</span></code></pre>
+<p class="tip">注意：在MP端自定义组件中的个性化属性配置的一些差异。</p>
 
+<p><strong>示范</strong></p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">myp-flex</span> <span class="hljs-attr">bgType</span>=<span class="hljs-string">"none"</span>&gt;</span>
+	<span class="hljs-comment">&lt;!-- 以下条件编译只是示范各端的差异：在MP端自定义组件需要再次设置style为flex:1. --&gt;</span>
+	<span class="hljs-comment">&lt;!-- 当然你可以不区分，全部都设置style为flex:1 --&gt;</span>
+	<span class="hljs-comment">&lt;!-- #ifndef APP-NVUE || H5 --&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">myp-item</span> <span class="hljs-attr">bgType</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"(item,idx) in apps"</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">"idx"</span> <span class="hljs-attr">:icon</span>=<span class="hljs-string">"item.icon"</span> <span class="hljs-attr">:text</span>=<span class="hljs-string">"item.name"</span> <span class="hljs-attr">iconType</span>=<span class="hljs-string">"inverse"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex:1;"</span> <span class="hljs-attr">boxStyle</span>=<span class="hljs-string">"height:180rpx;flex:1;"</span> <span class="hljs-attr">iconBoxStyle</span>=<span class="hljs-string">"width:80rpx;height:80rpx;border-radius:80rpx;background-color:#FF9090;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-item</span>&gt;</span>
+	<span class="hljs-comment">&lt;!-- #endif --&gt;</span>
+	<span class="hljs-comment">&lt;!-- APP端boxStyle中设置即可 --&gt;</span>
+	<span class="hljs-comment">&lt;!-- #ifdef APP-NVUE || H5 --&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">myp-item</span> <span class="hljs-attr">bgType</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"(item,idx) in apps"</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">"idx"</span> <span class="hljs-attr">:icon</span>=<span class="hljs-string">"item.icon"</span> <span class="hljs-attr">:text</span>=<span class="hljs-string">"item.name"</span> <span class="hljs-attr">iconType</span>=<span class="hljs-string">"inverse"</span> <span class="hljs-attr">boxStyle</span>=<span class="hljs-string">"height:180rpx;flex:1;"</span> <span class="hljs-attr">iconBoxStyle</span>=<span class="hljs-string">"width:80rpx;height:80rpx;border-radius:80rpx;background-color:#FF9090;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-item</span>&gt;</span>
+	<span class="hljs-comment">&lt;!-- #endif --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">myp-flex</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">myp-flex</span> <span class="hljs-attr">border</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">radius</span>=<span class="hljs-string">"base"</span> <span class="hljs-attr">justify</span>=<span class="hljs-string">"center"</span> <span class="hljs-attr">boxStyle</span>=<span class="hljs-string">"margin-left:32rpx;margin-right:32rpx;"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">myp-item</span> <span class="hljs-attr">bgType</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"(item,idx) in apps3"</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">"idx"</span> <span class="hljs-attr">:icon</span>=<span class="hljs-string">"item.icon"</span> <span class="hljs-attr">:text</span>=<span class="hljs-string">"item.name"</span> <span class="hljs-attr">iconType</span>=<span class="hljs-string">"inverse"</span> <span class="hljs-attr">boxStyle</span>=<span class="hljs-string">"height:180rpx;width:160rpx;"</span> <span class="hljs-attr">iconBoxStyle</span>=<span class="hljs-string">"width:80rpx;height:80rpx;border-radius:80rpx;background-color:#FF9090;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-item</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">myp-flex</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">myp-flex</span> <span class="hljs-attr">direction</span>=<span class="hljs-string">"column"</span> <span class="hljs-attr">border</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">radius</span>=<span class="hljs-string">"base"</span> <span class="hljs-attr">boxStyle</span>=<span class="hljs-string">"width: 200rpx; height: 560rpx;"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 100rpx;height: 160rpx;background-color: #fca177;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 100rpx;height: 160rpx;background-color: #35a2d7;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 100rpx;height: 160rpx;background-color: #f5a9d5;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">myp-flex</span>&gt;</span></code></pre>
+<p><strong>结果</strong></p>
+<p><img src="/images/doc/flex.png" alt="myp-flex"></p>
+
+  
+  
+    <div class="donate-box">
+	  <p>mypUI 是采用 MIT 许可的开源项目，使用完全免费。您觉得不错，或者对您有所帮助，甚至是鼓励作者的付出，可以给他买杯咖啡:</p>
+      <div style="margin-top:1em;">
+        <img src="/images/pay_wx_68.png" style="width:300px;height:400px;">,
+		<img src="/images/pay_ali_68.png" style="width:300px;height:400px;">
+      </div>
+	  <p style="margin-top:1em;">更多赞助方式：<a href="/support-mypui/">支持mypUI</a></p>
+    </div>
   
   
     <div class="guide-links">

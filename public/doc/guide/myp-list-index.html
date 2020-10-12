@@ -436,6 +436,24 @@
       
     
     <li>
+      <a href="/doc/guide/myp-scroll-inline.html" class="sidebar-link">横向列表：myp-scroll-inline</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
       <a href="/doc/guide/myp-scroll-scale.html" class="sidebar-link">伸缩列表：myp-scroll-scale</a>
     </li>
   
@@ -801,6 +819,24 @@
     
     <li>
       <a href="/doc/guide/myp-check-item.html" class="sidebar-link">单多选：myp-check-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-check-static.html" class="sidebar-link">单多选：myp-check-static</a>
     </li>
   
     
@@ -1264,6 +1300,24 @@
 	  
 	  
 	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-timeline-item.html" class="sidebar-link">结果展示：myp-timeline-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
 	    <li><h3>反馈互动</h3></li>
 	  
 	  
@@ -1597,24 +1651,6 @@
 	  
 	  
       
-      
-    
-    <li>
-      <a href="/doc/guide/element.html" class="sidebar-link">元素节点</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
         <li><h3>规模化</h3></li>
       
       
@@ -1692,24 +1728,6 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
@@ -1728,7 +1746,7 @@
       
     
     <li>
-      <a href="/doc/guide/filter.html" class="sidebar-link">过滤器</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1816,134 +1834,169 @@
 </thead>
 <tbody>
 <tr>
+<td>showScrollbar</td>
+<td>是否显示 scrollbar</td>
+<td>boolean</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>bgType</td>
+<td>背景主题</td>
+<td>string</td>
+<td>-</td>
+<td>‘page’</td>
+</tr>
+<tr>
+<td>position</td>
+<td>定位</td>
+<td>string</td>
+<td>-</td>
+<td>‘static’</td>
+</tr>
+<tr>
+<td>top</td>
+<td>定位的 top</td>
+<td>string</td>
+<td>-</td>
+<td>‘0’</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>定位的 bottom</td>
+<td>string</td>
+<td>-</td>
+<td>‘0’</td>
+</tr>
+<tr>
+<td>boxStyle</td>
+<td>外层样式</td>
+<td>string</td>
+<td>-</td>
+<td>‘’</td>
+</tr>
+<tr>
+<td>extra</td>
+<td>需要从屏幕高度减去的高度</td>
+<td>string</td>
+<td>-</td>
+<td>‘status-nav’</td>
+</tr>
+<tr>
+<td>height</td>
+<td>设置了 height，会直接使用 height，忽略其它的计算</td>
+<td>string</td>
+<td>-</td>
+<td>‘0’</td>
+</tr>
+<tr>
 <td>normalList</td>
-<td></td>
+<td>普通 list 内容</td>
 <td>array</td>
 <td>-</td>
 <td>[]</td>
 </tr>
 <tr>
 <td>onlyShowList</td>
-<td></td>
+<td>是否只展示普通 list 内容</td>
 <td>boolean</td>
 <td>-</td>
 <td>false</td>
 </tr>
 <tr>
 <td>showIndex</td>
-<td></td>
+<td>是否展示 index</td>
 <td>boolean</td>
 <td>-</td>
 <td>true</td>
 </tr>
 <tr>
 <td>needAnimation</td>
-<td></td>
+<td>滚动时是否有动画效果</td>
 <td>boolean</td>
 <td>-</td>
 <td>true</td>
 </tr>
 <tr>
 <td>hotList</td>
-<td></td>
+<td>热门 list 配置</td>
 <td>object</td>
 <td>-</td>
 <td>{}</td>
 </tr>
 <tr>
 <td>specialList</td>
-<td></td>
+<td>特殊 list 配置</td>
 <td>object</td>
 <td>-</td>
 <td>{}</td>
 </tr>
 <tr>
 <td>groupTitleStyle</td>
-<td></td>
+<td>group 类型的 title 样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
 </tr>
 <tr>
 <td>titleStyle</td>
-<td></td>
+<td>title 样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
 </tr>
 <tr>
 <td>groupItemStyle</td>
-<td></td>
+<td>group 类型的 item 样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
 </tr>
 <tr>
 <td>groupItemTextStyle</td>
-<td></td>
+<td>group 类型的 item 文字样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
 </tr>
 <tr>
 <td>groupItemDescStyle</td>
-<td></td>
+<td>group 类型的 item 描述文字样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
 </tr>
 <tr>
 <td>itemStyle</td>
-<td></td>
+<td>item 样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
 </tr>
 <tr>
 <td>itemTextStyle</td>
-<td></td>
+<td>item 文字样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
 </tr>
 <tr>
 <td>itemDescStyle</td>
-<td></td>
+<td>item 描述文字样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
 </tr>
 <tr>
 <td>indexBoxStyle</td>
-<td></td>
+<td>index 的外层样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
 </tr>
 <tr>
 <td>indexTextStyle</td>
-<td></td>
-<td>string</td>
-<td>-</td>
-<td>‘’</td>
-</tr>
-<tr>
-<td>bgType</td>
-<td></td>
-<td>string</td>
-<td>-</td>
-<td>‘page’</td>
-</tr>
-<tr>
-<td>boxStyle</td>
-<td></td>
-<td>string</td>
-<td>-</td>
-<td>‘’</td>
-</tr>
-<tr>
-<td>scrollStyle</td>
-<td></td>
+<td>index 的文字样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
@@ -1986,6 +2039,16 @@
 </table>
 <hr>
 
+  
+  
+    <div class="donate-box">
+	  <p>mypUI 是采用 MIT 许可的开源项目，使用完全免费。您觉得不错，或者对您有所帮助，甚至是鼓励作者的付出，可以给他买杯咖啡:</p>
+      <div style="margin-top:1em;">
+        <img src="/images/pay_wx_68.png" style="width:300px;height:400px;">,
+		<img src="/images/pay_ali_68.png" style="width:300px;height:400px;">
+      </div>
+	  <p style="margin-top:1em;">更多赞助方式：<a href="/support-mypui/">支持mypUI</a></p>
+    </div>
   
   
     <div class="guide-links">

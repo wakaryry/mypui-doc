@@ -6,10 +6,10 @@ order: 256
 
 ## Props
 
-| Prop name | Description | Type   | Values | Default                  |
-| --------- | ----------- | ------ | ------ | ------------------------ |
-| src       |             | string | -      | '/static/ui/loading.gif' |
-| width     |             | string | -      | '36rpx'                  |
-| height    |             | string | -      | '36rpx'                  |
+| Prop name | Description   | Type   | Values | Default                  |
+| --------- | ------------- | ------ | ------ | ------------------------ |
+| src       | 提示 gif 图片 | string | -      | '/static/ui/loading.gif' |
+| width     | 自定义宽度    | string | -      | '36rpx'                  |
+| height    | 自定义高度    | string | -      | '36rpx'                  |
 
 ---

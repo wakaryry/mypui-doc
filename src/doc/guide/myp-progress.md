@@ -6,15 +6,15 @@ order: 212
 
 ## Props
 
-| Prop name      | Description | Type   | Values | Default   |
-| -------------- | ----------- | ------ | ------ | --------- |
-| progress       |             | number | -      | 0         |
-| width          |             | string | -      | '600rpx'  |
-| height         |             | string | -      | '12rpx'   |
-| bgType         |             | string | -      | 'light'   |
-| progressHeight |             | string | -      | '12rpx'   |
-| progressBgType |             | string | -      | 'primary' |
-| boxStyle       |             | string | -      | ''        |
-| progressStyle  |             | string | -      | ''        |
+| Prop name      | Description        | Type   | Values | Default   |
+| -------------- | ------------------ | ------ | ------ | --------- |
+| progress       | 进度。0-100        | number | -      | 0         |
+| width          | 自定义宽度         | string | -      | '600rpx'  |
+| height         | 自定义高度         | string | -      | '12rpx'   |
+| bgType         | 背景主题           | string | -      | 'light'   |
+| progressHeight | 进度条的自定义高度 | string | -      | '12rpx'   |
+| progressBgType | 进度条的背景主题   | string | -      | 'primary' |
+| boxStyle       | 外层样式           | string | -      | ''        |
+| progressStyle  | 进度条的样式       | string | -      | ''        |
 
 ---

@@ -436,6 +436,24 @@
       
     
     <li>
+      <a href="/doc/guide/myp-scroll-inline.html" class="sidebar-link">横向列表：myp-scroll-inline</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
       <a href="/doc/guide/myp-scroll-scale.html" class="sidebar-link">伸缩列表：myp-scroll-scale</a>
     </li>
   
@@ -801,6 +819,24 @@
     
     <li>
       <a href="/doc/guide/myp-check-item.html" class="sidebar-link">单多选：myp-check-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-check-static.html" class="sidebar-link">单多选：myp-check-static</a>
     </li>
   
     
@@ -1264,6 +1300,24 @@
 	  
 	  
 	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-timeline-item.html" class="sidebar-link">结果展示：myp-timeline-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
 	    <li><h3>反馈互动</h3></li>
 	  
 	  
@@ -1597,24 +1651,6 @@
 	  
 	  
       
-      
-    
-    <li>
-      <a href="/doc/guide/element.html" class="sidebar-link">元素节点</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
         <li><h3>规模化</h3></li>
       
       
@@ -1692,24 +1728,6 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
@@ -1728,7 +1746,7 @@
       
     
     <li>
-      <a href="/doc/guide/filter.html" class="sidebar-link">过滤器</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1817,21 +1835,21 @@
 <tbody>
 <tr>
 <td>size</td>
-<td></td>
+<td>圆点样式的直径大小，不是圆点时需要设置为 0</td>
 <td>string</td>
 <td>-</td>
 <td>‘12rpx’</td>
 </tr>
 <tr>
 <td>bgType</td>
-<td></td>
+<td>背景主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘error’</td>
 </tr>
 <tr>
 <td>text</td>
-<td></td>
+<td>文字内容</td>
 <td>string\</td>
 <td>number</td>
 <td>-</td>
@@ -1839,35 +1857,35 @@
 </tr>
 <tr>
 <td>border</td>
-<td></td>
+<td>边框主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘none’</td>
 </tr>
 <tr>
 <td>textType</td>
-<td></td>
+<td>文字颜色主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘inverse’</td>
 </tr>
 <tr>
 <td>textSize</td>
-<td></td>
+<td>文字尺寸主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘ss’</td>
 </tr>
 <tr>
 <td>textStyle</td>
-<td></td>
+<td>文字样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
 </tr>
 <tr>
 <td>boxStyle</td>
-<td></td>
+<td>外层样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
@@ -1875,7 +1893,35 @@
 </tbody>
 </table>
 <hr>
+<p>badge 提供了 圆点样式 以及 文字样式 的效果。可以自行设置任意尺寸的 圆点 以及 文字内容 与样式。</p>
+<p><strong>示范代码如下：</strong></p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">myp-flex</span> <span class="hljs-attr">bgType</span>=<span class="hljs-string">"none"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"myp-justify-center myp-align-center"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex: 1;"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">myp-badge</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-badge</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"myp-justify-center myp-align-center"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex: 1;"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">myp-badge</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"24rpx"</span> <span class="hljs-attr">bgType</span>=<span class="hljs-string">"primary"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-badge</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"myp-justify-center myp-align-center"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex: 1;"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">myp-badge</span> <span class="hljs-attr">text</span>=<span class="hljs-string">"买一赠一"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">boxStyle</span>=<span class="hljs-string">"padding-left:16rpx;padding-right:16rpx;height:40rpx;border-radius:40rpx;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">myp-badge</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">myp-flex</span>&gt;</span></code></pre>
+<p class="tip">当然，badge可以搭配 myp-button/ myp-title/ myp-grid 等组件一起使用，具体会在相应的组件里面有说明。其实就是 myp-badge 作为插槽内容而已。您自己控制 myp-badge 的位置即可。</p>
 
+<p><strong>效果</strong></p>
+<p><img src="/images/doc/badge.jpeg" alt="myp-badge"></p>
+<p class="tip">注意：不是圆点时，需要size属性设置为字符串0，也就是 size=”0”，否则宽度和高度会受到默认的size影响。</p>
+
+  
+  
+    <div class="donate-box">
+	  <p>mypUI 是采用 MIT 许可的开源项目，使用完全免费。您觉得不错，或者对您有所帮助，甚至是鼓励作者的付出，可以给他买杯咖啡:</p>
+      <div style="margin-top:1em;">
+        <img src="/images/pay_wx_68.png" style="width:300px;height:400px;">,
+		<img src="/images/pay_ali_68.png" style="width:300px;height:400px;">
+      </div>
+	  <p style="margin-top:1em;">更多赞助方式：<a href="/support-mypui/">支持mypUI</a></p>
+    </div>
   
   
     <div class="guide-links">

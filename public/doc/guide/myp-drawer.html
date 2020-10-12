@@ -436,6 +436,24 @@
       
     
     <li>
+      <a href="/doc/guide/myp-scroll-inline.html" class="sidebar-link">横向列表：myp-scroll-inline</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
       <a href="/doc/guide/myp-scroll-scale.html" class="sidebar-link">伸缩列表：myp-scroll-scale</a>
     </li>
   
@@ -801,6 +819,24 @@
     
     <li>
       <a href="/doc/guide/myp-check-item.html" class="sidebar-link">单多选：myp-check-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-check-static.html" class="sidebar-link">单多选：myp-check-static</a>
     </li>
   
     
@@ -1264,6 +1300,24 @@
 	  
 	  
 	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-timeline-item.html" class="sidebar-link">结果展示：myp-timeline-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
 	    <li><h3>反馈互动</h3></li>
 	  
 	  
@@ -1597,24 +1651,6 @@
 	  
 	  
       
-      
-    
-    <li>
-      <a href="/doc/guide/element.html" class="sidebar-link">元素节点</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
         <li><h3>规模化</h3></li>
       
       
@@ -1692,24 +1728,6 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
@@ -1728,7 +1746,7 @@
       
     
     <li>
-      <a href="/doc/guide/filter.html" class="sidebar-link">过滤器</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1817,119 +1835,126 @@
 <tbody>
 <tr>
 <td>pos</td>
-<td></td>
+<td>出现位置</td>
 <td>string</td>
 <td>-</td>
 <td>‘bottom’</td>
 </tr>
 <tr>
 <td>bgType</td>
-<td></td>
+<td>内容背景主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘none’</td>
 </tr>
 <tr>
 <td>duration</td>
-<td></td>
+<td>打开/关闭的动画周期</td>
 <td>number</td>
 <td>-</td>
 <td>300</td>
 </tr>
 <tr>
 <td>overlay</td>
-<td></td>
+<td>遮罩层的整体设置</td>
 <td>object</td>
 <td>-</td>
 <td>{<br> timingFunction: [‘ease-in’, ‘ease-out’],<br> duration: 300,<br> bg: ‘’,<br> bgType: ‘mask’<br>}</td>
 </tr>
 <tr>
 <td>height</td>
-<td></td>
+<td>内容高度.0 为自适应.1 为全屏高度</td>
+<td>string</td>
+<td>-</td>
+<td>‘0’</td>
+</tr>
+<tr>
+<td>extra</td>
+<td>从 height 高度减去的高度</td>
 <td>string</td>
 <td>-</td>
 <td>‘0’</td>
 </tr>
 <tr>
 <td>standout</td>
-<td></td>
+<td>内容露出的高度</td>
 <td>string</td>
 <td>-</td>
 <td>‘0’</td>
 </tr>
 <tr>
 <td>leftOffset</td>
-<td></td>
+<td>内容左侧偏移量，-1 表示居中</td>
 <td>string</td>
 <td>-</td>
 <td>‘-1’</td>
 </tr>
 <tr>
 <td>rightOffset</td>
-<td></td>
+<td>内容右侧偏移量，-1 表示居中</td>
 <td>string</td>
 <td>-</td>
 <td>‘-1’</td>
 </tr>
 <tr>
 <td>bottomOffset</td>
-<td></td>
+<td>内容底部偏移量，-1 表示居中</td>
 <td>string</td>
 <td>-</td>
 <td>‘-1’</td>
 </tr>
 <tr>
 <td>topOffset</td>
-<td></td>
+<td>内容顶部偏移量，-1 表示居中</td>
 <td>string</td>
 <td>-</td>
 <td>‘-1’</td>
 </tr>
 <tr>
 <td>width</td>
-<td></td>
+<td>内容的宽度</td>
 <td>string</td>
 <td>-</td>
 <td>‘750rpx’</td>
 </tr>
 <tr>
 <td>animation</td>
-<td></td>
+<td>打开/关闭动画</td>
 <td>object</td>
 <td>-</td>
 <td>{<br> timingFunction: ‘ease-in-out’<br>}</td>
 </tr>
 <tr>
 <td>left</td>
-<td></td>
+<td>遮罩左侧偏移量</td>
 <td>string</td>
 <td>-</td>
 <td>‘0’</td>
 </tr>
 <tr>
 <td>top</td>
-<td></td>
+<td>遮罩顶部偏移量</td>
 <td>string</td>
 <td>-</td>
 <td>‘0’</td>
 </tr>
 <tr>
 <td>right</td>
-<td></td>
+<td>遮罩右侧偏移量</td>
 <td>string</td>
 <td>-</td>
 <td>‘0’</td>
 </tr>
 <tr>
 <td>bottom</td>
-<td></td>
+<td>遮罩底部偏移量</td>
 <td>string</td>
 <td>-</td>
 <td>‘0’</td>
 </tr>
 <tr>
 <td>boxStyle</td>
-<td></td>
+<td>内容外层样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
@@ -1991,8 +2016,14 @@
 <li>myp-popup-always 内部内容不受 v-if控制，支持 standout，用于standout以及明确需要与其它内容配合控制层级的地方；</li>
 <li>myp-drawer 是 myp-popup-always 的手势强化版，用于手势拖拽抽屉等；</li>
 </ul>
+<p>其它文档地址：</p>
+<ul>
+<li><a href="/doc/guide/myp-popup.html">myp-popup</a></li>
+<li><a href="/doc/guide/myp-popup-always.html">myp-popup-always</a></li>
+</ul>
 <p>如果您不知道自己该选择哪个，请直接使用 myp-popup。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>myp-drawer 用法上稍微有所不同，不再是使用 <code>show</code> 来控制，而是采用 <code>ref method</code> 来控制。</p>
+<p><strong>示范</strong></p>
+<p>myp-drawer 用法上稍微有所不同，不再是使用 <code>show</code> 来控制，而是采用 <code>ref method</code> 来控制。</p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
 	<span class="hljs-tag">&lt;<span class="hljs-name">myp-drawer</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"drawer-bottom"</span> <span class="hljs-attr">pos</span>=<span class="hljs-string">"bottom"</span> <span class="hljs-attr">standout</span>=<span class="hljs-string">"60px"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"750rpx"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"x-1000rpx"</span> @<span class="hljs-attr">overlayClicked</span>=<span class="hljs-string">"hide"</span>&gt;</span>
 		<span class="hljs-tag">&lt;<span class="hljs-name">bottom</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">bottom</span>&gt;</span>
@@ -2018,20 +2049,25 @@
 	&#125;
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 <p>以上代码就构建了一个 从底部出现的，事先露出 60px standout高度的 drawer。它支持手势拉出。</p>
-<h2 id="ref-method"><a href="#ref-method" class="headerlink" title="ref method"></a>ref method</h2><p>通过 ref method 来控制打开与关闭。提供 show 与 hide 方法。</p>
-<h3 id="show"><a href="#show" class="headerlink" title="show"></a>show</h3><p><code>show(duration)</code> 打开，支持 duration配置；</p>
-<h3 id="hide"><a href="#hide" class="headerlink" title="hide"></a>hide</h3><p><code>hide(duration)</code> 关闭，支持 duration配置；</p>
-<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>关于高度、位置等其它信息请查看文档：</p>
+<p><strong>结果</strong></p>
+<p><img src="/images/doc/drawer-close.png" alt="myp-drawer"><br><img src="/images/doc/drawer-open.png" alt="myp-drawer"></p>
+<p><strong>TODO</strong></p>
 <ul>
-<li><a href="/doc/guide/myp-popup.html">myp-popup</a></li>
-<li><a href="/doc/guide/myp-popup-always.html">myp-popup-always</a></li>
-</ul>
-<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
 <li>增加手势收起；</li>
 <li>开放swipe动作支持；</li>
 <li>开放打开/收起的progress，方便外部实现某些随动/联动动画；</li>
 </ul>
 
+  
+  
+    <div class="donate-box">
+	  <p>mypUI 是采用 MIT 许可的开源项目，使用完全免费。您觉得不错，或者对您有所帮助，甚至是鼓励作者的付出，可以给他买杯咖啡:</p>
+      <div style="margin-top:1em;">
+        <img src="/images/pay_wx_68.png" style="width:300px;height:400px;">,
+		<img src="/images/pay_ali_68.png" style="width:300px;height:400px;">
+      </div>
+	  <p style="margin-top:1em;">更多赞助方式：<a href="/support-mypui/">支持mypUI</a></p>
+    </div>
   
   
     <div class="guide-links">

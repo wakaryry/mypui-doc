@@ -6,58 +6,52 @@ order: 205
 
 ## Props
 
-| Prop name        | Description | Type   | Values | Default      |
-| ---------------- | ----------- | ------ | ------ | ------------ |
-| title1           |             | string | -      | ''           |
-| title2           |             | string | -      | ''           |
-| title3           |             | string | -      | ''           |
-| leftIcon1        |             | string | -      | ''           |
-| leftIcon2        |             | string | -      | ''           |
-| centerIcon1      |             | string | -      | ''           |
-| centerIcon2      |             | string | -      | ''           |
-| rightIcon1       |             | string | -      | ''           |
-| rightIcon2       |             | string | -      | ''           |
-| space            |             | string | -      | '12rpx'      |
-| height           |             | string | -      | 'l'          |
-| hover            |             | string | -      | 'none'       |
-| bgType           |             | string | -      | ''           |
-| title1Type       |             | string | -      | ''           |
-| title1Size       |             | string | -      | ''           |
-| title1Style      |             | string | -      | ''           |
-| title2Type       |             | string | -      | ''           |
-| title2Size       |             | string | -      | ''           |
-| title2Style      |             | string | -      | ''           |
-| title3Type       |             | string | -      | ''           |
-| title3Size       |             | string | -      | ''           |
-| title3Style      |             | string | -      | ''           |
-| leftIcon1Type    |             | string | -      | ''           |
-| leftIcon1Size    |             | string | -      | ''           |
-| leftIcon1Style   |             | string | -      | ''           |
-| leftIcon1Mode    |             | string | -      | 'aspectFill' |
-| leftIcon2Type    |             | string | -      | ''           |
-| leftIcon2Size    |             | string | -      | ''           |
-| leftIcon2Style   |             | string | -      | ''           |
-| leftIcon2Mode    |             | string | -      | 'aspectFill' |
-| centerIcon1Type  |             | string | -      | ''           |
-| centerIcon1Size  |             | string | -      | ''           |
-| centerIcon1Style |             | string | -      | ''           |
-| centerIcon1Mode  |             | string | -      | 'aspectFill' |
-| centerIcon2Type  |             | string | -      | ''           |
-| centerIcon2Size  |             | string | -      | ''           |
-| centerIcon2Style |             | string | -      | ''           |
-| centerIcon2Mode  |             | string | -      | 'aspectFill' |
-| rightIcon1Type   |             | string | -      | ''           |
-| rightIcon1Size   |             | string | -      | ''           |
-| rightIcon1Style  |             | string | -      | ''           |
-| rightIcon1Mode   |             | string | -      | 'aspectFill' |
-| rightIcon2Type   |             | string | -      | ''           |
-| rightIcon2Size   |             | string | -      | ''           |
-| rightIcon2Style  |             | string | -      | ''           |
-| rightIcon2Mode   |             | string | -      | 'aspectFill' |
-| boxStyle         |             | string | -      | ''           |
-| leftStyle        |             | string | -      | ''           |
-| centerStyle      |             | string | -      | ''           |
-| rightStyle       |             | string | -      | ''           |
+| Prop name        | Description               | Type   | Values | Default |
+| ---------------- | ------------------------- | ------ | ------ | ------- |
+| title1           | 左侧标题                  | string | -      | ''      |
+| title2           | 中间标题                  | string | -      | ''      |
+| title3           | 右侧标题                  | string | -      | ''      |
+| leftIcon1        | 左侧图标 1                | string | -      | ''      |
+| leftIcon2        | 左侧图标 2                | string | -      | ''      |
+| centerIcon1      | 中间图标 1                | string | -      | ''      |
+| centerIcon2      | 中间图标 2                | string | -      | ''      |
+| rightIcon1       | 右侧图标 1                | string | -      | ''      |
+| rightIcon2       | 右侧图标 3                | string | -      | ''      |
+| space            | icon-text-icon 之间的间距 | string | -      | '12rpx' |
+| height           | 高度主题                  | string | -      | 'l'     |
+| hover            | hover 主题                | string | -      | 'none'  |
+| bgType           | 背景主题                  | string | -      | ''      |
+| title1Type       | 标题 1 的颜色主题         | string | -      | ''      |
+| title1Size       | 标题 1 的尺寸主题         | string | -      | ''      |
+| title1Style      | 标题 1 的样式             | string | -      | ''      |
+| title2Type       | 标题 2 的颜色主题         | string | -      | ''      |
+| title2Size       | 标题 2 的尺寸主题         | string | -      | ''      |
+| title2Style      | 标题 2 的样式             | string | -      | ''      |
+| title3Type       | 标题 3 的颜色主题         | string | -      | ''      |
+| title3Size       | 标题 3 的尺寸主题         | string | -      | ''      |
+| title3Style      | 标题 3 的样式             | string | -      | ''      |
+| leftIcon1Type    | 左侧图标 1 的颜色主题     | string | -      | ''      |
+| leftIcon1Size    | 左侧图标 1 的尺寸主题     | string | -      | ''      |
+| leftIcon1Style   | 左侧图标 1 的样式         | string | -      | ''      |
+| leftIcon2Type    | 左侧图标 2 的颜色主题     | string | -      | ''      |
+| leftIcon2Size    | 左侧图标 2 的尺寸主题     | string | -      | ''      |
+| leftIcon2Style   | 左侧图标 2 的样式         | string | -      | ''      |
+| centerIcon1Type  | 中间图标 1 的颜色主题     | string | -      | ''      |
+| centerIcon1Size  | 中间图标 1 的尺寸主题     | string | -      | ''      |
+| centerIcon1Style | 中间图标 1 的样式         | string | -      | ''      |
+| centerIcon2Type  | 中间图标 2 的颜色主题     | string | -      | ''      |
+| centerIcon2Size  | 中间图标 2 的尺寸主题     | string | -      | ''      |
+| centerIcon2Style | 中间图标 2 的样式         | string | -      | ''      |
+| rightIcon1Type   | 右侧图标 1 的颜色主题     | string | -      | ''      |
+| rightIcon1Size   | 右侧图标 1 的尺寸主题     | string | -      | ''      |
+| rightIcon1Style  | 右侧图标 1 的样式         | string | -      | ''      |
+| rightIcon2Type   | 右侧图标 2 的颜色主题     | string | -      | ''      |
+| rightIcon2Size   | 右侧图标 2 的尺寸主题     | string | -      | ''      |
+| rightIcon2Style  | 右侧图标 2 的样式         | string | -      | ''      |
+| boxStyle         | 外层样式                  | string | -      | ''      |
+| leftStyle        | 左侧样式                  | string | -      | ''      |
+| centerStyle      | 中间样式                  | string | -      | ''      |
+| rightStyle       | 右侧样式                  | string | -      | ''      |
 
 ## Events
 

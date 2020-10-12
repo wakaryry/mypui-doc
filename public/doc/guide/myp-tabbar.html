@@ -436,6 +436,24 @@
       
     
     <li>
+      <a href="/doc/guide/myp-scroll-inline.html" class="sidebar-link">横向列表：myp-scroll-inline</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
       <a href="/doc/guide/myp-scroll-scale.html" class="sidebar-link">伸缩列表：myp-scroll-scale</a>
     </li>
   
@@ -801,6 +819,24 @@
     
     <li>
       <a href="/doc/guide/myp-check-item.html" class="sidebar-link">单多选：myp-check-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-check-static.html" class="sidebar-link">单多选：myp-check-static</a>
     </li>
   
     
@@ -1264,6 +1300,24 @@
 	  
 	  
 	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-timeline-item.html" class="sidebar-link">结果展示：myp-timeline-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
 	    <li><h3>反馈互动</h3></li>
 	  
 	  
@@ -1597,24 +1651,6 @@
 	  
 	  
       
-      
-    
-    <li>
-      <a href="/doc/guide/element.html" class="sidebar-link">元素节点</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
         <li><h3>规模化</h3></li>
       
       
@@ -1692,24 +1728,6 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
@@ -1728,7 +1746,7 @@
       
     
     <li>
-      <a href="/doc/guide/filter.html" class="sidebar-link">过滤器</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1817,63 +1835,63 @@
 <tbody>
 <tr>
 <td>tabs</td>
-<td></td>
+<td>tabs 的内容以及个性化的配置<br>isHump 表示是否凸起, noPage 表示点击当前 tab 时不切换，依然停留在原 tab 内容, hump 具备 humpStyle,hump 有 humpBottom(就是距离底部的距离 px)<br>icon,selectedIcon,title,selectedTitle,badge,dot,isHump,noPage,humpStyle,humpBottom<br>iconStyle,selectedIconStyle,titleStyle,selectedTitleStyle,badgeStyle,badgeTextStyle,dotStyle,iconBoxWidth</td>
 <td>array</td>
 <td>-</td>
 <td>[]</td>
 </tr>
 <tr>
 <td>tabStyle</td>
-<td></td>
+<td>全局 tabs 的样式设置。tabs 中可以单独设置进行覆盖</td>
 <td>object</td>
 <td>-</td>
 <td>{<br> iconStyle: ‘font-size: 20px;color: #333232;’,<br> selectedIconStyle: ‘font-size: 20px;color: #01A9F0;’,<br> titleStyle: ‘’,<br> selectedTitleStyle: ‘’,<br> boxStyle: ‘’,<br> tabsStyle: ‘’,<br> itemStyle: ‘’,<br> height: 50, // px<br> badgeStyle: ‘’,<br> badgeTextStyle: ‘’,<br> dotStyle: ‘’,<br> // we use it to help to position the badge or dot<br> iconBoxWidth: ‘46px’,<br> image: null,<br> imageStyle: ‘’,<br> imageBoxStyle: ‘’,<br> imageWidthXBar: false<br>}</td>
 </tr>
 <tr>
 <td>duration</td>
-<td></td>
+<td>页面切换的动画周期</td>
 <td>number</td>
 <td>-</td>
 <td>300</td>
 </tr>
 <tr>
 <td>timingFunction</td>
-<td></td>
+<td>页面切换的动画函数</td>
 <td>string</td>
 <td>-</td>
 <td>‘cubic-bezier(0.25, 0.46, 0.45, 0.94)’</td>
 </tr>
 <tr>
 <td>top</td>
-<td></td>
+<td>距离顶部的距离</td>
 <td>string</td>
 <td>-</td>
 <td>‘0’</td>
 </tr>
 <tr>
 <td>isSeize</td>
-<td></td>
+<td>tabs 以及 xbar 的高度是否有占位</td>
 <td>boolean</td>
 <td>-</td>
 <td>true</td>
 </tr>
 <tr>
 <td>considerXBar</td>
-<td></td>
+<td>是否考虑 xbar</td>
 <td>boolean</td>
 <td>-</td>
 <td>true</td>
 </tr>
 <tr>
 <td>xBarBgType</td>
-<td></td>
+<td>xbar 的背景主题</td>
 <td>string</td>
 <td>-</td>
 <td>‘inverse’</td>
 </tr>
 <tr>
 <td>xBarStyle</td>
-<td></td>
+<td>xbar 的样式</td>
 <td>string</td>
 <td>-</td>
 <td>‘’</td>
@@ -2201,6 +2219,16 @@
 <h2 id="其它设置"><a href="#其它设置" class="headerlink" title="其它设置"></a>其它设置</h2><h3 id="duration"><a href="#duration" class="headerlink" title="duration"></a>duration</h3><p>tab内容切换的动画周期，默认 300ms。</p>
 <h3 id="timingFunction"><a href="#timingFunction" class="headerlink" title="timingFunction"></a>timingFunction</h3><p>tab内容切换的动画曲线，默认 <code>cubic-bezier(0.25, 0.46, 0.45, 0.94)</code></p>
 
+  
+  
+    <div class="donate-box">
+	  <p>mypUI 是采用 MIT 许可的开源项目，使用完全免费。您觉得不错，或者对您有所帮助，甚至是鼓励作者的付出，可以给他买杯咖啡:</p>
+      <div style="margin-top:1em;">
+        <img src="/images/pay_wx_68.png" style="width:300px;height:400px;">,
+		<img src="/images/pay_ali_68.png" style="width:300px;height:400px;">
+      </div>
+	  <p style="margin-top:1em;">更多赞助方式：<a href="/support-mypui/">支持mypUI</a></p>
+    </div>
   
   
     <div class="guide-links">

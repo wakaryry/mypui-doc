@@ -1,15 +1,15 @@
 ---
 title: 底部安全区：myp-xbar
 type: guide
-order: 73
+order: 74
 ---
 
 ## Props
 
 | Prop name | Description | Type   | Values | Default |
 | --------- | ----------- | ------ | ------ | ------- |
-| bgType    |             | string | -      | ''      |
-| boxStyle  |             | string | -      | ''      |
+| bgType    | 背景主题    | string | -      | ''      |
+| boxStyle  | 外层样式    | string | -      | ''      |
 
 ## Slots
 

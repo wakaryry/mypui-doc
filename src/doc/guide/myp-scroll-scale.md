@@ -1,7 +1,7 @@
 ---
 title: 伸缩列表：myp-scroll-scale
 type: guide
-order: 66
+order: 67
 ---
 
 ## Props
