@@ -346,24 +346,6 @@
       
     
     <li>
-      <a href="/doc/guide/myp-list-simple.html" class="sidebar-link">列表：myp-list-simple</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/myp-list-cell.html" class="sidebar-link">列表单元：myp-list-cell</a>
     </li>
   
@@ -490,7 +472,25 @@
       
     
     <li>
-      <a href="/doc/guide/myp-list-chat.html" class="sidebar-link">聊天列表：myp-list-chat</a>
+      <a href="/doc/guide/myp-slide-gallery.html" class="sidebar-link">画廊/slide：myp-slide-gallery</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-slide-gallery-item.html" class="sidebar-link">画廊单元：myp-slide-gallery-item</a>
     </li>
   
     
@@ -890,7 +890,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-slider.html" class="sidebar-link">区间：myp-slider</a>
+      <a href="/doc/guide/myp-slider-bar.html" class="sidebar-link">区间：myp-slider-bar</a>
     </li>
   
     
@@ -998,25 +998,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-grid.html" class="sidebar-link">宫格：myp-grid</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-grid-item.html" class="sidebar-link">宫格item：myp-grid-item</a>
+      <a href="/doc/guide/myp-grid-static.html" class="sidebar-link">宫格：myp-grid-static</a>
     </li>
   
     
@@ -1217,60 +1199,6 @@
     
     <li>
       <a href="/doc/guide/myp-progress.html" class="sidebar-link">进度条：myp-progress</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-text.html" class="sidebar-link">聊天文字：myp-message-text</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-time.html" class="sidebar-link">聊天时间：myp-message-time</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-image.html" class="sidebar-link">聊天图片：myp-message-image</a>
     </li>
   
     
@@ -1728,7 +1656,7 @@
       
     
     <li>
-      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1746,7 +1674,7 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
+      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
     
@@ -1853,6 +1781,41 @@
 <td>number</td>
 <td>-</td>
 <td>300</td>
+</tr>
+<tr>
+<td>auto</td>
+<td>停止手势后是否自动打开/关闭</td>
+<td>boolean</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>allowAll</td>
+<td>是否手势加在整个内容上</td>
+<td>boolean</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>allowSwipe</td>
+<td>是否允许 swipe 动作来打开/关闭</td>
+<td>boolean</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>onlySwipe</td>
+<td>是否只允许 swipe 动作，没有跟手</td>
+<td>boolean</td>
+<td>-</td>
+<td>false</td>
+</tr>
+<tr>
+<td>hasOverlay</td>
+<td>是否存在遮罩层</td>
+<td>boolean</td>
+<td>-</td>
+<td>true</td>
 </tr>
 <tr>
 <td>overlay</td>
@@ -1991,6 +1954,11 @@
 <td></td>
 </tr>
 <tr>
+<td>standout</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>default</td>
 <td></td>
 </tr>
@@ -2051,12 +2019,6 @@
 <p>以上代码就构建了一个 从底部出现的，事先露出 60px standout高度的 drawer。它支持手势拉出。</p>
 <p><strong>结果</strong></p>
 <p><img src="/images/doc/drawer-close.png" alt="myp-drawer"><br><img src="/images/doc/drawer-open.png" alt="myp-drawer"></p>
-<p><strong>TODO</strong></p>
-<ul>
-<li>增加手势收起；</li>
-<li>开放swipe动作支持；</li>
-<li>开放打开/收起的progress，方便外部实现某些随动/联动动画；</li>
-</ul>
 
   
   

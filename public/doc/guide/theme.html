@@ -346,24 +346,6 @@
       
     
     <li>
-      <a href="/doc/guide/myp-list-simple.html" class="sidebar-link">列表：myp-list-simple</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/myp-list-cell.html" class="sidebar-link">列表单元：myp-list-cell</a>
     </li>
   
@@ -490,7 +472,25 @@
       
     
     <li>
-      <a href="/doc/guide/myp-list-chat.html" class="sidebar-link">聊天列表：myp-list-chat</a>
+      <a href="/doc/guide/myp-slide-gallery.html" class="sidebar-link">画廊/slide：myp-slide-gallery</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-slide-gallery-item.html" class="sidebar-link">画廊单元：myp-slide-gallery-item</a>
     </li>
   
     
@@ -890,7 +890,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-slider.html" class="sidebar-link">区间：myp-slider</a>
+      <a href="/doc/guide/myp-slider-bar.html" class="sidebar-link">区间：myp-slider-bar</a>
     </li>
   
     
@@ -998,25 +998,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-grid.html" class="sidebar-link">宫格：myp-grid</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-grid-item.html" class="sidebar-link">宫格item：myp-grid-item</a>
+      <a href="/doc/guide/myp-grid-static.html" class="sidebar-link">宫格：myp-grid-static</a>
     </li>
   
     
@@ -1217,60 +1199,6 @@
     
     <li>
       <a href="/doc/guide/myp-progress.html" class="sidebar-link">进度条：myp-progress</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-text.html" class="sidebar-link">聊天文字：myp-message-text</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-time.html" class="sidebar-link">聊天时间：myp-message-time</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-image.html" class="sidebar-link">聊天图片：myp-message-image</a>
     </li>
   
     
@@ -1728,7 +1656,7 @@
       
     
     <li>
-      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1746,7 +1674,7 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
+      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
     
@@ -2013,6 +1941,20 @@
 <p>主题变量与base.scss的对应，以及base.scss的解析</p>
 </blockquote>
 <p>base.scss 中定义的class，基本上已经足够支撑大多数的设计。熟悉它里面与主题的对应关系以及有哪些内容，对于快速开发，以及减少css代码的书写，与减少包体积来说是十分重要的。</p>
+<p>我们的组件库内部依赖全局样式<code>base.scss</code>，而且我们的组件里面很少用到别的样式。我们尽量在复用base.scss的样式，这对于小程序等需要分包的端来说是比较重要的，能够最大程度减少包体积。我自己本人也在用mypUI做项目，我们会一直全方面优化mypUI。也正是因为我不是为了框架而出框架，我更多的是项目的体验与实战，所以mypUI才会真的一直越做越好。</p>
+<p><code>base.scss</code>中提供了 flex布局、背景主题、颜色主题、字体大小主题、行高主题、高度主题、间距主题、文字省略、边框主题、圆角主题、遮罩主题、hover主题等各方面class。</p>
+<p>具体的对应关系您应该查阅<code>base.scss</code>里面的内容。</p>
+<p><code>base.scss</code>绝对足够支撑大多数业务与设计，而且我们的组件库就是基于<code>base.scss</code>的。</p>
+<p>很多人不知道主题类的设置到底有哪些值，其实具体有哪些值，取决于 <code>base.scss</code>，以及您是否添加了一些自定义的主题等。</p>
+<p>这些设置值对应为：</p>
+<ul>
+<li>边框主题：myp-border 下的class；</li>
+<li>背景色主题：myp-bg 下的class；</li>
+<li>颜色主题：myp-color 下的class；</li>
+<li>文字尺寸主题：myp-size 下的class；</li>
+<li>…</li>
+</ul>
+<p>具体的内容您应该去看 <code>base.scss</code>。您只有了解了 主题与样式 的对应关系才能更好的使用 <code>mypUI</code>。</p>
 <blockquote>
 <p>组件中对于主题的一些约定</p>
 </blockquote>
@@ -2032,9 +1974,81 @@
 <blockquote>
 <p>如何增加主题变量</p>
 </blockquote>
+<p>我们不建议您直接在mypUI.scss以及base.scss中增加变量和相关的class。</p>
+<p>您应该在uni.scss中增加变量，然后增加一个新的对应的class样式文件，并且在app.vue里面引入这个样式文件。</p>
 <blockquote>
 <p>各端兼容</p>
 </blockquote>
+<p>为了兼容各端的统一开发，以及单个开发某个端时的便利性，我们为需要兼容考虑的某些端提供了兼容scss样式文件。比如 <code>mp.scss</code> 和 <code>h5.scss</code>。</p>
+<p>如果您需要编译到这些平台，您应该条件引入这些样式：</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>&gt;</span><span class="css">
+	<span class="hljs-keyword">@import</span> <span class="hljs-string">'@/mypUI/base.scss'</span>;
+	<span class="hljs-comment">/* #ifdef MP */</span>
+	<span class="hljs-keyword">@import</span> <span class="hljs-string">'@/mypUI/mp.scss'</span>;
+	<span class="hljs-comment">/* #endif */</span>
+	<span class="hljs-comment">/* #ifdef H5 */</span>
+	<span class="hljs-keyword">@import</span> <span class="hljs-string">'@/mypUI/h5.scss'</span>;
+	<span class="hljs-comment">/* #endif */</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
+<p>需要编译到多端的时候，记得查看兼容平台相应的样式中的优先级。如果需要在样式中个性化，需要考虑优先级问题。</p>
+<p>比如H5中：</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>&gt;</span>
+.myp-border &#123;
+	&amp;-all &#123;
+		border-width: $myp-border-width !important;
+		border-style: solid !important;
+		border-color: $myp-border-color !important;
+	&#125;
+&#125;
+<span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre>
+<p>因为<code>h5.scss</code>中全局样式兼容的时候存在 <code>!important</code>，优先级高。所以如果您需要覆盖，记得在自己的样式里面加 <code>!important</code>。</p>
+<p>为什么会需要添加优先级：</p>
+<pre><code class="hljs css"><span class="hljs-comment">/*
+// 这是uni自动嵌入的样式，这些样式会直接嵌入到 组件/页面；
+// 这些样式的优先级非常高，比任何在 app.vue 里面引入的全局 style/class 也要高，毕竟这些样式是直接在组件文件下的；
+// 为了使 全局css 生效，我们 得给涉及到 这些属性的样式 设置 !important；
+// 而且，在 style 中个性化配置的时候也需要加 !important，否则无法生效；
+*/</span>
+
+<span class="hljs-selector-tag">view</span>,
+<span class="hljs-selector-tag">swiper-item</span>,
+<span class="hljs-selector-tag">scroll-view</span> &#123;
+  <span class="hljs-attribute">display</span>:-webkit-box;
+  <span class="hljs-attribute">display</span>:-webkit-flex;
+  <span class="hljs-attribute">display</span>:flex;
+  <span class="hljs-attribute">-webkit-box-orient</span>:vertical;
+  <span class="hljs-attribute">-webkit-box-direction</span>:normal;
+  <span class="hljs-attribute">-webkit-flex-direction</span>:column;
+          <span class="hljs-attribute">flex-direction</span>:column;
+  <span class="hljs-attribute">-webkit-flex-shrink</span>: <span class="hljs-number">0</span>;
+          <span class="hljs-attribute">flex-shrink</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">-webkit-box-flex</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">-webkit-flex-grow</span>: <span class="hljs-number">0</span>;
+          <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">-webkit-flex-basis</span>: auto;
+          <span class="hljs-attribute">flex-basis</span>: auto;
+  <span class="hljs-attribute">-webkit-box-align</span>: stretch;
+  <span class="hljs-attribute">-webkit-align-items</span>: stretch;
+          <span class="hljs-attribute">align-items</span>: stretch;
+  <span class="hljs-attribute">-webkit-align-content</span>: flex-start;
+          <span class="hljs-attribute">align-content</span>: flex-start;
+&#125;
+<span class="hljs-selector-tag">view</span>,
+<span class="hljs-selector-tag">image</span>,
+<span class="hljs-selector-tag">input</span>,
+<span class="hljs-selector-tag">scroll-view</span>,
+<span class="hljs-selector-tag">swiper</span>,
+<span class="hljs-selector-tag">swiper-item</span>,
+<span class="hljs-selector-tag">text</span>,
+<span class="hljs-selector-tag">textarea</span>,
+<span class="hljs-selector-tag">video</span> &#123;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">0px</span> solid <span class="hljs-number">#000000</span>;
+  <span class="hljs-attribute">box-sizing</span>: border-box;
+&#125;
+<span class="hljs-selector-tag">swiper-item</span> &#123;
+  <span class="hljs-attribute">position</span>: absolute;
+&#125;</code></pre>
 
   
   

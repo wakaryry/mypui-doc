@@ -346,24 +346,6 @@
       
     
     <li>
-      <a href="/doc/guide/myp-list-simple.html" class="sidebar-link">列表：myp-list-simple</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/myp-list-cell.html" class="sidebar-link">列表单元：myp-list-cell</a>
     </li>
   
@@ -490,7 +472,25 @@
       
     
     <li>
-      <a href="/doc/guide/myp-list-chat.html" class="sidebar-link">聊天列表：myp-list-chat</a>
+      <a href="/doc/guide/myp-slide-gallery.html" class="sidebar-link">画廊/slide：myp-slide-gallery</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-slide-gallery-item.html" class="sidebar-link">画廊单元：myp-slide-gallery-item</a>
     </li>
   
     
@@ -890,7 +890,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-slider.html" class="sidebar-link">区间：myp-slider</a>
+      <a href="/doc/guide/myp-slider-bar.html" class="sidebar-link">区间：myp-slider-bar</a>
     </li>
   
     
@@ -998,25 +998,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-grid.html" class="sidebar-link">宫格：myp-grid</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-grid-item.html" class="sidebar-link">宫格item：myp-grid-item</a>
+      <a href="/doc/guide/myp-grid-static.html" class="sidebar-link">宫格：myp-grid-static</a>
     </li>
   
     
@@ -1217,60 +1199,6 @@
     
     <li>
       <a href="/doc/guide/myp-progress.html" class="sidebar-link">进度条：myp-progress</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-text.html" class="sidebar-link">聊天文字：myp-message-text</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-time.html" class="sidebar-link">聊天时间：myp-message-time</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-image.html" class="sidebar-link">聊天图片：myp-message-image</a>
     </li>
   
     
@@ -1728,7 +1656,7 @@
       
     
     <li>
-      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1746,7 +1674,7 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
+      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
     
@@ -1918,6 +1846,20 @@
 <td>‘120rpx’</td>
 </tr>
 <tr>
+<td>top</td>
+<td>顶部空白占位</td>
+<td>string</td>
+<td>-</td>
+<td>‘0’</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>底部空白占位</td>
+<td>string</td>
+<td>-</td>
+<td>‘0’</td>
+</tr>
+<tr>
 <td>hasIndicator</td>
 <td>是否有指示器</td>
 <td>boolean</td>
@@ -2001,6 +1943,20 @@
 <td>-</td>
 <td>‘’</td>
 </tr>
+<tr>
+<td>updateTime</td>
+<td>通过改变该值触发位置的重新计算。<br>主要是为了兼容各大平台位置获取的时机问题。<br>在弹层里面，items 能够很快拿到，<br>但是不一定位置信息就可以立马拿到</td>
+<td>number</td>
+<td>-</td>
+<td>0</td>
+</tr>
+<tr>
+<td>delay</td>
+<td>延迟获取元素内容，<br>只影响 mounted 里面的调用，<br>-1 表示不延迟。<br>其他情况使用 updateTime</td>
+<td>number</td>
+<td>-</td>
+<td>-1</td>
+</tr>
 </tbody>
 </table>
 <h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><table>
@@ -2015,6 +1971,21 @@
 <tr>
 <td>change</td>
 <td>undefined</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h2><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Bindings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>indicator</td>
+<td></td>
 </tr>
 </tbody>
 </table>

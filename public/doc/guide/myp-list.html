@@ -346,24 +346,6 @@
       
     
     <li>
-      <a href="/doc/guide/myp-list-simple.html" class="sidebar-link">列表：myp-list-simple</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/myp-list-cell.html" class="sidebar-link">列表单元：myp-list-cell</a>
     </li>
   
@@ -490,7 +472,25 @@
       
     
     <li>
-      <a href="/doc/guide/myp-list-chat.html" class="sidebar-link">聊天列表：myp-list-chat</a>
+      <a href="/doc/guide/myp-slide-gallery.html" class="sidebar-link">画廊/slide：myp-slide-gallery</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-slide-gallery-item.html" class="sidebar-link">画廊单元：myp-slide-gallery-item</a>
     </li>
   
     
@@ -890,7 +890,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-slider.html" class="sidebar-link">区间：myp-slider</a>
+      <a href="/doc/guide/myp-slider-bar.html" class="sidebar-link">区间：myp-slider-bar</a>
     </li>
   
     
@@ -998,25 +998,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-grid.html" class="sidebar-link">宫格：myp-grid</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-grid-item.html" class="sidebar-link">宫格item：myp-grid-item</a>
+      <a href="/doc/guide/myp-grid-static.html" class="sidebar-link">宫格：myp-grid-static</a>
     </li>
   
     
@@ -1217,60 +1199,6 @@
     
     <li>
       <a href="/doc/guide/myp-progress.html" class="sidebar-link">进度条：myp-progress</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-text.html" class="sidebar-link">聊天文字：myp-message-text</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-time.html" class="sidebar-link">聊天时间：myp-message-time</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-image.html" class="sidebar-link">聊天图片：myp-message-image</a>
     </li>
   
     
@@ -1728,7 +1656,7 @@
       
     
     <li>
-      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1746,7 +1674,7 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
+      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
     
@@ -1890,6 +1818,13 @@
 <td>‘0’</td>
 </tr>
 <tr>
+<td>reverse</td>
+<td>是否颠倒列表</td>
+<td>boolean</td>
+<td>-</td>
+<td>false</td>
+</tr>
+<tr>
 <td>useLoading</td>
 <td>是否启用 loading 组件，而不是 loadmoreoffset 触发</td>
 <td>boolean</td>
@@ -1977,13 +1912,14 @@
 <p>主要功能如下：</p>
 </blockquote>
 <ul>
-<li>高度控制；</li>
+<li>app端高度继承，MP/H5端高度控制；</li>
 <li>可开可关闭的 下拉刷新 与 上提加载；</li>
 <li>可以设置 是使用 loader 组件来实现 上提加载，还是使用 loadMore 事件来实现上提加载；</li>
+<li>可以用来做聊天列表，并提供了示范；</li>
 <li>…</li>
 </ul>
-<p>如果您只是纯粹的想使用一个不带刷新和加载的列表，请使用 <code>myp-list-simple</code>，其文档见 <a href="/doc/guide/myp-list-simple.html">myp-list-simple</a></p>
-<h2 id="快速使用"><a href="#快速使用" class="headerlink" title="快速使用"></a>快速使用</h2><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<p><strong>快速使用</strong></p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">myp-list</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">"myp-list"</span> <span class="hljs-attr">:autoUpdate</span>=<span class="hljs-string">"true"</span> @<span class="hljs-attr">down</span>=<span class="hljs-string">"toLoadData"</span> @<span class="hljs-attr">up</span>=<span class="hljs-string">"toLoadData"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">myp-list-cell</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"(item,idx) in items"</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">"idx"</span>&gt;</span>
       <span class="hljs-comment">&lt;!-- 您的具体内容
@@ -2004,6 +1940,7 @@
 	  toLoadData() &#123;
 		<span class="hljs-keyword">const</span> ins = <span class="hljs-keyword">this</span>.$refs[<span class="hljs-string">'myp-list'</span>]
 		<span class="hljs-keyword">const</span> cp = ins.mypCurrentPage
+		<span class="hljs-comment">// 您需要更换这个api接口</span>
 		requestApi(&#123;<span class="hljs-attr">page</span>: cp&#125;).then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> &#123;
 		  <span class="hljs-keyword">if</span> (cp === <span class="hljs-number">1</span>) &#123;
 			<span class="hljs-keyword">this</span>.items = response.results || []
@@ -2023,31 +1960,39 @@
 <p><code>myp-list</code> 默认插槽 的子组件必须是 <code>myp-list-cell</code>。（因为weex端，list下只能是cell组件）</p>
 <p><code>autoUpdate</code> 可以决定是否自动加载数据（也就是拉取第一页的数据），下拉和上提对应 <code>down</code> 和 <code>up</code> 事件。</p>
 <p>在 <code>loadData</code> 方法中，我们不需要自己去管理当前的页面等状态，<code>myp-list</code> 会自己管理，你只需要调用 成功或者失败 的回掉即可。</p>
-<h2 id="刷新与加载"><a href="#刷新与加载" class="headerlink" title="刷新与加载"></a>刷新与加载</h2><p>我们提供了刷新与加载的开关，以及事件。大致为：<code>autoUpdate</code> <code>down</code> <code>up</code> <code>@inited</code> <code>@down</code> <code>@up</code> 。</p>
-<h3 id="down"><a href="#down" class="headerlink" title="down"></a>down</h3><p>下拉刷新的开关。默认是打开的，也就是：<code>{use: true, offset: uni.upx2px(140), inRate: 0.8, outRate: 0.2}</code>。</p>
+<p><strong>刷新与加载</strong></p>
+<p>我们提供了刷新与加载的开关，以及事件。大致为：<code>autoUpdate</code> <code>down</code> <code>up</code> <code>@inited</code> <code>@down</code> <code>@up</code> 。</p>
+<p><strong>down</strong></p>
+<p>下拉刷新的开关。默认是打开的，也就是：<code>{use: true, offset: uni.upx2px(140), inRate: 0.8, outRate: 0.2}</code>。</p>
 <ul>
 <li><code>use</code>: 刷新的开关。不需要下拉刷新，<code>use:false</code> 即可。</li>
 <li><code>offset</code>: 刷新栏的高度。</li>
 <li><code>inRate</code>: 满足释放刷新之前的拉下难易程度。</li>
 <li><code>outRate</code>: 满足释放刷新之后的拉下难易程度。</li>
 </ul>
+<p>关闭刷新可以是 <code>:down=&quot;{use:false}&quot;</code> ，也可以是 <code>:down=&quot;null&quot;</code>。</p>
 <p>刷新开启之后，会有对应的 <code>@down</code> 事件。</p>
-<h3 id="up"><a href="#up" class="headerlink" title="up"></a>up</h3><p>上提加载的开关。默认是打开的。也就是：<code>{use: true, offset: 80}</code>。</p>
+<p><strong>up</strong></p>
+<p>上提加载的开关。默认是打开的。也就是：<code>{use: true, offset: 80}</code>。</p>
 <p>不需要上提加载，直接 <code>use:false</code> 即可。<code>offset</code> 为触发上提加载时距离底部的距离。一般为加载组件的高度。</p>
 <p class="tip">在 app-nvue 端，我们提供了 两种 上提加载更多 的机制。</p>
 
 <p><code>app-nvue</code> 端默认使用的是 list的 <code>loadmoreoffset</code> 配置与 <code>@loadmore</code> 事件。在 <code>myp-list</code> 组件中对应的属性配置是 <code>useLoading:true</code> 以及 <code>loadMoreOffset:60</code></p>
 <p>如果您需要使用 <code>weex</code> 中的 <code>loading</code> 组件来做 上提加载更多，您需要设置：<code>useLoading:true</code>。我们默认是关闭了 <code>useLoading</code>，而是使用 <code>loadMoreOffset</code> 这个属性来配置可触发加载更多时的底部距离。</p>
+<p>关闭上提加载可以是 <code>:up=&quot;{use:false}&quot;</code> ，也可以是 <code>:up=&quot;null&quot;</code>。</p>
 <p>不管使用啥，上提加载对应的事件是 <code>@up</code>。</p>
-<h3 id="autoUpdate"><a href="#autoUpdate" class="headerlink" title="autoUpdate"></a>autoUpdate</h3><p>是否自动加载第一页数据。默认不加载，也就是 <code>autoUpdate:false</code>。</p>
-<p><code>autoUpdate:true</code> 即可自动加载第一页数据，当然前提条件是 开启了 下拉刷新。</p>
+<p><strong>autoUpdate</strong></p>
+<p>是否自动加载第一页数据。默认不加载，也就是 <code>autoUpdate:false</code>。</p>
+<p><code>autoUpdate:true</code> 即可自动加载第一页数据，当然前提条件是 开启了 下拉刷新或者上提加载。</p>
 <blockquote>
 <p>如果您不开启 <code>autoUpdate</code> 如何加载第一页数据了？</p>
 </blockquote>
 <p>一般情况下，我们调用 <code>ins.mypRefresh()</code> 进行手动刷新，<code>ins.mypLoad()</code> 进行手动加载。您只需要提供 <code>@down</code> 或者 <code>@up</code> 事件的回调即可。</p>
 <p><strong>注意</strong>：这里的 ins 指的是 myp-list 的ref。比如 <code>&lt;myp-list ref=&quot;myp-list&quot;&gt;&lt;/myp-list&gt;</code>, ins 就是 <code>this.$refs[&#39;myp-list&#39;]</code> whatever</p>
-<h3 id="dwon"><a href="#dwon" class="headerlink" title="@dwon"></a>@dwon</h3><p>开启了下拉刷新，就必须提供 <code>@dwon</code> 事件，并且在里面处理您的刷新逻辑。一般情况下， <code>@down</code> 与 <code>@up</code> 公用一个处理逻辑。</p>
-<h3 id="up-1"><a href="#up-1" class="headerlink" title="@up"></a>@up</h3><p>开启了 上提加载，就必须提供 <code>@up</code> 事件。一般与 <code>@down</code> 回调是同一个函数。</p>
+<p><strong>@dwon</strong></p>
+<p>开启了下拉刷新，就必须提供 <code>@dwon</code> 事件，并且在里面处理您的刷新逻辑。一般情况下， <code>@down</code> 与 <code>@up</code> 公用一个处理逻辑。</p>
+<p><strong>@up</strong></p>
+<p>开启了 上提加载，就必须提供 <code>@up</code> 事件。一般与 <code>@down</code> 回调是同一个函数。</p>
 <pre><code class="hljs js">toLoadData() &#123;
 	<span class="hljs-keyword">const</span> ins = <span class="hljs-keyword">this</span>.$refs[<span class="hljs-string">'myp-list'</span>]
 	<span class="hljs-keyword">const</span> cp = ins.mypCurrentPage
@@ -2064,16 +2009,12 @@
 &#125;</code></pre>
 <p>刷新与加载一体处理，而且我们不需要手动去管理页码等，myp-list 会自动为您处理。当然，您需要通知他如何处理，以及是否有下一页等。</p>
 <p>也就是上面写的，<code>ins.mypEndSuccess(ifHasNextPage)</code> 以及 <code>ins.mypEndError()</code>。刷新或者加载成功/失败都需要调用相应的接口，以便 <code>myp-list</code> 能够正确的为您处理业务。</p>
-<h3 id="inited"><a href="#inited" class="headerlink" title="@inited"></a>@inited</h3><p>有时候，您需要一个时机，这个时机是 myp-list 已经准备好了的时候。我们为您提供了 <code>@inited</code> 事件监听。这说明 myp-list 已经准备好了一切，您可以尽情的调用。有时候页面内容的初始化刷新，您可以在此事件的回调中处理。</p>
+<p><strong>@inited</strong></p>
+<p>有时候，您需要一个时机，这个时机是 myp-list 已经准备好了的时候。我们为您提供了 <code>@inited</code> 事件监听。这说明 myp-list 已经准备好了一切，您可以尽情的调用。有时候页面内容的初始化刷新，您可以在此事件的回调中处理。</p>
 <p><code>@inited</code> 通知是 晚于 页面的 onLoad 的，也就是 页面 onLoad 之后，我们才能监听到 <code>@inited</code> 事件。这对于我们来说很方便，恰好 onLoad 准备好了页面的各种初始化数据环境，比如 上一个页面传过来的 某个 id，我们需要用这个 id 去刷新 列表。</p>
 <p><code>autoUpdate</code> 也是一样。</p>
-<h2 id="其它事件"><a href="#其它事件" class="headerlink" title="其它事件"></a>其它事件</h2><h3 id="scroll"><a href="#scroll" class="headerlink" title="@scroll"></a>@scroll</h3><p>list 滚动时的 scroll 事件的监听。</p>
-<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
-<li>页面无内容提示占位；</li>
-<li>提供整个内容页的刷新显示（比如空白页面刷新时，刷新组件占满全屏）；</li>
-<li>回到顶部；</li>
-<li>更多更灵活的页面页码管理；</li>
-</ul>
+<p><strong>@scroll</strong></p>
+<p>list 滚动时的 scroll 事件的监听。</p>
 
   
   
@@ -2094,7 +2035,7 @@
       
       
       
-        <span style="float: right;"><a href="/doc/guide/myp-list-simple.html">列表：myp-list-simple</a> →</span>
+        <span style="float: right;"><a href="/doc/guide/myp-list-cell.html">列表单元：myp-list-cell</a> →</span>
       
     </div>
   

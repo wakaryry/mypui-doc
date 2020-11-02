@@ -346,24 +346,6 @@
       
     
     <li>
-      <a href="/doc/guide/myp-list-simple.html" class="sidebar-link">列表：myp-list-simple</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/myp-list-cell.html" class="sidebar-link">列表单元：myp-list-cell</a>
     </li>
   
@@ -490,7 +472,25 @@
       
     
     <li>
-      <a href="/doc/guide/myp-list-chat.html" class="sidebar-link">聊天列表：myp-list-chat</a>
+      <a href="/doc/guide/myp-slide-gallery.html" class="sidebar-link">画廊/slide：myp-slide-gallery</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-slide-gallery-item.html" class="sidebar-link">画廊单元：myp-slide-gallery-item</a>
     </li>
   
     
@@ -890,7 +890,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-slider.html" class="sidebar-link">区间：myp-slider</a>
+      <a href="/doc/guide/myp-slider-bar.html" class="sidebar-link">区间：myp-slider-bar</a>
     </li>
   
     
@@ -998,25 +998,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-grid.html" class="sidebar-link">宫格：myp-grid</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-grid-item.html" class="sidebar-link">宫格item：myp-grid-item</a>
+      <a href="/doc/guide/myp-grid-static.html" class="sidebar-link">宫格：myp-grid-static</a>
     </li>
   
     
@@ -1217,60 +1199,6 @@
     
     <li>
       <a href="/doc/guide/myp-progress.html" class="sidebar-link">进度条：myp-progress</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-text.html" class="sidebar-link">聊天文字：myp-message-text</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-time.html" class="sidebar-link">聊天时间：myp-message-time</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-image.html" class="sidebar-link">聊天图片：myp-message-image</a>
     </li>
   
     
@@ -1728,7 +1656,7 @@
       
     
     <li>
-      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1746,7 +1674,7 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
+      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
     
@@ -1829,6 +1757,9 @@
 <p>或者npm安装：<code>npm install @mypui/myp-ui</code></p>
 </blockquote>
 <pre><code class="hljs bash">npm install @mypui/myp-ui</code></pre>
+<blockquote>
+<p>注意：使用npm安装mypUI之前，您得确保您的项目进行了npm初始化：<code>npm init</code>，保证项目下存在<code>package.json</code>配置文件。否则可能会遇到一些意想不到的问题。</p>
+</blockquote>
 <h3 id="复制UI的静态资源"><a href="#复制UI的静态资源" class="headerlink" title="复制UI的静态资源"></a>复制UI的静态资源</h3><p><code>loadingSrc</code>等公用静态资源直接使用了示范UI项目中 <code>/static/ui</code> 下面的静态文件，没有使用网络图片，所以需要拷贝到自己的项目下（<code>/static/ui</code>这个路径还是需要保持一致的）。</p>
 <p>静态文件的路径依然保持和示范项目中一致即可也就是依然是 <code>/static/ui</code> 路径。</p>
 <h3 id="使css生效"><a href="#使css生效" class="headerlink" title="使css生效"></a>使css生效</h3><p>为了减少包体积，UI内使用了 <code>全局css</code> 。您需要在 <code>app.vue</code> 里面引入 <code>mypUI</code> 中的 <code>base.scss</code>。</p>

@@ -346,24 +346,6 @@
       
     
     <li>
-      <a href="/doc/guide/myp-list-simple.html" class="sidebar-link">列表：myp-list-simple</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/myp-list-cell.html" class="sidebar-link">列表单元：myp-list-cell</a>
     </li>
   
@@ -490,7 +472,25 @@
       
     
     <li>
-      <a href="/doc/guide/myp-list-chat.html" class="sidebar-link">聊天列表：myp-list-chat</a>
+      <a href="/doc/guide/myp-slide-gallery.html" class="sidebar-link">画廊/slide：myp-slide-gallery</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-slide-gallery-item.html" class="sidebar-link">画廊单元：myp-slide-gallery-item</a>
     </li>
   
     
@@ -890,7 +890,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-slider.html" class="sidebar-link">区间：myp-slider</a>
+      <a href="/doc/guide/myp-slider-bar.html" class="sidebar-link">区间：myp-slider-bar</a>
     </li>
   
     
@@ -998,25 +998,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-grid.html" class="sidebar-link">宫格：myp-grid</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-grid-item.html" class="sidebar-link">宫格item：myp-grid-item</a>
+      <a href="/doc/guide/myp-grid-static.html" class="sidebar-link">宫格：myp-grid-static</a>
     </li>
   
     
@@ -1217,60 +1199,6 @@
     
     <li>
       <a href="/doc/guide/myp-progress.html" class="sidebar-link">进度条：myp-progress</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-text.html" class="sidebar-link">聊天文字：myp-message-text</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-time.html" class="sidebar-link">聊天时间：myp-message-time</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-image.html" class="sidebar-link">聊天图片：myp-message-image</a>
     </li>
   
     
@@ -1728,7 +1656,7 @@
       
     
     <li>
-      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1746,7 +1674,7 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
+      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
     
@@ -1822,7 +1750,219 @@
   
 
   
-    
+    <p>简洁干脆的请求器。颗粒细，可配置和定制能力强。有任何问题可以加我<code>QQ：382006503</code>或者<code>微信：pptpdf</code>。</p>
+<p><code>myp-request</code> 也就是以前的 <code>wakary-request</code>。</p>
+<p>因为我们自己做了一套 <code>nvue</code> 页面 <code>uni-app</code> 模式下的 组件 <code>mypUI</code>，为了名字更加简短，改为 <code>myp-request</code>。</p>
+<p>整个处理逻辑都比较<code>直接</code>，代码也比较<code>直白</code>，就是<code>简单粗暴</code>的去适配<code>uni.request</code>，并且支持<code>全局配置</code>和<code>独立覆盖</code>。</p>
+<ul>
+<li>请求拦截，比如Header/URL配置检测、自动刷新Token等；</li>
+<li>响应拦截；</li>
+<li>在<code>uni.request</code>的回调中使用的全局callback；</li>
+<li>api级别的callback；</li>
+<li>支持常规请求，上传以及下载；</li>
+<li>支持Promise以及Task；</li>
+<li>支持同步/异步；</li>
+<li>更多…</li>
+</ul>
+<blockquote>
+<p><strong>注意：</strong></p>
+<p>没有对<code>header</code>做细致的合并工作（不打算处理），也就是请求中的<code>header</code>配置是直接覆盖全局中的<code>header</code>配置，而不是差异合并（当然，如果你有特殊需求，可以在<code>请求拦截器</code>里面处理<code>header</code>）。</p>
+<p>不对<code>url</code>进行任何的检测（自己保证<code>url</code>的合法性），最终的<code>url</code>就是<code>baseUrl</code>和<code>api</code>配置中<code>url</code>的拼接（当然，你可以在拦截请求器里面修改<code>url</code>）。</p>
+<p>可以根据需要在构建接口时任意添加<code>参数/字段</code>，方便你在<code>拦截器</code>里面使用。</p>
+<p><code>请求被拦截</code>也会进入响应拦截器里面，而且会自动<code>reject</code>返回的内容，响应拦截器接收到的数据为<code>{mypCancel:true, response:...}</code>；</p>
+<p>请求<code>fail</code>也会进入响应拦截器里面，而且会自动<code>reject</code>返回的内容，<code>fail</code>时响应拦截器接收到的数据为<code>{mypFail:true, response:...}</code>；</p>
+<p><code>success/fail/complete</code>回掉并不对应<code>uni.request</code>，而是对应响应拦截器的处理逻辑，<code>resolve</code>对应<code>success</code>，<code>reject</code>对应<code>fail</code>；</p>
+<p>不会<code>类axios</code>处理，不会进一步抽象与提炼。</p>
+</blockquote>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>源码比较直白，可以看源码:</p>
+<ul>
+<li><code>Request</code>class对象，需要实例化；</li>
+<li>提供了一个<code>request</code>方法，<code>request</code>方法会调用您设置的<code>请求拦截器</code>，提前拦截；</li>
+<li>适配<code>uni.request</code>，完成 <code>request</code> 方法；</li>
+<li>请求取消或者失败会走<code>reject</code>（<code>catch</code>中处理）；</li>
+<li>您可以通过<code>mypReqToReject</code>在响应拦截器中自由控制是否进入<code>reject</code>；</li>
+<li><code>fail</code>情况下也会进入响应拦截器，是否<code>fail</code>根据<code>response</code>中的<code>mypFail</code>来做判断；</li>
+<li><code>请求被拦截</code>也会进入响应拦截器，是否<code>被拦截</code>根据<code>response</code>中的<code>mypCancel</code>来做判断；</li>
+</ul>
+<h2 id="初始化请求器"><a href="#初始化请求器" class="headerlink" title="初始化请求器"></a>初始化请求器</h2><p>自己可以新建一个 <code>request.js</code>，用来配置自己的请求器。</p>
+<pre><code class="hljs js"><span class="hljs-comment">// 引入 Request</span>
+<span class="hljs-keyword">import</span> Request <span class="hljs-keyword">from</span> <span class="hljs-string">'@/mypUI/myp-request/index.js'</span>
+
+<span class="hljs-comment">// 设置 通用的 baseUrl 以及 header</span>
+<span class="hljs-keyword">const</span> config = &#123;
+	<span class="hljs-attr">baseUrl</span>: baseUrl,
+	<span class="hljs-attr">header</span>: &#123;<span class="hljs-string">"content-type"</span>: <span class="hljs-string">"application/x-www-form-urlencoded"</span>&#125;
+&#125;
+
+<span class="hljs-comment">// 设置自己的请求拦截器，必须加上 `async`</span>
+<span class="hljs-comment">// 请求前的拦截，比如是否登录/过期/刷新token/...</span>
+<span class="hljs-keyword">const</span> reqInterceptor = <span class="hljs-keyword">async</span> (options) =&gt; &#123;
+	<span class="hljs-comment">// 必须返回一个 Object</span>
+	<span class="hljs-comment">// 拦截请求：return &#123;mypReqToCancel: true, ...&#125;</span>
+	<span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> 添加任意拦截逻辑</span>
+	<span class="hljs-keyword">return</span> options
+&#125;
+
+<span class="hljs-comment">// 设置自己的响应拦截器</span>
+<span class="hljs-comment">// 统一对返回的数据进行整理，方便接口统一使用</span>
+<span class="hljs-comment">// conf是您api的options信息，一般情况下您只需要用到您自定义的标记字段</span>
+<span class="hljs-keyword">const</span> resInterceptor = <span class="hljs-function">(<span class="hljs-params">response, conf=&#123;&#125;</span>) =&gt;</span> &#123;
+	<span class="hljs-comment">// 必须返回你需要处理的数据，将会进入resolve（then中处理）</span>
+	<span class="hljs-comment">// 如果需要reject，需要设置mypReqToReject:true，还可以携带自己定义的任何提示内容（catch中处理）</span>
+	<span class="hljs-comment">// uni.request进入fail也会进入该拦截器（为了统一处理逻辑），这个时候的response参数为&#123;mypFail: true, response: fail info&#125;。fail时不管返回啥，都进入reject(catch)</span>
+	<span class="hljs-keyword">if</span> (response.mypFail) &#123;
+		<span class="hljs-keyword">return</span> response.response
+	&#125;
+	<span class="hljs-comment">// 请求被拦截时也会进入该回掉（为了统一处理逻辑），这个时候的response参数为&#123;mypCancel: true, response: cancel info&#125;。cancel时不管返回啥，都进入reject(catch)</span>
+	<span class="hljs-keyword">if</span> (response.mypCancel) &#123;
+		<span class="hljs-keyword">return</span> response.response
+	&#125;
+	<span class="hljs-keyword">return</span> response
+&#125;
+
+<span class="hljs-comment">// 实例化请求器</span>
+<span class="hljs-comment">// 您可以根据需要实例化多个请求器</span>
+<span class="hljs-keyword">const</span> req = <span class="hljs-keyword">new</span> Request(config, reqInterceptor, resInterceptor)
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> req</code></pre>
+<h2 id="构建api或者直接使用"><a href="#构建api或者直接使用" class="headerlink" title="构建api或者直接使用"></a>构建api或者直接使用</h2><p><strong>我们使用了一些固定的参数来定义请求的类别：</strong></p>
+<ul>
+<li>type: request-普通请求，upload-上传，download-下载；</li>
+<li>task: 布尔值，是否返回task任务，默认是不返回 false；</li>
+</ul>
+<p><strong>我们使用了一些固定的参数来标记拦截状态：</strong></p>
+<ul>
+<li>mypReqToCancel: 布尔值。请求拦截器的返回里标记是否拦截请求；</li>
+<li>mypCancel: 布尔值。响应拦截器回掉参数中，标记请求是否被拦截；</li>
+<li>mypFail: 布尔值。响应拦截器回掉参数中，标记是否进入了<code>uni.request</code>的<code>fail</code>，具体可以看拦截器示范；</li>
+<li>mypReqToReject：布尔值。用于响应拦截器里面的返回内容标记，标记是否进入<code>reject</code>；</li>
+</ul>
+<h3 id="构建api"><a href="#构建api" class="headerlink" title="构建api"></a>构建api</h3><pre><code class="hljs js"><span class="hljs-keyword">import</span> request <span class="hljs-keyword">from</span> <span class="hljs-string">'@/common/request.js'</span>
+
+<span class="hljs-comment">// baseUrl: 'https://www.baidu.com'</span>
+<span class="hljs-comment">// 在您需要请求的地方直接使用该api</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">editInfo</span>(<span class="hljs-params">data</span>) </span>&#123;
+	<span class="hljs-keyword">return</span> request.request(&#123;
+		<span class="hljs-attr">url</span>: <span class="hljs-string">'/search'</span>,
+		<span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+		<span class="hljs-attr">data</span>: data
+	&#125;)
+&#125;</code></pre>
+<pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; editInfo &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'@/api/user.js'</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;
+	<span class="hljs-attr">methods</span>: &#123;
+		changeUserInfo() &#123;
+			editInfo(&#123;<span class="hljs-attr">name</span>: <span class="hljs-string">'nickname'</span>&#125;).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> &#123;
+				<span class="hljs-comment">// success</span>
+			&#125;).catch(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> &#123;
+				<span class="hljs-comment">// error</span>
+				<span class="hljs-comment">// err 有可能是 Error 对象，也有可能是 您自己定义的内容，处理的时候您需要自己判断</span>
+				<span class="hljs-comment">// 一个通用的错误提示组件就可以完成</span>
+			&#125;)
+		&#125;
+	&#125;
+&#125;</code></pre>
+<h3 id="直接使用"><a href="#直接使用" class="headerlink" title="直接使用"></a>直接使用</h3><pre><code class="hljs js"><span class="hljs-keyword">import</span> request <span class="hljs-keyword">from</span> <span class="hljs-string">'@/common/request.js'</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;
+	<span class="hljs-attr">methods</span>: &#123;
+		changeUserInfo() &#123;
+			request.request(&#123;
+				<span class="hljs-attr">url</span>: <span class="hljs-string">'/edit_info'</span>,
+				<span class="hljs-attr">data</span>: &#123;<span class="hljs-attr">name</span>: <span class="hljs-string">'nickname'</span>&#125;,
+				<span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>
+			&#125;).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> &#123;
+				<span class="hljs-comment">// success</span>
+			&#125;).catch(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> &#123;
+				<span class="hljs-comment">// error</span>
+			&#125;)
+		&#125;
+	&#125;
+&#125;</code></pre>
+<p>当然，您也可以在其它<code>js</code>中使用，比如<code>store</code>。</p>
+<h2 id="task"><a href="#task" class="headerlink" title="task"></a>task</h2><h3 id="api"><a href="#api" class="headerlink" title="api"></a>api</h3><pre><code class="hljs js"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">upVideoProject</span>(<span class="hljs-params">file, name, data=&#123;&#125;, success=null, fail=null, complete=null</span>) </span>&#123;
+	<span class="hljs-keyword">return</span> req.request(&#123;
+		<span class="hljs-attr">url</span>: <span class="hljs-string">'/projects/video_upload/'</span>,
+		<span class="hljs-attr">filePath</span>: file,
+		<span class="hljs-attr">name</span>: name,
+		<span class="hljs-attr">formData</span>: data,
+		<span class="hljs-attr">type</span>: <span class="hljs-string">'upload'</span>,
+		<span class="hljs-attr">task</span>: <span class="hljs-literal">true</span>
+	&#125;, success, fail, complete)
+&#125;</code></pre>
+<h3 id="获取task"><a href="#获取task" class="headerlink" title="获取task"></a>获取task</h3><p><strong>使用async/await获取</strong></p>
+<pre><code class="hljs js"><span class="hljs-keyword">try</span>&#123;
+	<span class="hljs-keyword">const</span> a = <span class="hljs-keyword">await</span> upVideoProject(<span class="hljs-keyword">this</span>.videoSrc, <span class="hljs-string">'video'</span>, &#123;<span class="hljs-attr">name</span>: <span class="hljs-keyword">this</span>.name.trim()&#125;, (suc)=&gt;&#123;
+		<span class="hljs-comment">// 其实就是resolve/then</span>
+		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'a success'</span>, suc)
+	&#125;, (fail) =&gt; &#123;
+		<span class="hljs-comment">// 其实就是reject/catch</span>
+		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'a fail'</span>, fail)
+	&#125;, (com) =&gt; &#123;
+		<span class="hljs-comment">// 通用逻辑</span>
+		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'a complete'</span>, com)
+	&#125;)
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'a task:'</span>, a)
+	a.onProgressUpdate = <span class="hljs-function">(<span class="hljs-params">pg</span>) =&gt;</span> &#123;
+		<span class="hljs-built_in">console</span>.log(pg.progress)
+	&#125;
+&#125;<span class="hljs-keyword">catch</span>(e)&#123;
+	<span class="hljs-comment">//TODO handle the exception</span>
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'try:e:'</span>, e)
+&#125;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hi'</span>)</code></pre>
+<p><strong>then获取</strong><br><pre><code class="hljs js"><span class="hljs-keyword">const</span> a = upVideoProject(<span class="hljs-keyword">this</span>.videoSrc, <span class="hljs-string">'video'</span>, &#123;<span class="hljs-attr">name</span>: <span class="hljs-keyword">this</span>.name.trim()&#125;, (suc)=&gt;&#123;
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'success'</span>, suc)
+&#125;, (fail) =&gt; &#123;
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'fail'</span>, fail)
+&#125;, (com) =&gt; &#123;
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'complete'</span>, com)
+&#125;)
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'task:'</span>, a)
+a.then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> &#123;
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'res:'</span>, res)
+	res.onProgressUpdate = <span class="hljs-function">(<span class="hljs-params">pg</span>) =&gt;</span> &#123;
+		<span class="hljs-built_in">console</span>.log(pg.progress)
+	&#125;
+&#125;).catch(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> &#123;
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'err:'</span>, err)
+&#125;)
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hello'</span>)</code></pre></p>
+<h2 id="success-fail-complete回掉"><a href="#success-fail-complete回掉" class="headerlink" title="success/fail/complete回掉"></a>success/fail/complete回掉</h2><ul>
+<li><code>success/fail/complete</code>都支持全局配置和局部配置，全局和局部并不是覆盖关系，而是都会运行。先运行全局配置，然后是局部配置；</li>
+<li>所有的回掉都有一个参数，该参数就是响应拦截器里面您的返回内容；</li>
+<li><code>success/fail/complete</code>回掉并不对应<code>uni.request</code>的相应回掉，而是对应您的业务逻辑，<code>resolve/then</code>的就是<code>success</code>，<code>reject/catch</code>的就是<code>fail</code>；</li>
+<li><code>task</code>任务中，业务处理在<code>success/fail/complete</code>回掉中，毕竟不再是常规的<code>then/catch</code>处理；</li>
+</ul>
+<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><pre><code class="hljs js"><span class="hljs-keyword">const</span> sucH = <span class="hljs-function">(<span class="hljs-params">res</span>)=&gt;</span>&#123;&#125;
+...
+const req = <span class="hljs-keyword">new</span> Request(config, reqInter, resInter, sucH, failH, comH)</code></pre>
+<h3 id="局部配置"><a href="#局部配置" class="headerlink" title="局部配置"></a>局部配置</h3><p>参考上面的task api处理方式。</p>
+<h1 id="建议"><a href="#建议" class="headerlink" title="建议"></a>建议</h1><p>在构建<code>api</code>或者使用<code>request</code>的时候，您可以根据需要在<code>参数</code>里面增加字段，这样您可以根据自己的字段在<code>拦截器</code>里面做更多的事情。</p>
+<h2 id="比如"><a href="#比如" class="headerlink" title="比如"></a>比如</h2><pre><code class="hljs js"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">login</span>(<span class="hljs-params">data</span>) </span>&#123;
+	<span class="hljs-keyword">return</span> request.request(&#123;
+		<span class="hljs-attr">url</span>: <span class="hljs-string">'/login'</span>,
+		<span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+		<span class="hljs-attr">data</span>: data,
+		<span class="hljs-attr">authType</span>: <span class="hljs-string">'None'</span>
+	&#125;)
+&#125;</code></pre>
+<p>我们在<code>options</code>里面增加了一个<code>authType</code>参数，这样我们在构建<code>拦截器</code>的时候可以根据这个参数来判断该接口是否需要<code>登录授权</code>。</p>
+<pre><code class="hljs js"><span class="hljs-comment">// 需要登录的拦截掉，不需要登录的通过请求</span>
+<span class="hljs-keyword">const</span> reqInterceptor = <span class="hljs-keyword">async</span> (options) =&gt; &#123;
+	<span class="hljs-keyword">if</span> (options.authType === <span class="hljs-string">'None'</span>) &#123;
+		<span class="hljs-keyword">return</span> options
+	&#125;
+	<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+&#125;</code></pre>
+<h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><p>这就是一个最简单直接的请求库，你可以查看源码，从而根据自己的需要构建一个满意的<code>拦截器</code>和<code>响应器</code>。</p>
+<p>其实就是根据你的接口配置信息以及拦截返回的数据进行判断，进一步去适配<code>uni.request</code>。</p>
+<p>一切需要的都可以通过拦截器来实现。</p>
+<h1 id="mypUI"><a href="#mypUI" class="headerlink" title="mypUI"></a><code>mypUI</code></h1><p>全新的 <code>nvue-uniapp</code> 组件，一套组件支持编译到 <code>mp/h5/app</code>。</p>
+<p>QQ群：<code>306797275</code></p>
+<p>有任何问题可以加<code>QQ：382006503</code>或者<code>微信：pptpdf</code>。</p>
+
   
   
     <div class="donate-box">

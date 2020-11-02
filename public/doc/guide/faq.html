@@ -346,24 +346,6 @@
       
     
     <li>
-      <a href="/doc/guide/myp-list-simple.html" class="sidebar-link">列表：myp-list-simple</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
       <a href="/doc/guide/myp-list-cell.html" class="sidebar-link">列表单元：myp-list-cell</a>
     </li>
   
@@ -490,7 +472,25 @@
       
     
     <li>
-      <a href="/doc/guide/myp-list-chat.html" class="sidebar-link">聊天列表：myp-list-chat</a>
+      <a href="/doc/guide/myp-slide-gallery.html" class="sidebar-link">画廊/slide：myp-slide-gallery</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-slide-gallery-item.html" class="sidebar-link">画廊单元：myp-slide-gallery-item</a>
     </li>
   
     
@@ -890,7 +890,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-slider.html" class="sidebar-link">区间：myp-slider</a>
+      <a href="/doc/guide/myp-slider-bar.html" class="sidebar-link">区间：myp-slider-bar</a>
     </li>
   
     
@@ -998,25 +998,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-grid.html" class="sidebar-link">宫格：myp-grid</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-grid-item.html" class="sidebar-link">宫格item：myp-grid-item</a>
+      <a href="/doc/guide/myp-grid-static.html" class="sidebar-link">宫格：myp-grid-static</a>
     </li>
   
     
@@ -1217,60 +1199,6 @@
     
     <li>
       <a href="/doc/guide/myp-progress.html" class="sidebar-link">进度条：myp-progress</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-text.html" class="sidebar-link">聊天文字：myp-message-text</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-time.html" class="sidebar-link">聊天时间：myp-message-time</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-message-image.html" class="sidebar-link">聊天图片：myp-message-image</a>
     </li>
   
     
@@ -1728,7 +1656,7 @@
       
     
     <li>
-      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
     </li>
   
     
@@ -1746,7 +1674,7 @@
       
     
     <li>
-      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
+      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
     </li>
   
     
@@ -1846,6 +1774,40 @@
 <p>头条小程序下组件同名ref的问题</p>
 </blockquote>
 <p>头条小程序下，同一个页面下的子组件，如果子组件内部ref存在同名，获取组件的ref，会是最后created的那一个。其它平台暂时没有这个问题，头条小程序以前也没有这个问题。如果您在头条小程序下出现数据拉取不正确等问题，可以检查下是不是这个问题。</p>
+<blockquote>
+<p>list下为什么无法触发第二次加载更多</p>
+</blockquote>
+<p>不要把所有的内容放在一个cell里面，否则会出现无法触发上提加载的问题。尽量使用cell循环。</p>
+<blockquote>
+<p>list下为什么滚动条位置有问题</p>
+</blockquote>
+<ul>
+<li>不要把所有的内容放在一个cell下；</li>
+<li>不要试图给cell上面加一堆的style；</li>
+</ul>
+<blockquote>
+<p>textarea内容闪</p>
+</blockquote>
+<p>如果你的textarea存在内容时而出现，时而不见，或者内容闪烁的情况。先检查上一个页面是否存在弹窗类组件没有关闭。如果没有问题，可以独立这个页面测试是否有问题。独立没有问题，大概率是上一个页面某种写法导致闪烁。没有啥好办法。</p>
+<blockquote>
+<p>页面内容闪烁</p>
+</blockquote>
+<ul>
+<li>检查是否存在box-shadow；</li>
+</ul>
+<p><strong>Android平台阴影(box-shadow)问题</strong></p>
+<p>Android平台weex对阴影样式(box-shadow)支持不完善，如设置圆角边框时阴影样式显示不正常、设置动画时在Android7上显示不正常、在Android10上出现闪烁现象等。</p>
+<p>为解决这些问题，从HBuilderX 2.4.7起，新增elevation属性（组件的属性，不是css样式）设置组件的层级，Number类型，层级值越大阴影越明显，阴影效果也与组件位置有关，越靠近页面底部阴影效果越明显</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">elevation</span>=<span class="hljs-string">"5px"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span></code></pre>
+<p><strong>注意</strong></p>
+<p>设置elevation属性产生的阴影暂时无法修改颜色</p>
+<p>为了避免elevation属性的阴影效果与阴影样式(box-shadow)冲突，设置elevation属性后box-shadow样式失效</p>
+<p>使用elevation需要阴影元素的父元素大于阴影范围，否则会对阴影进行裁剪</p>
+<p>IOS不支持elevation属性，请使用box-shadow设置阴影</p>
+<ul>
+<li>swiper-list可能会造成下一个页面闪烁或者有历史内容残留</li>
+</ul>
+<p>swiper-list是双列表潜逃，支持公用header，以及swiper切换的效果。swiper-list有可能会导致下一个页面出现残影或者内容闪烁。（还在排查与取证阶段）</p>
 
   
   
