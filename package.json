@@ -8,8 +8,8 @@
     "start": "hexo server",
 	"build": "hexo clean && hexo generate",
 	"deploy": "npm run build && hexo deploy",
-    "lint": "zhlint 'src/{guide,api,style-guide}/*.md'",
-    "lint:fix": "zhlint 'src/{guide,api,style-guide}/*.md' --fix"
+    "lint": "zhlint 'src/{guide,api}/*.md'",
+    "lint:fix": "zhlint 'src/{guide,api}/*.md' --fix"
   },
   "engines": {
     "node": ">=12.0.0"
