@@ -3,14 +3,14 @@
   <ul class="nav-dropdown">
     <li><h4>知识</h4></li>
     <li><ul>
-      <li><a href="<%- url_for("/doc/cookbook/") %>" class="nav-link<%- page.path.match(/\/(cookbook)(\/|$)/) ? ' current' : '' %>" rel="noopener">分享</a></li>
+      <li><a href="<%- url_for("/cookbook/") %>" class="nav-link<%- page.path.match(/\/(cookbook)(\/|$)/) ? ' current' : '' %>" rel="noopener">分享</a></li>
     </ul></li>
     <li><h4>工具</h4></li>
     <li>
       <ul>
-        <li><a href="<%- url_for("/doc/tool/icon.html") %>" class="nav-link<%- page.path.match(/\/tool(\/icon.html$)/) ? ' current' : '' %>" rel="noopener">icon提取器</a></li>
-        <li><a href="<%- url_for("/doc/tool/props.html") %>" class="nav-link<%- page.path.match(/\/tool(\/props.html$)/) ? ' current' : '' %>" rel="noopener">props maker</a></li>
-        <li><a href="<%- url_for("/doc/tool/component.html") %>" class="nav-link<%- page.path.match(/\/tool(\/component.html$)/) ? ' current' : '' %>" rel="noopener">component maker</a></li>
+        <li><a href="<%- url_for("/tool/icon.html") %>" class="nav-link<%- page.path.match(/\/tool(\/icon.html$)/) ? ' current' : '' %>" rel="noopener">icon提取器</a></li>
+        <li><a href="<%- url_for("/tool/props.html") %>" class="nav-link<%- page.path.match(/\/tool(\/props.html$)/) ? ' current' : '' %>" rel="noopener">props maker</a></li>
+        <li><a href="<%- url_for("/tool/component.html") %>" class="nav-link<%- page.path.match(/\/tool(\/component.html$)/) ? ' current' : '' %>" rel="noopener">component maker</a></li>
       </ul>
     </li>
   </ul>
