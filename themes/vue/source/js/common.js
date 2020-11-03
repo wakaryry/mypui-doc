@@ -343,6 +343,7 @@
         sectionContainer.className = 'menu-sub'
         currentPageAnchor.parentNode.appendChild(sectionContainer)
       }
+	  /*
       var headers = content.querySelectorAll('h2')
       if (headers.length) {
         each.call(headers, function (h) {
@@ -362,7 +363,7 @@
           allHeaders.push(h)
         })
       }
-
+	  */
       var animating = false
       sectionContainer.addEventListener('click', function (e) {
 
