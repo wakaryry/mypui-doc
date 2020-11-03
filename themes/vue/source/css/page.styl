@@ -179,6 +179,26 @@
         content: "\f00c"
         font-family: FontAwesome
         background-color: $green
+  .simulator
+    position: fixed
+    top: 90px
+    right: 30px
+    z-index: 1
+    box-sizing: border-box
+    width: 360px
+    min-width: 360px
+    overflow: hidden
+    background: #fafafa
+    border-radius: 12px
+    box-shadow: #ebedf0 0 4px 12px
+
+iframe
+	display: block
+	width: 100%
+	border-left-width: 0
+	border-top-width: 0
+	border-right-width: 0
+	border-bottom-width: 0
 
 .donate-box
   margin-top: 2em
@@ -198,11 +218,21 @@
   .sidebar
     position: fixed
 
-@media screen and (min-width: 1760px)
+@media screen and (min-width: 2060px)
+  #header
+    background-color: #fff
+
+@media screen and (max-width: 2060px)
+  .content.with-simulator
+    padding-right: 460px
+  .content.with-sidebar
+    margin-left: 290px
   #header
     background-color: #fff
 
 @media screen and (max-width: 1760px)
+  .content.with-simulator
+    padding-right: 420px
   .content.with-sidebar
     margin-left: 290px
   #ad
@@ -215,6 +245,8 @@
     padding: 0 0 20px 30px
 
 @media screen and (max-width: 1300px)
+  .content.with-simulator
+    padding-right: 0px
   .content.with-sidebar
     margin-left: 290px
   #ad
