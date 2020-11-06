@@ -2,7 +2,7 @@
 title: 按钮：myp-button
 type: guide
 order: 150
-page: https://mypui.asnowsoft.cn/h5#/pages/base/button
+page: http://mypui.asnowsoft.cn/h5/#/pages/base/button
 ---
 
 ## Props
@@ -76,7 +76,7 @@ myp-button 的配置属性比较多，其实也很简单。毕竟命名规则都
 
 **效果**
 
-![myp-button](/doc/images/doc/button1.png)
+![myp-button](/images/doc/button1.png)
 
 > myp-button 默认是 relative定位的，所以您可以很便捷的搭配 badge 等组件来快速实现其它的效果
 
