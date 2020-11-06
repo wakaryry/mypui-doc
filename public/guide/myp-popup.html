@@ -1,0 +1,2138 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <title>弹窗1：myp-popup — mypUI</title>
+    <meta charset="utf-8">
+    <meta name="description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="alternate" hreflang="x-default" href="https://vuejs.org/guide/myp-popup.html">
+    <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/guide/myp-popup.html">
+    <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/guide/myp-popup.html">
+    <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/guide/myp-popup.html">
+    <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/guide/myp-popup.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/guide/myp-popup.html">
+    <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/guide/myp-popup.html">
+    <link rel="alternate" hreflang="es" href="https://es.vuejs.org/guide/myp-popup.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="弹窗1：myp-popup — mypUI">
+    <meta property="og:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
+    <meta property="og:image" content="https://mypui.asnowsoft.cn//doc/images/logo.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="弹窗1：myp-popup — mypUI">
+    <meta name="twitter:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
+    <meta name="twitter:image" content="https://mypui.asnowsoft.cn/images/logo.png">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/doc/images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/doc/images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/doc/images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/doc/images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/doc/images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/doc/images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/doc/images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/doc/images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/doc/images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/doc/images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/doc/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/doc/images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/doc/images/icons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <link rel="icon" href="/doc/images/logo.png" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#4fc08d">
+    <meta name="theme-color" content="#4fc08d">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- <link href="https://fonts.googleapis.com" rel="preconnect" crossorigin> -->
+    <!-- <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com" rel="preconnect" crossorigin> -->
+
+    <!-- <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet"> -->
+    <!-- <link href="//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js" rel="stylesheet"> -->
+
+    <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/doc/css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="/doc/js/vue.js"></script>
+
+    
+
+    <script>
+      Vue.config.productionTip = false
+      window.PAGE_TYPE = "guide"
+    </script>
+
+    <!-- ga -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '', 'mypui.asnowsoft.cn');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+      <a class="menu-button"></a>
+      <a class="logo" href="/"></a>
+    </div>
+    <header id="header">
+  <a id="logo" href="/doc/">
+    <img src="/doc/images/logo.png" alt="mypUI logo">
+    <span>mypUI</span>
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input" aria-label="搜索">
+  </form>
+</li>
+<li class="nav-dropdown-container learn">
+  <a class="nav-link current">学习</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><h4>文档</h4></li>
+    <li>
+      <ul>
+        <li><a href="/doc/guide/" class="nav-link current">教程</a></li>
+        <li><a href="/doc/api/" class="nav-link">API</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+
+<li class="nav-dropdown-container ecosystem">
+  <a class="nav-link">生态系统</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><h4>知识</h4></li>
+    <li><ul>
+      <li><a href="/doc/cookbook/" class="nav-link" rel="noopener">分享</a></li>
+    </ul></li>
+    <li><h4>工具</h4></li>
+    <li>
+      <ul>
+        <li><a href="/doc/tool/icon.html" class="nav-link" rel="noopener">icon提取器</a></li>
+        <li><a href="/doc/tool/props.html" class="nav-link" rel="noopener">props maker</a></li>
+        <li><a href="/doc/tool/component.html" class="nav-link" rel="noopener">component maker</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+
+<li>
+  <a href="/doc/guide/team.html" class="nav-link team">团队</a>
+</li>
+<li class="nav-dropdown-container support-vue">
+  <a href="/doc/support-mypui/" class="nav-link">支持 mypUI</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="/doc/support-mypui/#One-time-Donations" class="nav-link">一次性赞助</a></li>
+    <li><a href="/doc/support-mypui/#Recurring-Pledges" class="nav-link">周期性赞助</a></li>
+  </ul>
+</li>
+
+<li><a href="https://github.com/wakaryry/mypui-doc" target="_blank" class="nav-link contribute">参与文档</a></li>
+
+  </ul>
+</header>
+
+    
+      <div id="main" class="fix-sidebar">
+        
+  
+
+<div class="sidebar">
+  <div class="sidebar-inner">
+    
+    <div class="list">
+      
+        <h2>
+          
+          教程
+        </h2>
+        <ul class="menu-root">
+  
+    
+    
+      
+        <li><h3>基础</h3></li>
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/why.html" class="sidebar-link">为什么选择mypUI</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/index.html" class="sidebar-link">快速上手</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/global.html" class="sidebar-link">全局视野</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/theme.html" class="sidebar-link">主题配置</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/design.html" class="sidebar-link">设计规范</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	    <li><h3>布局</h3></li>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-flex.html" class="sidebar-link">布局：myp-flex</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-wing.html" class="sidebar-link">测距：myp-wing</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-space.html" class="sidebar-link">间距：myp-space</a>
+    </li>
+  
+    
+    
+      
+	  
+	    <li><h3>列表与盒子</h3></li>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-list.html" class="sidebar-link">列表：myp-list</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-list-cell.html" class="sidebar-link">列表单元：myp-list-cell</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-list-header.html" class="sidebar-link">列表header：myp-list-header</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-waterfall.html" class="sidebar-link">瀑布流：myp-waterfall</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-scroll-h.html" class="sidebar-link">横向列表：myp-scroll-h</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-scroll-inline.html" class="sidebar-link">横向列表：myp-scroll-inline</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-scroll-scale.html" class="sidebar-link">伸缩列表：myp-scroll-scale</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-scroll-scale-item.html" class="sidebar-link">伸缩列表单元：myp-scroll-scale-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-slide-gallery.html" class="sidebar-link">画廊/slide：myp-slide-gallery</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-slide-gallery-item.html" class="sidebar-link">画廊单元：myp-slide-gallery-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-list-index.html" class="sidebar-link">索引列表：myp-list-index</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-content-box.html" class="sidebar-link">盒子：myp-content-box</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-height.html" class="sidebar-link">高度：myp-height</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-status.html" class="sidebar-link">状态栏：myp-status</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-xbar.html" class="sidebar-link">底部安全区：myp-xbar</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-position.html" class="sidebar-link">定位：myp-position</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	    <li><h3>导航</h3></li>
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-navbar.html" class="sidebar-link">导航栏：myp-navbar</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-tabbar.html" class="sidebar-link">tabbar：myp-tabbar</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-tabs-h.html" class="sidebar-link">横向tabs：myp-tabs-h</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-tabs-v.html" class="sidebar-link">竖向tabs：myp-tabs-v</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-drawer.html" class="sidebar-link">抽屉：myp-drawer</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-popover.html" class="sidebar-link">气泡：myp-popover</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	    <li><h3>数据输入</h3></li>
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-button.html" class="sidebar-link">按钮：myp-button</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-input.html" class="sidebar-link">输入框：myp-input</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-input-one.html" class="sidebar-link">验证码输入：myp-input-one</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-switch.html" class="sidebar-link">开关：myp-switch</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-check.html" class="sidebar-link">单多选：myp-check</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-check-item.html" class="sidebar-link">单多选：myp-check-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-check-static.html" class="sidebar-link">单多选：myp-check-static</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-select.html" class="sidebar-link">选择：myp-select</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-stepper.html" class="sidebar-link">步进器：myp-stepper</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-slider-bar.html" class="sidebar-link">区间：myp-slider-bar</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-search.html" class="sidebar-link">搜索框：myp-search</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-picker-time.html" class="sidebar-link">时间选择：myp-picker-time</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-picker-time-content.html" class="sidebar-link">时间内容：myp-picker-time-content</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-picker.html" class="sidebar-link">选择器：myp-picker</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-picker-content.html" class="sidebar-link">选择内容：myp-picker-content</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-grid-static.html" class="sidebar-link">宫格：myp-grid-static</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	    <li><h3>数据展示</h3></li>
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-cell.html" class="sidebar-link">单元：myp-cell</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-item.html" class="sidebar-link">item：myp-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-icon.html" class="sidebar-link">图标：myp-icon</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-title.html" class="sidebar-link">标题：myp-title</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-tag.html" class="sidebar-link">标签：myp-tag</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-tag-group.html" class="sidebar-link">标签群：myp-tag-group</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-badge.html" class="sidebar-link">badge：myp-badge</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-countdown.html" class="sidebar-link">倒计时：myp-countdown</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-divider.html" class="sidebar-link">分割器：myp-divider</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-progress-circle.html" class="sidebar-link">环状进度条：myp-progress-circle</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-progress.html" class="sidebar-link">进度条：myp-progress</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-result.html" class="sidebar-link">结果展示：myp-result</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-timeline-item.html" class="sidebar-link">结果展示：myp-timeline-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	    <li><h3>反馈互动</h3></li>
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-popup.html" class="sidebar-link current">弹窗1：myp-popup</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-popup-always.html" class="sidebar-link">弹窗2：myp-popup-always</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-toast.html" class="sidebar-link">toast提示：myp-toast</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-loading.html" class="sidebar-link">加载中：myp-loading</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-notice.html" class="sidebar-link">提示：myp-notice</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-notice-dynamic.html" class="sidebar-link">动态提示：myp-notice-dynamic</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-loading-indicator.html" class="sidebar-link">loading指示：myp-loading-indicator</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-fold.html" class="sidebar-link">收展：myp-fold</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-overlay.html" class="sidebar-link">遮罩层：myp-overlay</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	    <li><h3>手势</h3></li>
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-refresher.html" class="sidebar-link">刷新：myp-refresher</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-refresher-n.html" class="sidebar-link">刷新：myp-refresher-n</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-loader.html" class="sidebar-link">加载：myp-loader</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-loader-n.html" class="sidebar-link">加载：myp-loader-n</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	    <li><h3>请求与工具</h3></li>
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/request.html" class="sidebar-link">请求</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/validator.html" class="sidebar-link">验证</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/time.html" class="sidebar-link">时间处理</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/utils.html" class="sidebar-link">功能方法</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/system.html" class="sidebar-link">系统信息</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+        <li><h3>规模化</h3></li>
+      
+      
+    
+    <li>
+      <a href="/doc/guide/routing.html" class="sidebar-link">路由</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/share.html" class="sidebar-link">分享</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/scene.html" class="sidebar-link">小程序扫码</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/contentBoxMixin.html" class="sidebar-link">contentBoxMixin</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+        <li><h3>更多</h3></li>
+      
+    
+    <li>
+      <a href="/doc/guide/team.html" class="sidebar-link">认识团队</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/history.html" class="sidebar-link">更新日志</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/faq.html" class="sidebar-link">常见问题</a>
+    </li>
+  
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="content  with-simulator guide with-sidebar myp-popup-guide">
+  
+    
+  
+  
+    <h1>弹窗1：myp-popup</h1>
+  
+
+  
+    <h2 id="Props"><a href="#Props" class="headerlink" title="Props"></a>Props</h2><table>
+<thead>
+<tr>
+<th>Prop name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Values</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>show</td>
+<td>是否显示/打开</td>
+<td>boolean</td>
+<td>-</td>
+<td>false</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>定位位置</td>
+<td>string</td>
+<td>-</td>
+<td>‘bottom’</td>
+</tr>
+<tr>
+<td>bgType</td>
+<td>背景主题</td>
+<td>string</td>
+<td>-</td>
+<td>‘none’</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>动画周期</td>
+<td>number</td>
+<td>-</td>
+<td>300</td>
+</tr>
+<tr>
+<td>hasOverlay</td>
+<td>是否有 overlay</td>
+<td>boolean</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>overlay</td>
+<td>遮罩层设置</td>
+<td>object</td>
+<td>-</td>
+<td>{<br> hasAnimation: true,<br> timingFunction: [‘ease-in’, ‘ease-out’],<br> duration: 300,<br> bg: ‘’,<br> bgType: ‘mask’<br>}</td>
+</tr>
+<tr>
+<td>height</td>
+<td>自定义高度</td>
+<td>string</td>
+<td>-</td>
+<td>‘0’</td>
+</tr>
+<tr>
+<td>extra</td>
+<td>需要从屏幕高度额外减去的高度</td>
+<td>string</td>
+<td>-</td>
+<td>‘0’</td>
+</tr>
+<tr>
+<td>leftOffset</td>
+<td>内容与屏幕左侧的偏移量</td>
+<td>string</td>
+<td>-</td>
+<td>‘-1’</td>
+</tr>
+<tr>
+<td>rightOffset</td>
+<td>内容与屏幕右侧的偏移量</td>
+<td>string</td>
+<td>-</td>
+<td>‘-1’</td>
+</tr>
+<tr>
+<td>bottomOffset</td>
+<td>内容与屏幕底部的偏移量</td>
+<td>string</td>
+<td>-</td>
+<td>‘-1’</td>
+</tr>
+<tr>
+<td>topOffset</td>
+<td>内容与屏幕顶部的偏移量</td>
+<td>string</td>
+<td>-</td>
+<td>‘-1’</td>
+</tr>
+<tr>
+<td>width</td>
+<td>自定义宽度</td>
+<td>string</td>
+<td>-</td>
+<td>‘750rpx’</td>
+</tr>
+<tr>
+<td>animation</td>
+<td>动画函数</td>
+<td>object</td>
+<td>-</td>
+<td>{<br> timingFunction: ‘ease-in-out’<br>}</td>
+</tr>
+<tr>
+<td>left</td>
+<td>遮罩与屏幕左侧的偏移量</td>
+<td>string</td>
+<td>-</td>
+<td>‘0’</td>
+</tr>
+<tr>
+<td>top</td>
+<td>遮罩与屏幕顶部的偏移量</td>
+<td>string</td>
+<td>-</td>
+<td>‘0’</td>
+</tr>
+<tr>
+<td>right</td>
+<td>遮罩与屏幕右侧的偏移量</td>
+<td>string</td>
+<td>-</td>
+<td>‘0’</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>遮罩与屏幕底部的偏移量</td>
+<td>string</td>
+<td>-</td>
+<td>‘0’</td>
+</tr>
+<tr>
+<td>boxStyle</td>
+<td>内容外层样式</td>
+<td>string</td>
+<td>-</td>
+<td>‘’</td>
+</tr>
+<tr>
+<td>overlayStyle</td>
+<td>overlay 的外层样式</td>
+<td>string</td>
+<td>-</td>
+<td>‘’</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><table>
+<thead>
+<tr>
+<th>Event name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>overlayClicked</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h2><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Bindings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>myp-popup 组件主要用于各种弹窗，它具备良好的动画效果，是个极为优秀的组件。</p>
+<p>主要特性如下：</p>
+<ul>
+<li>支持上下左右中等各个位置出现；</li>
+<li>支持从各个位置出现然后居中屏幕；</li>
+<li>直接居中时，支持透明度以及scale；</li>
+<li>支持遮罩层以及遮罩层的动画；</li>
+<li>支持遮罩层距离各边界的距离；</li>
+<li>支持弹窗内容设置offset；</li>
+<li>支持偏移量设置实现各种效果；</li>
+</ul>
+<p class="tip">myp-popup 最优秀的弹窗组件。在应用内可以实现各种弹窗效果。myp-popup-always 也属于此组件，两者属性几乎一致。唯一不同的是，myp-popup-always 内的内容是不受v-if控制的，一直存在，所以支持 standout 特性，也就是允许在收起的时候还能对外露出一小截。</p>
+
+<p>myp-popup 主要用于：</p>
+<ul>
+<li>弹层，内容弹层，全屏弹层；</li>
+<li>actionsheet；</li>
+<li>modal；</li>
+<li>filter弹层（筛选类组件）；</li>
+<li>picker弹层（弹出picker类组件）；</li>
+<li>…等任何需要弹出在普通视图层之上的视图；</li>
+</ul>
+<h2 id="快速使用"><a href="#快速使用" class="headerlink" title="快速使用"></a>快速使用</h2><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">myp-popup</span> <span class="hljs-attr">:show</span>=<span class="hljs-string">"show"</span> <span class="hljs-attr">pos</span>=<span class="hljs-string">"bottom"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"600rpx"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"x-800rpx"</span> @<span class="hljs-attr">overlayClicked</span>=<span class="hljs-string">"toCancel"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>
+	  <span class="hljs-comment">&lt;!-- 您的弹层内容 --&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">myp-popup</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;
+	  <span class="hljs-attr">props</span>: &#123;
+		  <span class="hljs-attr">show</span>: &#123;
+			  <span class="hljs-attr">type</span>: <span class="hljs-built_in">Boolean</span>,
+			  <span class="hljs-attr">default</span>: <span class="hljs-literal">false</span>
+		  &#125;
+	  &#125;,
+	  <span class="hljs-attr">methods</span>: &#123;
+		  toCancel() &#123;
+			  <span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">"cancel"</span>)
+		  &#125;
+	  &#125;
+  &#125;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+<p>myp-popup 是受 <code>show</code> 属性控制 打开/关闭 的，默认 <code>show</code> 是 <code>false</code>（默认 <code>:show=&quot;true&quot;</code> 是不会弹出内容的，因为内部采用的是对 show 的 watch）。</p>
+<ul>
+<li>show 控制开关，不支持通过 ref 来开关；</li>
+<li>pos 设置出现以及消失的位置，当前只支持从哪里出现，便从哪里消失；</li>
+<li>width 是内容的宽度，默认是 全屏宽度 750rpx。允许带单位与不带单位，支持 rpx/px，不带单位默认为 rpx；</li>
+<li>height 是内容的高度，默认是 全屏高度，也就是height的设置为0。允许带单位与不带单位，支持 rpx/px，不带单位默认为 rpx。支持 描述性的写法，比如 <code>x-600rpx</code> 表示 xBar的高度+600rpx的高度；</li>
+<li>@overlayClicked 为遮罩层点击的回调，您可以什么都不做，也可以通知程序关闭弹层；</li>
+</ul>
+<p class="tip">使用 myp-popup 类组件，主要需要知道两个方面，一个是 内容宽高的设置；另外就是 内容位置的调整。下面，我们继续为您讲解</p>
+
+<h3 id="show"><a href="#show" class="headerlink" title="show"></a>show</h3><p>show 控制 myp-popup 的打开/关闭。必须初始化为 false。不提供 ref methods，你必须通过 控制 show 来控制 打开与关闭。</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">sex-pop</span> <span class="hljs-attr">:show</span>=<span class="hljs-string">"sexVisible"</span> @<span class="hljs-attr">cancel</span>=<span class="hljs-string">"toHideSex"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">sex-pop</span>&gt;</span></code></pre>
+<pre><code class="hljs js">data() &#123;
+	<span class="hljs-keyword">return</span> &#123;
+		<span class="hljs-attr">sexVisible</span>: <span class="hljs-literal">false</span>
+	&#125;
+&#125;,
+<span class="hljs-attr">methods</span>: &#123;
+	toShowSex() &#123;
+		<span class="hljs-keyword">this</span>.sexVisible = <span class="hljs-literal">true</span>
+	&#125;,
+	toHideSex() &#123;
+		<span class="hljs-keyword">this</span>.sexVisible = <span class="hljs-literal">false</span>
+	&#125;
+&#125;</code></pre>
+<p class="tip">更多代码应该查看 mypUI 的demo。sex-pop 是使用 myp-popup 构建的一个 私有组件</p>
+
+<h3 id="overlayClicked"><a href="#overlayClicked" class="headerlink" title="@overlayClicked"></a>@overlayClicked</h3><p>点击遮罩层的监听。</p>
+<h2 id="内容宽高"><a href="#内容宽高" class="headerlink" title="内容宽高"></a>内容宽高</h2><p>myp-popup 组件需要您为它提供固定的宽度和高度。默认是 750rpx 宽 和 整个屏幕高。也就是 默认占满全屏。</p>
+<p>我们通过 width 设置宽度。通过 height和extra 来控制高度。</p>
+<h3 id="width"><a href="#width" class="headerlink" title="width"></a>width</h3><p>myp-popup 内容区的宽度。width 的值不仅仅只是一个宽度，它还会辅助帮助水平方向上的定位。比如 宽度是 600rpx，默认居中，那它自动可以知道 距离某一侧 75rpx。</p>
+<p>width 也可以是 0。这个时候他会 自动减去 overlay 与边界的距离，以及 内容区的偏移量设置。（想知道 边界距离 与 偏移量的意思？请看下面文档：<a href="#top-left等">top/left等</a>）</p>
+<p>width 可以带单位，可以不带单位，不带单位默认为 rpx。</p>
+<h3 id="height"><a href="#height" class="headerlink" title="height"></a>height</h3><p>height 默认是 0，也就是 整个屏幕高度。可以设置 0-1 之间，也就是 屏幕高度的百分比。0 与1 都表示整个屏幕高度。height和width一样，也会辅助定位。</p>
+<p>height 可以带单位，可以不带单位，不带单位默认为 rpx。还可以多段拼接：<code>x-600rpx-16px</code>。</p>
+<p>关于 语意化 的 字符串，我们有：<code>status</code> <code>x</code> <code>nav</code>，分别表示 <code>状态栏的高度</code> <code>xBar的高度</code> 和 <code>导航栏的高度</code>。</p>
+<h3 id="extra"><a href="#extra" class="headerlink" title="extra"></a>extra</h3><p>有时候，我们发现只是一个 height 的高度，也不能完全满足要求。比如 一个 900rpx 高度的内容区，现在，我们就想弹出一个内容层，它并不完全遮住这 900rpx，还差个 20px 不遮住。我们仅仅只是 通过 height，好像不太好设置出这种 从某个高度减去某个高度 的效果。干脆就提供了 extra 整个属性。它也是单位随意，默认 rpx。</p>
+<p>extra 是要从 height 中减去的高度。</p>
+<h2 id="内容位置"><a href="#内容位置" class="headerlink" title="内容位置"></a>内容位置</h2><p>知道内容 宽高 的设置规则了，现在就应该是 内容位置 的决策了。</p>
+<p>一个 弹层，其内容位置主要有：</p>
+<ul>
+<li>从哪里出现，到哪里停止（也就是 出现位置 和 最终的定位）；</li>
+<li>遮罩层的位置，以及宽高（也就是 遮罩层与 边界 的距离）；</li>
+</ul>
+<p><code>pos</code> <code>top</code> <code>left</code> <code>bottom</code> <code>right</code> <code>topOffset</code> <code>leftOffset</code> <code>bottomOffset</code> <code>rightOffset</code> 绝对是最佳助手。</p>
+<h3 id="pos"><a href="#pos" class="headerlink" title="pos"></a>pos</h3><p>pos 决定了 它从哪里出现，从哪里退出。</p>
+<p>可以取的值有：<code>top</code> <code>left</code> <code>bottom</code> <code>right</code> <code>top-center</code> <code>left-center</code> <code>bottom-center</code> <code>right-center</code> <code>center</code> <code>scale-center</code>。</p>
+<p>center 表示直接出现在 中间，有 opacity 过渡效果。scale-center 是 scale效果。具体看 代码示范。</p>
+<p>left-center 之类的就是 从left出来，然后到中间停止。其实就是 left 等的快速设置。</p>
+<h3 id="top-left等"><a href="#top-left等" class="headerlink" title="top/left等"></a>top/left等</h3><p>这个 top/left/bottom/right 不是 pos 的意思。而是 遮罩层（overlay）与 屏幕边界的距离，默认遮罩层是全屏的。</p>
+<p>top/left/bottom/right 默认都是 <code>0</code>，也就是 遮罩层全屏。单位随意。</p>
+<h3 id="topOffset-leftOffset等"><a href="#topOffset-leftOffset等" class="headerlink" title="topOffset/leftOffset等"></a>topOffset/leftOffset等</h3><p>上面我们定义了 遮罩层的位置，有时候我们还需要 内容区离遮罩层 有一个 距离。我们通过 topOffset/leftOffset/bottomOffset/rightOffset 来做设置。他们表示的就是 内容区与遮罩层 的距离。</p>
+<p>topOffset/leftOffset/bottomOffset/rightOffset 默认都是 <code>-1</code>，也就是 内容区 默认居中。</p>
+<blockquote>
+<p>我们从某一个方向举例来做理解：</p>
+</blockquote>
+<p>假如我们 从 手机屏幕顶部 出现弹层（pos=”top”)。这时候就 只有 leftOffset rightOffset 和 topOffset 生效（bottomOffset是不生效的。当然，这个时候如果 leftOffset 和 rightOffset 同时都设置了的话，也只能有一个生效，默认是 leftOffset，毕竟还有宽度在做限制，不太可能同时去满足两边的 offset）。</p>
+<p>leftOffset 设置为 0，它在左侧的定位就是 紧挨着 overlay 的左侧，不会再自动居中。topOffset 设置为 100px，它就会在距离 overlay 顶部 100px 的时候停住，不会再自动居中。（具体看 demo代码 或者 自己手动实验）</p>
+<p class="tip">总之，offset类 的属性 是 遮罩层 与 内容区 之间的 间距。有这个东西之后，我们可以很轻松的实现，某个弹层在居中的基础上往 上/下/左/右 偏移一部分。</p>
+
+<h2 id="遮罩层"><a href="#遮罩层" class="headerlink" title="遮罩层"></a>遮罩层</h2><p>遮罩层除了 top/left/bottom/right 的设置外，还有一个 overlay 属性。</p>
+<h3 id="overlay"><a href="#overlay" class="headerlink" title="overlay"></a>overlay</h3><pre><code class="hljs js">overlay: &#123;
+	<span class="hljs-attr">type</span>: <span class="hljs-built_in">Object</span>,
+	<span class="hljs-attr">default</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> (&#123;
+		<span class="hljs-attr">hasAnimation</span>: <span class="hljs-literal">true</span>,
+		<span class="hljs-attr">timingFunction</span>: [<span class="hljs-string">'ease-in'</span>, <span class="hljs-string">'ease-out'</span>],
+		<span class="hljs-attr">duration</span>: <span class="hljs-number">300</span>,
+		<span class="hljs-attr">bg</span>: <span class="hljs-string">''</span>,
+		<span class="hljs-attr">bgType</span>: <span class="hljs-string">'mask'</span>
+	&#125;)
+&#125;</code></pre>
+<p>遮罩层 默认是具备 opacity的动画特性的，周期是 300ms，具备一个 mask 主题背景色。出现时 ease-in 动画，隐藏时 ease-out 动画效果。bg 接受一个有效的css颜色值，比如：<code>#F1F1F1</code> 这种。</p>
+<p>这些都可以再重新设置。</p>
+<h2 id="动画效果"><a href="#动画效果" class="headerlink" title="动画效果"></a>动画效果</h2><p>可以自定义 打开/关闭 动画的周期，以及 动画的 timing-function。通过 <code>duration</code> 和 <code>animation</code> 配置。</p>
+<h3 id="duration"><a href="#duration" class="headerlink" title="duration"></a>duration</h3><p>默认 duration 是 300ms。Number 类型。</p>
+<h3 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h3><p>animation 是一个 Object，不过目前只支持 timingFunction。而且 打开/关闭 动画一样。</p>
+<pre><code class="hljs js">animation: &#123;
+	<span class="hljs-attr">type</span>: <span class="hljs-built_in">Object</span>,
+	<span class="hljs-attr">default</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> (&#123;
+		<span class="hljs-attr">timingFunction</span>: <span class="hljs-string">'ease-in-out'</span>
+	&#125;)
+&#125;</code></pre>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="overlayClicked-1"><a href="#overlayClicked-1" class="headerlink" title="@overlayClicked"></a>@overlayClicked</h3><p>遮罩层被点击的监听。比如您可以处理 点击遮罩层 通知 程序来关闭 popup。</p>
+<h2 id="插槽"><a href="#插槽" class="headerlink" title="插槽"></a>插槽</h2><p>默认插槽。</p>
+<h2 id="其它props"><a href="#其它props" class="headerlink" title="其它props"></a>其它props</h2><h3 id="bgType"><a href="#bgType" class="headerlink" title="bgType"></a>bgType</h3><p>可以为 内容区 设置一个 默认的主题背景色。比如：<code>page</code>  <code>inverse</code>  <code>primary</code> 等。</p>
+<h3 id="boxStyle"><a href="#boxStyle" class="headerlink" title="boxStyle"></a>boxStyle</h3><p>内容区盒子的私有化 style 配置。</p>
+<h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><p>我们对默认插槽有一个 <code>flex-direction: column;</code> 的设置，所以 在内容区，您完全可以使用 <code>flex:1;</code> 来获得高度。</p>
+<p>比如：</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">myp-popup</span> <span class="hljs-attr">:show</span>=<span class="hljs-string">"show"</span> <span class="hljs-attr">pos</span>=<span class="hljs-string">"bottom"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex:1;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">myp-popup</span>&gt;</span></code></pre>
+<p>默认插槽内的那个 view 就可以直接获得 整个屏幕的高度（获得myp-popup内容区height的高度。刚好默认是 整个屏幕高度）。</p>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
+<li>直接控制高度 0-height 的弹层；</li>
+</ul>
+
+  
+  
+    <div class="donate-box">
+	  <p>mypUI 是采用 MIT 许可的开源项目，使用完全免费。您觉得不错，或者对您有所帮助，甚至是鼓励作者的付出，可以给他买杯咖啡:</p>
+      <div style="margin-top:1em;">
+        <img src="/doc/images/pay_wx_68.png" style="width:300px;height:400px;">,
+		<img src="/doc/images/pay_ali_68.png" style="width:300px;height:400px;">
+      </div>
+	  <p style="margin-top:1em;">更多赞助方式：<a href="/doc/support-mypui/">支持mypUI</a></p>
+    </div>
+  
+  
+    <div class="guide-links">
+      
+      
+        <span>← <a href="/doc/guide/myp-timeline-item.html">结果展示：myp-timeline-item</a></span>
+      
+      
+      
+        <span style="float: right;"><a href="/doc/guide/myp-popup-always.html">弹窗2：myp-popup-always</a> →</span>
+      
+    </div>
+  
+  <div class="footer">
+      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+<div id="bsa-native"></div>
+<script>
+_bsa.init('custom', 'CKYD62QM', 'placement:vuejsorg',
+  {
+    target: '#bsa-native',
+    template: '<a class="native-box" href="##statlink##"><div class="native-sponsor">Sponsor</div><div class="native-text"><strong>##company##</strong> — ##description##</div></a>'
+  }
+);
+</script>
+
+
+    发现错误？想参与编辑？
+    <a href="https://github.com/wakaryry/mypui-doc/blob/master/src/guide/myp-popup.md" rel="noopener" target="_blank">
+      在 GitHub 上编辑此页！
+    </a>
+  </div>
+  
+  <div class="simulator">
+    <iframe src="http://mypui.asnowsoft.cn/h5/#/pages/pop/index" style="width: 360px; height:640px;"></iframe>
+  </div>
+  
+</div>
+
+      </div>
+      <script src="/doc/js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="/doc/js/css.escape.js"></script>
+    <script src="/doc/js/common.js"></script>
+
+    <!-- search -->
+    <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/doc/css/search.css">
+    <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
+  </body>
+</html>

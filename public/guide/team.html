@@ -1,0 +1,2277 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <title>认识团队 — mypUI</title>
+    <meta charset="utf-8">
+    <meta name="description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="alternate" hreflang="x-default" href="https://vuejs.org/guide/team.html">
+    <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/guide/team.html">
+    <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/guide/team.html">
+    <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/guide/team.html">
+    <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/guide/team.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/guide/team.html">
+    <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/guide/team.html">
+    <link rel="alternate" hreflang="es" href="https://es.vuejs.org/guide/team.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="认识团队 — mypUI">
+    <meta property="og:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
+    <meta property="og:image" content="https://mypui.asnowsoft.cn//doc/images/logo.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="认识团队 — mypUI">
+    <meta name="twitter:description" content="mypUI - 基于uniapp，快速开发原生APP/MP/H5的组件库与工具集">
+    <meta name="twitter:image" content="https://mypui.asnowsoft.cn/images/logo.png">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/doc/images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/doc/images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/doc/images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/doc/images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/doc/images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/doc/images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/doc/images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/doc/images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/doc/images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/doc/images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/doc/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/doc/images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/doc/images/icons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <link rel="icon" href="/doc/images/logo.png" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#4fc08d">
+    <meta name="theme-color" content="#4fc08d">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- <link href="https://fonts.googleapis.com" rel="preconnect" crossorigin> -->
+    <!-- <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com" rel="preconnect" crossorigin> -->
+
+    <!-- <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet"> -->
+    <!-- <link href="//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js" rel="stylesheet"> -->
+
+    <link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/doc/css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="/doc/js/vue.js"></script>
+
+    
+
+    <script>
+      Vue.config.productionTip = false
+      window.PAGE_TYPE = "guide"
+    </script>
+
+    <!-- ga -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '', 'mypui.asnowsoft.cn');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+      <a class="menu-button"></a>
+      <a class="logo" href="/"></a>
+    </div>
+    <header id="header">
+  <a id="logo" href="/doc/">
+    <img src="/doc/images/logo.png" alt="mypUI logo">
+    <span>mypUI</span>
+  </a>
+  <ul id="nav">
+    <li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input" aria-label="搜索">
+  </form>
+</li>
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">学习</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><h4>文档</h4></li>
+    <li>
+      <ul>
+        <li><a href="/doc/guide/" class="nav-link current">教程</a></li>
+        <li><a href="/doc/api/" class="nav-link">API</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+
+<li class="nav-dropdown-container ecosystem">
+  <a class="nav-link">生态系统</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><h4>知识</h4></li>
+    <li><ul>
+      <li><a href="/doc/cookbook/" class="nav-link" rel="noopener">分享</a></li>
+    </ul></li>
+    <li><h4>工具</h4></li>
+    <li>
+      <ul>
+        <li><a href="/doc/tool/icon.html" class="nav-link" rel="noopener">icon提取器</a></li>
+        <li><a href="/doc/tool/props.html" class="nav-link" rel="noopener">props maker</a></li>
+        <li><a href="/doc/tool/component.html" class="nav-link" rel="noopener">component maker</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+
+<li>
+  <a href="/doc/guide/team.html" class="nav-link team current">团队</a>
+</li>
+<li class="nav-dropdown-container support-vue">
+  <a href="/doc/support-mypui/" class="nav-link">支持 mypUI</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="/doc/support-mypui/#One-time-Donations" class="nav-link">一次性赞助</a></li>
+    <li><a href="/doc/support-mypui/#Recurring-Pledges" class="nav-link">周期性赞助</a></li>
+  </ul>
+</li>
+
+<li><a href="https://github.com/wakaryry/mypui-doc" target="_blank" class="nav-link contribute">参与文档</a></li>
+
+  </ul>
+</header>
+
+    
+      <div id="main" class="fix-sidebar">
+        
+  
+
+<div class="sidebar">
+  <div class="sidebar-inner">
+    
+    <div class="list">
+      
+        <h2>
+          
+          教程
+        </h2>
+        <ul class="menu-root">
+  
+    
+    
+      
+        <li><h3>基础</h3></li>
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/why.html" class="sidebar-link">为什么选择mypUI</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/index.html" class="sidebar-link">快速上手</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/global.html" class="sidebar-link">全局视野</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/theme.html" class="sidebar-link">主题配置</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/design.html" class="sidebar-link">设计规范</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	    <li><h3>布局</h3></li>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-flex.html" class="sidebar-link">布局：myp-flex</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-wing.html" class="sidebar-link">测距：myp-wing</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-space.html" class="sidebar-link">间距：myp-space</a>
+    </li>
+  
+    
+    
+      
+	  
+	    <li><h3>列表与盒子</h3></li>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-list.html" class="sidebar-link">列表：myp-list</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-list-cell.html" class="sidebar-link">列表单元：myp-list-cell</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-list-header.html" class="sidebar-link">列表header：myp-list-header</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-waterfall.html" class="sidebar-link">瀑布流：myp-waterfall</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-scroll-h.html" class="sidebar-link">横向列表：myp-scroll-h</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-scroll-inline.html" class="sidebar-link">横向列表：myp-scroll-inline</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-scroll-scale.html" class="sidebar-link">伸缩列表：myp-scroll-scale</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-scroll-scale-item.html" class="sidebar-link">伸缩列表单元：myp-scroll-scale-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-slide-gallery.html" class="sidebar-link">画廊/slide：myp-slide-gallery</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-slide-gallery-item.html" class="sidebar-link">画廊单元：myp-slide-gallery-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-list-index.html" class="sidebar-link">索引列表：myp-list-index</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-content-box.html" class="sidebar-link">盒子：myp-content-box</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-height.html" class="sidebar-link">高度：myp-height</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-status.html" class="sidebar-link">状态栏：myp-status</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-xbar.html" class="sidebar-link">底部安全区：myp-xbar</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-position.html" class="sidebar-link">定位：myp-position</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	    <li><h3>导航</h3></li>
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-navbar.html" class="sidebar-link">导航栏：myp-navbar</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-tabbar.html" class="sidebar-link">tabbar：myp-tabbar</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-tabs-h.html" class="sidebar-link">横向tabs：myp-tabs-h</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-tabs-v.html" class="sidebar-link">竖向tabs：myp-tabs-v</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-drawer.html" class="sidebar-link">抽屉：myp-drawer</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-popover.html" class="sidebar-link">气泡：myp-popover</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	    <li><h3>数据输入</h3></li>
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-button.html" class="sidebar-link">按钮：myp-button</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-input.html" class="sidebar-link">输入框：myp-input</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-input-one.html" class="sidebar-link">验证码输入：myp-input-one</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-switch.html" class="sidebar-link">开关：myp-switch</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-check.html" class="sidebar-link">单多选：myp-check</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-check-item.html" class="sidebar-link">单多选：myp-check-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-check-static.html" class="sidebar-link">单多选：myp-check-static</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-select.html" class="sidebar-link">选择：myp-select</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-stepper.html" class="sidebar-link">步进器：myp-stepper</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-slider-bar.html" class="sidebar-link">区间：myp-slider-bar</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-search.html" class="sidebar-link">搜索框：myp-search</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-picker-time.html" class="sidebar-link">时间选择：myp-picker-time</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-picker-time-content.html" class="sidebar-link">时间内容：myp-picker-time-content</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-picker.html" class="sidebar-link">选择器：myp-picker</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-picker-content.html" class="sidebar-link">选择内容：myp-picker-content</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-grid-static.html" class="sidebar-link">宫格：myp-grid-static</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	    <li><h3>数据展示</h3></li>
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-cell.html" class="sidebar-link">单元：myp-cell</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-item.html" class="sidebar-link">item：myp-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-icon.html" class="sidebar-link">图标：myp-icon</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-title.html" class="sidebar-link">标题：myp-title</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-tag.html" class="sidebar-link">标签：myp-tag</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-tag-group.html" class="sidebar-link">标签群：myp-tag-group</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-badge.html" class="sidebar-link">badge：myp-badge</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-countdown.html" class="sidebar-link">倒计时：myp-countdown</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-divider.html" class="sidebar-link">分割器：myp-divider</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-progress-circle.html" class="sidebar-link">环状进度条：myp-progress-circle</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-progress.html" class="sidebar-link">进度条：myp-progress</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-result.html" class="sidebar-link">结果展示：myp-result</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-timeline-item.html" class="sidebar-link">结果展示：myp-timeline-item</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	    <li><h3>反馈互动</h3></li>
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-popup.html" class="sidebar-link">弹窗1：myp-popup</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-popup-always.html" class="sidebar-link">弹窗2：myp-popup-always</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-toast.html" class="sidebar-link">toast提示：myp-toast</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-loading.html" class="sidebar-link">加载中：myp-loading</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-notice.html" class="sidebar-link">提示：myp-notice</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-notice-dynamic.html" class="sidebar-link">动态提示：myp-notice-dynamic</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-loading-indicator.html" class="sidebar-link">loading指示：myp-loading-indicator</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-fold.html" class="sidebar-link">收展：myp-fold</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-overlay.html" class="sidebar-link">遮罩层：myp-overlay</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	    <li><h3>手势</h3></li>
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-refresher.html" class="sidebar-link">刷新：myp-refresher</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-refresher-n.html" class="sidebar-link">刷新：myp-refresher-n</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-loader.html" class="sidebar-link">加载：myp-loader</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-loader-n.html" class="sidebar-link">加载：myp-loader-n</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	    <li><h3>请求与工具</h3></li>
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/request.html" class="sidebar-link">请求</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/validator.html" class="sidebar-link">验证</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/time.html" class="sidebar-link">时间处理</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/utils.html" class="sidebar-link">功能方法</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/system.html" class="sidebar-link">系统信息</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+        <li><h3>规模化</h3></li>
+      
+      
+    
+    <li>
+      <a href="/doc/guide/routing.html" class="sidebar-link">路由</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/share.html" class="sidebar-link">分享</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/scene.html" class="sidebar-link">小程序扫码</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/contentBoxMixin.html" class="sidebar-link">contentBoxMixin</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/loading.html" class="sidebar-link">加载提示</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/toast.html" class="sidebar-link">toast提示</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+        <li><h3>更多</h3></li>
+      
+    
+    <li>
+      <a href="/doc/guide/team.html" class="sidebar-link current">认识团队</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/history.html" class="sidebar-link">更新日志</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/faq.html" class="sidebar-link">常见问题</a>
+    </li>
+  
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="content  guide with-sidebar team-guide">
+  
+    
+  
+  
+    <h1>认识团队</h1>
+  
+
+  
+    
+<script id="vuer-profile-template" type="text/template">
+  <div class="vuer">
+    <div class="avatar">
+      <img v-if="profile.imageUrl"
+        :src="profile.imageUrl"
+        :alt="profile.name" width=80 height=80>
+      <img v-else-if="profile.github"
+        :src="'https://github.com/' + profile.github + '.png'"
+        :alt="profile.name" width=80 height=80>
+      <img v-else-if="profile.twitter"
+        :src="'https://avatars.io/twitter/' + profile.twitter"
+        :alt="profile.name" width=80 height=80>
+    </div>
+    <div class="profile">
+      <h3 :data-official-title="profile.title">
+        {{ profile.name }}
+        <sup v-if="profile.title && titleVisible" v-html="profile.title"></sup>
+      </h3>
+      <dl>
+        <template v-if="profile.reposOfficial">
+          <dt>Core focus</dt>
+          <dd>
+            <ul>
+              <li v-for="repo in profile.reposOfficial">
+                <a :href="githubUrl('vuejs', repo)" target=_blank rel="noopener noreferrer">{{ repo.name || repo }}</a>
+              </li>
+            </ul>
+          </dd>
+        </template>
+        <template v-if="profile.github && profile.reposPersonal">
+          <dt>Ecosystem</dt>
+          <dd>
+            <ul>
+              <li v-for="repo in profile.reposPersonal">
+                <a :href="githubUrl(profile.github, repo)" target=_blank rel="noopener noreferrer">{{ repo.name || repo }}</a>
+              </li>
+            </ul>
+          </dd>
+        </template>
+        <template v-if="profile.work">
+          <dt>
+            <i class="fa fa-briefcase"></i>
+            <span class="sr-only">Work</span>
+          </dt>
+          <dd v-html="workHtml"></dd>
+        </template>
+        <span v-if="profile.distanceInKm" class="distance">
+          <dt>
+            <i class="fa fa-map-marker"></i>
+            <span class="sr-only">Distance</span>
+          </dt>
+          <dd>
+            About
+            <span
+              v-if="profile.distanceInKm <= 150"
+              :title="profile.name + ' is close enough to commute to your location.'"
+              class="user-match"
+            >{{ textDistance }} away</span>
+            <template v-else>{{ textDistance }} away</template>
+            in {{ profile.city }}
+          </dd>
+        </span>
+        <template v-else-if="profile.city">
+          <dt>
+            <i class="fa fa-map-marker"></i>
+            <span class="sr-only">City</span>
+          </dt>
+          <dd>
+            {{ profile.city }}
+          </dd>
+        </template>
+        <template v-if="profile.links">
+          <dt>
+            <i class="fa fa-link"></i>
+            <span class="sr-only">Links</span>
+          </dt>
+          <dd>
+            <ul>
+              <li v-for="link in profile.links">
+                <a :href="link" target=_blank>{{ minimizeLink(link) }}</a>
+              </li>
+            </ul>
+          </dd>
+        </template>
+        <footer v-if="hasSocialLinks" class="social">
+          <a class=github v-if="profile.github" :href="githubUrl(profile.github)">
+            <i class="fa fa-github"></i>
+            <span class="sr-only">Github</span>
+          </a>
+          <a class=twitter v-if="profile.twitter" :href="'https://twitter.com/' + profile.twitter">
+            <i class="fa fa-twitter"></i>
+            <span class="sr-only">Twitter</span>
+          </a>
+          <a class=codepen v-if="profile.codepen" :href="'https://codepen.io/' + profile.codepen">
+            <i class="fa fa-codepen"></i>
+            <span class="sr-only">CodePen</span>
+          </a>
+          <a class=linkedin v-if="profile.linkedin" :href="'https://www.linkedin.com/in/' + profile.linkedin">
+            <i class="fa fa-linkedin"></i>
+            <span class="sr-only">LinkedIn</span>
+          </a>
+        </footer>
+      </dl>
+    </div>
+  </div>
+</script>
+
+<div id="team-members">
+  <div class="team">
+
+    <h2 id="active-core-team-members">
+      核心团队活跃成员
+      <button v-if="geolocationSupported && !userPosition" @click="getUserPosition" :disabled="isSorting" class="sort-by-distance-button">
+        <i v-if="isSorting" class="fa fa-refresh rotating-clockwise"></i>
+        <template v-else>
+          <i class="fa fa-map-marker"></i>
+          <span>谁在我附近</span>
+        </template>
+      </button>
+    </h2>
+
+    <p v-if="errorGettingLocation" class="tip">
+      未成功获取您的位置。
+    </p>
+
+    <p>
+      mypUI 的开发及其生态建设来自不同的省份与技术领域，这里会展示其中部分团队成员的信息。
+    </p>
+
+    <p v-if="userPosition" class="success">
+      核心团队成员已经按照跟你的距离排序。
+    </p>
+
+    <vuer-profile v-for="profile in sortedTeam" :key="profile.name" :profile="profile" :title-visible="titleVisible"></vuer-profile>
+  </div>
+
+  <div class="team">
+    <h2 id="core-team-emeriti">
+      核心团队荣誉成员
+    </h2>
+
+    <p>
+      我们在此致敬过去曾做出过突出贡献的不再活跃的团队成员。
+    </p>
+
+    <vuer-profile v-for="profile in teamEmeriti" :key="profile.name" :profile="profile" :title-visible="titleVisible"></vuer-profile>
+  </div>
+
+  <div class="team">
+    <h2 id="community-partners">
+      社区伙伴
+      <button v-if="geolocationSupported && !userPosition" @click="getUserPosition" :disabled="isSorting" class="sort-by-distance-button">
+        <i v-if="isSorting" class="fa fa-refresh rotating-clockwise"></i>
+        <template v-else>
+          <i class="fa fa-map-marker"></i>
+          <span>谁在我附近</span>
+        </template>
+      </button>
+    </h2>
+
+    <p v-if="errorGettingLocation" class="tip">
+      未成功获取您的位置。
+    </p>
+
+    <p>
+      一些 mypUI 的社区成员让这里变得更加丰富多彩，有必要在此特别提及。我们与这些主要合作伙伴建立了更加亲密的关系，经常与他们就即将到来的功能和新闻展开协作。
+    </p>
+
+    <p v-if="userPosition" class="success">
+      社区伙伴们已经按照跟你的距离排序。
+    </p>
+
+    <vuer-profile v-for="profile in sortedPartners" :key="profile.name" :profile="profile" :title-visible="titleVisible"></vuer-profile>
+  </div>
+</div>
+
+<script>
+(function () {
+  var cityCoordsFor = {
+    '北京': [39.904200, 116.407396]
+  }
+
+  var team = [{
+    name: '马玉平',
+    title: '身体好才是真的好',
+    city: '北京',
+    github: 'wakaryry',
+    work: {
+      role: 'Creator',
+      org: 'mypUI'
+    },
+    links: [
+      'https://github.com/wakaryry'
+    ]
+  }]
+
+  team = team.concat(shuffle([
+  ]))
+
+  var emeriti = shuffle([
+  ])
+
+  var partners = [
+  ]
+
+  Vue.component('vuer-profile', {
+    template: '#vuer-profile-template',
+    props: {
+      profile: Object,
+      titleVisible: Boolean
+    },
+    computed: {
+      workHtml: function () {
+        var work = this.profile.work
+        var html = ''
+        if (work.orgUrl) {
+          html += '<a href="' + work.orgUrl + '" target="_blank" rel="noopener noreferrer">'
+          if (work.org) {
+            html += work.org
+          } else {
+            this.minimizeLink(work.orgUrl)
+          }
+          html += '</a>'
+        } else if (work.org) {
+          html += work.org
+        }
+        if (work.role) {
+          if (html.length > 0) {
+            html = work.role + ' @ ' + html
+          } else {
+            html = work.role
+          }
+        }
+        return html
+      },
+      textDistance: function () {
+        var distanceInKm = this.profile.distanceInKm || 0
+        if (this.$root.useMiles) {
+          return roundDistance(kmToMi(distanceInKm)) + ' miles'
+        } else {
+          return roundDistance(distanceInKm) + ' km'
+        }
+      },
+      languageListHtml: function () {
+        var vm = this
+        var nav = window.navigator
+        if (!vm.profile.languages) return ''
+        var preferredLanguageCode = nav.languages
+          // The preferred language set in the browser
+          ? nav.languages[0]
+          : (
+              // The system language in IE
+              nav.userLanguage ||
+              // The language in the current page
+              nav.language
+            )
+        return (
+          '<ul><li>' +
+          vm.profile.languages.map(function (languageCode, index) {
+            var language = languageNameFor[languageCode]
+            if (
+              languageCode !== 'en' &&
+              preferredLanguageCode &&
+              languageCode === preferredLanguageCode.slice(0, 2)
+            ) {
+              return (
+                '<span ' +
+                  'class="user-match" ' +
+                  'title="' +
+                    vm.profile.name +
+                    ' can give technical talks in your preferred language.' +
+                  '"' +
+                '\>' + language + '</span>'
+              )
+            }
+            return language
+          }).join('</li><li>') +
+          '</li></ul>'
+        )
+      },
+      hasSocialLinks: function () {
+        return this.profile.github || this.profile.twitter || this.profile.codepen || this.profile.linkedin
+      }
+    },
+    methods: {
+      minimizeLink: function (link) {
+        return link
+          .replace(/^https?:\/\/(www\.)?/, '')
+          .replace(/\/$/, '')
+          .replace(/^mailto:/, '')
+      },
+      /**
+       * Generate a GitHub URL using a repo and a handle.
+       */
+      githubUrl: function (handle, repo) {
+        if (repo && repo.url) {
+          return repo.url
+        }
+        if (repo && repo.indexOf('/') !== -1) {
+          // If the repo name has a slash, it must be an organization repo.
+          // In such a case, we discard the (personal) handle.
+          return (
+            'https://github.com/' +
+            repo.replace(/\/\*$/, '')
+          )
+        }
+        return 'https://github.com/' + handle + '/' + (repo || '')
+      }
+    }
+  })
+
+  new Vue({
+    el: '#team-members',
+    data: {
+      team: team,
+      teamEmeriti: emeriti,
+      partners: shuffle(partners),
+      geolocationSupported: false,
+      isSorting: false,
+      errorGettingLocation: false,
+      userPosition: null,
+      useMiles: false,
+      konami: {
+        position: 0,
+        code: [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+      }
+    },
+    computed: {
+      sortedTeam: function () {
+        return this.sortVuersByDistance(this.team)
+      },
+      sortedPartners: function () {
+        return this.sortVuersByDistance(this.partners)
+      },
+      titleVisible: function () {
+        return this.konami.code.length === this.konami.position
+      }
+    },
+    created: function () {
+      var nav = window.navigator
+      if ('geolocation' in nav) {
+        this.geolocationSupported = true
+        var imperialLanguageCodes = [
+          'en-US', 'en-MY', 'en-MM', 'en-BU', 'en-LR', 'my', 'bu'
+        ]
+        if (imperialLanguageCodes.indexOf(nav.language) !== -1) {
+          this.useMiles = true
+        }
+      }
+      document.addEventListener('keydown', this.konamiKeydown)
+    },
+    beforeDestroy: function () {
+      document.removeEventListener('keydown', this.konamiKeydown)
+    },
+    methods: {
+      getUserPosition: function () {
+        var vm = this
+        var nav = window.navigator
+        vm.isSorting = true
+        nav.geolocation.getCurrentPosition(
+          function (position) {
+            vm.userPosition = position
+            vm.isSorting = false
+          },
+          function (error) {
+            vm.isSorting = false
+            vm.errorGettingLocation = true
+          },
+          {
+            enableHighAccuracy: true
+          }
+        )
+      },
+      sortVuersByDistance: function (vuers) {
+        var vm = this
+        if (!vm.userPosition) return vuers
+        var vuersWithDistances = vuers.map(function (vuer) {
+          var cityCoords = cityCoordsFor[vuer.city]
+          if (cityCoords) {
+            return Object.assign({}, vuer, {
+              distanceInKm: getDistanceFromLatLonInKm(
+                vm.userPosition.coords.latitude,
+                vm.userPosition.coords.longitude,
+                cityCoords[0],
+                cityCoords[1]
+              )
+            })
+          }
+          return Object.assign({}, vuer, {
+            distanceInKm: null
+          })
+        })
+        vuersWithDistances.sort(function (a, b) {
+          if (a.distanceInKm && b.distanceInKm) return a.distanceInKm - b.distanceInKm
+          if (a.distanceInKm && !b.distanceInKm) return -1
+          if (!a.distanceInKm && b.distanceInKm) return 1
+          if (a.name < b.name) return -1
+          if (a.name > b.name) return 1
+        })
+        return vuersWithDistances
+      },
+      konamiKeydown: function (event) {
+        if (this.titleVisible) {
+          return
+        }
+
+        if (event.keyCode !== this.konami.code[this.konami.position++]) {
+          this.konami.position = 0
+        }
+      }
+    }
+  })
+
+  /**
+  * Shuffles array in place.
+  * @param {Array} a items The array containing the items.
+  */
+  function shuffle (a) {
+    a = a.concat([])
+    if (window.location.hostname === 'localhost') {
+      return a
+    }
+    var j, x, i
+    for (i = a.length; i; i--) {
+      j = Math.floor(Math.random() * i)
+      x = a[i - 1]
+      a[i - 1] = a[j]
+      a[j] = x
+    }
+    return a
+  }
+
+  /**
+  * Calculates great-circle distances between the two points – that is, the shortest distance over the earth’s surface – using the Haversine formula.
+  * @param {Number} lat1 The latitude of the 1st location.
+  * @param {Number} lon1 The longitute of the 1st location.
+  * @param {Number} lat2 The latitude of the 2nd location.
+  * @param {Number} lon2 The longitute of the 2nd location.
+  */
+  function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+    var R = 6371 // Radius of the earth in km
+    var dLat = deg2rad(lat2-lat1)  // deg2rad below
+    var dLon = deg2rad(lon2-lon1)
+    var a =
+      Math.sin(dLat/2) * Math.sin(dLat/2) +
+      Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+      Math.sin(dLon/2) * Math.sin(dLon/2)
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
+    var d = R * c // Distance in km
+    return d
+  }
+
+  function deg2rad(deg) {
+    return deg * (Math.PI/180)
+  }
+
+  function kmToMi (km) {
+    return km * 0.62137
+  }
+
+  function roundDistance (num) {
+    return Number(Math.ceil(num).toPrecision(2))
+  }
+})()
+</script>
+
+
+  
+  
+    <div class="donate-box">
+	  <p>mypUI 是采用 MIT 许可的开源项目，使用完全免费。您觉得不错，或者对您有所帮助，甚至是鼓励作者的付出，可以给他买杯咖啡:</p>
+      <div style="margin-top:1em;">
+        <img src="/doc/images/pay_wx_68.png" style="width:300px;height:400px;">,
+		<img src="/doc/images/pay_ali_68.png" style="width:300px;height:400px;">
+      </div>
+	  <p style="margin-top:1em;">更多赞助方式：<a href="/doc/support-mypui/">支持mypUI</a></p>
+    </div>
+  
+  
+    <div class="guide-links">
+      
+      
+        <span>← <a href="/doc/guide/toast.html">toast提示</a></span>
+      
+      
+      
+        <span style="float: right;"><a href="/doc/guide/history.html">更新日志</a> →</span>
+      
+    </div>
+  
+  <div class="footer">
+      <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+<div id="bsa-native"></div>
+<script>
+_bsa.init('custom', 'CKYD62QM', 'placement:vuejsorg',
+  {
+    target: '#bsa-native',
+    template: '<a class="native-box" href="##statlink##"><div class="native-sponsor">Sponsor</div><div class="native-text"><strong>##company##</strong> — ##description##</div></a>'
+  }
+);
+</script>
+
+
+    发现错误？想参与编辑？
+    <a href="https://github.com/wakaryry/mypui-doc/blob/master/src/guide/team.md" rel="noopener" target="_blank">
+      在 GitHub 上编辑此页！
+    </a>
+  </div>
+  
+</div>
+
+      </div>
+      <script src="/doc/js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="/doc/js/css.escape.js"></script>
+    <script src="/doc/js/common.js"></script>
+
+    <!-- search -->
+    <link href="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/doc/css/search.css">
+    <script src="//code.bdstatic.com/npm/docsearch.js@1.5.0/dist/cdn/docsearch.min.js"></script>
+  </body>
+</html>
