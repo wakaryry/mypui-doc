@@ -399,6 +399,24 @@
       
     
     <li>
+      <a href="/doc/guide/myp-waterfall-view.html" class="sidebar-link">瀑布流：myp-waterfall-view</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
       <a href="/doc/guide/myp-scroll-h.html" class="sidebar-link">横向列表：myp-scroll-h</a>
     </li>
   
@@ -435,7 +453,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-scroll-scale.html" class="sidebar-link">伸缩列表：myp-scroll-scale</a>
+      <a href="/doc/guide/myp-gallery.html" class="sidebar-link">画廊：myp-scroll-scale</a>
     </li>
   
     
@@ -453,43 +471,7 @@
       
     
     <li>
-      <a href="/doc/guide/myp-scroll-scale-item.html" class="sidebar-link">伸缩列表单元：myp-scroll-scale-item</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-slide-gallery.html" class="sidebar-link">画廊/slide：myp-slide-gallery</a>
-    </li>
-  
-    
-    
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      
-      
-    
-    <li>
-      <a href="/doc/guide/myp-slide-gallery-item.html" class="sidebar-link">画廊单元：myp-slide-gallery-item</a>
+      <a href="/doc/guide/myp-gallery-item.html" class="sidebar-link">画廊单元：myp-scroll-scale-item</a>
     </li>
   
     
@@ -526,6 +508,60 @@
     
     <li>
       <a href="/doc/guide/myp-content-box.html" class="sidebar-link">盒子：myp-content-box</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-tab-container.html" class="sidebar-link">切换盒子：myp-tab-container</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-swiper.html" class="sidebar-link">swiper：myp-swiper</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-swiper-item.html" class="sidebar-link">swiper：myp-swiper-item</a>
     </li>
   
     
@@ -728,6 +764,24 @@
     
     <li>
       <a href="/doc/guide/myp-button.html" class="sidebar-link">按钮：myp-button</a>
+    </li>
+  
+    
+    
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      
+      
+    
+    <li>
+      <a href="/doc/guide/myp-button-raw.html" class="sidebar-link">原生按钮：myp-button-raw</a>
     </li>
   
     
@@ -1751,6 +1805,7 @@
   
     <p>mypUI 是基于 uniapp/weex 的一套组件库与工具集，可以 <strong>高效且规范</strong> 地开发出 uniapp 支持的各端应用（APP/各家小程序/H5/快应用）。兼容 nvue 页面 和 vue 页面。nvue 页面对应的 app端 依托 weex 编译为原生，具备良好的性能与体验。</p>
 <p>mypUI 从学习成本、开发经验，以及记忆成本、性能优化、包体积等多方面考虑，不断优化，已经是一个不可多得的优秀框架，绝对能为您带来 <strong>稳定、高效、规范</strong> 的开发体验。</p>
+<p>再说，作者经历过 <code>Objective-c</code> <code>swift</code> <code>Python</code> <code>go</code> <code>Javascript</code> 等多语言开发，前后台都有涉及，绝对有信心和能力维护好一套优秀的组件，也不允许自己使用一套不规范的UI。</p>
 <h2 id="集成mypUI"><a href="#集成mypUI" class="headerlink" title="集成mypUI"></a>集成mypUI</h2><h3 id="拷贝UI组件"><a href="#拷贝UI组件" class="headerlink" title="拷贝UI组件"></a>拷贝UI组件</h3><p>直接将<code>mypUI</code>放在您的项目根目录下。</p>
 <blockquote>
 <p>或者npm安装：<code>npm install @mypui/myp-ui</code></p>
@@ -1803,12 +1858,6 @@
 &#125;</code></pre>
 <h3 id="初始化系统变量"><a href="#初始化系统变量" class="headerlink" title="初始化系统变量"></a>初始化系统变量</h3><p>我们建议您在 <code>onLaunch</code> 里面对系统变量进行初始化（当然，这是可选的，<code>mypUI</code> 内部接口会根据需要调用初始化的接口）。</p>
 <p>初始化代码如下：</p>
-<ul>
-<li><p>先引入并放入mixins；</p>
-</li>
-<li><p>然后调用初始化方法；</p>
-</li>
-</ul>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
 	<span class="hljs-keyword">import</span> &#123;initSystemInfo&#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'@/mypUI/utils/system.js'</span>
 	
