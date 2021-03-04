@@ -1,6 +1,6 @@
 # mypUI 中文文档
 
-文档地址：[mypui](https://mypui.fekit.cn/)
+文档地址：[mypui](https://mypui.fekit.cn/doc/)
 
 该站点基于 [Hexo](https://hexo.io/) 和 [Vue中文文档](https://cn.vuejs.org/) 构建而成。网站内容在 `src` 文件夹内，格式为 Markdown。欢迎 issue 或 pull request。
 
