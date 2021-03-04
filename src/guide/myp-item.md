@@ -2,7 +2,7 @@
 title: item：myp-item
 type: guide
 order: 203
-page: https://mypui.asnowsoft.cn/h5/#/pages/base/item
+page: https://mypui.fekit.cn/h5/#/pages/base/item
 ---
 
 ## Props

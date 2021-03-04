@@ -209,9 +209,9 @@ mypUI 组件的文档，分为快捷设置，细节配置，进阶设置等层�
 
 **Android APP下载地址**
 
-[Android Demo APK下载](https://mypui.asnowsoft.cn/apk/mypUI.apk)
+[Android Demo APK下载](https://cdn.mypui.fekit.cn/apk/mypUI.apk)
 
-![Android下载](https://mypui.asnowsoft.cn/apk/mypUI.png)
+![Android下载](https://cdn.mypui.fekit.cn/apk/mypUI.png)
 
 - [mypUI-github](https://github.com/wakaryry/mypUI) 欢迎star
 
@@ -219,7 +219,7 @@ mypUI 组件的文档，分为快捷设置，细节配置，进阶设置等层�
 
 - [mypUI-文档开源地址](https://github.com/wakaryry/mypui-doc)
 
-- [mypUI-文档线上地址](https://mypui.asnowsoft.cn)
+- [mypUI-文档线上地址](https://mypui.fekit.cn/doc/)
 
 - npm地址：[https://www.npmjs.com/package/@mypui/myp-ui](https://www.npmjs.com/package/@mypui/myp-ui)
 

@@ -2,7 +2,7 @@
 title: 分割器：myp-divider
 type: guide
 order: 210
-page: https://mypui.asnowsoft.cn/h5/#/pages/base/divider
+page: https://mypui.fekit.cn/h5/#/pages/base/divider
 ---
 
 ## Props

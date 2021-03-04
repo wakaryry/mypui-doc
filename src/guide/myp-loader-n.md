@@ -2,7 +2,7 @@
 title: 加载：myp-loader-n
 type: guide
 order: 303
-page: https://mypui.asnowsoft.cn/h5/#/pages/scroll/index
+page: https://mypui.fekit.cn/h5/#/pages/scroll/index
 ---
 
 ## Props

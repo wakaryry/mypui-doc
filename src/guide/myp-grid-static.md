@@ -2,7 +2,7 @@
 title: 宫格：myp-grid-static
 type: guide
 order: 200
-page: https://mypui.asnowsoft.cn/h5/#/pages/base/grid
+page: https://mypui.fekit.cn/h5/#/pages/base/grid
 ---
 
 ## Props

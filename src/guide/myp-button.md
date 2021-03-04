@@ -2,7 +2,7 @@
 title: 按钮：myp-button
 type: guide
 order: 150
-page: https://mypui.asnowsoft.cn/h5/#/pages/base/button
+page: https://mypui.fekit.cn/h5/#/pages/base/button
 ---
 
 ## Props

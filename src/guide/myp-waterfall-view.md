@@ -2,7 +2,7 @@
 title: 瀑布流：myp-waterfall-view
 type: guide
 order: 64
-page: https://mypui.asnowsoft.cn/h5/#/pages/scroll/waterfall
+page: https://mypui.fekit.cn/h5/#/pages/scroll/waterfall
 ---
 
 > 支持左右两列

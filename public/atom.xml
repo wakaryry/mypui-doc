@@ -5,9 +5,9 @@
   
   <link href="/doc/atom.xml" rel="self"/>
   
-  <link href="http://mypui.asnowsoft.cn/doc/"/>
+  <link href="http://mypui.fekit.cn/doc/"/>
   <updated>2020-07-14T00:46:47.770Z</updated>
-  <id>http://mypui.asnowsoft.cn/doc/</id>
+  <id>http://mypui.fekit.cn/doc/</id>
   
   <author>
     <name>Yuping Ma</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>hello</title>
-    <link href="http://mypui.asnowsoft.cn/doc/2019/02/18/hello/"/>
-    <id>http://mypui.asnowsoft.cn/doc/2019/02/18/hello/</id>
+    <link href="http://mypui.fekit.cn/doc/2019/02/18/hello/"/>
+    <id>http://mypui.fekit.cn/doc/2019/02/18/hello/</id>
     <published>2019-02-18T10:01:31.000Z</published>
     <updated>2020-07-14T00:46:47.770Z</updated>
     
