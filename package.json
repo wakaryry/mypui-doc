@@ -1,5 +1,6 @@
 {
-  "name": "mypui.fekit.cn "private": true,
+  "name": "mypui.fekit.cn",
+  "private": true,
   "hexo": {
     "version": "3.9.0"
   },
