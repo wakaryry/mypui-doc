@@ -5,9 +5,9 @@
   
   <link href="/doc/atom.xml" rel="self"/>
   
-  <link href="https:/mypui.fekit.cnc/"/>
+  <link href="https:/mypui.fekit.cn/doc/"/>
   <updated>2020-07-14T00:46:47.770Z</updated>
-  <id>https:/mypui.fekit.cnc/</id>
+  <id>https:/mypui.fekit.cn/doc/</id>
   
   <author>
     <name>Yuping Ma</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>hello</title>
-    <link href="https:/mypui.fekit.cnc/2019/02/18/hello/"/>
-    <id>https:/mypui.fekit.cnc/2019/02/18/hello/</id>
+    <link href="https:/mypui.fekit.cn/doc/2019/02/18/hello/"/>
+    <id>https:/mypui.fekit.cn/doc/2019/02/18/hello/</id>
     <published>2019-02-18T10:01:31.000Z</published>
     <updated>2020-07-14T00:46:47.770Z</updated>
     
