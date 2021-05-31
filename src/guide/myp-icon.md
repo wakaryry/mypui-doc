@@ -2,7 +2,7 @@
 title: 图标：myp-icon
 type: guide
 order: 204
-page: https://mypui.fekit.cn/h5/#/pages/base/icon
+page: https://mypui.redou.vip/h5/#/pages/base/icon
 ---
 
 ## Props
@@ -75,4 +75,4 @@ myp-icon 其实就是 view 包裹了一个 image 或者 text。我们可以分�
 
 但是有时候，我们的图标几十几百个，没有一个批量的处理程序，手动处理简直就是灾难，为此，我们提供了一个 python 提取程序。您只数据按照要求定义数据源，然后运行程序即可。
 
-具体使用文档见：[icons提取器](/doc/tool/icon.html)
+具体使用文档见：[icons提取器](/tool/icon.html)

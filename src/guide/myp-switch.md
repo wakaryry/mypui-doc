@@ -2,7 +2,7 @@
 title: 开关：myp-switch
 type: guide
 order: 154
-page: https://mypui.fekit.cn/h5/#/pages/base/switch
+page: https://mypui.redou.vip/h5/#/pages/base/switch
 ---
 
 ## Props

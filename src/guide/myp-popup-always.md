@@ -51,7 +51,7 @@ myp-popup-always 几乎是与 myp-popup 一样的，属性一样，用法一样�
 
 - myp-popup-always 因为一直存在，所以它支持 standout 属性，允许 不打开的时候还能够 对外露出一小截；
 
-这里只讲差异的内容，其它内容请查阅：[myp-popup](/doc/guide/myp-popup.html)
+这里只讲差异的内容，其它内容请查阅：[myp-popup](/guide/myp-popup.html)
 
 ## standout
 

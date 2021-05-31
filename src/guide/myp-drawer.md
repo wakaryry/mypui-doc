@@ -2,7 +2,7 @@
 title: 抽屉：myp-drawer
 type: guide
 order: 104
-page: https://mypui.fekit.cn/h5/#/pages/drawer/index
+page: https://mypui.redou.vip/h5/#/pages/drawer/index
 ---
 
 ## Props
@@ -70,8 +70,8 @@ myp-drawer 组件，提供了从不同方向出现的抽屉的实现。是一个
 
 其它文档地址：
 
-- [myp-popup](/doc/guide/myp-popup.html)
-- [myp-popup-always](/doc/guide/myp-popup-always.html)
+- [myp-popup](/guide/myp-popup.html)
+- [myp-popup-always](/guide/myp-popup-always.html)
 
 如果您不知道自己该选择哪个，请直接使用 myp-popup。
 
@@ -110,6 +110,6 @@ myp-drawer 用法上稍微有所不同，不再是使用 `show` 来控制，而�
 
 **结果**
 
-![myp-drawer](/images/doc/drawer-close.png)
-![myp-drawer](/images/doc/drawer-open.png)
+![myp-drawer](/images/drawer-close.png)
+![myp-drawer](/images/drawer-open.png)
 

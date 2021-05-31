@@ -2,7 +2,7 @@
 title: 单多选：myp-check-item
 type: guide
 order: 156
-page: https://mypui.fekit.cn/h5/#/pages/base/check
+page: https://mypui.redou.vip/h5/#/pages/base/check
 ---
 
 ## Props
@@ -27,7 +27,7 @@ page: https://mypui.fekit.cn/h5/#/pages/base/check
 
 myp-check-item 只用于 myp-check 组件的子组件。而且 myp-check 的子组件必须是 myp-check-item。
 
-如果您不想自定义，请直接使用我们提供的默认可配置的选择组件 [myp-check-static](/doc/guide/myp-check-static.html).
+如果您不想自定义，请直接使用我们提供的默认可配置的选择组件 [myp-check-static](/guide/myp-check-static.html).
 
 **示范**
 
@@ -47,4 +47,4 @@ myp-check-item 只用于 myp-check 组件的子组件。而且 myp-check 的子�
 
 **效果**
 
-![myp-check](/images/doc/check.jpeg)
+![myp-check](/images/check.jpeg)

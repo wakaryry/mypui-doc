@@ -8,9 +8,9 @@ order: 3
 
 从全局出发，您需要了解：
 
-- 整套UI依赖的主题规范：[主题配置](/doc/guide/theme.html)；
+- 整套UI依赖的主题规范：[主题配置](/guide/theme.html)；
 
-- 组件/接口的设计与命名规范：[设计规范](/doc/guide/design.html)；
+- 组件/接口的设计与命名规范：[设计规范](/guide/design.html)；
 
 - 页面元素与快速构建；
 

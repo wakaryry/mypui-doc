@@ -2,7 +2,7 @@
 title: 提示：myp-notice
 type: guide
 order: 254
-page: https://mypui.fekit.cn/h5/#/pages/pop/index
+page: https://mypui.redou.vip/h5/#/pages/pop/index
 ---
 
 ## Props

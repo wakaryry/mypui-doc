@@ -2,7 +2,7 @@
 title: 高度：myp-height
 type: guide
 order: 74
-page: https://mypui.fekit.cn/h5/#/pages/base/height
+page: https://mypui.redou.vip/h5/#/pages/base/height
 ---
 
 ## Props
@@ -47,6 +47,6 @@ myp-height 是有一个有趣的组件。它给予了您快速决策特殊高度
 
 其它相关文档：
 
-- [myp-status](/doc/guide/myp-status.html) 
-- [myp-xbar](/doc/guide/myp-xbar.html) 
-- [myp-navbar](/doc/guide/myp-navbar.html)
+- [myp-status](/guide/myp-status.html) 
+- [myp-xbar](/guide/myp-xbar.html) 
+- [myp-navbar](/guide/myp-navbar.html)

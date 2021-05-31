@@ -2,7 +2,7 @@
 title: 标签：myp-tag
 type: guide
 order: 206
-page: https://mypui.fekit.cn/h5/#/pages/base/tag
+page: https://mypui.redou.vip/h5/#/pages/base/tag
 ---
 
 ## Props

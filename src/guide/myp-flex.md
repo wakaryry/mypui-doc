@@ -2,7 +2,7 @@
 title: 布局：myp-flex
 type: guide
 order: 30
-page: https://mypui.fekit.cn/h5/#/pages/flex/flex
+page: https://mypui.redou.vip/h5/#/pages/flex/flex
 ---
 
 ## Props
@@ -64,4 +64,4 @@ myp-flex 是flex布局的组件化。
 
 **结果**
 
-![myp-flex](/images/doc/flex.png)
+![myp-flex](/images/flex.png)

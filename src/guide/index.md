@@ -46,7 +46,7 @@ npm install @mypui/myp-ui
 
 > 注意：如果您使用的是npm安装，记得引入方式为：`@import '@mypui/myp-ui/base.scss';`。
 
-具体的scss变量的引入以及自定义和规范，请看文档：[主题](/doc/guide/theme.html) 以及 [设计](/doc/guide/design.html).
+具体的scss变量的引入以及自定义和规范，请看文档：[主题](/guide/theme.html) 以及 [设计](/guide/design.html).
 
 ### 配置 `easycom`
 
@@ -75,7 +75,7 @@ UI内部使用了 `easycom` 的组件自动引入，所以您必须在项目中�
 
 如果主题内定义的变量无法满足您的要求，您还可以在 `uni.scss` 里面进行添加，然后新增一个相应的 `class` 文件即可，并在 `app.vue` 下引入。
 
-关于主题的具体说明与使用，请查阅 [主题](/doc/guide/theme.html)。
+关于主题的具体说明与使用，请查阅 [主题](/guide/theme.html)。
 
 如果您需要用到主题内定义的`scss变量`，然后您也在 `uni.scss`中进行了复制粘贴，那么您可以在项目里面的任何地方直接使用，不需要再次引入scss变量。
 
@@ -159,7 +159,7 @@ onLaunch: function() {
 
 - [mypUI-文档开源](https://github.com/wakaryry/mypui-doc)
 
-- [mypUI-文档地址](https://mypui.fekit.cn/doc/)
+- [mypUI-文档地址](https://mypui.redou.vip/)
 
 - npm地址：[https://www.npmjs.com/package/@mypui/myp-ui](https://www.npmjs.com/package/@mypui/myp-ui)
 
@@ -180,9 +180,9 @@ onLaunch: function() {
 
 **Android APP下载地址**
 
-[Android Demo APK下载](https://cdn.mypui.fekit.cn/apk/mypUI.apk)
+[Android Demo APK下载](https://cdn.mypui.redou.vip/apk/mypUI.apk)
 
-![Android下载](https://cdn.mypui.fekit.cn/apk/mypUI.png)
+![Android下载](https://cdn.mypui.redou.vip/apk/mypUI.png)
 
 <p class="tip">想了解我们是怎么使用 mypUI 的吗？又如何对 mypUI 有一个更加全面的了解？或者说站在一个代码设计者的角度去了解 mypUI? 纵观全局，对你更加高效的使用mypUI非常有用。建议您一定要看看</p>
 

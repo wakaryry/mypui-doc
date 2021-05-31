@@ -4,7 +4,7 @@ type: guide
 order: 2020
 ---
 
-和 [myp-content-box](/doc/guide/myp-content-box.html) 里面说到的一样，有时候页面或者某个组件的高度无法决策，我们需要明确指定它的高度。
+和 [myp-content-box](/guide/myp-content-box.html) 里面说到的一样，有时候页面或者某个组件的高度无法决策，我们需要明确指定它的高度。
 
 这时候，可以使用：
 

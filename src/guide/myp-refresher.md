@@ -2,7 +2,7 @@
 title: 刷新：myp-refresher
 type: guide
 order: 300
-page: https://mypui.fekit.cn/h5/#/pages/scroll/index
+page: https://mypui.redou.vip/h5/#/pages/scroll/index
 ---
 
 ## Props

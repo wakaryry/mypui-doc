@@ -2,7 +2,7 @@
 title: 原生按钮：myp-button-raw
 type: guide
 order: 151
-page: https://mypui.fekit.cn/h5/#/pages/base/button
+page: https://mypui.redou.vip/h5/#/pages/base/button
 ---
 
 ## Props

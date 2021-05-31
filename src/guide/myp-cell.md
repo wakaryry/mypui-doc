@@ -2,7 +2,7 @@
 title: 单元：myp-cell
 type: guide
 order: 202
-page: https://mypui.fekit.cn/h5/#/pages/base/cell
+page: https://mypui.redou.vip/h5/#/pages/base/cell
 ---
 
 ## Props
@@ -80,7 +80,7 @@ myp-cell 是通用的 单行cell 展示组件。为 icon-title-value-indicator �
 <myp-cell icon="solid-about" title="关于我们" indicator="right" space="24rpx" boxStyle="padding-left:38rpx;padding-right:48rpx;" @selected="toAbout"></myp-cell>
 ```
 
-![myp-cell](/images/doc/cell.jpeg)
+![myp-cell](/images/cell.jpeg)
 
 使用非常简单，和其它组件一样，即支持快速配置，也支持细节定义。
 

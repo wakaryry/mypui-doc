@@ -2,7 +2,7 @@
 title: badge：myp-badge
 type: guide
 order: 208
-page: https://mypui.fekit.cn/h5/#/pages/base/badge
+page: https://mypui.redou.vip/h5/#/pages/base/badge
 ---
 
 ## Props
@@ -42,6 +42,6 @@ badge 提供了 圆点样式 以及 文字样式 的效果。可以自行设置�
 
 **效果**
 
-![myp-badge](/images/doc/badge.jpeg)
+![myp-badge](/images/badge.jpeg)
 
 <p class="tip">注意：不是圆点时，需要size属性设置为字符串0，也就是 size="0"，否则宽度和高度会受到默认的size影响。</p>

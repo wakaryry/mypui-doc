@@ -2,7 +2,7 @@
 title: 倒计时：myp-countdown
 type: guide
 order: 209
-page: https://mypui.fekit.cn/h5/#/pages/base/countdown
+page: https://mypui.redou.vip/h5/#/pages/base/countdown
 ---
 
 ## Props
@@ -49,4 +49,4 @@ page: https://mypui.fekit.cn/h5/#/pages/base/countdown
 
 **结果**
 
-![myp-countdown](/images/doc/countdown.jpeg)
+![myp-countdown](/images/countdown.jpeg)

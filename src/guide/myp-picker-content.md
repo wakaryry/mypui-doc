@@ -2,7 +2,7 @@
 title: 选择内容：myp-picker-content
 type: guide
 order: 165
-page: https://mypui.fekit.cn/h5/#/pages/picker/index
+page: https://mypui.redou.vip/h5/#/pages/picker/index
 ---
 
 ## Props

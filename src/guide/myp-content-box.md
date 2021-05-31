@@ -2,7 +2,7 @@
 title: 盒子：myp-content-box
 type: guide
 order: 70
-page: https://mypui.fekit.cn/h5/#/pages/base/content_box
+page: https://mypui.redou.vip/h5/#/pages/base/content_box
 ---
 
 ## Props
@@ -66,4 +66,4 @@ contentBoxMixin 的混入，不会重复去获取系统信息，会直接使用 
 
 不过，您应该避免过多的依赖高度决策，或者是滥用高度决策。只有在flex不能满足的时候明确使用高度决策。
 
-contentBoxMixin 的文档请看 [contentBoxMixin](/doc/guide/contentBoxMixin.html)
+contentBoxMixin 的文档请看 [contentBoxMixin](/guide/contentBoxMixin.html)

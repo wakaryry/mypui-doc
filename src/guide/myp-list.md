@@ -2,7 +2,7 @@
 title: 列表：myp-list
 type: guide
 order: 60
-page: https://mypui.fekit.cn/h5/#/pages/scroll/index
+page: https://mypui.redou.vip/h5/#/pages/scroll/index
 ---
 
 ## Props

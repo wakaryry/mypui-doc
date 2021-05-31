@@ -2,7 +2,7 @@
 title: 状态栏：myp-status
 type: guide
 order: 75
-page: https://mypui.fekit.cn/h5/#/pages/base/height
+page: https://mypui.redou.vip/h5/#/pages/base/height
 ---
 
 ## Props
@@ -32,6 +32,6 @@ myp-status 为您提供了快速决策 statusBar 高度的能力。您可以在�
 
 其它相关文档：
 
-- [myp-height](/doc/guide/myp-height.html) 
-- [myp-xbar](/doc/guide/myp-xbar.html) 
-- [myp-navbar](/doc/guide/myp-navbar.html)
+- [myp-height](/guide/myp-height.html) 
+- [myp-xbar](/guide/myp-xbar.html) 
+- [myp-navbar](/guide/myp-navbar.html)

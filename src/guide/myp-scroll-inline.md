@@ -2,7 +2,7 @@
 title: 横向列表：myp-scroll-inline
 type: guide
 order: 66
-page: https://mypui.fekit.cn/h5/#/pages/scroll/h
+page: https://mypui.redou.vip/h5/#/pages/scroll/h
 ---
 
 ## Props

@@ -2,7 +2,7 @@
 title: 瀑布流：myp-waterfall
 type: guide
 order: 63
-page: https://mypui.fekit.cn/h5/#/pages/scroll/waterfall
+page: https://mypui.redou.vip/h5/#/pages/scroll/waterfall
 ---
 
 ## Props

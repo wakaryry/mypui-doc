@@ -2,7 +2,7 @@
 title: 单多选：myp-check-static
 type: guide
 order: 157
-page: https://mypui.fekit.cn/h5/#/pages/base/check
+page: https://mypui.redou.vip/h5/#/pages/base/check
 ---
 
 ## Props
@@ -57,7 +57,7 @@ myp-check-static 组件提供的是现成的内部item，除了一些基础的�
 
 myp-check-static 支持单选/多选。单选多选都是这个组件，单选的时候返回的值也是数组，value属性的类型也依然是数组。
 
-如果您需要更加灵活，可自定义的check类组件，我们还提供了 [myp-check](/doc/guide/myp-check.html) 组件。
+如果您需要更加灵活，可自定义的check类组件，我们还提供了 [myp-check](/guide/myp-check.html) 组件。
 
 **示范**
 
@@ -77,4 +77,4 @@ myp-check-static 支持单选/多选。单选多选都是这个组件，单选�
 
 **效果**
 
-![myp-check](/images/doc/check.jpeg)
+![myp-check](/images/check.jpeg)

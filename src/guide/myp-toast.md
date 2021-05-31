@@ -2,7 +2,7 @@
 title: toast提示：myp-toast
 type: guide
 order: 252
-page: https://mypui.fekit.cn/h5/#/pages/pop/index
+page: https://mypui.redou.vip/h5/#/pages/pop/index
 ---
 
 ## Props

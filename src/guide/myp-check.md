@@ -2,7 +2,7 @@
 title: 单多选：myp-check
 type: guide
 order: 155
-page: https://mypui.fekit.cn/h5/#/pages/base/check
+page: https://mypui.redou.vip/h5/#/pages/base/check
 ---
 
 ## Props
@@ -39,7 +39,7 @@ myp-check支持单选/多选。单选多选都是这个组件，单选的时候�
 
 <p class="tip">myp-check组件下的选项必须由 myp-check-item 包裹，否则无法按照预期使用</p>
 
-如果您只需要一些简单的默认样式，我们还提供了 [myp-check-static](/doc/guide/myp-check-static.html)组件。
+如果您只需要一些简单的默认样式，我们还提供了 [myp-check-static](/guide/myp-check-static.html)组件。
 
 **示范**
 
@@ -59,5 +59,5 @@ myp-check支持单选/多选。单选多选都是这个组件，单选的时候�
 
 **效果**
 
-![myp-check](/images/doc/check.jpeg)
+![myp-check](/images/check.jpeg)
 

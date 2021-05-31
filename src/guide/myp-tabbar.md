@@ -2,7 +2,7 @@
 title: tabbar：myp-tabbar
 type: guide
 order: 101
-page: https://mypui.fekit.cn/h5/#/pages/tabbar/index
+page: https://mypui.redou.vip/h5/#/pages/tabbar/index
 ---
 
 ## Props
@@ -218,7 +218,7 @@ tabs 是一个数组，决策了 有多少个 tabs，以及他们各自的功能
 myp-tabbar 可以适配出很多样式。下面列出了几个样式以及配置，全面的代码请看 demo。
 
 ### 普通图标与文字
-![普通图标与文字](/images/doc/tabbar-normal.jpg)
+![普通图标与文字](/images/tabbar-normal.jpg)
 
 ```js
 {
@@ -257,7 +257,7 @@ myp-tabbar 可以适配出很多样式。下面列出了几个样式以及配置
 ```
 
 ### icon不带文字
-![中间icon](/images/doc/tabbar-icon.jpg)
+![中间icon](/images/tabbar-icon.jpg)
 
 ```js
 {
@@ -277,7 +277,7 @@ myp-tabbar 可以适配出很多样式。下面列出了几个样式以及配置
 ```
 
 ### 中间凸出
-![中间凸出](/images/doc/tabbar-hump.jpg)
+![中间凸出](/images/tabbar-hump.jpg)
 
 ```js
 	// tabs 的中间凸出设置
@@ -297,7 +297,7 @@ myp-tabbar 可以适配出很多样式。下面列出了几个样式以及配置
 ```
 
 ### 中间凸出带文字
-![中间凸出带文字](/images/doc/tabbar-hump-text.jpg)
+![中间凸出带文字](/images/tabbar-hump-text.jpg)
 
 ```js
 // tabs 的中间凸出设置
@@ -320,7 +320,7 @@ myp-tabbar 可以适配出很多样式。下面列出了几个样式以及配置
 ```
 
 ### 特殊外观
-![特殊外观](/images/doc/tabbar-bg.jpg)
+![特殊外观](/images/tabbar-bg.jpg)
 
 我们有个时候看到别人的tabbar有一个独特的外观，比如一条具备特殊弧度的border，看上去很顺滑，很有感觉。这种怎么做？
 

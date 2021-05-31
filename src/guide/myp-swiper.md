@@ -2,7 +2,7 @@
 title: swiper：myp-swiper
 type: guide
 order: 72
-page: https://mypui.fekit.cn/h5/#/pages/base/swiper
+page: https://mypui.redou.vip/h5/#/pages/base/swiper
 ---
 
 ## Slots

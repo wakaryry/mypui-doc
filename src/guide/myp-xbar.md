@@ -2,7 +2,7 @@
 title: 底部安全区：myp-xbar
 type: guide
 order: 76
-page: https://mypui.fekit.cn/h5/#/pages/base/height
+page: https://mypui.redou.vip/h5/#/pages/base/height
 ---
 
 ## Props
@@ -32,6 +32,6 @@ myp-xbar 为您提供了快速决策 x-bar 高度的能力。您可以在需要�
 
 其它相关文档：
 
-- [myp-height](/doc/guide/myp-height.html) 
-- [myp-status](/doc/guide/myp-status.html) 
-- [myp-navbar](/doc/guide/myp-navbar.html)
+- [myp-height](/guide/myp-height.html) 
+- [myp-status](/guide/myp-status.html) 
+- [myp-navbar](/guide/myp-navbar.html)

@@ -4,7 +4,7 @@ type: guide
 order: 5
 ---
 
-相信您已经大概了解了 mypUI 的 [主题相关](/doc/guide/theme.html) 的内容。
+相信您已经大概了解了 mypUI 的 [主题相关](/guide/theme.html) 的内容。
 
 这里我们介绍下 mypUI 的组件设计与属性以及接口命名的规范。
 

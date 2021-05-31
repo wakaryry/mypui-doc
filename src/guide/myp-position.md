@@ -2,7 +2,7 @@
 title: 定位：myp-position
 type: guide
 order: 77
-page: https://mypui.fekit.cn/h5/#/pages/base/position
+page: https://mypui.redou.vip/h5/#/pages/base/position
 ---
 
 ## Props

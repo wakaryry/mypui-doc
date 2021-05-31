@@ -2,7 +2,7 @@
 title: 标题：myp-title
 type: guide
 order: 205
-page: https://mypui.fekit.cn/h5/#/pages/base/title
+page: https://mypui.redou.vip/h5/#/pages/base/title
 ---
 
 ## Props

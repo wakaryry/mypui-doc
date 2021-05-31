@@ -42,17 +42,17 @@ mypUI 从一开始就一直在思考如下几个问题：
 
 mypUI 设计规范和技术上支持灵活的样式定制，以满足业务和品牌上多样化的视觉需求，包括但不限于全局样式（主色、圆角、边框）和指定组件的视觉定制。
 
-![主题配置](/images/doc/button.png)
+![主题配置](/images/button.png)
 
 mypUI 的样式采用了 scss 作为开发语言，并定义了一系列全局的样式变量，您可以根据需求进行相应的调整。
 
 mypUI 的主题设计绝对是经得住推敲与实践的，更是对于app/MP开发过程中不断实践与迭代的结果。
 
-其中包含了 主题、文字、边框、圆角、字号、尺寸 等多种通用变量，所有的样式变量以及具体的使用说明在 [这里](/doc/guide/theme.html) 找到。
+其中包含了 主题、文字、边框、圆角、字号、尺寸 等多种通用变量，所有的样式变量以及具体的使用说明在 [这里](/guide/theme.html) 找到。
 
 如果以上变量不能满足你的定制需求，可以给我们提 issue。
 
-当然，对于您自己添加变量，那也是非常的方便。更多主题配置的内容将在 [主题配置](/doc/guide/theme.html) 讲解。
+当然，对于您自己添加变量，那也是非常的方便。更多主题配置的内容将在 [主题配置](/guide/theme.html) 讲解。
 
 ## 快捷配置与灵活订制
 
@@ -88,7 +88,7 @@ mypUI 中组件的props都采用了规范与统一的命名规则。`xx` `xxType
 
 `myp-button`中背景主题色叫做 `bgType`，`myp-cell`中背景主题色也是`bgType`。你只需要了解了这其中的设计规范与规则，开发起来就会事半功倍。
 
-具体字段的设计规范，请查阅 [设计规范](/doc/guide/design.html)。
+具体字段的设计规范，请查阅 [设计规范](/guide/design.html)。
 
 ## 文档分层，一目了然
 
@@ -209,9 +209,9 @@ mypUI 组件的文档，分为快捷设置，细节配置，进阶设置等层�
 
 **Android APP下载地址**
 
-[Android Demo APK下载](https://cdn.mypui.fekit.cn/apk/mypUI.apk)
+[Android Demo APK下载](https://cdn.mypui.redou.vip/apk/mypUI.apk)
 
-![Android下载](https://cdn.mypui.fekit.cn/apk/mypUI.png)
+![Android下载](https://cdn.mypui.redou.vip/apk/mypUI.png)
 
 - [mypUI-github](https://github.com/wakaryry/mypUI) 欢迎star
 
@@ -219,7 +219,7 @@ mypUI 组件的文档，分为快捷设置，细节配置，进阶设置等层�
 
 - [mypUI-文档开源地址](https://github.com/wakaryry/mypui-doc)
 
-- [mypUI-文档线上地址](https://mypui.fekit.cn/doc/)
+- [mypUI-文档线上地址](https://mypui.redou.vip/)
 
 - npm地址：[https://www.npmjs.com/package/@mypui/myp-ui](https://www.npmjs.com/package/@mypui/myp-ui)
 
