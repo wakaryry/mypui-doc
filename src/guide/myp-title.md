@@ -17,7 +17,7 @@ page: https://mypui.redou.vip/h5/#/pages/base/title
 | centerIcon1      | 中间图标 1                | string | -      | ''      |
 | centerIcon2      | 中间图标 2                | string | -      | ''      |
 | rightIcon1       | 右侧图标 1                | string | -      | ''      |
-| rightIcon2       | 右侧图标 3                | string | -      | ''      |
+| rightIcon2       | 右侧图标 2                | string | -      | ''      |
 | space            | icon-text-icon 之间的间距 | string | -      | '12rpx' |
 | height           | 高度主题                  | string | -      | 'l'     |
 | hover            | hover 主题                | string | -      | 'none'  |
