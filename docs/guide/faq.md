@@ -67,7 +67,7 @@ IOS不支持elevation属性，请使用box-shadow设置阴影
 
 - swiper-list可能会造成下一个页面闪烁或者有历史内容残留
 
-swiper-list是双列表潜逃，支持公用header，以及swiper切换的效果。swiper-list有可能会导致下一个页面出现残影或者内容闪烁。（还在排查与取证阶段）
+swiper-list是双列表嵌套，支持公用header，以及swiper切换的效果。swiper-list有可能会导致下一个页面出现残影或者内容闪烁。（还在排查与取证阶段）
 
 > 兄弟absolute定位的问题
 
